@@ -1,0 +1,8 @@
+# Nmap 6.49BETA4 scan initiated Sat Sep 10 10:29:02 2016 as: nmap --script ssl-enum-ciphers -oN freak_443 -p 443 192.168.179.136
+Nmap scan report for 192.168.179.136
+Host is up (0.00053s latency).
+PORT    STATE  SERVICE
+443/tcp closed https
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+# Nmap done at Sat Sep 10 10:29:03 2016 -- 1 IP address (1 host up) scanned in 1.20 seconds

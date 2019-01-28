@@ -1,0 +1,6 @@
+for ssh go to the path etc/ssh and open the file sshd_config and then uncomment the line #PermitRootLogin without-password
+and change the line -->PermitRootLogin yes to PermitRootLogin no
+
+For telnet -->go to the path etc pam.d and open login file and uncomment the line #auth [success=ok new_authtok_reqd=ok ignore=ignore user_unknown=bad default=die] pam_securetty.so
+
+For ftp go to path etc and open vsftp.conf and change the line pam_service_name=ftp to its default oreginal value(check from internet)

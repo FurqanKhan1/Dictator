@@ -1,0 +1,9 @@
+2016-10-06 08:15:19,553 - Info Logger - DEBUG - 
+
+
+ STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 238
+2016-10-06 08:15:19,735 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-10-06 08:15:19,738 - Info Logger - DEBUG - {*}-Starting method --> InsertIPExploits()
+2016-10-06 08:15:19,739 - Info Logger - DEBUG - Inserting many records
+2016-10-06 08:15:19,749 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-06 08:15:19,750 - Info Logger - DEBUG - Starting method --> GetIPExploits()

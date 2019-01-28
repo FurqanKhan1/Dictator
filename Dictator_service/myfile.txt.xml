@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.12 scan initiated Fri Dec 30 23:41:59 2016 as: nmap -sn -oA myfile.txt 10.0.1.1-254 -->
+<nmaprun scanner="nmap" args="nmap -sn -oA myfile.txt 10.0.1.1-254" start="1483121519" startstr="Fri Dec 30 23:41:59 2016" version="7.12" xmloutputversion="1.04">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.1.39" addrtype="ipv4"/>
+<address addr="B8:2A:72:9E:AF:5E" addrtype="mac" vendor="Dell"/>
+<hostnames>
+</hostnames>
+<times srtt="1454" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.1.85" addrtype="ipv4"/>
+<address addr="00:0C:29:47:D4:08" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<times srtt="4812" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="10.0.1.37" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</host>
+<runstats><finished time="1483121551" timestr="Fri Dec 30 23:42:31 2016" elapsed="31.43" summary="Nmap done at Fri Dec 30 23:42:31 2016; 254 IP addresses (3 hosts up) scanned in 31.43 seconds" exit="success"/><hosts up="3" down="251" total="254"/>
+</runstats>
+</nmaprun>

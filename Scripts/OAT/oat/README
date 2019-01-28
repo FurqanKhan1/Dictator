@@ -1,0 +1,65 @@
+Oracle Auditing Tools v1.1.0 by patrik@cqure.net
+------------------------------------------------
+
+The Oracle Auditing Tools are to be run against
+Oracle servers on the Microsoft Windows platform.
+
+The OAT use CREATE LIBRARY to be able to access
+the WinExec function in the kernel32.dll. Having 
+access to this function makes it possible to 
+execute anything on the server with same 
+permissions as the user who has started the
+Oracle Service. So basicaly all accounts with
+default passwords, or easy  guessable password,
+having this privelege can do this.
+
+The OAT have a builtin TFTP server for making file
+transfers easy. The tftp server is based on the
+server source from www.gordian.com.
+
+The Tools are Java based and were tested on both
+Windows and Linux. They should hopefully also run
+on any other Java platform.
+
+The toolkit consists of the following tools:
+--------------------------------------------
+OracleSamDump - Connects to the Oracle server
+and executes TFTP get, to fetch the pwdump2 binary.
+The server is then pwdump2:ed and the result is
+returned to the SAM folder of the TFTP server.
+
+OracleSysExec - Can be run in interactive mode,
+letting the user specify commands to be executed by
+the server or in automatic mode. In automatic mode,
+netcat is tftpd over to the server and binds a shell
+to the tcp port 31337.
+
+OracleTNSCtrl - is used to query the TNS listener
+for various information, like the Oracle lsnrctl
+utility. It is somewhat limited though. Use the help
+command to see commands curently implemented.
+
+Requirements
+------------
+Java Runtime Environment
+http://www.javasoft.com or your favorite google query
+
+Oracle JDBC Driver (classes111.zip or classes12.zip)
+http://www.oracle.com or your favorite google query
+
+Known BUGS
+----------
+The full automatic mode has trouble resolving SIDs
+on some installations. Due to limited testing
+possibilities I have not been able to pinpoint the
+problem. You will have to use the OracleTNSCtrl
+to find the SIDs in these cases, using the 
+'services' or 'status' query. The SIDs can then
+ be added as a parameter to any of the programs.
+Feel free to solve the problem and send me the
+patches ;)
+
+Oh and yes, Please only run this software against
+YOUR OWN boxes.
+
+Patrik Karlsson, http://www.cqure.net

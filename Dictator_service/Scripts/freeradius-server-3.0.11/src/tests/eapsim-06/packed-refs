@@ -1,0 +1,30 @@
+# pack-refs with: peeled fully-peeled 
+fa09b49fc03fee1c5148d5661741649e2306a917 refs/remotes/origin/channels
+3586e33866f358bd71ed035c4548505faf622ba9 refs/remotes/origin/master
+50b9eb203cf4f2198fb15ce86f84bc061efcc9c0 refs/remotes/origin/stable-1.0
+4c69c3ea1489f09e1c3e698eaebd67b6d8d25785 refs/remotes/origin/stable-1.1
+7a0613b8dd9ff81dfb1a3781f81ca548ee15437a refs/tags/1.0-beta1
+42735c4690cc0918b4d8421c9e8ad0b95e6bcb2c refs/tags/1.0-beta2
+08c1043753635ab60ee9931b0b7ece28079c2d2c refs/tags/1.0-beta3
+e411f1cab892f86045bc9554e55d9de84a53c60f refs/tags/1.0-beta4
+a3df68a3a3907aed9c2a612131fbe069e5f4e4f5 refs/tags/1.0-beta5
+cd43ba1eda03c8988d6761e1bfef3bff75314c87 refs/tags/1.0.0
+^41558e4bd6982d508914a4f7b8278615aef1ad9e
+8e627212a0b6a3ca83384b1049d81fe91fba25db refs/tags/1.0.1
+e097b67fba002f7be8241ba9f750b9ac188caa58 refs/tags/1.0.2
+^616aed4ec2889f379b9d1e840230d9a33cda8bf0
+fc80df21aac14ed617b7d97e6f6b409a344f04b4 refs/tags/1.0.2-rc1
+^af940d2f2486e7af23c436e65cf480c09d8c8a06
+7b9dd07e003e0a9d7379fa5d28d335ae0fc1b9f9 refs/tags/1.0.2-rc2
+780d451afad21a22d2af6bd030ee71311856f038 refs/tags/1.1.0-beta+2013071101
+1be90abcb9440b6f14b3fca4d7b462d9b3ce6432 refs/tags/1.1.0-beta1
+c01a93445096d3717e7a5c0008e2a57dd49b496b refs/tags/1.1.0-beta1+android2
+b9bbbf2edc475b81d4b4855324cb1f132631edaf refs/tags/1.1.0-beta1+android3
+ea443ace40fe7c5a219893aa1c07421de26fd490 refs/tags/1.1.0-beta1+android4
+6d31c503b500c205e121aa10138cbce4a578f150 refs/tags/1.1.0-beta1+android5
+a80517089aa52a69810ef3df9107020dfe5c5594 refs/tags/1.1.0-beta1+ios1
+b9bbbf2edc475b81d4b4855324cb1f132631edaf refs/tags/1.1.0-beta1+ios2
+349dff84f386877e919ebdfc6b536cd48b3c194e refs/tags/1.1.0-beta1+ios3
+6d31c503b500c205e121aa10138cbce4a578f150 refs/tags/1.1.0-beta1+ios4
+9e14f5e1644e7c6b01eb4d3371018b03105dd9c2 refs/tags/1.2.0-beta1+android7
+f5ff6e1bd819a347aa532c1ef1a9cf0c67387507 refs/tags/1.2.0-beta1+android9

@@ -1,0 +1,2450 @@
+<!doctype html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <title>views_ API documentation</title>
+    <meta name="description" content="@Author         :Furqan Khan
+@Email          :furqankhan08@gmail.com
+@Date           :1/3/2017
+
+Obje..." />
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+  
+  <style type="text/css">
+  
+* {
+  box-sizing: border-box;
+}
+/*! normalize.css v1.1.1 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    background: #fff; /* 1 */
+    color: #000; /* 2 */
+    font-size: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 4 */
+    -ms-text-size-adjust: 100%; /* 4 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+p,
+pre {
+    margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+
+q {
+    quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+  </style>
+
+  <style type="text/css">
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+  body {
+    background: #fff;
+    font-family: "Source Sans Pro", "Helvetica Neueue", Helvetica, sans;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+  #content {
+    width: 70%;
+    max-width: 850px;
+    float: left;
+    padding: 30px 60px;
+    border-left: 1px solid #ddd;
+  }
+  #sidebar {
+    width: 25%;
+    float: left;
+    padding: 30px;
+    overflow: hidden;
+  }
+  #nav {
+    font-size: 130%;
+    margin: 0 0 15px 0;
+  }
+
+  #top {
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    font-size: .85em;
+    text-transform: uppercase;
+  }
+
+  #footer {
+    font-size: .75em;
+    padding: 5px 30px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+  }
+    #footer p {
+      margin: 0 0 0 30px;
+      display: inline-block;
+    }
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 300;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.1em;
+    margin: 0 0 .50em 0;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    margin: 1em 0 .50em 0;
+  }
+
+  h3 {
+    margin: 25px 0 10px 0;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 105%;
+  }
+
+  a {
+    color: #058;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+  }
+
+  a:hover {
+    color: #e08524;
+    transition: color .3s ease-in-out;
+  }
+
+  pre, code, .mono, .name {
+    font-family: "Ubuntu Mono", "Cousine", "DejaVu Sans Mono", monospace;
+  }
+
+  .title .name {
+    font-weight: bold;
+  }
+  .section-title {
+    margin-top: 2em;
+  }
+  .ident {
+    color: #900;
+  }
+
+  code {
+    background: #f9f9f9;
+  } 
+
+  pre {
+    background: #fefefe;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 0 #f3f3f3;
+    margin: 0 30px;
+    padding: 15px 30px;
+  }
+
+  .codehilite {
+    margin: 0 30px 10px 30px;
+  }
+
+    .codehilite pre {
+      margin: 0;
+    }
+    .codehilite .err { background: #ff3300; color: #fff !important; } 
+
+  table#module-list {
+    font-size: 110%;
+  }
+
+    table#module-list tr td:first-child {
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+    table#module-list td {
+      vertical-align: top;
+      padding-bottom: 8px;
+    }
+
+      table#module-list td p {
+        margin: 0 0 7px 0;
+      }
+
+  .def {
+    display: table;
+  }
+
+    .def p {
+      display: table-cell;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .def p:first-child {
+      white-space: nowrap;
+    }
+
+    .def p:last-child {
+      width: 100%;
+    }
+
+
+  #index {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+    ul#index .class_name {
+      /* font-size: 110%; */
+      font-weight: bold;
+    }
+    #index ul {
+      margin: 0;
+    }
+
+  .item {
+    margin: 0 0 15px 0;
+  }
+
+    .item .class {
+      margin: 0 0 25px 30px;
+    }
+
+      .item .class ul.class_list {
+        margin: 0 0 20px 0;
+      }
+
+    .item .name {
+      background: #fafafa;
+      margin: 0;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 3px;
+      display: inline-block;
+      min-width: 40%;
+    }
+      .item .name:hover {
+        background: #f6f6f6;
+      }
+
+    .item .empty_desc {
+      margin: 0 0 5px 0;
+      padding: 0;
+    }
+
+    .item .inheritance {
+      margin: 3px 0 0 30px;
+    }
+
+    .item .inherited {
+      color: #666;
+    }
+
+    .item .desc {
+      padding: 0 8px;
+      margin: 0;
+    }
+
+      .item .desc p {
+        margin: 0 0 10px 0;
+      }
+
+    .source_cont {
+      margin: 0;
+      padding: 0;
+    }
+
+    .source_link a {
+      background: #ffc300;
+      font-weight: 400;
+      font-size: .75em;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 1px 1px 0 #f4b700;
+      
+      padding: 3px 8px;
+      border-radius: 2px;
+      transition: background .3s ease-in-out;
+    }
+      .source_link a:hover {
+        background: #FF7200;
+        text-shadow: none;
+        transition: background .3s ease-in-out;
+      }
+
+    .source {
+      display: none;
+      max-height: 600px;
+      overflow-y: scroll;
+      margin-bottom: 15px;
+    }
+
+      .source .codehilite {
+        margin: 0;
+      }
+
+  .desc h1, .desc h2, .desc h3 {
+    font-size: 100% !important;
+  }
+  .clear {
+    clear: both;
+  }
+
+  @media all and (max-width: 950px) {
+    #sidebar {
+      width: 35%;
+    }
+    #content {
+      width: 65%;
+    }
+  }
+  @media all and (max-width: 650px) {
+    #top {
+      display: none;
+    }
+    #sidebar {
+      float: none;
+      width: auto;
+    }
+    #content {
+      float: none;
+      width: auto;
+      padding: 30px;
+    }
+
+    #index ul {
+      padding: 0;
+      margin-bottom: 15px;
+    }
+    #index ul li {
+      display: inline-block;
+      margin-right: 30px;
+    }
+    #footer {
+      text-align: left;
+    }
+    #footer p {
+      display: block;
+      margin: inherit;
+    }
+  }
+
+  /*****************************/
+
+  </style>
+
+  <style type="text/css">
+  .codehilite .hll { background-color: #ffffcc }
+.codehilite  { background: #f8f8f8; }
+.codehilite .c { color: #408080; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+.codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #FF0000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #00A000 } /* Generic.Inserted */
+.codehilite .go { color: #888888 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #7D9029 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #A0A000 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+  </style>
+
+  <style type="text/css">
+  
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+  </style>
+
+  <script type="text/javascript">
+  function toggle(id, $link) {
+    $node = document.getElementById(id);
+    if (!$node)
+    return;
+    if (!$node.style.display || $node.style.display == 'none') {
+    $node.style.display = 'block';
+    $link.innerHTML = 'Hide source &nequiv;';
+    } else {
+    $node.style.display = 'none';
+    $link.innerHTML = 'Show source &equiv;';
+    }
+  }
+  </script>
+</head>
+<body>
+<a href="#" id="top">Top</a>
+
+<div id="container">
+    
+  
+  <div id="sidebar">
+    <h1>Index</h1>
+    <ul id="index">
+
+
+
+    </ul>
+  </div>
+
+    <article id="content">
+      
+  
+
+  
+
+
+  <header id="section-intro">
+  <h1 class="title"><span class="name">views_</span> module</h1>
+  <p>@Author         :Furqan Khan
+@Email          :furqankhan08@gmail.com
+@Date           :1/3/2017</p>
+<p>Objective :
+The purpose of this file /module /Class is to map to serve teh Rest request
+Depending upon the requested url the views module will fetch the data from the backend
+python files and would transform the data to json format ,and would finally return the data back to the
+requesting application.</p>
+<p>class SetCsrf(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    This class is only for test purpose and it forces the framework to generate a csrf token 
+    with custom authentication
+
+    @method_decorator(ensure_csrf_cookie)
+    def get(self,request,format=None):
+            return Response(JSONRenderer().render({&quot;helllo&quot;:&quot;world&quot;}))
+</pre></div>
+
+
+<p>class UserList(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The code is only for testing purpose and has no utility with final draft of code
+
+
+    def get(self,request,format=None):
+            Employee_dict={}
+            Employee_list=[]
+            Employee_dict[&quot;id&quot;]=1
+            Employee_dict[&quot;name&quot;]=&quot;Furqan Khan&quot;
+            Employee_list.append(Employee_dict)
+            Employee_dict={}
+            Employee_dict[&quot;id&quot;]=2
+            Employee_dict[&quot;name&quot;]=&quot;Burhan Khan&quot;
+            Employee_list.append(Employee_dict)
+            serialize=UserSerializer(Employee_list,many=True)
+            return Response(JSONRenderer().render(serialize.data))
+            #return JSONResponse(serialize.data)
+</pre></div>
+
+
+<p>class StartScanConcurrent(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan attributes 
+    and would invoke appropriate backend python files Gui_main_driver.py to start the scan as a process.
+
+    Note :This class would invoke the dicovery and vulnerability scanning in concurrent mode.
+
+    IN order to understand about input given to this method and response returned read API documentation.
+
+    #@csrf_exempt
+    def post(self,request,format=None):
+            print &quot;Request HIt :&quot;
+            #data_=JSONParser().parse(request)
+            scan_attributes=ScanAttributes(data=request.data)
+            #scan_attributes=ScanAttributes(data=data_)
+            return_response={}
+
+            if scan_attributes.is_valid():
+                    #return Response(scan_attributes.data)
+                    obj=Gui_main_driver.Gui_main()
+
+                    scan_id=obj.main_start(scan_attributes.data[&quot;project_name&quot;],scan_attributes.data[&quot;IP_range&quot;],scan_attributes.data[&quot;Port_range&quot;],scan_attributes.data[&quot;switch&quot;],&quot;1&quot;,&quot;init&quot;,scan_attributes.data[&quot;assessment_id&quot;],scan_attributes.data[&quot;app_id&quot;],True)
+                    if scan_id !=-1:
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;project_id&quot;]=str(scan_id)
+                            return_response[&quot;value&quot;]=str(scan_id)
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;project_id&quot;]=str(scan_id)
+                            return_response[&quot;value&quot;]=str(scan_id)
+                    return Response(JSONRenderer().render(return_response))
+
+            return_response[&quot;status&quot;]=&quot;failure&quot;
+            return_response[&quot;errors&quot;]=scan_attributes.errors
+            return_response[&quot;value&quot;]=scan_attributes.errors
+            #return Response(return_response)       
+            return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class StartScan(APIView):
+        #@csrf_exempt</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan attributes 
+    and would invoke appropriate backend python files Gui_main._driver.py to start the scan as a process
+
+    Note :This class will invoke the backend code in sequential mode
+    IN order to understand about input given to this method and response returned read API documentation.
+
+
+    def post(self,request,format=None):
+            print &quot;Request HIt :&quot;
+            #data_=JSONParser().parse(request)
+            scan_attributes=ScanAttributes(data=request.data)
+            #scan_attributes=ScanAttributes(data=data_)
+            return_response={}
+
+            if scan_attributes.is_valid():
+                    #return Response(scan_attributes.data)
+                    obj=Gui_main_driver.Gui_main()
+
+                    scan_id=obj.main_start(scan_attributes.data[&quot;project_name&quot;],scan_attributes.data[&quot;IP_range&quot;],scan_attributes.data[&quot;Port_range&quot;],scan_attributes.data[&quot;switch&quot;],&quot;1&quot;,&quot;init&quot;,scan_attributes.data[&quot;assessment_id&quot;],scan_attributes.data[&quot;app_id&quot;])
+                    if scan_id != -1:
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;project_id&quot;]=str(scan_id)
+                            return_response[&quot;value&quot;]=str(scan_id)
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;value&quot;]=&quot;-1&quot;
+                    return Response(JSONRenderer().render(return_response))
+
+            return_response[&quot;status&quot;]=&quot;failure&quot;
+            return_response[&quot;errors&quot;]=scan_attributes.errors
+            return_response[&quot;value&quot;]=scan_attributes.errors
+            #return Response(return_response)       
+            return Response(JSONRenderer().render(return_response))
+
+    def get(self,request,format=None):
+            Employee_dict={}
+            Employee_list=[]
+            Employee_dict[&quot;id&quot;]=1
+            Employee_dict[&quot;name&quot;]=&quot;Furqan Khan&quot;
+            Employee_list.append(Employee_dict)
+            Employee_dict={}
+            Employee_dict[&quot;id&quot;]=2
+            Employee_dict[&quot;name&quot;]=&quot;Burhan Khan&quot;
+            Employee_list.append(Employee_dict)
+            serialize=UserSerializer(Employee_list,many=True)
+            return Response(serialize.data)
+</pre></div>
+
+
+<p>class StopScan(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan/project id 
+    and would invoke appropriate backend python files Gui_main_driver.py to stop the scan
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    #@csrf_exempt
+    @method_decorator(csrf_protect)
+    def post(self,request,format=None):
+            scan_attributes=General(data=request.data)
+            return_response={}
+
+            if scan_attributes.is_valid():
+                    #return Response(scan_attributes.data)
+                    obj=Gui_main_driver.Gui_main()
+
+                    scan_id=obj.main_pause(scan_attributes.data[&quot;project_id&quot;],scan_attributes.data[&quot;assessment_id&quot;],scan_attributes.data[&quot;app_id&quot;])
+                    if scan_id !=0:
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;response_code&quot;]=str(scan_id)
+                    return_response[&quot;value&quot;]=str(scan_id)
+                    #return Response(JSONRenderer().render(return_response))
+                    return Response(JSONRenderer().render(return_response))
+
+            return_response[&quot;status&quot;]=&quot;failure&quot;
+            return_response[&quot;errors&quot;]=scan_attributes.errors
+            return_response[&quot;value&quot;]=scan_attributes.errors
+            return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class StopScanConc(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan/project id 
+    and would invoke appropriate backend python files Gui_main_driver.py to stop the scan
+
+    Note :This class would serve the purpose of stopping concurrent scan.Thus actually it would pause
+    both the discovery as well as the vulnerability scanning phase.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+    #@csrf_exempt
+    def post(self,request,format=None):
+            try:
+                    scan_attributes=General(data=request.data)
+                    return_response={}
+
+                    if scan_attributes.is_valid():
+                            #return Response(scan_attributes.data)
+                            obj=Gui_main_driver.Gui_main()
+
+                            scan_id=obj.main_pause(scan_attributes.data[&quot;project_id&quot;],scan_attributes.data[&quot;assessment_id&quot;],scan_attributes.data[&quot;app_id&quot;])
+                            exp_id=obj.exploits_pause(scan_attributes.data[&quot;project_id&quot;],True)
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;response_code&quot;]=str(scan_id)
+                            #return Response(JSONRenderer().render(return_response))
+                            return Response(JSONRenderer().render(return_response))
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=scan_attributes.errors
+                            return Response(JSONRenderer().render(return_response))
+            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=str(ee)
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class ResumeScanConc(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan/project id 
+    and would invoke appropriate backend python files Gui_main_driver.py to resume paused the scan
+
+    Note :This class would serve the purpose of resuming concurrent scan.Thus actually it would pause
+    both the discovery as well as the vulnerability scanning phase.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+    #@csrf_exempt
+    def post(self,request,format=None):
+            try:
+                    scan_attributes=General(data=request.data)
+                    return_response={}
+
+                    if scan_attributes.is_valid():
+                            #return Response(scan_attributes.data)
+                            obj=Gui_main_driver.Gui_main()
+
+                            scan_id=obj.main_resume(scan_attributes.data[&quot;project_id&quot;],scan_attributes.data[&quot;assessment_id&quot;],scan_attributes.data[&quot;app_id&quot;],True)
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;project_id&quot;]=str(scan_id)
+                            return_response[&quot;value&quot;]=str(scan_id)
+                            return Response(JSONRenderer().render(return_response))
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=scan_attributes.errors
+                            return_response[&quot;value&quot;]=scan_attributes.errors
+                            return Response(JSONRenderer().render(return_response)) 
+            except Exception ,ee:
+
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=str(ee)
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class StopExploits(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan/project id 
+    and would invoke appropriate backend python files Gui_main_driver.py to stop the vulnerability scan
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+    #@csrf_exempt
+    def post(self,request,format=None):
+            try:
+                    return_response={}
+                    scan_attributes=General(data=request.data)
+                    if scan_attributes.is_valid():
+                            #return Response(scan_attributes.data)
+                            try:
+                                    concurrent=request.data[&quot;concurrent&quot;]
+                            except Exception ,ex:
+                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                    return_response[&quot;errors&quot;]=&quot;Required Concurrent Field&quot;
+                                    return_response[&quot;value&quot;]=&quot;Required Concurrent Field&quot;
+                                    return Response(JSONRenderer().render(return_response))
+
+                            obj=Gui_main_driver.Gui_main()
+                            scan_id=obj.exploits_pause(scan_attributes.data[&quot;project_id&quot;],concurrent)
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;response_code&quot;]=str(scan_id)
+                            return_response[&quot;value&quot;]=str(scan_id)
+                            return Response(JSONRenderer().render(return_response))
+
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=scan_attributes.errors
+                    return Response(JSONRenderer().render(return_response))
+            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=str(ee)
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class ResumeScan(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan/project id 
+    and would invoke appropriate backend python files Gui_main_driver.py to resume the scan.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+    #@csrf_exempt
+    def post(self,request,format=None):
+            scan_attributes=General(data=request.data)
+            return_response={}
+
+            if scan_attributes.is_valid():
+                    #return Response(scan_attributes.data)
+                    obj=Gui_main_driver.Gui_main()
+
+                    scan_id=obj.main_resume(scan_attributes.data[&quot;project_id&quot;],scan_attributes.data[&quot;assessment_id&quot;],scan_attributes.data[&quot;app_id&quot;])
+                    return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                    return_response[&quot;project_id&quot;]=str(scan_id)
+                    return_response[&quot;value&quot;]=str(scan_id)
+                    return Response(JSONRenderer().render(return_response))
+
+            return_response[&quot;status&quot;]=&quot;failure&quot;
+            return_response[&quot;errors&quot;]=scan_attributes.errors
+            return_response[&quot;value&quot;]=scan_attributes.errors
+            return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class ResumeExploits(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the scan/project id 
+    and would invoke appropriate backend python files Gui_main_driver.py to resume  the vul scan
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+    #@csrf_exempt
+    def post(self,request,format=None):
+            try:
+                    scan_attributes=General(data=request.data)
+                    return_response={}
+
+                    if scan_attributes.is_valid():
+                            #return Response(scan_attributes.data)
+                            obj=Gui_main_driver.Gui_main()                  
+                            scan_id=obj.exploits_resume(scan_attributes.data[&quot;project_id&quot;])
+                            return_response[&quot;status&quot;]=&quot;success&quot; #+str(scan_attributes.data[&quot;project_name&quot;])
+                            return_response[&quot;project_id&quot;]=str(scan_id)
+                            return_response[&quot;value&quot;]=str(scan_id)
+                            return Response(JSONRenderer().render(return_response))
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=scan_attributes.errors
+                    return_response[&quot;value&quot;]=scan_attributes.errors
+                    return Response(JSONRenderer().render(return_response)) 
+            except Exception ,ee:
+
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=str(ee)
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class ExploitableProjects(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would return the project id&#39;s of the
+    projects for which the discovery would be over and would be eligible for vulnerability scan
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    def get(self,request,format=None):
+            obj=IPtable.Projects()
+            projects=obj.completed_projects()       
+            project_list=[]
+            for project in projects:
+                    #print str(project[0])+ &quot;   &quot; +str(project[1])
+                    project_dict={}
+                    project_dict[&quot;id&quot;]=project[0]
+                    project_dict[&quot;name&quot;]=project[1]
+                    project_list.append(project_dict)
+
+            #print &quot;
+</pre></div>
+
+
+<p>My val is ---&gt;"+str(project_list)
+                return_response={}
+                try:
+                        serialize=ProjectSerializer(data=project_list,many=True)
+                        #print "</p>
+<p>serializers are :"+str(serialize)+"</p>
+<p>"
+                except Exception ,ee :
+                        print "EXception " +str(ee)
+                        return_response["status"]="failure"
+                        return_response["errors"]=str(ee)
+                        return Response(JSONRenderer().render(return_response)) </p>
+<div class="codehilite"><pre><span></span>            if serialize.is_valid():
+                    print &quot;
+</pre></div>
+
+
+<p>The serlize data obtained !!</p>
+<p>"
+                        print str(serialize.data)</p>
+<div class="codehilite"><pre><span></span>                    return_response[&quot;status&quot;]=&quot;success&quot;
+                    return_response[&quot;data&quot;]=serialize.data
+            else:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=serialize.errors
+
+            return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class ExploitConfig_overwrite(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the updated configuration 
+    for a project and would delete the old configuration and results and would update to default
+    configuration .Thus invoking the file Gui_main_driver.py for the method updateDefaultconfiguration()
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    def configure_response(self,default_config):
+                    print &quot;IN configure response !&quot;
+                    config_list=[]
+                    config_dict={}
+                    return_val=[]
+                    for config in default_config[&quot;value&quot;]:
+                            print str(config)
+                            config_dict={}
+                            #print str(project[0])+ &quot;   &quot; +str(project[1])
+                            config_dict[&quot;id&quot;]=config[0]
+                            config_dict[&quot;project_id&quot;]=config[1]
+                            config_dict[&quot;host&quot;]=config[2]
+                            config_dict[&quot;port&quot;]=config[3]
+                            config_dict[&quot;service&quot;]=config[4]
+                            config_dict[&quot;project_status&quot;]=config[5]
+                            config_dict[&quot;Commands&quot;]=config[6]
+                            config_dict[&quot;reconfig_service&quot;]=False
+                            config_dict[&quot;reconfig_exploit&quot;]=False
+                            config_list.append(config_dict)
+                    return_val.append(config_dict)
+                    return_val.append(config_list)
+                    return return_val
+
+
+    def post(self,request,format=None):
+            print &quot;
+</pre></div>
+
+
+<p>IN post method of config overwrite !!!"
+                obj=Gui_main_driver.Gui_main()
+                project_id=request.data["project_id"]
+                continue_=False
+                delete=True   <br />
+                default_config=obj.Overwrite_and_GetDefaultConfiguration(project_id,'','',continue_,delete,False)
+                if default_config["status"]=="reconfig":
+                        resp=self.configure_response(default_config)
+                        config_dict=resp[0]
+                        config_list=resp[1]
+                        #print "</p>
+<p>"+str(project_list)
+                        return_response={}</p>
+<div class="codehilite"><pre><span></span>                    if 1:#serialize.is_valid():
+
+                            return_response[&quot;status&quot;]=&quot;success&quot;
+                            #return_response[&quot;data&quot;]=serialize.data  #Note Both work the same !!!
+                            return_response[&quot;data&quot;]=config_list#serialize.data #Thus while reteriving data we can simply send back query list to json data !!.No need to build wrapper
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=serialize.errors
+
+                    return Response(JSONRenderer().render(return_response)) 
+            else:
+                    print &quot;
+</pre></div>
+
+
+<p>Returning default config </p>
+<p>"
+                        return Response(JSONRenderer().render(default_config))</p>
+<p>class ExploitConfig(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the updated configuration 
+    for a project and would update the configuration .Thus invoking the file Gui_main_driver.py for the 
+    method updateDefaultconfiguration().Finally it will return the updated configuration
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+
+    def post(self,request,format=None):
+            print &quot;hello world !!&quot;
+            return_response={}
+            all_values=[]
+            obj=Gui_main_driver.Gui_main()
+            try: 
+                    concurrent=request.data[&quot;concurrent&quot;]
+                    data_=Configuration(data=request.data[&quot;data&quot;],many=True) #it transforms the underlying dictionary to ordered dictionary which is nothing but cololection of tuples.It does that recursively
+                     #data_=test_multi(data=request.data[&quot;data&quot;],many=True)
+            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;errors&quot;]=str(ee)
+                    return_response[&quot;value&quot;]=&quot;Error message is --&gt;&quot;+str(ee)
+                    return Response(JSONRenderer().render(return_response))
+
+            try:
+
+                    if data_.is_valid(): #list of dictionaries with each dictionary contains list of dict
+                             for key in data_.data: #key would be 1 dict
+                                    default_config={}
+                                    for i,(k,v) in enumerate(key.iteritems()): #keys would be project_id,commands and etc
+                                            #print &quot;---&gt;&quot;+str(type(v))
+                                            default_config[k]=v
+                                            #print type(default_config)
+                                    all_values.append(dict(default_config)) 
+                            project_id=data_.data[0][&quot;project_id&quot;]
+                            print &quot;Project id is : &quot;+str(project_id)
+                            continue_=False
+                            delete=False
+                            #print &quot;----------------------------------&quot;
+                            #print str(all_values)
+                            #print &quot;
+</pre></div>
+
+
+<p>-------------------"
+                                print str(all_values)
+                                if concurrent =="0":  <br />
+                                        update_result=obj.updateDefaultconfiguration(data_.data,project_id)
+                                elif concurrent=="1":
+                                        update_result=obj.updateDefaultconfiguration(data_.data,project_id,'','',True)
+                                print "The length of elements returned :"+str(len(update_result))
+                                print "</p>
+<p>Obtained result is :" +str(update_result)
+                                return_response["status"]="success"
+                                return_response["value"]=update_result[0] #tedupdate status of services
+                                return_response["data"]=update_result[1] #the list of updated services
+                        else:
+                                return_response["status"]="failure"
+                                return_response["value"]="Error message is :"+str(data_.errors)
+                                return_response["errors"]=data_.errors
+                except Exception ,ee:
+                        return_response["status"]="failure"
+                        return_response["errors"]=str(ee)
+                        return_response["value"]="Error message is :"+str(ee)
+                        return Response(JSONRenderer().render(return_response)) </p>
+<div class="codehilite"><pre><span></span>            return Response(JSONRenderer().render(return_response))
+
+    def configure_response(self,default_config):
+                    print &quot;IN configure response !&quot;
+                    config_list=[]
+                    config_dict={}
+                    return_val=[]
+                    for config in default_config[&quot;value&quot;]:
+                            #print str(config)
+                            config_dict={}
+                            #print str(project[0])+ &quot;   &quot; +str(project[1])
+                            config_dict[&quot;id&quot;]=config[0]
+                            config_dict[&quot;project_id&quot;]=config[1]
+                            config_dict[&quot;host&quot;]=config[2]
+                            config_dict[&quot;port&quot;]=config[3]
+                            config_dict[&quot;service&quot;]=config[4]
+                            config_dict[&quot;project_status&quot;]=config[5]
+                            config_dict[&quot;Commands&quot;]=config[6]
+                            config_dict[&quot;reconfig_service&quot;]=False
+                            config_dict[&quot;reconfig_exploit&quot;]=False
+                            config_list.append(config_dict)
+                    return_val.append(config_dict)
+                    return_val.append(config_list)
+                    return return_val
+
+
+    def get(self,request,format=None):
+            obj=Gui_main_driver.Gui_main()
+            project_id=request.data[&quot;project_id&quot;]
+            continue_=False
+            delete=False    
+            default_config=obj.getDefaultConfiguration(project_id,continue_,delete,False)
+            if default_config[&quot;status&quot;]==&quot;reconfig&quot;:
+                    resp=self.configure_response(default_config)
+                    config_dict=resp[0]
+                    config_list=resp[1]
+                    #print &quot;
+</pre></div>
+
+
+<p>"+str(project_list)
+                        return_response={}
+                        try:
+                                print "Reached here"
+                                #serialize=Configuration(data=config_dict)
+                                #print "</p>
+<p>seturnrializers are :"+str(serialize)+"</p>
+<p>"</p>
+<div class="codehilite"><pre><span></span>                    except Exception ,ee :
+                            print &quot;EXception &quot; +str(ee)
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=str(ee)
+                            return Response(JSONRenderer().render(return_response))
+
+
+
+                    if 1:#serialize.is_valid():
+
+                            return_response[&quot;status&quot;]=&quot;success&quot;
+                            #return_response[&quot;data&quot;]=serialize.data  #Note Both work the same !!!
+                            return_response[&quot;data&quot;]=config_list#serialize.data #Thus while reteriving data we can simply send back query list to json data !!.No need to build wrapper
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=serialize.errors
+
+                    return Response(JSONRenderer().render(return_response)) 
+            else:
+                    print &quot;
+</pre></div>
+
+
+<p>Returning default config </p>
+<p>"
+                        return Response(JSONRenderer().render(default_config))</p>
+<p>class LaunchExploits(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the project id as input and
+    would start vulneraibility scanning for the obtained project id.
+    It invokes Gui_main_driver.py file to start vulneribility scanning.
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    def post(self,request,format=None):
+            try:    
+                    self.project_obj=IPtable.Projects()             
+                    obj=Gui_main_driver.Gui_main()
+                    exploit_data=Exploits(data=request.data)
+                    return_response={}
+                    if(exploit_data.is_valid()):
+                            project_id=exploit_data.data[&quot;project_id&quot;]
+                            continue_=True
+                            delete=False
+                            get_default_config=False
+                            threading=exploit_data.data[&quot;threading&quot;]
+                            result=self.project_obj.completed_projects(int(project_id))
+                            if result[0] &gt; 0:
+                                    exploit_status=obj.LaunchExploits(project_id,continue_,delete,get_default_config,threading)
+                                    return_response[&quot;status&quot;]=&quot;success&quot;
+                                    return_response[&quot;value&quot;]=exploit_status
+                            else:
+                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                    return_response[&quot;value&quot;]=&quot;In valid project id .&quot;
+
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=exploit_data.errors
+                    return Response(JSONRenderer().render(return_response))
+
+            except Exception,ee:
+                    return_response={}
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class LaunchExploitsConcurrent(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the project id as input and
+    would start vulneraibility scanning for the obtained project id.
+    It invokes Gui_main_driver.py file to start vulneribility scanning in concurrent mode.
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    def post(self,request,format=None):
+            try:                    
+                    obj=Gui_main_driver.Gui_main()
+                    exploit_data=ExploitsConcurrent(data=request.data)
+                    return_response={}
+                    if(exploit_data.is_valid()):
+                            project_id=exploit_data.data[&quot;project_id&quot;]
+                            continue_=True
+                            delete=False
+                            get_default_config=False
+                            threading=exploit_data.data[&quot;threading&quot;]
+                            if threading==True:
+                                    threading=False
+                            rec_list=exploit_data.data[&quot;record_list&quot;]
+                            exploit_status=obj.LaunchExploits(project_id,continue_,delete,get_default_config,False,True,rec_list)
+                            return_response[&quot;status&quot;]=&quot;success&quot;
+                            return_response[&quot;value&quot;]=exploit_status
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=exploit_data.errors
+                    return Response(JSONRenderer().render(return_response))
+
+            except Exception,ee:
+                    return_response={}
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class DownloadAllMannual(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the project id as input and
+    would return a zipped folder containing all the reports, pcap files and etc.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    def __init__(self):
+            self.folder_dir=os.path.dirname(os.path.realpath(__file__))
+            self.results_path=os.path.join(self.folder_dir,&quot;Results&quot;)
+            self.folder_name=os.path.join(self.results_path,&quot;Data_&quot;)
+
+
+
+
+    def zipdir(self,path,ziph):
+            for dirname,subdirs,files in os.walk(path):
+                    abs_path_dir=dirname
+                    rel_path_dir=abs_path_dir[len(path)+len(os.sep):]
+                    print &quot;ADd dir is :&quot;+str(rel_path_dir)
+                    for file_ in files:
+                                    abs_path=os.path.join(dirname,file_)
+                                    rel_path=abs_path[len(path)+len(os.sep):]
+                                    ziph.write(abs_path,rel_path)
+
+    def init_project_directory(self,project_id):
+            #print &quot;Initialising parent directory &quot;
+            try:
+                    if not os.path.exists(self.folder_name+str(project_id)):
+                            return -1
+                    return 1;
+            except Exception ,ee:
+                    #self.print_Error(&quot;Error while creating directory !!&quot;+str(ee))
+                    print &quot;EX &quot;+str(ee)
+                    return -1
+
+    def post(self,request,format=None):
+                    self.project_obj=IPtable.Projects()
+                    try:
+                            return_response={}
+                            to_validate=General(data=request.data)
+                            if to_validate.is_valid():
+                                    print str(to_validate.data)
+                                    project_id=to_validate.data[&quot;project_id&quot;]
+                                    result=self.project_obj.completed_projects(int(project_id))
+                                    if result[0] &gt; 0:
+                                            status=self.init_project_directory(project_id)
+                                            if status != -1:
+                                                    self.data_path=self.folder_name+str(project_id)
+                                                    zip_folder_name=&quot;Data_&quot;+str(project_id)+&quot;.zip&quot;
+                                                    zip_folder_creation_path=os.path.join(self.results_path,zip_folder_name)
+                                                    zip_folder_path=self.data_path #file to be zipped
+                                                    zipf=zipfile.ZipFile(zip_folder_creation_path,&#39;w&#39;,zipfile.ZIP_DEFLATED)
+                                                    self.zipdir(zip_folder_path,zipf)
+                                                    zipf.close()
+                                                    zip_file=open(zip_folder_creation_path,&#39;rb&#39;)
+                                                    resp=HttpResponse(FileWrapper(zip_file),content_type=&quot;application/zip&quot;)
+                                                    resp[&#39;content-Disposition&#39;]=&#39;attachment;filename=&quot;%s&quot;&#39;%&#39;text.zip&#39;
+                                                    return resp
+
+                                            else:
+                                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                                    return_response[&quot;value&quot;]=&quot;No data is present for the given project id :&quot;
+                                    else:
+                                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                                            return_response[&quot;value&quot;]=&quot;In valid project id .&quot;
+
+
+
+                            else:
+                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                    return_response[&quot;value&quot;]=to_validate.errors
+
+                            return Response(JSONRenderer().render(return_response))
+                    except Exception ,ee:
+                            return_response={}
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;value&quot;]=str(ee)
+                            return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class MergeReports(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take the project id as input and
+    would return a zipped folder containing the merged qualys ,nessus and mannual vul scanning report.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+
+    def post(self,request,format=None):
+                    obj=Report_orchestration.Report_merger(True,True)
+                    self.project_obj=IPtable.Projects()
+                    try:
+                            return_response={}
+                            to_validate=Merge_reports(data=request.data)
+                            if to_validate.is_valid():
+                                    print str(to_validate.data)
+                                    project_id=to_validate.data[&quot;project_id&quot;]
+                                    format_=to_validate.data[&quot;report_format&quot;]
+                                    #obj=Report_merger(True,True)
+                                    result=self.project_obj.completed_projects(int(project_id))
+                                    if result[0] &gt; 0:
+                                            resp=obj.generate_report(int(project_id),format_)
+                                            if resp[&quot;status&quot;]==&quot;success&quot;:
+                                                    return_response[&quot;status&quot;]=&quot;success&quot;
+                                                    return_response[&quot;value&quot;]=resp[&quot;value&quot;]
+                                                    zip_file=open(resp[&quot;value&quot;],&#39;rb&#39;)
+                                                    resp=HttpResponse(FileWrapper(zip_file),content_type=&quot;application/zip&quot;)
+                                                    resp[&#39;content-Disposition&#39;]=&#39;attachment;filename=&quot;%s&quot;&#39;%&#39;text.zip&#39;
+                                                    return resp
+                                            else:
+                                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                                    return_response[&quot;value&quot;]=resp[&quot;value&quot;]
+                                    else:
+                                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                                            return_response[&quot;value&quot;]=&quot;In valid project id .&quot;
+
+
+
+                            else:
+                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                    return_response[&quot;value&quot;]=to_validate.errors
+
+                            return Response(JSONRenderer().render(return_response))
+                    except Exception ,ee:
+                            return_response={}
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;value&quot;]=str(ee)
+                            return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class UploadQualysXml(APIView):</p>
+<div class="codehilite"><pre><span></span>    <span class="nv">Objective</span> <span class="s s-Atom">:</span>
+    <span class="nv">The</span> <span class="s s-Atom">objective</span> <span class="s s-Atom">of</span> <span class="s s-Atom">this</span> <span class="s s-Atom">class</span> <span class="o">is</span> <span class="s s-Atom">to</span> <span class="s s-Atom">serve</span> <span class="s s-Atom">the</span> <span class="nv">Post</span> <span class="s s-Atom">method</span> <span class="s s-Atom">which</span> <span class="s s-Atom">would</span> <span class="s s-Atom">take</span> <span class="s s-Atom">the</span> <span class="s s-Atom">qualys</span> <span class="s s-Atom">xml</span> <span class="s s-Atom">report</span> <span class="s s-Atom">and</span> 
+    <span class="s s-Atom">would</span> <span class="s s-Atom">parse</span> <span class="s s-Atom">it</span> <span class="s s-Atom">and</span> <span class="s s-Atom">store</span> <span class="s s-Atom">it</span> <span class="s s-Atom">in</span> <span class="s s-Atom">database</span> <span class="s s-Atom">table</span><span class="p">.</span>
+
+    <span class="nv">In</span> <span class="s s-Atom">order</span> <span class="s s-Atom">to</span> <span class="s s-Atom">understand</span> <span class="s s-Atom">about</span> <span class="s s-Atom">input</span> <span class="s s-Atom">given</span> <span class="s s-Atom">to</span> <span class="s s-Atom">this</span> <span class="s s-Atom">method</span> <span class="s s-Atom">and</span> <span class="s s-Atom">response</span> <span class="s s-Atom">returned</span> <span class="s s-Atom">read</span> <span class="nv">API</span> <span class="s s-Atom">documentation</span><span class="p">.</span>
+
+
+    <span class="s s-Atom">parser_classes=</span><span class="p">(</span><span class="nv">MultiPartParser</span><span class="p">,)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">post</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span><span class="s s-Atom">request</span><span class="p">,</span><span class="s s-Atom">format</span><span class="o">=</span><span class="nv">None</span><span class="p">)</span><span class="s s-Atom">:</span>
+            <span class="nn">try</span><span class="p">:</span>
+                    <span class="s s-Atom">print</span> <span class="s2">&quot;Inside Qualys XML :&quot;</span>
+                    <span class="s s-Atom">to_validate</span><span class="o">=</span><span class="nv">UploadXml</span><span class="p">(</span><span class="s s-Atom">data</span><span class="o">=</span><span class="s s-Atom">request</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">)</span>
+                    <span class="s s-Atom">return_response=</span><span class="p">{}</span>
+                    <span class="s s-Atom">if</span> <span class="s s-Atom">to_validate</span><span class="p">.</span><span class="nf">is_valid</span><span class="p">()</span><span class="s s-Atom">:</span>
+                            <span class="s s-Atom">file_obj</span><span class="o">=</span><span class="s s-Atom">request</span><span class="p">.</span><span class="nv">FILES</span><span class="p">[</span><span class="s s-Atom">&#39;filename&#39;</span><span class="p">]</span>
+                            <span class="nv">F_validator</span><span class="o">=</span><span class="nv">FileValidator</span><span class="p">.</span><span class="nv">FileValidator</span><span class="p">()</span>
+                            <span class="s s-Atom">is_xml</span><span class="o">=</span><span class="nv">F_validator</span><span class="p">.</span><span class="nf">validateXML</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">)</span>
+                            <span class="s s-Atom">if</span> <span class="s s-Atom">is_xml:</span>
+                                    <span class="s s-Atom">#print</span> <span class="s2">&quot;Validation results are :--&gt;&quot;</span> <span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">is_xml</span><span class="p">)</span>                               
+                                    <span class="s s-Atom">print</span> <span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">)</span>
+                                    <span class="s s-Atom">folder_dir</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">realpath</span><span class="p">(</span><span class="k">__</span><span class="s s-Atom">file__</span><span class="p">))</span>
+                                    <span class="s s-Atom">results_path</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">folder_dir</span><span class="p">,</span><span class="s2">&quot;XML_reports&quot;</span><span class="p">)</span>
+                                    <span class="s s-Atom">un_id</span><span class="o">=</span><span class="s s-Atom">uuid</span><span class="p">.</span><span class="nf">uuid1</span><span class="p">()</span>
+                                    <span class="s s-Atom">pid</span><span class="o">=</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">[</span><span class="s2">&quot;project_name&quot;</span><span class="p">]</span>
+
+                                    <span class="s s-Atom">xml_file_name</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;_pid:&quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;_uid:&quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">un_id</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;.xml&quot;</span>
+                                    <span class="s s-Atom">xml_file_path</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">results_path</span><span class="p">,</span><span class="s s-Atom">xml_file_name</span><span class="p">)</span>
+                                    <span class="s s-Atom">with</span> <span class="nf">open</span> <span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">,</span><span class="s s-Atom">&#39;wb&#39;</span><span class="p">)</span> <span class="s s-Atom">as</span> <span class="s s-Atom">out_file:</span>
+                                            <span class="s s-Atom">for</span> <span class="s s-Atom">chunks</span> <span class="s s-Atom">in</span> <span class="s s-Atom">file_obj</span><span class="p">.</span><span class="nf">chunks</span><span class="p">()</span><span class="s s-Atom">:</span>
+                                                    <span class="s s-Atom">out_file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s s-Atom">chunks</span><span class="p">)</span>
+                                    <span class="s s-Atom">print</span> <span class="s2">&quot;uploaded File :--&gt; &quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">)</span> 
+                                    <span class="s s-Atom">qualys</span><span class="o">=</span><span class="nv">Qualys_parser</span><span class="p">.</span><span class="nv">QualysParser</span><span class="p">()</span>
+                                    <span class="s s-Atom">qualys_results</span><span class="o">=</span><span class="nv">None</span>
+                                    <span class="s s-Atom">val</span><span class="o">=</span><span class="s s-Atom">qualys</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">,</span><span class="nf">int</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">))</span>
+                                    <span class="s s-Atom">if</span> <span class="s s-Atom">val</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">==</span><span class="s2">&quot;success&quot;</span><span class="s s-Atom">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;success&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">)</span>
+                                    <span class="nn">else</span><span class="p">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">val</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+                                    <span class="s s-Atom">os</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">)</span>
+                                    <span class="s s-Atom">print</span> <span class="s2">&quot;File removed&quot;</span>
+                            <span class="nn">else</span><span class="p">:</span>
+                                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;Supplied file was not XML ,only XML type accepted&quot;</span>
+                    <span class="nn">else</span><span class="p">:</span>
+                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">errors</span>
+
+                    <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+
+            <span class="s s-Atom">except</span> <span class="nv">Exception</span> <span class="p">,</span><span class="nn">ee</span><span class="p">:</span>
+                    <span class="s s-Atom">return_response=</span><span class="p">{}</span>
+                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">ee</span><span class="p">)</span>
+                    <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+</pre></div>
+
+
+<p>class ReportOnFly(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post method which would take either qualys or nessus 
+    report as input at one time and would parse the report and map cve&#39;s with exploits and would
+    return final copy of integrated report in the format chosen by user.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    parser_classes=(MultiPartParser,)
+
+    def post(self,request,format=None):
+            try:
+                    to_validate=OnFly(data=request.data)
+                    return_response={}
+                    if to_validate.is_valid():
+                            file_obj=request.FILES[&#39;filename&#39;]
+                            F_validator=FileValidator.FileValidator()
+                            is_xml=F_validator.validateXML(file_obj)
+                            if is_xml:
+                                    valid=[&quot;nessus&quot;,&quot;qualys&quot;]
+                                    if (to_validate.data[&quot;source&quot;] not in valid):
+                                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                                            return_response[&quot;value&quot;]=&quot;The source of report must be either qualys or nessus&quot;
+                                            return Response(JSONRenderer().render(return_response))
+
+                                    print str(file_obj.name)
+                                    folder_dir=os.path.dirname(os.path.realpath(__file__))
+                                    results_path=os.path.join(folder_dir,&quot;XML_reports&quot;)
+                                    un_id=uuid.uuid1()
+                                    xml_file_name=str(file_obj.name)+&quot;_uid:&quot;+str(un_id)+&quot;.xml&quot;
+                                    xml_file_path=os.path.join(results_path,xml_file_name)
+                                    with open (xml_file_path,&#39;wb&#39;) as out_file:
+                                            for chunks in file_obj.chunks():
+                                                    out_file.write(chunks)
+                                    print &quot;uploaded File -&quot;+str(xml_file_path)
+                                    if to_validate.data[&quot;source&quot;]==&quot;nessus&quot;:
+                                            obj=Exploit_mapping.Exploit_mapping(xml_file_path)
+                                    else:
+                                            obj=Exploit_mapping.Exploit_mapping(&#39;&#39;,xml_file_path)
+
+                                    val=obj.generate_report(to_validate.data[&quot;report_format&quot;])
+                                    os.remove(xml_file_path)
+                                    if val[&quot;status&quot;]==&quot;success&quot;:
+                                            print &quot;Success reutrned&quot;
+                                            #return_response[&quot;status&quot;]=&quot;success&quot;
+                                            #return_response[&quot;value&quot;]=str(pid)
+                                            return_response[&quot;status&quot;]=&quot;success&quot;
+                                            return_response[&quot;value&quot;]=val[&quot;value&quot;]
+                                            zip_file=open(val[&quot;value&quot;],&#39;rb&#39;)
+                                            resp=HttpResponse(FileWrapper(zip_file),content_type=&quot;application/zip&quot;)
+                                            resp[&#39;content-Disposition&#39;]=&#39;attachment;filename=&quot;%s&quot;&#39;%&#39;Report.zip&#39;
+                                            return resp
+
+                                    else:
+                                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                                            return_response[&quot;value&quot;]=str(val[&quot;value&quot;])
+
+
+                            else:
+                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                    return_response[&quot;value&quot;]=&quot;Supplied file was not XML ,only XML type accepted&quot;
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;value&quot;]=to_validate.errors
+
+                    return Response(JSONRenderer().render(return_response))
+
+            except Exception ,ee:
+                    print &quot;Inside exception :&quot;+str(ee)
+                    return_response={}
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+                    #return Response(status=204)
+</pre></div>
+
+
+<p>class UploadNessusXml(APIView):</p>
+<div class="codehilite"><pre><span></span>    <span class="nv">Objective</span> <span class="s s-Atom">:</span>
+    <span class="nv">The</span> <span class="s s-Atom">objective</span> <span class="s s-Atom">of</span> <span class="s s-Atom">this</span> <span class="s s-Atom">class</span> <span class="o">is</span> <span class="s s-Atom">to</span> <span class="s s-Atom">serve</span> <span class="s s-Atom">the</span> <span class="nv">Post</span> <span class="s s-Atom">method</span> <span class="s s-Atom">which</span> <span class="s s-Atom">would</span> <span class="s s-Atom">take</span> <span class="s s-Atom">the</span> <span class="s s-Atom">nessus</span> <span class="s s-Atom">xml</span> <span class="s s-Atom">report</span> <span class="s s-Atom">and</span> 
+    <span class="s s-Atom">would</span> <span class="s s-Atom">parse</span> <span class="s s-Atom">it</span> <span class="s s-Atom">and</span> <span class="s s-Atom">store</span> <span class="s s-Atom">it</span> <span class="s s-Atom">in</span> <span class="s s-Atom">database</span> <span class="s s-Atom">table</span><span class="p">.</span>
+
+    <span class="nv">In</span> <span class="s s-Atom">order</span> <span class="s s-Atom">to</span> <span class="s s-Atom">understand</span> <span class="s s-Atom">about</span> <span class="s s-Atom">input</span> <span class="s s-Atom">given</span> <span class="s s-Atom">to</span> <span class="s s-Atom">this</span> <span class="s s-Atom">method</span> <span class="s s-Atom">and</span> <span class="s s-Atom">response</span> <span class="s s-Atom">returned</span> <span class="s s-Atom">read</span> <span class="nv">API</span> <span class="s s-Atom">documentation</span><span class="p">.</span>
+
+
+    <span class="s s-Atom">parser_classes=</span><span class="p">(</span><span class="nv">MultiPartParser</span><span class="p">,)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">post</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span><span class="s s-Atom">request</span><span class="p">,</span><span class="s s-Atom">format</span><span class="o">=</span><span class="nv">None</span><span class="p">)</span><span class="s s-Atom">:</span>
+            <span class="nn">try</span><span class="p">:</span>
+                    <span class="s s-Atom">to_validate</span><span class="o">=</span><span class="nv">UploadXml</span><span class="p">(</span><span class="s s-Atom">data</span><span class="o">=</span><span class="s s-Atom">request</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">)</span>
+                    <span class="s s-Atom">return_response=</span><span class="p">{}</span>
+                    <span class="s s-Atom">if</span> <span class="s s-Atom">to_validate</span><span class="p">.</span><span class="nf">is_valid</span><span class="p">()</span><span class="s s-Atom">:</span>
+                            <span class="s s-Atom">file_obj</span><span class="o">=</span><span class="s s-Atom">request</span><span class="p">.</span><span class="nv">FILES</span><span class="p">[</span><span class="s s-Atom">&#39;filename&#39;</span><span class="p">]</span>
+                            <span class="nv">F_validator</span><span class="o">=</span><span class="nv">FileValidator</span><span class="p">.</span><span class="nv">FileValidator</span><span class="p">()</span>
+                            <span class="s s-Atom">is_xml</span><span class="o">=</span><span class="nv">F_validator</span><span class="p">.</span><span class="nf">validateXML</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">)</span>
+                            <span class="s s-Atom">if</span> <span class="s s-Atom">is_xml:</span>
+                                    <span class="s s-Atom">#print</span> <span class="s2">&quot;Validation results are :--&gt;&quot;</span> <span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">is_xml</span><span class="p">)</span>                               
+                                    <span class="s s-Atom">print</span> <span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">)</span>
+                                    <span class="s s-Atom">folder_dir</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">realpath</span><span class="p">(</span><span class="k">__</span><span class="s s-Atom">file__</span><span class="p">))</span>
+                                    <span class="s s-Atom">results_path</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">folder_dir</span><span class="p">,</span><span class="s2">&quot;XML_reports&quot;</span><span class="p">)</span>
+                                    <span class="s s-Atom">un_id</span><span class="o">=</span><span class="s s-Atom">uuid</span><span class="p">.</span><span class="nf">uuid1</span><span class="p">()</span>
+                                    <span class="s s-Atom">pid</span><span class="o">=</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">[</span><span class="s2">&quot;project_name&quot;</span><span class="p">]</span>
+
+                                    <span class="s s-Atom">xml_file_name</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;_pid:&quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;_uid:&quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">un_id</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;.nessus&quot;</span>
+                                    <span class="s s-Atom">xml_file_path</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">results_path</span><span class="p">,</span><span class="s s-Atom">xml_file_name</span><span class="p">)</span>
+                                    <span class="s s-Atom">with</span> <span class="nf">open</span> <span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">,</span><span class="s s-Atom">&#39;wb&#39;</span><span class="p">)</span> <span class="s s-Atom">as</span> <span class="s s-Atom">out_file:</span>
+                                            <span class="s s-Atom">for</span> <span class="s s-Atom">chunks</span> <span class="s s-Atom">in</span> <span class="s s-Atom">file_obj</span><span class="p">.</span><span class="nf">chunks</span><span class="p">()</span><span class="s s-Atom">:</span>
+                                                    <span class="s s-Atom">out_file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s s-Atom">chunks</span><span class="p">)</span>
+                                    <span class="s s-Atom">print</span> <span class="s2">&quot;uploaded File -&quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">)</span>
+                                    <span class="s s-Atom">nessus</span><span class="o">=</span><span class="nv">Nessus_parser</span><span class="p">.</span><span class="nv">Nessus_Parser</span><span class="p">()</span>                            
+                                    <span class="s s-Atom">nessus_results</span><span class="o">=</span><span class="nv">None</span>             <span class="s s-Atom">#</span>       <span class="p">(</span><span class="s s-Atom">&#39;m.nessus&#39;</span><span class="p">,</span><span class="s s-Atom">&#39;0&#39;</span><span class="p">,</span><span class="s s-Atom">&#39;&#39;</span><span class="p">,</span><span class="s2">&quot;return&quot;</span><span class="p">))</span>   
+                                    <span class="s s-Atom">val</span><span class="o">=</span><span class="s s-Atom">nessus</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">,</span><span class="nf">int</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">))</span>
+                                    <span class="s s-Atom">if</span> <span class="s s-Atom">val</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">==</span><span class="s2">&quot;success&quot;</span><span class="s s-Atom">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;success&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">)</span>
+                                    <span class="nn">else</span><span class="p">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">val</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+                                    <span class="s s-Atom">os</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">)</span>
+                                    <span class="s s-Atom">print</span> <span class="s2">&quot;File removed&quot;</span>
+                            <span class="nn">else</span><span class="p">:</span>
+                                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;Supplied file was not XML ,only XML type accepted&quot;</span>
+                    <span class="nn">else</span><span class="p">:</span>
+                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">errors</span>
+
+                    <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+
+            <span class="s s-Atom">except</span> <span class="nv">Exception</span> <span class="p">,</span><span class="nn">ee</span><span class="p">:</span>
+                    <span class="s s-Atom">return_response=</span><span class="p">{}</span>
+                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">ee</span><span class="p">)</span>
+                    <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+                    <span class="s s-Atom">#return</span> <span class="nv">Response</span><span class="p">(</span><span class="s s-Atom">status</span><span class="o">=</span><span class="mi">204</span><span class="p">)</span>
+</pre></div>
+
+
+<p>class UploadNmapXml(APIView):</p>
+<div class="codehilite"><pre><span></span>    <span class="nv">Objective</span> <span class="s s-Atom">:</span>
+    <span class="nv">The</span> <span class="s s-Atom">objective</span> <span class="s s-Atom">of</span> <span class="s s-Atom">this</span> <span class="s s-Atom">class</span> <span class="o">is</span> <span class="s s-Atom">to</span> <span class="s s-Atom">serve</span> <span class="s s-Atom">the</span> <span class="nv">Post</span> <span class="s s-Atom">method</span> <span class="s s-Atom">which</span> <span class="s s-Atom">would</span> <span class="s s-Atom">take</span> <span class="s s-Atom">the</span> <span class="s s-Atom">nmap</span> <span class="s s-Atom">xml</span> <span class="s s-Atom">report</span> <span class="s s-Atom">and</span> 
+    <span class="s s-Atom">would</span> <span class="s s-Atom">parse</span> <span class="s s-Atom">it</span> <span class="s s-Atom">and</span> <span class="s s-Atom">store</span> <span class="s s-Atom">it</span> <span class="s s-Atom">in</span> <span class="s s-Atom">database</span> <span class="s s-Atom">table</span><span class="p">.</span>
+
+    <span class="nv">In</span> <span class="s s-Atom">order</span> <span class="s s-Atom">to</span> <span class="s s-Atom">understand</span> <span class="s s-Atom">about</span> <span class="s s-Atom">input</span> <span class="s s-Atom">given</span> <span class="s s-Atom">to</span> <span class="s s-Atom">this</span> <span class="s s-Atom">method</span> <span class="s s-Atom">and</span> <span class="s s-Atom">response</span> <span class="s s-Atom">returned</span> <span class="s s-Atom">read</span> <span class="nv">API</span> <span class="s s-Atom">documentation</span><span class="p">.</span>
+
+
+    <span class="s s-Atom">parser_classes=</span><span class="p">(</span><span class="nv">MultiPartParser</span><span class="p">,)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">post</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span><span class="s s-Atom">request</span><span class="p">,</span><span class="s s-Atom">format</span><span class="o">=</span><span class="nv">None</span><span class="p">)</span><span class="s s-Atom">:</span>
+            <span class="nn">try</span><span class="p">:</span>
+                    <span class="nv">IPtable_obj</span><span class="o">=</span><span class="nv">IPtable</span><span class="p">.</span><span class="nv">IPtable</span><span class="p">()</span>
+                    <span class="s s-Atom">to_validate</span><span class="o">=</span><span class="nv">UploadXml</span><span class="p">(</span><span class="s s-Atom">data</span><span class="o">=</span><span class="s s-Atom">request</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">)</span>
+                    <span class="s s-Atom">return_response=</span><span class="p">{}</span>
+                    <span class="s s-Atom">if</span> <span class="s s-Atom">to_validate</span><span class="p">.</span><span class="nf">is_valid</span><span class="p">()</span><span class="s s-Atom">:</span>
+                            <span class="s s-Atom">file_obj</span><span class="o">=</span><span class="s s-Atom">request</span><span class="p">.</span><span class="nv">FILES</span><span class="p">[</span><span class="s s-Atom">&#39;filename&#39;</span><span class="p">]</span>
+                            <span class="nv">F_validator</span><span class="o">=</span><span class="nv">FileValidator</span><span class="p">.</span><span class="nv">FileValidator</span><span class="p">()</span>
+                            <span class="s s-Atom">is_xml</span><span class="o">=</span><span class="nv">F_validator</span><span class="p">.</span><span class="nf">validateXML</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">)</span>
+                            <span class="s s-Atom">if</span> <span class="s s-Atom">is_xml:</span>
+                                    <span class="s s-Atom">#print</span> <span class="s2">&quot;Validation results are :--&gt;&quot;</span> <span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">is_xml</span><span class="p">)</span>                               
+                                    <span class="s s-Atom">print</span> <span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">)</span>
+                                    <span class="s s-Atom">folder_dir</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">dirname</span><span class="p">(</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">realpath</span><span class="p">(</span><span class="k">__</span><span class="s s-Atom">file__</span><span class="p">))</span>
+                                    <span class="s s-Atom">results_path</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">folder_dir</span><span class="p">,</span><span class="s2">&quot;XML_reports&quot;</span><span class="p">)</span>
+                                    <span class="s s-Atom">pid</span><span class="o">=</span><span class="nv">IPtable_obj</span><span class="p">.</span><span class="nv">Insert</span><span class="p">(</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">[</span><span class="s2">&quot;project_name&quot;</span><span class="p">],</span><span class="s s-Atom">&#39;import&#39;</span><span class="p">,</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">))</span>
+                                    <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">pid==-</span><span class="mi">1</span><span class="p">)</span><span class="s s-Atom">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;Some error occured while inserting details&quot;</span>
+                                            <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+
+                                    <span class="s s-Atom">xml_file_name</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">file_obj</span><span class="p">.</span><span class="s s-Atom">name</span><span class="p">)</span><span class="s s-Atom">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">)</span>
+                                    <span class="s s-Atom">xml_file_path</span><span class="o">=</span><span class="s s-Atom">os</span><span class="p">.</span><span class="s s-Atom">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">results_path</span><span class="p">,</span><span class="s s-Atom">xml_file_name</span><span class="p">)</span>
+                                    <span class="s s-Atom">with</span> <span class="nf">open</span> <span class="p">(</span><span class="s s-Atom">xml_file_path</span><span class="p">,</span><span class="s s-Atom">&#39;wb&#39;</span><span class="p">)</span> <span class="s s-Atom">as</span> <span class="s s-Atom">out_file:</span>
+                                            <span class="s s-Atom">for</span> <span class="s s-Atom">chunks</span> <span class="s s-Atom">in</span> <span class="s s-Atom">file_obj</span><span class="p">.</span><span class="nf">chunks</span><span class="p">()</span><span class="s s-Atom">:</span>
+                                                    <span class="s s-Atom">out_file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s s-Atom">chunks</span><span class="p">)</span>
+                                    <span class="s s-Atom">print</span> <span class="s2">&quot;uploaded&quot;</span>
+                                    <span class="s s-Atom">val</span><span class="o">=</span><span class="s s-Atom">nmap_parser</span><span class="p">.</span><span class="nv">Import</span><span class="p">(</span><span class="s s-Atom">&#39;gui&#39;</span><span class="p">,</span><span class="s s-Atom">xml_file_path</span><span class="p">,</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">data</span><span class="p">[</span><span class="s2">&quot;project_name&quot;</span><span class="p">],</span><span class="s s-Atom">pid</span><span class="p">)</span>
+                                    <span class="s s-Atom">if</span> <span class="s s-Atom">val</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">==</span><span class="s2">&quot;success&quot;</span><span class="s s-Atom">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;success&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">pid</span><span class="p">)</span>
+                                    <span class="nn">else</span><span class="p">:</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">val</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+                            <span class="nn">else</span><span class="p">:</span>
+                                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;Supplied file was not XML ,only XML type accepted&quot;</span>
+                    <span class="nn">else</span><span class="p">:</span>
+                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                            <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s s-Atom">to_validate</span><span class="p">.</span><span class="s s-Atom">errors</span>
+
+                    <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+
+            <span class="s s-Atom">except</span> <span class="nv">Exception</span> <span class="p">,</span><span class="nn">ee</span><span class="p">:</span>
+                    <span class="s s-Atom">return_response=</span><span class="p">{}</span>
+                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="s s-Atom">=</span><span class="s2">&quot;failure&quot;</span>
+                    <span class="s s-Atom">return_response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="s s-Atom">ee</span><span class="p">)</span>
+                    <span class="s s-Atom">return</span> <span class="nv">Response</span><span class="p">(</span><span class="nv">JSONRenderer</span><span class="p">().</span><span class="nf">render</span><span class="p">(</span><span class="s s-Atom">return_response</span><span class="p">))</span>
+</pre></div>
+
+
+<p>class Reconfigure():</p>
+<div class="codehilite"><pre><span></span>            Objective :
+            The objective of this class is to help in reconfiguration of the input given by user for 
+            updating configuration.It does not interact with the web service directly.
+
+            In order to understand about input given to this method and response returned read API
+            documentation.
+
+
+            def configure_response(self,default_config):
+                    print &quot;IN configure response !&quot;
+                    config_list=[]
+                    config_dict={}
+                    record_list=[]
+                    return_val=[]
+
+                    for config in default_config[&quot;value&quot;]:
+                            #print str(config)
+                            config_dict={}
+                            #print str(project[0])+ &quot;   &quot; +str(project[1])
+                            config_dict[&quot;id&quot;]=config[0]
+                            record_list.append(config[0])
+                            config_dict[&quot;project_id&quot;]=config[1]
+                            config_dict[&quot;host&quot;]=config[2]
+                            config_dict[&quot;port&quot;]=config[3]
+                            config_dict[&quot;service&quot;]=config[4]
+                            config_dict[&quot;project_status&quot;]=config[5]
+                            config_dict[&quot;Commands&quot;]=config[6]
+                            config_dict[&quot;reconfig_service&quot;]=False
+                            config_dict[&quot;reconfig_exploit&quot;]=False
+                            config_list.append(config_dict)
+                    return_val.append(config_dict)
+                    return_val.append(config_list)
+                    return_val.append(record_list)
+                    return return_val
+</pre></div>
+
+
+<p>class PollingConfig(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Post-Get methods which would take the project id and would
+    return the configuration for the vul scanning for the records for which the discovery would be over.
+    This is essentially used in concurrent mode
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+
+    def get(self,request,format=None):
+            try:
+                    return_response={}
+                    project_id=request.data[&quot;project_id&quot;]
+                    obj=Polling.PollingExploits(int(project_id))
+                    continue_=False
+                    delete=False
+
+                    default_config=obj.getConfiguration()
+                    if default_config[&quot;status&quot;]==&quot;reconfig&quot;:
+                            exp_obj=Reconfigure() 
+                            resp=exp_obj.configure_response(default_config)
+                            config_dict=resp[0]
+                            config_list=resp[1]
+                            record_list=resp[2]
+                            return_response[&quot;status&quot;]=&quot;success&quot;
+                            #return_response[&quot;data&quot;]=serialize.data  #Note Both work the same !!!
+                            return_response[&quot;data&quot;]=config_list
+                            return_response[&quot;record_list&quot;]=record_list
+                            return Response(JSONRenderer().render(return_response))
+
+                    else:
+                            print &quot;
+
+    Returning default config
+</pre></div>
+
+
+<p>"
+                                return Response(JSONRenderer().render(default_config))
+                except Exception ,ee:
+                        return_response["status"]="failure"
+                        return_response["data"]=str(ee)
+                        return Response(JSONRenderer().render(return_response))</p>
+<div class="codehilite"><pre><span></span>    def post(self,request,format=None):
+            try:
+                    return_response={}
+                    update_data=Polling_(data=request.data)
+                    return_response={}
+                    if(update_data.is_valid()):
+                            project_id=update_data.data[&quot;project_id&quot;]
+                            record_list=update_data.data[&quot;record_list&quot;]
+                            obj=Polling.PollingExploits(int(project_id))
+                            return_response=obj.UpdateStatus(record_list)
+
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=update_data.errors
+                    return Response(JSONRenderer().render(return_response))
+
+            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class PercentPolling(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve the Get-Post method which would return teh percantage of the
+    completion in case of discovery and vulnerability scanning
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+
+    def get(self,request,format=None):
+            try:
+                    self.project_obj=IPtable.Projects()
+                    return_response={}
+                    poll_data=Poll_me(data=request.data)
+                    if poll_data.is_valid():
+                                    project_id=request.data[&quot;project_id&quot;]
+                                    result=self.project_obj.completed_projects(int(project_id))
+                                    if result[0] &gt; 0:
+                                            obj=IPtable.Projects()
+                                            continue_=False
+                                            delete=False
+                                            valid_source=[&quot;discovery&quot;,&quot;scan&quot;]       
+                                            if request.data[&quot;source&quot;] not in valid_source:
+                                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                                    return_response[&quot;data&quot;]=&quot;The source can either be scan or discovery&quot;
+                                                    return_response[&quot;value&quot;]=&quot;The source can either be scan or discovery&quot;
+                                                    return Response(JSONRenderer().render(return_response))
+
+
+                                            poll_results=obj.Poll(int(project_id),request.data[&quot;source&quot;])
+                                            if poll_results != -1:
+                                                    return_response[&quot;status&quot;]=&quot;success&quot;
+                                                    #return_response[&quot;data&quot;]=serialize.data  #Note Both work the same !!!
+                                                    return_response[&quot;data&quot;]=poll_results[0]
+
+                                                    return_response[&quot;value&quot;]=poll_results[0]
+                                                    return Response(JSONRenderer().render(return_response))
+
+                                            else:
+                                                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                                                    return_response[&quot;value&quot;]=&quot;Cant fetch Polling status.Kindly check supplied params&quot;
+                                                    return_response[&quot;data&quot;]=&quot;Cant fetch Polling status.Kindly check supplied params&quot;
+                                                    return Response(JSONRenderer().render(return_response))
+                                    else:
+                                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                                            return_response[&quot;value&quot;]=&quot;In valid project id&quot;
+                                            return_response[&quot;data&quot;]=&quot;In valid project id&quot;
+                                            return Response(JSONRenderer().render(return_response))
+
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;data&quot;]=poll_data.errors
+                            return_response[&quot;errors&quot;]=poll_data.errors
+                            return_response[&quot;value&quot;]=poll_data.errors
+                            return Response(JSONRenderer().render(return_response))
+
+
+            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;data&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class PollingExploit(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to poll the vulnerability scanning and return results.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+
+    def get(self,request,format=None):
+            try:
+                    self.project_obj=IPtable.Projects()
+                    return_response={}
+                    project_id=request.data[&quot;project_id&quot;]
+                    result=self.project_obj.completed_projects(int(project_id))
+                    if result[0] &gt; 0:
+                                    obj=Polling.PollingExploits(int(project_id))
+                                    continue_=False
+                                    delete=False
+
+                                    default_config=obj.ExploitPoll()
+                                    if default_config[&quot;status&quot;]==&quot;success&quot;:
+                                            exp_obj=Reconfigure() 
+                                            resp=exp_obj.configure_response(default_config)
+                                            config_dict=resp[0]
+                                            config_list=resp[1]
+                                            record_list=resp[2]
+                                            return_response[&quot;status&quot;]=&quot;success&quot;
+                                            #return_response[&quot;data&quot;]=serialize.data  #Note Both work the same !!!
+                                            return_response[&quot;data&quot;]=config_list
+                                            return_response[&quot;record_list&quot;]=record_list
+                                            return Response(JSONRenderer().render(return_response))
+
+                                    else:
+                                            print &quot;
+
+    Returning default config
+</pre></div>
+
+
+<p>"
+                                                return Response(JSONRenderer().render(default_config))
+                        else:
+                                        return_response["status"]="failure"
+                                        return_response["data"]="In valid project id"
+                                        return Response(JSONRenderer().render(return_response))</p>
+<div class="codehilite"><pre><span></span>            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;data&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+
+    def post(self,request,format=None):
+            try:
+                    return_response={}
+                    update_data=Polling_(data=request.data)
+                    return_response={}
+                    if(update_data.is_valid()):
+                            project_id=update_data.data[&quot;project_id&quot;]
+                            record_list=update_data.data[&quot;record_list&quot;]
+                            obj=Polling.PollingExploits(int(project_id))
+                            return_response=obj.UpdateStatusExploit(record_list)
+
+                    else:
+                            return_response[&quot;status&quot;]=&quot;failure&quot;
+                            return_response[&quot;errors&quot;]=update_data.errors
+                    return Response(JSONRenderer().render(return_response))
+
+            except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;value&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+
+
+<p>class ExploitConfigConc(APIView):</p>
+<div class="codehilite"><pre><span></span>    Objective :
+    The objective of this class is to serve Get method which would poll the backend code
+    to fetch results of vulnerability scanning when mode is concurrent.
+
+    In order to understand about input given to this method and response returned read API documentation.
+
+
+    def get(self,request,format=None):
+            try:
+                    return_response={}
+                    obj=Gui_main_driver.Gui_main()
+                    project_id=request.data[&quot;project_id&quot;]
+                    continue_=False
+                    delete=False    
+                    default_config=obj.getDefaultConfiguration(project_id,&#39;&#39;,&#39;&#39;,True,True,&#39;&#39;)
+                    if default_config[&quot;status&quot;]==&quot;reconfig&quot;:
+                                    exp_obj=Reconfigure() 
+                                    resp=exp_obj.configure_response(default_config)
+                                    config_dict=resp[0]
+                                    config_list=resp[1]
+                                    record_list=resp[2]
+                                    return_response[&quot;status&quot;]=&quot;success&quot;
+                                    #return_response[&quot;data&quot;]=serialize.data  #Note Both work the same !!!
+                                    return_response[&quot;data&quot;]=config_list
+                                    return_response[&quot;record_list&quot;]=record_list
+                                    return Response(JSONRenderer().render(return_response))
+
+                    else:
+                                    print &quot;
+
+    Returning default config
+</pre></div>
+
+
+<p>"
+                                        return Response(JSONRenderer().render(default_config))</p>
+<div class="codehilite"><pre><span></span>            except Exception ,ee:
+                    #except Exception ,ee:
+                    return_response[&quot;status&quot;]=&quot;failure&quot;
+                    return_response[&quot;data&quot;]=str(ee)
+                    return Response(JSONRenderer().render(return_response))
+</pre></div>
+  
+
+  </header>
+
+  <section id="section-items">
+
+
+
+  </section>
+
+    </article>
+  <div class="clear"> </div>
+  <footer id="footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/BurntSushi/pdoc">pdoc 0.3.2</a>
+    </p>
+
+    <p>pdoc is in the public domain with the
+      <a href="http://unlicense.org">UNLICENSE</a></p>
+
+    <p>Design by <a href="http://nadh.in">Kailash Nadh</a></p>
+  </footer>
+</div>
+</body>
+</html>

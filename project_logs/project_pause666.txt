@@ -1,0 +1,9 @@
+Inside INIT
+Inside Stopper.PY 
+
+
+('', '', '', '2', '', '666', 'g-stop', '', '')
+Project id is :666
+17463
+psutil.Process(pid=17463, name='python')
+Parent Process already KIlled

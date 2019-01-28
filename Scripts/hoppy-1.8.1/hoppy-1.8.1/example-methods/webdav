@@ -1,0 +1,1 @@
+webDav on (loop), PROPFIND (loop) HTTP/1.1\nhost: (host):(port)\n(auth)\nDepth: 1\nContent-Type: text/xml\nExpect: 100-continue\nContent-Length: 143\nTranslate: f\n\n(wait)<?xml version="1.0" encoding="utf-8" ?>\n<propfind xmlns="DAV:">\n<prop>\n<checked-in />\n<checked-out />\n</prop>\n<dead-props />\n</propfind>\n\n

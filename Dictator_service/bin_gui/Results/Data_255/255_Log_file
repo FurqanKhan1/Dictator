@@ -1,0 +1,1210 @@
+2016-10-14 07:57:13,303 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :Inside command_meta
+2016-10-14 07:57:25,950 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :[4mmsf[0m [0m> 
+2016-10-14 07:57:25,951 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :0
+2016-10-14 07:57:29,058 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :workspace -a Metasploit_automation
+[0m[1m[34m[*][0m Added workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-14 07:57:32,164 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :set THREADS 1
+[0mTHREADS => 1
+[4mmsf[0m [0m> 
+2016-10-14 07:57:35,273 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :workspace Metasploit_automation
+[0m[1m[34m[*][0m Workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-14 07:57:38,386 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :use auxiliary/scanner/ftp/ftp_login
+[0m[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:41,495 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :set RHOSTS 192.168.179.136
+[0mRHOSTS => 192.168.179.136
+[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:44,608 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :set USERNAME msfadmin
+[0mUSERNAME => msfadmin
+[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:47,721 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :set PASSWORD msfadmin
+[0mPASSWORD => msfadmin
+[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:50,833 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :set VERBOSE false
+[0mVERBOSE => false
+[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:50,834 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :
+
+Everything Fine till now-->Launching run command
+
+
+2016-10-14 07:57:55,971 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :
+
+Module Execution completed
+
+
+2016-10-14 07:57:55,972 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :Before : 
+After : 
+run
+[0m
+[1m[34m[*][0m 192.168.179.136:21 - Starting FTP login sweep
+[1m[32m[+][0m 192.168.179.136:21 - LOGIN SUCCESSFUL: msfadmin:msfadmin
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:55,972 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :
+
+Now exiting !!!
+
+
+2016-10-14 07:57:55,972 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :
+Exiting  from msfconsole !!!
+
+2016-10-14 07:57:58,077 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :Exited from msfconsole !!!
+2016-10-14 07:57:58,078 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :Before : 
+exit
+[0mAfter : 
+<class 'pexpect.EOF'>
+2016-10-14 07:57:58,078 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :Closing the child pipe !!!
+2016-10-14 07:57:58,181 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_1  Message --> :Saving details :
+2016-10-14 07:57:58,182 - Commands Logger - DEBUG - Command id is ->ftp_1
+2016-10-14 07:57:58,183 - Commands Logger - DEBUG - commands are : ['>msfconsole', '\x1b[4mmsf\x1b[0m \x1b[0m> ', u'workspace -a Metasploit_automation\n', 'workspace -a Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Added workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'set THREADS 1\n', 'set THREADS 1\r\r\n\x1b[0mTHREADS => 1\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'workspace Metasploit_automation\n', 'workspace Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'use auxiliary/scanner/ftp/ftp_login\n', 'use auxiliary/scanner/ftp/ftp_login\r\r\n\x1b[0m\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mftp_login\x1b[0m) \x1b[0m> \n', u'set RHOSTS 192.168.179.136\n', 'set RHOSTS 192.168.179.136\r\r\n\x1b[0mRHOSTS => 192.168.179.136\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mftp_login\x1b[0m) \x1b[0m> \n', u'set USERNAME msfadmin\n', 'set USERNAME msfadmin\r\r\n\x1b[0mUSERNAME => msfadmin\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mftp_login\x1b[0m) \x1b[0m> \n', u'set PASSWORD msfadmin\n', 'set PASSWORD msfadmin\r\r\n\x1b[0mPASSWORD => msfadmin\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mftp_login\x1b[0m) \x1b[0m> \n', u'set VERBOSE false\n', 'set VERBOSE false\r\r\n\x1b[0mVERBOSE => false\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mftp_login\x1b[0m) \x1b[0m> \n', '>run', 'run\r\r\n\x1b[0m\r\n\x1b[1m\x1b[34m[*]\x1b[0m 192.168.179.136:21 - Starting FTP login sweep\r\n\x1b[1m\x1b[32m[+]\x1b[0m 192.168.179.136:21 - LOGIN SUCCESSFUL: msfadmin:msfadmin\r\n\x1b[1m\x1b[34m[*]\x1b[0m Scanned 1 of 1 hosts (100% complete)\r\n\x1b[1m\x1b[34m[*]\x1b[0m Auxiliary module execution completed\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mftp_login\x1b[0m) \x1b[0m> \n']
+2016-10-14 07:57:58,183 - Commands Logger - DEBUG - My var : '$.Entries."ftp_1"'
+2016-10-14 07:57:58,183 - Commands Logger - DEBUG - Result --> : 
+Command Executed :>msfconsole
+Result :
+run
+[0m
+[1m[34m[*][0m 192.168.179.136:21 - Starting FTP login sweep
+[1m[32m[+][0m 192.168.179.136:21 - LOGIN SUCCESSFUL: msfadmin:msfadmin
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mftp_login[0m) [0m> 
+2016-10-14 07:57:58,196 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:57:58,197 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :Inside command_meta
+2016-10-14 07:58:07,738 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :[4mmsf[0m [0m> 
+2016-10-14 07:58:07,739 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :0
+2016-10-14 07:58:10,884 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :workspace -a Metasploit_automation
+[0m[1m[34m[*][0m Added workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-14 07:58:14,036 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :set THREADS 1
+[0mTHREADS => 1
+[4mmsf[0m [0m> 
+2016-10-14 07:58:17,143 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :workspace Metasploit_automation
+[0m[1m[34m[*][0m Workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-14 07:58:20,251 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :use auxiliary/scanner/ftp/anonymous
+[0m[4mmsf[0m auxiliary([1m[31manonymous[0m) [0m> 
+2016-10-14 07:58:23,363 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :set RHOSTS 192.168.179.136
+[0mRHOSTS => 192.168.179.136
+[4mmsf[0m auxiliary([1m[31manonymous[0m) [0m> 
+2016-10-14 07:58:26,474 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :set VERBOSE false
+[0mVERBOSE => false
+[4mmsf[0m auxiliary([1m[31manonymous[0m) [0m> 
+2016-10-14 07:58:26,474 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :
+
+Everything Fine till now-->Launching run command
+
+
+2016-10-14 07:58:31,589 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :
+
+Module Execution completed
+
+
+2016-10-14 07:58:31,590 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :Before : 
+After : 
+run
+[0m
+[1m[32m[+][0m 192.168.179.136:21 - Anonymous READ (220 (vsFTPd 2.3.4))
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31manonymous[0m) [0m> 
+2016-10-14 07:58:31,590 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :
+
+Now exiting !!!
+
+
+2016-10-14 07:58:31,590 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :
+Exiting  from msfconsole !!!
+
+2016-10-14 07:58:33,699 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :Exited from msfconsole !!!
+2016-10-14 07:58:33,699 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :Before : 
+exit
+[0mAfter : 
+<class 'pexpect.EOF'>
+2016-10-14 07:58:33,699 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :Closing the child pipe !!!
+2016-10-14 07:58:33,801 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_2  Message --> :Saving details :
+2016-10-14 07:58:33,803 - Commands Logger - DEBUG - Command id is ->ftp_2
+2016-10-14 07:58:33,804 - Commands Logger - DEBUG - commands are : ['>msfconsole', '\x1b[4mmsf\x1b[0m \x1b[0m> ', u'workspace -a Metasploit_automation\n', 'workspace -a Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Added workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'set THREADS 1\n', 'set THREADS 1\r\r\n\x1b[0mTHREADS => 1\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'workspace Metasploit_automation\n', 'workspace Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'use auxiliary/scanner/ftp/anonymous\n', 'use auxiliary/scanner/ftp/anonymous\r\r\n\x1b[0m\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31manonymous\x1b[0m) \x1b[0m> \n', u'set RHOSTS 192.168.179.136\n', 'set RHOSTS 192.168.179.136\r\r\n\x1b[0mRHOSTS => 192.168.179.136\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31manonymous\x1b[0m) \x1b[0m> \n', u'set VERBOSE false\n', 'set VERBOSE false\r\r\n\x1b[0mVERBOSE => false\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31manonymous\x1b[0m) \x1b[0m> \n', '>run', 'run\r\r\n\x1b[0m\r\n\x1b[1m\x1b[32m[+]\x1b[0m 192.168.179.136:21 - Anonymous READ (220 (vsFTPd 2.3.4))\r\n\x1b[1m\x1b[34m[*]\x1b[0m Scanned 1 of 1 hosts (100% complete)\r\n\x1b[1m\x1b[34m[*]\x1b[0m Auxiliary module execution completed\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31manonymous\x1b[0m) \x1b[0m> \n']
+2016-10-14 07:58:33,804 - Commands Logger - DEBUG - My var : '$.Entries."ftp_2"'
+2016-10-14 07:58:33,804 - Commands Logger - DEBUG - Result --> : 
+Command Executed :>msfconsole
+Result :
+run
+[0m
+[1m[32m[+][0m 192.168.179.136:21 - Anonymous READ (220 (vsFTPd 2.3.4))
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31manonymous[0m) [0m> 
+2016-10-14 07:58:33,809 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:33,818 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :
+
+Starting FTP Login --Anonmous
+
+
+2016-10-14 07:58:34,152 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :Connected to 192.168.179.136.
+220 (vsFTPd 2.3.4)
+  Name (192.168.179.136:root):
+2016-10-14 07:58:37,262 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :Before : After :  anonymous
+331 Please specify the password.
+Password:
+2016-10-14 07:58:40,374 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :Login Successful
+2016-10-14 07:58:40,375 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :Before : After : 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
+2016-10-14 07:58:40,376 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :Closing Child now !!
+2016-10-14 07:58:40,479 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_3  Message --> :Saving details :
+2016-10-14 07:58:40,481 - Commands Logger - DEBUG - Command id is ->ftp_3
+2016-10-14 07:58:40,481 - Commands Logger - DEBUG - commands are : [u'ftp 192.168.179.136\n', 'Name (192.168.179.136:root):\n', 'Name (192.168.179.136:root):', 'anonymous\n', ' anonymous\r\n331 Please specify the password.\r\nPassword:\n', 'noah@example.com\n', '\r\n230 Login successful.\r\nRemote system type is UNIX.\r\nUsing binary mode to transfer files.\r\nftp> \n']
+2016-10-14 07:58:40,481 - Commands Logger - DEBUG - My var : '$.Entries."ftp_3"'
+2016-10-14 07:58:40,482 - Commands Logger - DEBUG - Result --> : 
+Login SuccesFul --> 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> Command Executed :ftp 192.168.179.136
+
+Result :
+
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
+2016-10-14 07:58:40,486 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:40,489 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:58:40,494 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_4  Message --> :Thread started --with command nmap -sV --script=ftp-bounce.nse -p 21 192.168.179.136
+2016-10-14 07:58:42,523 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_4  Message --> :Thread finished
+2016-10-14 07:58:42,526 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_4  Message --> :Saving details :
+2016-10-14 07:58:42,528 - Commands Logger - DEBUG - Command id is ->ftp_4
+2016-10-14 07:58:42,529 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=ftp-bounce.nse -p 21 192.168.179.136', '\nEnd']
+2016-10-14 07:58:42,529 - Commands Logger - DEBUG - My var : '$.Entries."ftp_4"'
+2016-10-14 07:58:42,529 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=ftp-bounce.nse -p 21 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:58 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00028s latency).
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.3.4
+MAC Address: 00:0C:29:25:59:EA (VMware)
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.97 seconds
+
+
+
+2016-10-14 07:58:42,532 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:42,538 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:58:42,541 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 21 192.168.179.136
+2016-10-14 07:58:44,802 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_5  Message --> :Thread finished
+2016-10-14 07:58:44,803 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_5  Message --> :Saving details :
+2016-10-14 07:58:44,805 - Commands Logger - DEBUG - Command id is ->ftp_5
+2016-10-14 07:58:44,806 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 21 192.168.179.136', '\nEnd']
+2016-10-14 07:58:44,806 - Commands Logger - DEBUG - My var : '$.Entries."ftp_5"'
+2016-10-14 07:58:44,806 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 21 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:58 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00032s latency).
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.3.4
+|_banner: 220 (vsFTPd 2.3.4)
+MAC Address: 00:0C:29:25:59:EA (VMware)
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.22 seconds
+
+
+
+2016-10-14 07:58:44,811 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:44,859 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:58:44,867 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_6  Message --> :Thread started --with command nmap --script=ftp-anon.nse -p 21 192.168.179.136
+2016-10-14 07:58:46,040 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_6  Message --> :Thread finished
+2016-10-14 07:58:46,041 - Commands Logger - DEBUG - Command Logger --->Command id --> ftp_6  Message --> :Saving details :
+2016-10-14 07:58:46,042 - Commands Logger - DEBUG - Command id is ->ftp_6
+2016-10-14 07:58:46,042 - Commands Logger - DEBUG - commands are : [u'nmap --script=ftp-anon.nse -p 21 192.168.179.136', '\nEnd']
+2016-10-14 07:58:46,043 - Commands Logger - DEBUG - My var : '$.Entries."ftp_6"'
+2016-10-14 07:58:46,043 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=ftp-anon.nse -p 21 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:58 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00033s latency).
+PORT   STATE SERVICE
+21/tcp open  ftp
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.15 seconds
+
+
+
+2016-10-14 07:58:46,050 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:46,087 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:58:46,088 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Thread started --with command nmap -p 23 192.168.179.136 --script telnet-encryption
+2016-10-14 07:58:47,392 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Thread finished
+2016-10-14 07:58:47,402 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Saving details :
+2016-10-14 07:58:47,408 - Commands Logger - DEBUG - Command id is ->telnet_1
+2016-10-14 07:58:47,408 - Commands Logger - DEBUG - commands are : [u'nmap -p 23 192.168.179.136 --script telnet-encryption', '\nEnd']
+2016-10-14 07:58:47,409 - Commands Logger - DEBUG - My var : '$.Entries."telnet_1"'
+2016-10-14 07:58:47,410 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -p 23 192.168.179.136 --script telnet-encryption
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:58 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00032s latency).
+PORT   STATE SERVICE
+23/tcp open  telnet
+| telnet-encryption: 
+|_  Telnet server does not support encryption
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.28 seconds
+
+
+
+2016-10-14 07:58:47,417 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:47,455 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:58:47,462 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_1  Message --> :Thread started --with command rpcinfo -p  192.168.179.136
+2016-10-14 07:58:47,493 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_1  Message --> :Thread finished
+2016-10-14 07:58:47,493 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_1  Message --> :Saving details :
+2016-10-14 07:58:47,495 - Commands Logger - DEBUG - Command id is ->rpcbind_1
+2016-10-14 07:58:47,495 - Commands Logger - DEBUG - commands are : [u'rpcinfo -p  192.168.179.136', '\nEnd']
+2016-10-14 07:58:47,495 - Commands Logger - DEBUG - My var : '$.Entries."rpcbind_1"'
+2016-10-14 07:58:47,496 - Commands Logger - DEBUG - Result --> : Command Executed :rpcinfo -p  192.168.179.136
+
+Result   program vers proto   port  service
+    100000    2   tcp    111  portmapper
+    100000    2   udp    111  portmapper
+    100024    1   udp  53394  status
+    100024    1   tcp  60158  status
+    100003    2   udp   2049  nfs
+    100003    3   udp   2049  nfs
+    100003    4   udp   2049  nfs
+    100021    1   udp  59259  nlockmgr
+    100021    3   udp  59259  nlockmgr
+    100021    4   udp  59259  nlockmgr
+    100003    2   tcp   2049  nfs
+    100003    3   tcp   2049  nfs
+    100003    4   tcp   2049  nfs
+    100021    1   tcp  49476  nlockmgr
+    100021    3   tcp  49476  nlockmgr
+    100021    4   tcp  49476  nlockmgr
+    100005    1   udp  58485  mountd
+    100005    1   tcp  47703  mountd
+    100005    2   udp  58485  mountd
+    100005    2   tcp  47703  mountd
+    100005    3   udp  58485  mountd
+    100005    3   tcp  47703  mountd
+
+
+
+2016-10-14 07:58:47,500 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:58:47,532 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:58:47,534 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_2  Message --> :Thread started --with command nmap -v -sR 192.168.179.136
+2016-10-14 07:59:05,133 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_2  Message --> :Thread finished
+2016-10-14 07:59:05,134 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_2  Message --> :Saving details :
+2016-10-14 07:59:05,138 - Commands Logger - DEBUG - Command id is ->rpcbind_2
+2016-10-14 07:59:05,138 - Commands Logger - DEBUG - commands are : [u'nmap -v -sR 192.168.179.136', '\nEnd']
+2016-10-14 07:59:05,138 - Commands Logger - DEBUG - My var : '$.Entries."rpcbind_2"'
+2016-10-14 07:59:05,139 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -v -sR 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:58 EDT
+NSE: Loaded 33 scripts for scanning.
+Initiating ARP Ping Scan at 07:58
+Scanning 192.168.179.136 [1 port]
+Completed ARP Ping Scan at 07:58, 0.20s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 07:58
+Completed Parallel DNS resolution of 1 host. at 07:58, 0.14s elapsed
+Initiating SYN Stealth Scan at 07:58
+Scanning 192.168.179.136 [1000 ports]
+Discovered open port 139/tcp on 192.168.179.136
+Discovered open port 3306/tcp on 192.168.179.136
+Discovered open port 111/tcp on 192.168.179.136
+Discovered open port 445/tcp on 192.168.179.136
+Discovered open port 80/tcp on 192.168.179.136
+Discovered open port 5900/tcp on 192.168.179.136
+Discovered open port 22/tcp on 192.168.179.136
+Discovered open port 53/tcp on 192.168.179.136
+Discovered open port 23/tcp on 192.168.179.136
+Discovered open port 25/tcp on 192.168.179.136
+Discovered open port 21/tcp on 192.168.179.136
+Discovered open port 1099/tcp on 192.168.179.136
+Discovered open port 6000/tcp on 192.168.179.136
+Discovered open port 513/tcp on 192.168.179.136
+Discovered open port 514/tcp on 192.168.179.136
+Discovered open port 5432/tcp on 192.168.179.136
+Discovered open port 2049/tcp on 192.168.179.136
+Discovered open port 8180/tcp on 192.168.179.136
+Discovered open port 8009/tcp on 192.168.179.136
+Discovered open port 512/tcp on 192.168.179.136
+Discovered open port 1524/tcp on 192.168.179.136
+Discovered open port 2121/tcp on 192.168.179.136
+Discovered open port 6667/tcp on 192.168.179.136
+Completed SYN Stealth Scan at 07:58, 1.40s elapsed (1000 total ports)
+Initiating Service scan at 07:58
+Scanning 23 services on 192.168.179.136
+Completed Service scan at 07:59, 11.13s elapsed (23 services on 1 host)
+NSE: Script scanning 192.168.179.136.
+Initiating NSE at 07:59
+Completed NSE at 07:59, 3.54s elapsed
+Nmap scan report for 192.168.179.136
+Host is up (0.00052s latency).
+Not shown: 977 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+512/tcp  open  exec        netkit-rsh rexecd
+513/tcp  open  login?
+514/tcp  open  tcpwrapped
+1099/tcp open  rmiregistry GNU Classpath grmiregistry
+1524/tcp open  shell       Metasploitable root shell
+2049/tcp open  nfs         2-4 (RPC #100003)
+2121/tcp open  ftp         ProFTPD 1.3.1
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+5900/tcp open  vnc         VNC (protocol 3.3)
+6000/tcp open  X11         (access denied)
+6667/tcp open  irc         Unreal ircd
+8009/tcp open  ajp13       Apache Jserv (Protocol v1.3)
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+MAC Address: 00:0C:29:25:59:EA (VMware)
+Service Info: Hosts:  metasploitable.localdomain, localhost, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.56 seconds
+           Raw packets sent: 1087 (47.812KB) | Rcvd: 1087 (43.568KB)
+
+WARNING: -sR is now an alias for -sV and activates version detection as well as RPC scan.
+
+
+2016-10-14 07:59:05,146 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:05,184 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:05,189 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_3  Message --> :Thread started --with command nmap -sV --script=nfs-showmount.nse -p 111 192.168.179.136
+2016-10-14 07:59:13,182 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_3  Message --> :Thread finished
+2016-10-14 07:59:13,183 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_3  Message --> :Saving details :
+2016-10-14 07:59:13,184 - Commands Logger - DEBUG - Command id is ->rpcbind_3
+2016-10-14 07:59:13,184 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=nfs-showmount.nse -p 111 192.168.179.136', '\nEnd']
+2016-10-14 07:59:13,185 - Commands Logger - DEBUG - My var : '$.Entries."rpcbind_3"'
+2016-10-14 07:59:13,185 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=nfs-showmount.nse -p 111 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00096s latency).
+PORT    STATE SERVICE VERSION
+111/tcp open  rpcbind 2 (RPC #100000)
+| nfs-showmount: 
+|_  / *
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.94 seconds
+
+
+
+2016-10-14 07:59:13,188 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:13,202 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:13,214 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_4  Message --> :Thread started --with command nmap -sR -p 111 192.168.179.136
+2016-10-14 07:59:21,336 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_4  Message --> :Thread finished
+2016-10-14 07:59:21,337 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_4  Message --> :Saving details :
+2016-10-14 07:59:21,341 - Commands Logger - DEBUG - Command id is ->rpcbind_4
+2016-10-14 07:59:21,342 - Commands Logger - DEBUG - commands are : [u'nmap -sR -p 111 192.168.179.136', '\nEnd']
+2016-10-14 07:59:21,342 - Commands Logger - DEBUG - My var : '$.Entries."rpcbind_4"'
+2016-10-14 07:59:21,342 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sR -p 111 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00071s latency).
+PORT    STATE SERVICE VERSION
+111/tcp open  rpcbind 2 (RPC #100000)
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.09 seconds
+
+WARNING: -sR is now an alias for -sV and activates version detection as well as RPC scan.
+
+
+2016-10-14 07:59:21,371 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:21,405 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:21,414 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_5  Message --> :Thread started --with command nmap -sV --script=rpcinfo.nse -p 111 192.168.179.136
+2016-10-14 07:59:29,491 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_5  Message --> :Thread finished
+2016-10-14 07:59:29,491 - Commands Logger - DEBUG - Command Logger --->Command id --> rpcbind_5  Message --> :Saving details :
+2016-10-14 07:59:29,493 - Commands Logger - DEBUG - Command id is ->rpcbind_5
+2016-10-14 07:59:29,493 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=rpcinfo.nse -p 111 192.168.179.136', '\nEnd']
+2016-10-14 07:59:29,493 - Commands Logger - DEBUG - My var : '$.Entries."rpcbind_5"'
+2016-10-14 07:59:29,493 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=rpcinfo.nse -p 111 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00025s latency).
+PORT    STATE SERVICE VERSION
+111/tcp open  rpcbind 2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      47703/tcp  mountd
+|   100005  1,2,3      58485/udp  mountd
+|   100021  1,3,4      49476/tcp  nlockmgr
+|   100021  1,3,4      59259/udp  nlockmgr
+|   100024  1          53394/udp  status
+|_  100024  1          60158/tcp  status
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.05 seconds
+
+
+
+2016-10-14 07:59:29,498 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:29,527 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:29,537 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Thread started --with command nmap -p 23 192.168.179.136 --script telnet-encryption
+2016-10-14 07:59:30,957 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Thread finished
+2016-10-14 07:59:30,958 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Saving details :
+2016-10-14 07:59:30,960 - Commands Logger - DEBUG - Command id is ->telnet_1
+2016-10-14 07:59:30,961 - Commands Logger - DEBUG - commands are : [u'nmap -p 23 192.168.179.136 --script telnet-encryption', '\nEnd']
+2016-10-14 07:59:30,961 - Commands Logger - DEBUG - My var : '$.Entries."telnet_1"'
+2016-10-14 07:59:30,962 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -p 23 192.168.179.136 --script telnet-encryption
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.0064s latency).
+PORT   STATE SERVICE
+23/tcp open  telnet
+| telnet-encryption: 
+|_  Telnet server does not support encryption
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.39 seconds
+
+
+
+2016-10-14 07:59:30,968 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:31,012 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:31,017 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_1  Message --> :Thread started --with command python Scripts/smtp-vrfy-check.py -h 192.168.179.136 -p 25 -u Scripts/names.txt -v 0
+2016-10-14 07:59:31,324 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_1  Message --> :Thread finished
+2016-10-14 07:59:31,325 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_1  Message --> :Saving details :
+2016-10-14 07:59:31,326 - Commands Logger - DEBUG - Command id is ->smtp_1
+2016-10-14 07:59:31,327 - Commands Logger - DEBUG - commands are : [u'python Scripts/smtp-vrfy-check.py -h 192.168.179.136 -p 25 -u Scripts/names.txt -v 0', '\nEnd']
+2016-10-14 07:59:31,327 - Commands Logger - DEBUG - My var : '$.Entries."smtp_1"'
+2016-10-14 07:59:31,327 - Commands Logger - DEBUG - Result --> : Command Executed :python Scripts/smtp-vrfy-check.py -h 192.168.179.136 -p 25 -u Scripts/names.txt -v 0
+
+ResultSMTP VRFY Checker
+By brad a.
+---------------------------------
+[+] Establishing connection to 192.168.179.136 : 25
+[V] Banner:
+220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+
+[V] Sending: VRFY jame
+
+[+] User: jame  -> Not Found!
+550 5.1.1 <jame>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY jill
+
+[+] User: jill  -> Not Found!
+550 5.1.1 <jill>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY khan
+
+[+] User: khan  -> Not Found!
+550 5.1.1 <khan>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY root
+
+[+] User: root  -> Unknown Error!
+252 2.0.0 root
+
+[V] Sending: VRFY toor
+
+[+] User: toor  -> Not Found!
+550 5.1.1 <toor>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY admin
+
+[+] User: admin  -> Not Found!
+550 5.1.1 <admin>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY msfadmin
+
+[+] User: msfadmin  -> Unknown Error!
+252 2.0.0 msfadmin
+
+[V] Sending: VRFY msf
+
+[+] User: msf  -> Not Found!
+550 5.1.1 <msf>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY admin@123
+
+[+] User: admin@123  -> Unknown Error!
+501 5.1.3 Bad recipient address syntax
+
+[V] Attempted ten usernames, reconnecting
+[V] Banner:
+220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+
+[V] Sending: VRFY abc
+
+[+] User: abc  -> Unknown Error!
+252 2.0.0 abc
+
+[V] Sending: VRFY furqan
+
+[+] User: furqan  -> Not Found!
+550 5.1.1 <furqan>: Recipient address rejected: User unknown in local recipient table
+
+[V] Sending: VRFY pal-blr-furqan
+
+[+] User: pal-blr-furqan  -> Not Found!
+550 5.1.1 <pal-blr-furqan>: Recipient address rejected: User unknown in local recipient table
+
+
+
+
+2016-10-14 07:59:31,335 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:31,347 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:31,350 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_2  Message --> :Thread started --with command python Scripts/smtp-vrfy.py -t 192.168.179.136 -p 25 -f Scripts/names.txt
+2016-10-14 07:59:31,614 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_2  Message --> :Thread finished
+2016-10-14 07:59:31,615 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_2  Message --> :Saving details :
+2016-10-14 07:59:31,618 - Commands Logger - DEBUG - Command id is ->smtp_2
+2016-10-14 07:59:31,618 - Commands Logger - DEBUG - commands are : [u'python Scripts/smtp-vrfy.py -t 192.168.179.136 -p 25 -f Scripts/names.txt', '\nEnd']
+2016-10-14 07:59:31,622 - Commands Logger - DEBUG - My var : '$.Entries."smtp_2"'
+2016-10-14 07:59:31,622 - Commands Logger - DEBUG - Result --> : Command Executed :python Scripts/smtp-vrfy.py -t 192.168.179.136 -p 25 -f Scripts/names.txt
+
+Result[+] Connecting to server
+[+] Connected onFri Oct 14 07:59:31 2016
+[+] Waiting for SMTP banner
+220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+
+[-] Not found jill
+
+[-] Not found khan
+
+[+] Found! root
+
+[-] Not found toor
+
+[-] Not found admin
+
+[+] Found! msfadmin
+
+[-] Not found msf
+
+[+] Found! abc
+
+[-] Not found furqan
+
+[-] Not found pal-blr-furqan
+
+
+
+
+2016-10-14 07:59:31,628 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:31,680 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:31,685 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_3  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 25 192.168.179.136
+2016-10-14 07:59:34,078 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_3  Message --> :Thread finished
+2016-10-14 07:59:34,079 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_3  Message --> :Saving details :
+2016-10-14 07:59:34,081 - Commands Logger - DEBUG - Command id is ->smtp_3
+2016-10-14 07:59:34,082 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 25 192.168.179.136', '\nEnd']
+2016-10-14 07:59:34,082 - Commands Logger - DEBUG - My var : '$.Entries."smtp_3"'
+2016-10-14 07:59:34,083 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 25 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00032s latency).
+PORT   STATE SERVICE VERSION
+25/tcp open  smtp    Postfix smtpd
+|_banner: 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+MAC Address: 00:0C:29:25:59:EA (VMware)
+Service Info: Host:  metasploitable.localdomain
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.36 seconds
+
+
+
+2016-10-14 07:59:34,116 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:34,134 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:34,141 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_4  Message --> :Thread started --with command nmap --script=smtp-open-relay.nse -p 25 192.168.179.136
+2016-10-14 07:59:54,009 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_4  Message --> :Thread finished
+2016-10-14 07:59:54,010 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_4  Message --> :Saving details :
+2016-10-14 07:59:54,012 - Commands Logger - DEBUG - Command id is ->smtp_4
+2016-10-14 07:59:54,012 - Commands Logger - DEBUG - commands are : [u'nmap --script=smtp-open-relay.nse -p 25 192.168.179.136', '\nEnd']
+2016-10-14 07:59:54,014 - Commands Logger - DEBUG - My var : '$.Entries."smtp_4"'
+2016-10-14 07:59:54,014 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=smtp-open-relay.nse -p 25 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.0013s latency).
+PORT   STATE SERVICE
+25/tcp open  smtp
+|_smtp-open-relay: Server doesn't seem to be an open relay, all tests failed
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 19.83 seconds
+
+
+
+2016-10-14 07:59:54,026 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:54,044 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:54,052 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_5  Message --> :Thread started --with command nmap --script=smtp-enum-users.nse -p 25 192.168.179.136
+2016-10-14 07:59:55,351 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_5  Message --> :Thread finished
+2016-10-14 07:59:55,352 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_5  Message --> :Saving details :
+2016-10-14 07:59:55,353 - Commands Logger - DEBUG - Command id is ->smtp_5
+2016-10-14 07:59:55,354 - Commands Logger - DEBUG - commands are : [u'nmap --script=smtp-enum-users.nse -p 25 192.168.179.136', '\nEnd']
+2016-10-14 07:59:55,354 - Commands Logger - DEBUG - My var : '$.Entries."smtp_5"'
+2016-10-14 07:59:55,354 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=smtp-enum-users.nse -p 25 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00033s latency).
+PORT   STATE SERVICE
+25/tcp open  smtp
+| smtp-enum-users: 
+|_  Method RCPT returned a unhandled status code.
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.27 seconds
+
+
+
+2016-10-14 07:59:55,359 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:55,393 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:55,394 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_6  Message --> :Thread started --with command nmap --script=ssl-heartbleed.nse -p 25 192.168.179.136
+2016-10-14 07:59:56,891 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_6  Message --> :Thread finished
+2016-10-14 07:59:56,892 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_6  Message --> :Saving details :
+2016-10-14 07:59:56,897 - Commands Logger - DEBUG - Command id is ->smtp_6
+2016-10-14 07:59:56,902 - Commands Logger - DEBUG - commands are : [u'nmap --script=ssl-heartbleed.nse -p 25 192.168.179.136', '\nEnd']
+2016-10-14 07:59:56,902 - Commands Logger - DEBUG - My var : '$.Entries."smtp_6"'
+2016-10-14 07:59:56,903 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=ssl-heartbleed.nse -p 25 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00041s latency).
+PORT   STATE SERVICE
+25/tcp open  smtp
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.45 seconds
+
+
+
+2016-10-14 07:59:56,912 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:56,937 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_7  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:56,944 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_7  Message --> :Thread started --with command nmap --script=smtp-strangeport.nse -p 25 192.168.179.136
+2016-10-14 07:59:58,176 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_7  Message --> :Thread finished
+2016-10-14 07:59:58,177 - Commands Logger - DEBUG - Command Logger --->Command id --> smtp_7  Message --> :Saving details :
+2016-10-14 07:59:58,182 - Commands Logger - DEBUG - Command id is ->smtp_7
+2016-10-14 07:59:58,182 - Commands Logger - DEBUG - commands are : [u'nmap --script=smtp-strangeport.nse -p 25 192.168.179.136', '\nEnd']
+2016-10-14 07:59:58,183 - Commands Logger - DEBUG - My var : '$.Entries."smtp_7"'
+2016-10-14 07:59:58,183 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=smtp-strangeport.nse -p 25 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00071s latency).
+PORT   STATE SERVICE
+25/tcp open  smtp
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.17 seconds
+
+
+
+2016-10-14 07:59:58,203 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:58,244 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:58,253 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Thread started --with command nmap -p 23 192.168.179.136 --script telnet-encryption
+2016-10-14 07:59:59,564 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Thread finished
+2016-10-14 07:59:59,565 - Commands Logger - DEBUG - Command Logger --->Command id --> telnet_1  Message --> :Saving details :
+2016-10-14 07:59:59,566 - Commands Logger - DEBUG - Command id is ->telnet_1
+2016-10-14 07:59:59,567 - Commands Logger - DEBUG - commands are : [u'nmap -p 23 192.168.179.136 --script telnet-encryption', '\nEnd']
+2016-10-14 07:59:59,567 - Commands Logger - DEBUG - My var : '$.Entries."telnet_1"'
+2016-10-14 07:59:59,567 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -p 23 192.168.179.136 --script telnet-encryption
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00036s latency).
+PORT   STATE SERVICE
+23/tcp open  telnet
+| telnet-encryption: 
+|_  Telnet server does not support encryption
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.29 seconds
+
+
+
+2016-10-14 07:59:59,574 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 07:59:59,598 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 07:59:59,598 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_1  Message --> :Thread started --with command nmap --script=smb-enum-shares.nse -p 139 192.168.179.136
+2016-10-14 08:00:00,967 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_1  Message --> :Thread finished
+2016-10-14 08:00:00,968 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_1  Message --> :Saving details :
+2016-10-14 08:00:00,970 - Commands Logger - DEBUG - Command id is ->netbios-ssn_1
+2016-10-14 08:00:00,971 - Commands Logger - DEBUG - commands are : [u'nmap --script=smb-enum-shares.nse -p 139 192.168.179.136', '\nEnd']
+2016-10-14 08:00:00,971 - Commands Logger - DEBUG - My var : '$.Entries."netbios-ssn_1"'
+2016-10-14 08:00:00,971 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=smb-enum-shares.nse -p 139 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 07:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.0011s latency).
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.34 seconds
+
+
+
+2016-10-14 08:00:00,976 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:00:00,991 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:00:00,992 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_2  Message --> :Thread started --with command nmap --script=smb-enum-domains.nse -p 139 192.168.179.136
+2016-10-14 08:00:02,130 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_2  Message --> :Thread finished
+2016-10-14 08:00:02,131 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_2  Message --> :Saving details :
+2016-10-14 08:00:02,133 - Commands Logger - DEBUG - Command id is ->netbios-ssn_2
+2016-10-14 08:00:02,134 - Commands Logger - DEBUG - commands are : [u'nmap --script=smb-enum-domains.nse -p 139 192.168.179.136', '\nEnd']
+2016-10-14 08:00:02,134 - Commands Logger - DEBUG - My var : '$.Entries."netbios-ssn_2"'
+2016-10-14 08:00:02,134 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=smb-enum-domains.nse -p 139 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 08:00 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00030s latency).
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.10 seconds
+
+
+
+2016-10-14 08:00:02,140 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:00:02,183 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:00:02,184 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_3  Message --> :Thread started --with command nmap -sU -sS --script=smb-os-discovery.nse -p 139 192.168.179.136
+2016-10-14 08:00:03,508 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_3  Message --> :Thread finished
+2016-10-14 08:00:03,510 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_3  Message --> :Saving details :
+2016-10-14 08:00:03,514 - Commands Logger - DEBUG - Command id is ->netbios-ssn_3
+2016-10-14 08:00:03,514 - Commands Logger - DEBUG - commands are : [u'nmap -sU -sS --script=smb-os-discovery.nse -p 139 192.168.179.136', '\nEnd']
+2016-10-14 08:00:03,515 - Commands Logger - DEBUG - My var : '$.Entries."netbios-ssn_3"'
+2016-10-14 08:00:03,515 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU -sS --script=smb-os-discovery.nse -p 139 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 08:00 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00038s latency).
+PORT    STATE  SERVICE
+139/tcp open   netbios-ssn
+139/udp closed netbios-ssn
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP
+|_  System time: 2016-10-14T03:18:48-04:00
+
+Nmap done: 1 IP address (1 host up) scanned in 1.30 seconds
+
+
+
+2016-10-14 08:00:03,522 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:00:03,528 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:00:03,529 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_4  Message --> :Thread started --with command nmap --script=smb-enum-users.nse -p 139 192.168.179.136
+2016-10-14 08:00:04,724 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_4  Message --> :Thread finished
+2016-10-14 08:00:04,724 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_4  Message --> :Saving details :
+2016-10-14 08:00:04,726 - Commands Logger - DEBUG - Command id is ->netbios-ssn_4
+2016-10-14 08:00:04,726 - Commands Logger - DEBUG - commands are : [u'nmap --script=smb-enum-users.nse -p 139 192.168.179.136', '\nEnd']
+2016-10-14 08:00:04,726 - Commands Logger - DEBUG - My var : '$.Entries."netbios-ssn_4"'
+2016-10-14 08:00:04,727 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=smb-enum-users.nse -p 139 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 08:00 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00037s latency).
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Host script results:
+| smb-enum-users: 
+|   METASPLOITABLE\backup (RID: 1068)
+|     Full name:   backup
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\bin (RID: 1004)
+|     Full name:   bin
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\bind (RID: 1210)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\daemon (RID: 1002)
+|     Full name:   daemon
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\dhcp (RID: 1202)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\distccd (RID: 1222)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\ftp (RID: 1214)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\games (RID: 1010)
+|     Full name:   games
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\gnats (RID: 1082)
+|     Full name:   Gnats Bug-Reporting System (admin)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\irc (RID: 1078)
+|     Full name:   ircd
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\klog (RID: 1206)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\libuuid (RID: 1200)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\list (RID: 1076)
+|     Full name:   Mailing List Manager
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\lp (RID: 1014)
+|     Full name:   lp
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\mail (RID: 1016)
+|     Full name:   mail
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\man (RID: 1012)
+|     Full name:   man
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\msfadmin (RID: 3000)
+|     Full name:   msfadmin,,,
+|     Flags:       Normal user account
+|   METASPLOITABLE\mysql (RID: 1218)
+|     Full name:   MySQL Server,,,
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\news (RID: 1018)
+|     Full name:   news
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\postfix (RID: 1212)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\postgres (RID: 1216)
+|     Full name:   PostgreSQL administrator,,,
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\proftpd (RID: 1226)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\proxy (RID: 1026)
+|     Full name:   proxy
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\root (RID: 1000)
+|     Full name:   root
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\service (RID: 3004)
+|     Full name:   ,,,
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\sshd (RID: 1208)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\sync (RID: 1008)
+|     Full name:   sync
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\sys (RID: 1006)
+|     Full name:   sys
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\syslog (RID: 1204)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\telnetd (RID: 1224)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\tomcat55 (RID: 1220)
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\user (RID: 3002)
+|     Full name:   just a user,111,,
+|     Flags:       Normal user account
+|   METASPLOITABLE\uucp (RID: 1020)
+|     Full name:   uucp
+|     Flags:       Normal user account, Account disabled
+|   METASPLOITABLE\www-data (RID: 1066)
+|     Full name:   www-data
+|_    Flags:       Normal user account, Account disabled
+
+Nmap done: 1 IP address (1 host up) scanned in 1.18 seconds
+
+
+
+2016-10-14 08:00:04,735 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:00:04,772 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:00:04,773 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_5  Message --> :Thread started --with command nmap -sV --script=smb-os-discovery.nse -p 139 192.168.179.136
+2016-10-14 08:00:18,666 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_5  Message --> :Thread finished
+2016-10-14 08:00:18,667 - Commands Logger - DEBUG - Command Logger --->Command id --> netbios-ssn_5  Message --> :Saving details :
+2016-10-14 08:00:18,668 - Commands Logger - DEBUG - Command id is ->netbios-ssn_5
+2016-10-14 08:00:18,668 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=smb-os-discovery.nse -p 139 192.168.179.136', '\nEnd']
+2016-10-14 08:00:18,668 - Commands Logger - DEBUG - My var : '$.Entries."netbios-ssn_5"'
+2016-10-14 08:00:18,669 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=smb-os-discovery.nse -p 139 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 08:00 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00032s latency).
+PORT    STATE SERVICE     VERSION
+139/tcp open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP
+|_  System time: 2016-10-14T03:19:03-04:00
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.86 seconds
+
+
+
+2016-10-14 08:00:18,678 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:00:18,692 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Inside command_meta
+2016-10-14 08:00:31,141 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :[4mmsf[0m [0m> 
+2016-10-14 08:00:31,142 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :0
+2016-10-14 08:00:34,251 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :workspace -a Metasploit_automation
+[0m[1m[34m[*][0m Added workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-14 08:00:37,359 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set THREADS 1
+[0mTHREADS => 1
+[4mmsf[0m [0m> 
+2016-10-14 08:00:40,469 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :workspace Metasploit_automation
+[0m[1m[34m[*][0m Workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-14 08:00:43,582 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :use auxiliary/scanner/ssh/ssh_login
+[0m[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-14 08:00:46,694 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set RHOSTS 192.168.179.136
+[0mRHOSTS => 192.168.179.136
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-14 08:00:49,804 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set USERPASS_FILE /usr/share/metasploit-framework/dat a/wordlists/root_userpass.txt
+[0mUSERPASS_FILE => /usr/share/metasploit-framework/data/wordlists/root_userpass.txt
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-14 08:00:52,912 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set VERBOSE false
+[0mVERBOSE => false
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-14 08:00:52,913 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Everything Fine till now-->Launching run command
+
+
+2016-10-14 08:02:51,378 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Module Execution completed
+
+
+2016-10-14 08:02:51,379 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Before : 
+After : 
+run
+[0m
+[1m[34m[*][0m 192.168.179.136:22 SSH - Starting bruteforce
+[1m[32m[+][0m 192.168.179.136:22 SSH - Success: 'msfadmin:msfadmin' 'uid=1000(msfadmin) gid=1000(msfadmin) groups=4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),107(fuse),111(lpadmin),112(admin),119(sambashare),1000(msfadmin) Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux '
+[1m[34m[*][0m Command shell session 1 opened (192.168.179.139:55217 -> 192.168.179.136:22) at 2016-10-14 08:02:49 -0400
+2016-10-14 08:02:51,379 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Now exiting !!!
+
+
+2016-10-14 08:02:51,379 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+Exiting  from msfconsole !!!
+
+2016-10-14 08:03:53,542 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Some Error Occured while Exiting
+
+
+2016-10-14 08:03:53,543 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Before : 
+
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> exit
+[0m[1m[34m[*][0m You have active sessions open, to exit anyway type "exit -y"
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> After : 
+<class 'pexpect.TIMEOUT'>
+2016-10-14 08:03:53,543 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Closing the child pipe !!!
+2016-10-14 08:03:53,955 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Saving details :
+2016-10-14 08:03:53,958 - Commands Logger - DEBUG - Command id is ->ssh_1
+2016-10-14 08:03:53,958 - Commands Logger - DEBUG - commands are : ['>msfconsole', '\x1b[4mmsf\x1b[0m \x1b[0m> ', u'workspace -a Metasploit_automation\n', 'workspace -a Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Added workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'set THREADS 1\n', 'set THREADS 1\r\r\n\x1b[0mTHREADS => 1\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'workspace Metasploit_automation\n', 'workspace Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'use auxiliary/scanner/ssh/ssh_login\n', 'use auxiliary/scanner/ssh/ssh_login\r\r\n\x1b[0m\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set RHOSTS 192.168.179.136\n', 'set RHOSTS 192.168.179.136\r\r\n\x1b[0mRHOSTS => 192.168.179.136\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\n', 'set USERPASS_FILE /usr/share/metasploit-framework/dat \ra/wordlists/root_userpass.txt\r\r\n\x1b[0mUSERPASS_FILE => /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set VERBOSE false\n', 'set VERBOSE false\r\r\n\x1b[0mVERBOSE => false\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', '>run', "run\r\r\n\x1b[0m\r\n\x1b[1m\x1b[34m[*]\x1b[0m 192.168.179.136:22 SSH - Starting bruteforce\r\n\x1b[1m\x1b[32m[+]\x1b[0m 192.168.179.136:22 SSH - Success: 'msfadmin:msfadmin' 'uid=1000(msfadmin) gid=1000(msfadmin) groups=4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),107(fuse),111(lpadmin),112(admin),119(sambashare),1000(msfadmin) Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux '\r\n\x1b[1m\x1b[34m[*]\x1b[0m Command shell session 1 opened (192.168.179.139:55217 -> 192.168.179.136:22) at 2016-10-14 08:02:49 -0400\n"]
+2016-10-14 08:03:53,959 - Commands Logger - DEBUG - My var : '$.Entries."ssh_1"'
+2016-10-14 08:03:53,959 - Commands Logger - DEBUG - Result --> : 
+Command Executed :>msfconsole
+Result :
+run
+[0m
+[1m[34m[*][0m 192.168.179.136:22 SSH - Starting bruteforce
+[1m[32m[+][0m 192.168.179.136:22 SSH - Success: 'msfadmin:msfadmin' 'uid=1000(msfadmin) gid=1000(msfadmin) groups=4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),107(fuse),111(lpadmin),112(admin),119(sambashare),1000(msfadmin) Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux '
+[1m[34m[*][0m Command shell session 1 opened (192.168.179.139:55217 -> 192.168.179.136:22) at 2016-10-14 08:02:49 -0400
+2016-10-14 08:03:53,966 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:03:53,971 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:03:53,973 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :Thread started --with command java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck 192.168.179.136 22
+2016-10-14 08:03:56,219 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :Thread finished
+2016-10-14 08:03:56,220 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :Saving details :
+2016-10-14 08:03:56,223 - Commands Logger - DEBUG - Command id is ->ssh_2
+2016-10-14 08:03:56,224 - Commands Logger - DEBUG - commands are : [u"java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck 192.168.179.136 22", '\nEnd']
+2016-10-14 08:03:56,224 - Commands Logger - DEBUG - My var : '$.Entries."ssh_2"'
+2016-10-14 08:03:56,225 - Commands Logger - DEBUG - Result --> : Command Executed :java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck 192.168.179.136 22
+
+ResultSSH Version: 2.0
+SSH Library: OpenSSH_4.7p1 Debian
+
+
+Key Exchange Algorithms: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+Server Host Key Algorithms: ssh-rsa,ssh-dss
+Encryption Algorithms Client to Server: aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,arcfour128,arcfour256,arcfour,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr
+Encryption Algorithms Server to Client: aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,arcfour128,arcfour256,arcfour,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr
+Mac Algorithms Client to Server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+Mac Algorithms Server to Client: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+Compression Algorithms Client to Server: none,zlib@openssh.com
+Compression Algorithms Server to Client: none,zlib@openssh.com
+
+
+
+2016-10-14 08:03:56,232 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:03:56,242 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:03:56,244 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :Thread started --with command nc -zvn 192.168.179.136 22
+2016-10-14 08:03:56,268 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :Thread finished
+2016-10-14 08:03:56,270 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :Saving details :
+2016-10-14 08:03:56,276 - Commands Logger - DEBUG - Command id is ->ssh_3
+2016-10-14 08:03:56,277 - Commands Logger - DEBUG - commands are : [u'nc -zvn 192.168.179.136 22', '\nEnd']
+2016-10-14 08:03:56,278 - Commands Logger - DEBUG - My var : '$.Entries."ssh_3"'
+2016-10-14 08:03:56,278 - Commands Logger - DEBUG - Result --> : Command Executed :nc -zvn 192.168.179.136 22
+
+Result
+(UNKNOWN) [192.168.179.136] 22 (ssh) open
+
+
+2016-10-14 08:03:56,285 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:03:56,320 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :
+
+Starting ssh--INteractive
+
+
+2016-10-14 08:04:01,489 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Permission Denied at inception for root--Good 
+2016-10-14 08:04:01,490 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Before : 
+After : 
+
+Permission denied, please try again.
+root@192.168.179.136's password: 
+2016-10-14 08:04:01,490 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Closing Child now !!
+2016-10-14 08:04:01,592 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Saving details :
+2016-10-14 08:04:01,593 - Commands Logger - DEBUG - Command id is ->ssh_4
+2016-10-14 08:04:01,594 - Commands Logger - DEBUG - commands are : [u'ssh root@192.168.179.136\n', 'root\n', "\r\nPermission denied, please try again.\r\r\nroot@192.168.179.136's password: \n"]
+2016-10-14 08:04:01,594 - Commands Logger - DEBUG - My var : '$.Entries."ssh_4"'
+2016-10-14 08:04:01,594 - Commands Logger - DEBUG - Result --> : Command Executed :ssh root@192.168.179.136
+
+
+Result:
+
+Permission denied, please try again.
+root@192.168.179.136's password: 
+
+2016-10-14 08:04:01,598 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:04:01,602 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:04:01,603 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Thread started --with command nmap -sV --script=ssh2-enum-algos.nse -p 22 192.168.179.136
+2016-10-14 08:04:03,762 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Thread finished
+2016-10-14 08:04:03,762 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Saving details :
+2016-10-14 08:04:03,764 - Commands Logger - DEBUG - Command id is ->ssh_5
+2016-10-14 08:04:03,764 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=ssh2-enum-algos.nse -p 22 192.168.179.136', '\nEnd']
+2016-10-14 08:04:03,764 - Commands Logger - DEBUG - My var : '$.Entries."ssh_5"'
+2016-10-14 08:04:03,764 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=ssh2-enum-algos.nse -p 22 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 08:04 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00034s latency).
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+| ssh2-enum-algos: 
+|   kex_algorithms: (4)
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group14-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (2)
+|       ssh-rsa
+|       ssh-dss
+|   encryption_algorithms: (13)
+|       aes128-cbc
+|       3des-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       arcfour128
+|       arcfour256
+|       arcfour
+|       aes192-cbc
+|       aes256-cbc
+|       rijndael-cbc@lysator.liu.se
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|   mac_algorithms: (7)
+|       hmac-md5
+|       hmac-sha1
+|       umac-64@openssh.com
+|       hmac-ripemd160
+|       hmac-ripemd160@openssh.com
+|       hmac-sha1-96
+|       hmac-md5-96
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+MAC Address: 00:0C:29:25:59:EA (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.13 seconds
+
+
+
+2016-10-14 08:04:03,832 - Commands Logger - DEBUG - Finished!!!
+2016-10-14 08:04:03,854 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-14 08:04:03,859 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 22 192.168.179.136
+2016-10-14 08:04:06,192 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Thread finished
+2016-10-14 08:04:06,193 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Saving details :
+2016-10-14 08:04:06,194 - Commands Logger - DEBUG - Command id is ->ssh_6
+2016-10-14 08:04:06,194 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 22 192.168.179.136', '\nEnd']
+2016-10-14 08:04:06,195 - Commands Logger - DEBUG - My var : '$.Entries."ssh_6"'
+2016-10-14 08:04:06,195 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 22 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-14 08:04 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00037s latency).
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1
+MAC Address: 00:0C:29:25:59:EA (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.29 seconds
+
+
+
+2016-10-14 08:04:06,198 - Commands Logger - DEBUG - Finished!!!

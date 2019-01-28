@@ -1,0 +1,173 @@
+TERM environment variable not set.
+Inside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('', '', '', '2', '-T4 -A -v -Pn -n', '727', 'g-resume', '', '', '0')
+Reached !!!@@@###
+('(', '', '', '2', '-T4 -A -v -Pn -n', '727', 'g-resume', '', ')')
+
+
+ Hello world 
+
+
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 139967480051184)>]
+Reached Here in Launch Paused Scan !!!
+
+Started Launch Paused 
+Started
+The current status is : processing
+Data status is :0
+Ended
+Started
+Ended
+Started
+(1)--About to make bulk enteries - #Ip:1
+in elif(1)
+Started
+ended
+Ended
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['192.168.182.128']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 139967480051184)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+Started Simple acanner
+Started
+
+Started thread for IP :192.168.182.128 --> Thread is : <Thread(Thread-1, started daemon 139967374575360)>
+Ended
+Reached port scanner module with record id --> 2535
+Starting the scan with the switch :-T4 -A -v -Pn -n
+Reached Debug 1
+Reached Debug 2
+Up host status is :1
+Reached Debug 3
+[31m----------------------------------------------[0m
+Reached Debug 4
+Result for IP : 192.168.182.128
+Protocol : TCP
+Reached Debug 5
+[34mport : [33m21 	 [32mopen 	[31mftp[0m
+[34mport : [33m22 	 [32mopen 	[31mssh[0m
+[34mport : [33m23 	 [32mopen 	[31mtelnet[0m
+[34mport : [33m25 	 [32mopen 	[31msmtp[0m
+[34mport : [33m53 	 [32mopen 	[31mdomain[0m
+[34mport : [33m80 	 [32mopen 	[31mhttp[0m
+[31m----------------------------------------------[0m
+Reached Debug 6
+Started
+Stopped
+Reached Debug 8
+
+
+Main thread starting Polling .........
+
+
+Main Thread Starting pooling in 10 sec :
+
+
+ Finished subprocess for ip 192.168.182.128 and Process : <Process(Process-1, stopped)>
+Ended Simple acanner
+
+
+Thread ended with host ip -192.168.182.128
+
+
+Pooling started :
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 139967480051184)>, <_DummyThread(Dummy-2, started daemon 139967548483328)>]
+
+[31m----------------------------------------------[0m
+None
+Obtained dummy thread <_DummyThread(Dummy-2, started daemon 139967548483328)>
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139967480051184)>, <_DummyThread(Dummy-2, started daemon 139967548483328)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139967480051184)>, <_DummyThread(Dummy-2, started daemon 139967548483328)>]
+Reached here as well !!!
+# of threads Alive are :2
+
+Now stopping and saving Global Project Id : 727
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 128.384071827
+Inside INIT
+Inside INIT
+INVOKED Driver meta main with record_list : [] and  concurrent status : False and skip_init_check status as :False and continue =False
+
+
+
+
+
+P_id ---> 727
+
+
+ Project id is :	727
+
+
+valid projects are ['727']
+IN exists with Pid727
+Connection init done()
+Logg printed
+here#@@
+0
+Initialising parent directory 
+INitialised
+Hello
+here reached 
+I am in parse and process
+
+
+ Inside insert IPexploits --
+
+
+
+[32m[+] Launching configuration ....[0m
+success
+
+
+About to return now !!!
+success fully done till now
+folder name is : /root/Django-projects/Dictator/Dictator_service
+
+
+
+
+
+Inside update --Obtained process id is ->10462  and project_id is : 727
+Concurrent is false and updating with above values
+ended
+Stopped
+Successfully launched exploits in seq-def mode.Reffer to exploits logs from here on 

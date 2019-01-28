@@ -1,0 +1,1124 @@
+2016-10-17 16:56:08,723 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-10-17 16:56:10,951 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :$server 192.168.179.136
+
+2016-10-17 16:56:10,952 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+After : 
+>
+2016-10-17 16:56:13,059 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+ server 192.168.179.136
+Default server: 192.168.179.136
+After : 
+Address: 192.168.179.136#53
+> 
+2016-10-17 16:56:15,167 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-10-17 16:56:15,168 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : cricinfo.com
+Server:		192.168.179.136
+Address:	192.168.179.136#53
+
+Non-authoritative answer:
+Name:	cricinfo.com
+After : Address: 52.19.167.6
+> 
+2016-10-17 16:56:15,169 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-17 16:56:15,274 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Saving details :
+2016-10-17 16:56:15,275 - Commands Logger - DEBUG - Command id is ->domain_1
+2016-10-17 16:56:15,276 - Commands Logger - DEBUG - commands are : [u'nslookup\n', u'server 192.168.179.136', 'Address: 192.168.179.136#53\r\n> \n', ' server 192.168.179.136\r\nDefault server: 192.168.179.136\r\n   Address: 192.168.179.136#53\r\n> ', u'cricinfo.com\n', 'Address: 52.19.167.6\r\n> \n']
+2016-10-17 16:56:15,276 - Commands Logger - DEBUG - My var : '$.Entries."domain_1"'
+2016-10-17 16:56:15,276 - Commands Logger - DEBUG - Result --> : Address: 52.19.167.6
+> 
+
+
+Command Executed :nslookup
+
+Result:
+Address: 52.19.167.6
+> 
+
+2016-10-17 16:56:15,449 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 16:56:15,449 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-17 16:56:15,449 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Exiting Domain interactive !!
+2016-10-17 16:56:15,449 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-10-17 16:56:15,450 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread started --with command fierce -dns 192.168.179.136 -threads 10
+2016-10-17 16:57:55,451 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Terminating process
+2016-10-17 16:57:55,635 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Parent Process already KIlled
+2016-10-17 16:57:55,701 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread finished
+2016-10-17 16:58:45,679 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :
+Trying zone transfer first...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+
+Killed
+
+
+2016-10-17 16:58:45,680 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Dns reverse lookup
+2016-10-17 16:59:00,703 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :4
+2016-10-17 16:59:00,704 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Reverse dns Failed
+2016-10-17 16:59:00,705 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Before : 
+After : 
+<class 'pexpect.TIMEOUT'>
+2016-10-17 16:59:00,706 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Closing Child now !!
+2016-10-17 16:59:00,810 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :There is no reverse dns resolution for ip :192.168.179.136
+2016-10-17 16:59:00,811 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Saving details :
+2016-10-17 16:59:00,813 - Commands Logger - DEBUG - Command id is ->domain_2
+2016-10-17 16:59:00,814 - Commands Logger - DEBUG - commands are : ['fierce -dns 192.168.179.136 -threads 10\n', '\nTrying zone transfer first...\n\nUnsuccessful in zone transfer (it was worth a shot)\nOkay, trying the good old fashioned way... brute force\n\nChecking for wildcard DNS...\nNope. Good.\nNow performing 2280 test(s)...\n\nKilled\n\n\n', 'Result --> -1', u'No reverse dns for ip -->192.168.179.136']
+2016-10-17 16:59:00,814 - Commands Logger - DEBUG - My var : '$.Entries."domain_2"'
+2016-10-17 16:59:00,815 - Commands Logger - DEBUG - Result --> : Command Executed :fierce -dns 192.168.179.136 -threads 10
+
+
+Result:
+No reverse dns for ip -->192.168.179.136
+2016-10-17 16:59:00,820 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 16:59:00,835 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :In Dns_recon check
+2016-10-17 16:59:00,836 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Dns reverse lookup
+2016-10-17 16:59:01,349 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :1
+2016-10-17 16:59:01,350 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Reverse dns Failed
+2016-10-17 16:59:01,351 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+2016-10-17 16:59:01,352 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Closing Child now !!
+2016-10-17 16:59:01,456 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -D name_list.txt
+2016-10-17 16:59:01,457 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -a
+2016-10-17 16:59:01,457 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Launching Command --> :dnsrecon -d 192.168.179.136 -t zonewalk
+2016-10-17 16:59:04,674 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+
+2016-10-17 16:59:04,676 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Saving details :
+2016-10-17 16:59:04,681 - Commands Logger - DEBUG - Command id is ->domain_3
+2016-10-17 16:59:04,681 - Commands Logger - DEBUG - commands are : ['Dns check : 192.168.179.136', 'Res:-1', u'dnsrecon -d 192.168.179.136 -t zonewalk\n', '[*] Performing NSEC Zone Walk for 192.168.179.136\n[*] Getting SOA record for 192.168.179.136\n[-] Error while resolving SOA record.\nTraceback (most recent call last):\n  File "./dnsrecon.py", line 1681, in <module>\n    main()\n  File "./dnsrecon.py", line 1595, in main\n    ds_zone_walk(res, domain)\n  File "./dnsrecon.py", line 1225, in ds_zone_walk\n    soa_rcd = res.get_soa()[0][2]\nIndexError: list index out of range\n']
+2016-10-17 16:59:04,682 - Commands Logger - DEBUG - My var : '$.Entries."domain_3"'
+2016-10-17 16:59:04,683 - Commands Logger - DEBUG - Result --> : Command Executed :Dns check : 192.168.179.136
+
+Result :
+[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+2016-10-17 16:59:04,701 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 16:59:04,702 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-17 16:59:04,705 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-10-17 16:59:12,645 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread finished
+2016-10-17 16:59:12,645 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Saving details :
+2016-10-17 16:59:12,646 - Commands Logger - DEBUG - Command id is ->domain_4
+2016-10-17 16:59:12,647 - Commands Logger - DEBUG - commands are : [u'nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-17 16:59:12,647 - Commands Logger - DEBUG - My var : '$.Entries."domain_4"'
+2016-10-17 16:59:12,647 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-17 16:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00032s latency).
+PORT   STATE SERVICE
+53/udp open  domain
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 7.92 seconds
+
+
+
+2016-10-17 16:59:12,654 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 16:59:12,699 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-17 16:59:12,704 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-10-17 16:59:35,436 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread finished
+2016-10-17 16:59:35,437 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Saving details :
+2016-10-17 16:59:35,438 - Commands Logger - DEBUG - Command id is ->domain_5
+2016-10-17 16:59:35,438 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-17 16:59:35,439 - Commands Logger - DEBUG - My var : '$.Entries."domain_5"'
+2016-10-17 16:59:35,439 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-17 16:59 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.0084s latency).
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 22.71 seconds
+
+
+
+2016-10-17 16:59:35,446 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 16:59:35,474 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-17 16:59:35,479 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-10-17 16:59:35,516 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread finished
+2016-10-17 16:59:35,517 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Saving details :
+2016-10-17 16:59:35,518 - Commands Logger - DEBUG - Command id is ->domain_6
+2016-10-17 16:59:35,518 - Commands Logger - DEBUG - commands are : [u'nslookup 192.168.179.136', '\nEnd']
+2016-10-17 16:59:35,519 - Commands Logger - DEBUG - My var : '$.Entries."domain_6"'
+2016-10-17 16:59:35,519 - Commands Logger - DEBUG - Result --> : Command Executed :nslookup 192.168.179.136
+
+ResultServer:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+
+
+2016-10-17 16:59:35,522 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 17:16:57,722 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-10-17 17:17:00,050 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :$server 192.168.179.136
+
+2016-10-17 17:17:00,051 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+After : 
+>
+2016-10-17 17:17:02,157 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+ server 192.168.179.136
+Default server: 192.168.179.136
+After : 
+Address: 192.168.179.136#53
+> 
+2016-10-17 17:17:04,263 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-10-17 17:17:04,265 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : cricinfo.com
+Server:		192.168.179.136
+Address:	192.168.179.136#53
+
+Non-authoritative answer:
+Name:	cricinfo.com
+After : Address: 52.19.167.6
+> 
+2016-10-17 17:17:04,268 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-17 17:17:04,373 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Saving details :
+2016-10-17 17:17:04,375 - Commands Logger - DEBUG - Command id is ->domain_1
+2016-10-17 17:17:04,375 - Commands Logger - DEBUG - commands are : [u'nslookup\n', u'server 192.168.179.136', 'Address: 192.168.179.136#53\r\n> \n', ' server 192.168.179.136\r\nDefault server: 192.168.179.136\r\n   Address: 192.168.179.136#53\r\n> ', u'cricinfo.com\n', 'Address: 52.19.167.6\r\n> \n']
+2016-10-17 17:17:04,375 - Commands Logger - DEBUG - My var : '$.Entries."domain_1"'
+2016-10-17 17:17:04,376 - Commands Logger - DEBUG - Result --> : Address: 52.19.167.6
+> 
+
+
+Command Executed :nslookup
+
+Result:
+Address: 52.19.167.6
+> 
+
+2016-10-17 17:17:04,388 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 17:17:04,388 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-17 17:17:04,388 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Exiting Domain interactive !!
+2016-10-17 17:17:04,388 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-10-17 17:17:04,395 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread started --with command fierce -dns 192.168.179.136 -threads 10
+2016-10-17 17:18:44,396 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Terminating process
+2016-10-17 17:18:44,471 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Parent Process already KIlled
+2016-10-17 17:18:44,490 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread finished
+2016-10-17 17:19:34,505 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :
+Trying zone transfer first...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+
+Killed
+
+
+2016-10-17 17:19:34,506 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Dns reverse lookup
+2016-10-17 17:19:35,031 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :1
+2016-10-17 17:19:35,031 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Reverse dns Failed
+2016-10-17 17:19:35,034 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+2016-10-17 17:19:35,036 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Closing Child now !!
+2016-10-17 17:19:35,137 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :There is no reverse dns resolution for ip :192.168.179.136
+2016-10-17 17:19:35,138 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Saving details :
+2016-10-17 17:19:35,139 - Commands Logger - DEBUG - Command id is ->domain_2
+2016-10-17 17:19:35,139 - Commands Logger - DEBUG - commands are : ['fierce -dns 192.168.179.136 -threads 10\n', '\nTrying zone transfer first...\n\nUnsuccessful in zone transfer (it was worth a shot)\nOkay, trying the good old fashioned way... brute force\n\nChecking for wildcard DNS...\nNope. Good.\nNow performing 2280 test(s)...\n\nKilled\n\n\n', 'Result --> -1', u'No reverse dns for ip -->192.168.179.136']
+2016-10-17 17:19:35,139 - Commands Logger - DEBUG - My var : '$.Entries."domain_2"'
+2016-10-17 17:19:35,140 - Commands Logger - DEBUG - Result --> : Command Executed :fierce -dns 192.168.179.136 -threads 10
+
+
+Result:
+No reverse dns for ip -->192.168.179.136
+2016-10-17 17:19:35,143 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 17:19:35,144 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :In Dns_recon check
+2016-10-17 17:19:35,146 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Dns reverse lookup
+2016-10-17 17:19:35,458 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :1
+2016-10-17 17:19:35,458 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Reverse dns Failed
+2016-10-17 17:19:35,459 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+2016-10-17 17:19:35,459 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Closing Child now !!
+2016-10-17 17:19:35,560 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -D name_list.txt
+2016-10-17 17:19:35,561 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -a
+2016-10-17 17:19:35,561 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Launching Command --> :dnsrecon -d 192.168.179.136 -t zonewalk
+2016-10-17 17:19:39,700 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[*] Name Server 198.41.0.4 will be used
+[*] 	 A 192.168.179.136 192.168.179.136
+[-] A timeout error occurred while performing the zone walk please make 
+[-] sure you can reach the target DNS Servers directly and requests
+[-] are not being filtered. Increase the timeout to a higher number
+[-] with --lifetime <time> option.
+[*] 1 records found
+
+
+2016-10-17 17:19:39,701 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Saving details :
+2016-10-17 17:19:39,704 - Commands Logger - DEBUG - Command id is ->domain_3
+2016-10-17 17:19:39,704 - Commands Logger - DEBUG - commands are : ['Dns check : 192.168.179.136', 'Res:-1', u'dnsrecon -d 192.168.179.136 -t zonewalk\n', '[*] Performing NSEC Zone Walk for 192.168.179.136\n[*] Getting SOA record for 192.168.179.136\n[*] Name Server 198.41.0.4 will be used\n[*] \t A 192.168.179.136 192.168.179.136\n[-] A timeout error occurred while performing the zone walk please make \n[-] sure you can reach the target DNS Servers directly and requests\n[-] are not being filtered. Increase the timeout to a higher number\n[-] with --lifetime <time> option.\n[*] 1 records found\n']
+2016-10-17 17:19:39,705 - Commands Logger - DEBUG - My var : '$.Entries."domain_3"'
+2016-10-17 17:19:39,705 - Commands Logger - DEBUG - Result --> : Command Executed :Dns check : 192.168.179.136
+
+Result :
+[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[*] Name Server 198.41.0.4 will be used
+[*] 	 A 192.168.179.136 192.168.179.136
+[-] A timeout error occurred while performing the zone walk please make 
+[-] sure you can reach the target DNS Servers directly and requests
+[-] are not being filtered. Increase the timeout to a higher number
+[-] with --lifetime <time> option.
+[*] 1 records found
+
+2016-10-17 17:19:39,725 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 17:19:39,728 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-17 17:19:39,740 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-10-17 17:19:41,270 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread finished
+2016-10-17 17:19:41,271 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Saving details :
+2016-10-17 17:19:41,272 - Commands Logger - DEBUG - Command id is ->domain_4
+2016-10-17 17:19:41,272 - Commands Logger - DEBUG - commands are : [u'nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-17 17:19:41,273 - Commands Logger - DEBUG - My var : '$.Entries."domain_4"'
+2016-10-17 17:19:41,273 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-17 17:19 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00041s latency).
+PORT   STATE SERVICE
+53/udp open  domain
+|_dns-recursion: Recursion appears to be enabled
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.50 seconds
+
+
+
+2016-10-17 17:19:41,283 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 17:19:41,333 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-17 17:19:41,343 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-10-17 17:20:04,508 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread finished
+2016-10-17 17:20:04,509 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Saving details :
+2016-10-17 17:20:04,510 - Commands Logger - DEBUG - Command id is ->domain_5
+2016-10-17 17:20:04,510 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-17 17:20:04,511 - Commands Logger - DEBUG - My var : '$.Entries."domain_5"'
+2016-10-17 17:20:04,511 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-17 17:19 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00042s latency).
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.14 seconds
+
+
+
+2016-10-17 17:20:04,514 - Commands Logger - DEBUG - Finished!!!
+2016-10-17 17:20:04,547 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-17 17:20:04,551 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-10-17 17:20:04,602 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread finished
+2016-10-17 17:20:04,603 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Saving details :
+2016-10-17 17:20:04,604 - Commands Logger - DEBUG - Command id is ->domain_6
+2016-10-17 17:20:04,605 - Commands Logger - DEBUG - commands are : [u'nslookup 192.168.179.136', '\nEnd']
+2016-10-17 17:20:04,605 - Commands Logger - DEBUG - My var : '$.Entries."domain_6"'
+2016-10-17 17:20:04,605 - Commands Logger - DEBUG - Result --> : Command Executed :nslookup 192.168.179.136
+
+ResultServer:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+
+
+2016-10-17 17:20:04,608 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:18:00,722 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-10-18 01:18:02,963 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :$server 192.168.179.136
+
+2016-10-18 01:18:02,964 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+After : 
+>
+2016-10-18 01:18:05,073 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+ server 192.168.179.136
+Default server: 192.168.179.136
+After : 
+Address: 192.168.179.136#53
+> 
+2016-10-18 01:18:07,183 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-10-18 01:18:07,184 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : cricinfo.com
+Server:		192.168.179.136
+Address:	192.168.179.136#53
+
+Non-authoritative answer:
+Name:	cricinfo.com
+After : Address: 52.19.167.6
+> 
+2016-10-18 01:18:07,184 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:18:07,288 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Saving details :
+2016-10-18 01:18:07,289 - Commands Logger - DEBUG - Command id is ->domain_1
+2016-10-18 01:18:07,289 - Commands Logger - DEBUG - commands are : [u'nslookup\n', u'server 192.168.179.136', 'Address: 192.168.179.136#53\r\n> \n', ' server 192.168.179.136\r\nDefault server: 192.168.179.136\r\n   Address: 192.168.179.136#53\r\n> ', u'cricinfo.com\n', 'Address: 52.19.167.6\r\n> \n']
+2016-10-18 01:18:07,290 - Commands Logger - DEBUG - My var : '$.Entries."domain_1"'
+2016-10-18 01:18:07,290 - Commands Logger - DEBUG - Result --> : Address: 52.19.167.6
+> 
+
+
+Command Executed :nslookup
+
+Result:
+Address: 52.19.167.6
+> 
+
+2016-10-18 01:18:07,294 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:18:07,294 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:18:07,294 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Exiting Domain interactive !!
+2016-10-18 01:18:07,295 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-10-18 01:18:07,296 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread started --with command fierce -dns 192.168.179.136 -threads 10
+2016-10-18 01:19:47,299 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Terminating process
+2016-10-18 01:19:47,375 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Parent Process already KIlled
+2016-10-18 01:19:47,446 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread finished
+2016-10-18 01:20:37,429 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :
+Trying zone transfer first...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+
+Killed
+
+
+2016-10-18 01:20:37,429 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Dns reverse lookup
+2016-10-18 01:20:52,448 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :4
+2016-10-18 01:20:52,449 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Reverse dns Failed
+2016-10-18 01:20:52,451 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Before : 
+After : 
+<class 'pexpect.TIMEOUT'>
+2016-10-18 01:20:52,451 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Closing Child now !!
+2016-10-18 01:20:52,555 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :There is no reverse dns resolution for ip :192.168.179.136
+2016-10-18 01:20:52,556 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Saving details :
+2016-10-18 01:20:52,752 - Commands Logger - DEBUG - Command id is ->domain_2
+2016-10-18 01:20:52,752 - Commands Logger - DEBUG - commands are : ['fierce -dns 192.168.179.136 -threads 10\n', '\nTrying zone transfer first...\n\nUnsuccessful in zone transfer (it was worth a shot)\nOkay, trying the good old fashioned way... brute force\n\nChecking for wildcard DNS...\nNope. Good.\nNow performing 2280 test(s)...\n\nKilled\n\n\n', 'Result --> -1', u'No reverse dns for ip -->192.168.179.136']
+2016-10-18 01:20:52,753 - Commands Logger - DEBUG - My var : '$.Entries."domain_2"'
+2016-10-18 01:20:52,753 - Commands Logger - DEBUG - Result --> : Command Executed :fierce -dns 192.168.179.136 -threads 10
+
+
+Result:
+No reverse dns for ip -->192.168.179.136
+2016-10-18 01:20:52,787 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:20:52,788 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :In Dns_recon check
+2016-10-18 01:20:52,788 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Dns reverse lookup
+2016-10-18 01:20:55,111 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :1
+2016-10-18 01:20:55,112 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Reverse dns Failed
+2016-10-18 01:20:55,114 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+2016-10-18 01:20:55,115 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Closing Child now !!
+2016-10-18 01:20:55,218 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -D name_list.txt
+2016-10-18 01:20:55,218 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -a
+2016-10-18 01:20:55,218 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Launching Command --> :dnsrecon -d 192.168.179.136 -t zonewalk
+2016-10-18 01:20:58,601 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+
+2016-10-18 01:20:58,602 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Saving details :
+2016-10-18 01:20:58,607 - Commands Logger - DEBUG - Command id is ->domain_3
+2016-10-18 01:20:58,608 - Commands Logger - DEBUG - commands are : ['Dns check : 192.168.179.136', 'Res:-1', u'dnsrecon -d 192.168.179.136 -t zonewalk\n', '[*] Performing NSEC Zone Walk for 192.168.179.136\n[*] Getting SOA record for 192.168.179.136\n[-] Error while resolving SOA record.\nTraceback (most recent call last):\n  File "./dnsrecon.py", line 1681, in <module>\n    main()\n  File "./dnsrecon.py", line 1595, in main\n    ds_zone_walk(res, domain)\n  File "./dnsrecon.py", line 1225, in ds_zone_walk\n    soa_rcd = res.get_soa()[0][2]\nIndexError: list index out of range\n']
+2016-10-18 01:20:58,609 - Commands Logger - DEBUG - My var : '$.Entries."domain_3"'
+2016-10-18 01:20:58,609 - Commands Logger - DEBUG - Result --> : Command Executed :Dns check : 192.168.179.136
+
+Result :
+[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+2016-10-18 01:20:58,819 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:20:58,820 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:20:58,821 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-10-18 01:21:04,352 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread finished
+2016-10-18 01:21:04,353 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Saving details :
+2016-10-18 01:21:04,356 - Commands Logger - DEBUG - Command id is ->domain_4
+2016-10-18 01:21:04,356 - Commands Logger - DEBUG - commands are : [u'nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:21:04,357 - Commands Logger - DEBUG - My var : '$.Entries."domain_4"'
+2016-10-18 01:21:04,357 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:20 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00049s latency).
+PORT   STATE SERVICE
+53/udp open  domain
+|_dns-recursion: Recursion appears to be enabled
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 5.48 seconds
+
+
+
+2016-10-18 01:21:04,362 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:21:04,423 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:21:04,427 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-10-18 01:21:27,794 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread finished
+2016-10-18 01:21:27,794 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Saving details :
+2016-10-18 01:21:27,796 - Commands Logger - DEBUG - Command id is ->domain_5
+2016-10-18 01:21:27,796 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:21:27,796 - Commands Logger - DEBUG - My var : '$.Entries."domain_5"'
+2016-10-18 01:21:27,797 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:21 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00055s latency).
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.33 seconds
+
+
+
+2016-10-18 01:21:27,839 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:21:27,866 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:21:27,869 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-10-18 01:21:28,023 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread finished
+2016-10-18 01:21:28,024 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Saving details :
+2016-10-18 01:21:28,045 - Commands Logger - DEBUG - Command id is ->domain_6
+2016-10-18 01:21:28,046 - Commands Logger - DEBUG - commands are : [u'nslookup 192.168.179.136', '\nEnd']
+2016-10-18 01:21:28,046 - Commands Logger - DEBUG - My var : '$.Entries."domain_6"'
+2016-10-18 01:21:28,047 - Commands Logger - DEBUG - Result --> : Command Executed :nslookup 192.168.179.136
+
+ResultServer:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+
+
+2016-10-18 01:21:28,068 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:29:26,305 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-10-18 01:29:28,580 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :$server 192.168.179.136
+
+2016-10-18 01:29:28,581 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+After : 
+>
+2016-10-18 01:29:30,690 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+ server 192.168.179.136
+Default server: 192.168.179.136
+After : 
+Address: 192.168.179.136#53
+> 
+2016-10-18 01:29:32,799 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-10-18 01:29:32,801 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : cricinfo.com
+Server:		192.168.179.136
+Address:	192.168.179.136#53
+
+Non-authoritative answer:
+Name:	cricinfo.com
+After : Address: 52.19.167.6
+> 
+2016-10-18 01:29:32,802 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:29:32,907 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Saving details :
+2016-10-18 01:29:33,017 - Commands Logger - DEBUG - Command id is ->domain_1
+2016-10-18 01:29:33,018 - Commands Logger - DEBUG - commands are : [u'nslookup\n', u'server 192.168.179.136', 'Address: 192.168.179.136#53\r\n> \n', ' server 192.168.179.136\r\nDefault server: 192.168.179.136\r\n   Address: 192.168.179.136#53\r\n> ', u'cricinfo.com\n', 'Address: 52.19.167.6\r\n> \n']
+2016-10-18 01:29:33,019 - Commands Logger - DEBUG - My var : '$.Entries."domain_1"'
+2016-10-18 01:29:33,019 - Commands Logger - DEBUG - Result --> : Address: 52.19.167.6
+> 
+
+
+Command Executed :nslookup
+
+Result:
+Address: 52.19.167.6
+> 
+
+2016-10-18 01:29:33,127 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:29:33,128 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:29:33,128 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Exiting Domain interactive !!
+2016-10-18 01:29:33,128 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-10-18 01:29:33,129 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread started --with command fierce -dns 192.168.179.136 -threads 10
+2016-10-18 01:31:13,130 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Terminating process
+2016-10-18 01:31:13,203 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Parent Process already KIlled
+2016-10-18 01:31:13,214 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread finished
+2016-10-18 01:32:03,233 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :
+Trying zone transfer first...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+
+Killed
+
+
+2016-10-18 01:32:03,233 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Dns reverse lookup
+2016-10-18 01:32:08,690 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :1
+2016-10-18 01:32:08,691 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Reverse dns Failed
+2016-10-18 01:32:08,692 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+2016-10-18 01:32:08,692 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Closing Child now !!
+2016-10-18 01:32:08,793 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :There is no reverse dns resolution for ip :192.168.179.136
+2016-10-18 01:32:08,793 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Saving details :
+2016-10-18 01:32:08,938 - Commands Logger - DEBUG - Command id is ->domain_2
+2016-10-18 01:32:08,939 - Commands Logger - DEBUG - commands are : ['fierce -dns 192.168.179.136 -threads 10\n', '\nTrying zone transfer first...\n\nUnsuccessful in zone transfer (it was worth a shot)\nOkay, trying the good old fashioned way... brute force\n\nChecking for wildcard DNS...\nNope. Good.\nNow performing 2280 test(s)...\n\nKilled\n\n\n', 'Result --> -1', u'No reverse dns for ip -->192.168.179.136']
+2016-10-18 01:32:08,939 - Commands Logger - DEBUG - My var : '$.Entries."domain_2"'
+2016-10-18 01:32:08,939 - Commands Logger - DEBUG - Result --> : Command Executed :fierce -dns 192.168.179.136 -threads 10
+
+
+Result:
+No reverse dns for ip -->192.168.179.136
+2016-10-18 01:32:08,948 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:32:08,949 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :In Dns_recon check
+2016-10-18 01:32:08,949 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Dns reverse lookup
+2016-10-18 01:32:09,187 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :1
+2016-10-18 01:32:09,187 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Reverse dns Failed
+2016-10-18 01:32:09,188 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+2016-10-18 01:32:09,188 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Closing Child now !!
+2016-10-18 01:32:09,290 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -D name_list.txt
+2016-10-18 01:32:09,291 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -a
+2016-10-18 01:32:09,291 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Launching Command --> :dnsrecon -d 192.168.179.136 -t zonewalk
+2016-10-18 01:32:12,619 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+
+2016-10-18 01:32:12,620 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Saving details :
+2016-10-18 01:32:12,623 - Commands Logger - DEBUG - Command id is ->domain_3
+2016-10-18 01:32:12,624 - Commands Logger - DEBUG - commands are : ['Dns check : 192.168.179.136', 'Res:-1', u'dnsrecon -d 192.168.179.136 -t zonewalk\n', '[*] Performing NSEC Zone Walk for 192.168.179.136\n[*] Getting SOA record for 192.168.179.136\n[-] Error while resolving SOA record.\nTraceback (most recent call last):\n  File "./dnsrecon.py", line 1681, in <module>\n    main()\n  File "./dnsrecon.py", line 1595, in main\n    ds_zone_walk(res, domain)\n  File "./dnsrecon.py", line 1225, in ds_zone_walk\n    soa_rcd = res.get_soa()[0][2]\nIndexError: list index out of range\n']
+2016-10-18 01:32:12,624 - Commands Logger - DEBUG - My var : '$.Entries."domain_3"'
+2016-10-18 01:32:12,625 - Commands Logger - DEBUG - Result --> : Command Executed :Dns check : 192.168.179.136
+
+Result :
+[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+2016-10-18 01:32:12,641 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:32:12,642 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:32:12,646 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-10-18 01:32:20,924 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread finished
+2016-10-18 01:32:20,925 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Saving details :
+2016-10-18 01:32:21,121 - Commands Logger - DEBUG - Command id is ->domain_4
+2016-10-18 01:32:21,121 - Commands Logger - DEBUG - commands are : [u'nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:32:21,121 - Commands Logger - DEBUG - My var : '$.Entries."domain_4"'
+2016-10-18 01:32:21,121 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:32 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00038s latency).
+PORT   STATE SERVICE
+53/udp open  domain
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 8.24 seconds
+
+
+
+2016-10-18 01:32:21,129 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:32:21,171 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:32:21,176 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-10-18 01:32:44,391 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread finished
+2016-10-18 01:32:44,391 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Saving details :
+2016-10-18 01:32:44,393 - Commands Logger - DEBUG - Command id is ->domain_5
+2016-10-18 01:32:44,393 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:32:44,394 - Commands Logger - DEBUG - My var : '$.Entries."domain_5"'
+2016-10-18 01:32:44,394 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:32 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00032s latency).
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.18 seconds
+
+
+
+2016-10-18 01:32:44,399 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:32:44,400 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:32:44,401 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-10-18 01:32:44,446 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread finished
+2016-10-18 01:32:44,447 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Saving details :
+2016-10-18 01:32:44,448 - Commands Logger - DEBUG - Command id is ->domain_6
+2016-10-18 01:32:44,449 - Commands Logger - DEBUG - commands are : [u'nslookup 192.168.179.136', '\nEnd']
+2016-10-18 01:32:44,449 - Commands Logger - DEBUG - My var : '$.Entries."domain_6"'
+2016-10-18 01:32:44,449 - Commands Logger - DEBUG - Result --> : Command Executed :nslookup 192.168.179.136
+
+ResultServer:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+
+
+2016-10-18 01:32:44,453 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:43:03,862 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-10-18 01:43:06,084 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :$server 192.168.179.136
+
+2016-10-18 01:43:06,085 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+After : 
+>
+2016-10-18 01:43:08,191 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+ server 192.168.179.136
+Default server: 192.168.179.136
+After : 
+Address: 192.168.179.136#53
+> 
+2016-10-18 01:43:10,301 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-10-18 01:43:10,302 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : cricinfo.com
+Server:		192.168.179.136
+Address:	192.168.179.136#53
+
+Non-authoritative answer:
+Name:	cricinfo.com
+After : Address: 52.19.167.6
+> 
+2016-10-18 01:43:10,302 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:43:10,406 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Saving details :
+2016-10-18 01:43:10,407 - Commands Logger - DEBUG - Command id is ->domain_1
+2016-10-18 01:43:10,407 - Commands Logger - DEBUG - commands are : [u'nslookup\n', u'server 192.168.179.136', 'Address: 192.168.179.136#53\r\n> \n', ' server 192.168.179.136\r\nDefault server: 192.168.179.136\r\n   Address: 192.168.179.136#53\r\n> ', u'cricinfo.com\n', 'Address: 52.19.167.6\r\n> \n']
+2016-10-18 01:43:10,408 - Commands Logger - DEBUG - My var : '$.Entries."domain_1"'
+2016-10-18 01:43:10,408 - Commands Logger - DEBUG - Result --> : Address: 52.19.167.6
+> 
+
+
+Command Executed :nslookup
+
+Result:
+Address: 52.19.167.6
+> 
+
+2016-10-18 01:43:10,415 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:43:10,415 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:43:10,415 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Exiting Domain interactive !!
+2016-10-18 01:43:10,415 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-10-18 01:43:10,416 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread started --with command fierce -dns 192.168.179.136 -threads 10
+2016-10-18 01:44:50,417 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Terminating process
+2016-10-18 01:44:50,491 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Parent Process already KIlled
+2016-10-18 01:44:50,506 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread finished
+2016-10-18 01:45:40,512 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :
+Trying zone transfer first...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+
+Killed
+
+
+2016-10-18 01:45:40,513 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Dns reverse lookup
+2016-10-18 01:45:55,521 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :4
+2016-10-18 01:45:55,522 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Reverse dns Failed
+2016-10-18 01:45:55,523 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Before : 
+After : 
+<class 'pexpect.TIMEOUT'>
+2016-10-18 01:45:55,524 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Closing Child now !!
+2016-10-18 01:45:55,628 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :There is no reverse dns resolution for ip :192.168.179.136
+2016-10-18 01:45:55,629 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Saving details :
+2016-10-18 01:45:55,631 - Commands Logger - DEBUG - Command id is ->domain_2
+2016-10-18 01:45:55,632 - Commands Logger - DEBUG - commands are : ['fierce -dns 192.168.179.136 -threads 10\n', '\nTrying zone transfer first...\n\nUnsuccessful in zone transfer (it was worth a shot)\nOkay, trying the good old fashioned way... brute force\n\nChecking for wildcard DNS...\nNope. Good.\nNow performing 2280 test(s)...\n\nKilled\n\n\n', 'Result --> -1', u'No reverse dns for ip -->192.168.179.136']
+2016-10-18 01:45:55,633 - Commands Logger - DEBUG - My var : '$.Entries."domain_2"'
+2016-10-18 01:45:55,638 - Commands Logger - DEBUG - Result --> : Command Executed :fierce -dns 192.168.179.136 -threads 10
+
+
+Result:
+No reverse dns for ip -->192.168.179.136
+2016-10-18 01:45:55,649 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:45:55,652 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :In Dns_recon check
+2016-10-18 01:45:55,653 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Dns reverse lookup
+2016-10-18 01:46:10,676 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :4
+2016-10-18 01:46:10,676 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Reverse dns Failed
+2016-10-18 01:46:10,677 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Before : 
+After : 
+<class 'pexpect.TIMEOUT'>
+2016-10-18 01:46:10,677 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Closing Child now !!
+2016-10-18 01:46:10,781 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -D name_list.txt
+2016-10-18 01:46:10,781 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -a
+2016-10-18 01:46:10,781 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Launching Command --> :dnsrecon -d 192.168.179.136 -t zonewalk
+2016-10-18 01:46:14,012 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+
+2016-10-18 01:46:14,014 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Saving details :
+2016-10-18 01:46:14,019 - Commands Logger - DEBUG - Command id is ->domain_3
+2016-10-18 01:46:14,019 - Commands Logger - DEBUG - commands are : ['Dns check : 192.168.179.136', 'Res:-1', u'dnsrecon -d 192.168.179.136 -t zonewalk\n', '[*] Performing NSEC Zone Walk for 192.168.179.136\n[*] Getting SOA record for 192.168.179.136\n[-] Error while resolving SOA record.\nTraceback (most recent call last):\n  File "./dnsrecon.py", line 1681, in <module>\n    main()\n  File "./dnsrecon.py", line 1595, in main\n    ds_zone_walk(res, domain)\n  File "./dnsrecon.py", line 1225, in ds_zone_walk\n    soa_rcd = res.get_soa()[0][2]\nIndexError: list index out of range\n']
+2016-10-18 01:46:14,020 - Commands Logger - DEBUG - My var : '$.Entries."domain_3"'
+2016-10-18 01:46:14,020 - Commands Logger - DEBUG - Result --> : Command Executed :Dns check : 192.168.179.136
+
+Result :
+[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[-] Error while resolving SOA record.
+Traceback (most recent call last):
+  File "./dnsrecon.py", line 1681, in <module>
+    main()
+  File "./dnsrecon.py", line 1595, in main
+    ds_zone_walk(res, domain)
+  File "./dnsrecon.py", line 1225, in ds_zone_walk
+    soa_rcd = res.get_soa()[0][2]
+IndexError: list index out of range
+
+2016-10-18 01:46:14,177 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:46:14,178 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:46:14,181 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-10-18 01:46:35,134 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread finished
+2016-10-18 01:46:35,135 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Saving details :
+2016-10-18 01:46:35,138 - Commands Logger - DEBUG - Command id is ->domain_4
+2016-10-18 01:46:35,138 - Commands Logger - DEBUG - commands are : [u'nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:46:35,139 - Commands Logger - DEBUG - My var : '$.Entries."domain_4"'
+2016-10-18 01:46:35,139 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:46 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00042s latency).
+PORT   STATE SERVICE
+53/udp open  domain
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 20.92 seconds
+
+
+
+2016-10-18 01:46:35,144 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:46:35,154 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:46:35,156 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-10-18 01:47:00,105 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread finished
+2016-10-18 01:47:00,106 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Saving details :
+2016-10-18 01:47:00,108 - Commands Logger - DEBUG - Command id is ->domain_5
+2016-10-18 01:47:00,108 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:47:00,108 - Commands Logger - DEBUG - My var : '$.Entries."domain_5"'
+2016-10-18 01:47:00,108 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:46 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00033s latency).
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.91 seconds
+
+
+
+2016-10-18 01:47:00,112 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:47:00,164 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:47:00,169 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-10-18 01:47:00,215 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread finished
+2016-10-18 01:47:00,216 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Saving details :
+2016-10-18 01:47:00,218 - Commands Logger - DEBUG - Command id is ->domain_6
+2016-10-18 01:47:00,218 - Commands Logger - DEBUG - commands are : [u'nslookup 192.168.179.136', '\nEnd']
+2016-10-18 01:47:00,218 - Commands Logger - DEBUG - My var : '$.Entries."domain_6"'
+2016-10-18 01:47:00,218 - Commands Logger - DEBUG - Result --> : Command Executed :nslookup 192.168.179.136
+
+ResultServer:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+
+
+2016-10-18 01:47:00,221 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:51:13,587 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-10-18 01:51:15,798 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :$server 192.168.179.136
+
+2016-10-18 01:51:15,799 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+After : 
+>
+2016-10-18 01:51:17,908 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : 
+ server 192.168.179.136
+Default server: 192.168.179.136
+After : 
+Address: 192.168.179.136#53
+> 
+2016-10-18 01:51:20,018 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-10-18 01:51:20,019 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Before : cricinfo.com
+Server:		192.168.179.136
+Address:	192.168.179.136#53
+
+Non-authoritative answer:
+Name:	cricinfo.com
+After : Address: 52.19.167.6
+> 
+2016-10-18 01:51:20,026 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:51:20,131 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Saving details :
+2016-10-18 01:51:20,195 - Commands Logger - DEBUG - Command id is ->domain_1
+2016-10-18 01:51:20,196 - Commands Logger - DEBUG - commands are : [u'nslookup\n', u'server 192.168.179.136', 'Address: 192.168.179.136#53\r\n> \n', ' server 192.168.179.136\r\nDefault server: 192.168.179.136\r\n   Address: 192.168.179.136#53\r\n> ', u'cricinfo.com\n', 'Address: 52.19.167.6\r\n> \n']
+2016-10-18 01:51:20,196 - Commands Logger - DEBUG - My var : '$.Entries."domain_1"'
+2016-10-18 01:51:20,196 - Commands Logger - DEBUG - Result --> : Address: 52.19.167.6
+> 
+
+
+Command Executed :nslookup
+
+Result:
+Address: 52.19.167.6
+> 
+
+2016-10-18 01:51:20,203 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:51:20,203 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Closing Child now !!
+2016-10-18 01:51:20,204 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_1  Message --> :Exiting Domain interactive !!
+2016-10-18 01:51:20,204 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-10-18 01:51:20,209 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread started --with command fierce -dns 192.168.179.136 -threads 10
+2016-10-18 01:53:00,209 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Terminating process
+2016-10-18 01:53:00,271 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Parent Process already KIlled
+2016-10-18 01:53:00,289 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Thread finished
+2016-10-18 01:53:50,308 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :
+Trying zone transfer first...
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+
+Killed
+
+
+2016-10-18 01:53:50,308 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Dns reverse lookup
+2016-10-18 01:53:50,768 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :1
+2016-10-18 01:53:50,769 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Reverse dns Failed
+2016-10-18 01:53:50,770 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+2016-10-18 01:53:50,772 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Closing Child now !!
+2016-10-18 01:53:50,872 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :There is no reverse dns resolution for ip :192.168.179.136
+2016-10-18 01:53:50,873 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_2  Message --> :Saving details :
+2016-10-18 01:53:50,874 - Commands Logger - DEBUG - Command id is ->domain_2
+2016-10-18 01:53:50,874 - Commands Logger - DEBUG - commands are : ['fierce -dns 192.168.179.136 -threads 10\n', '\nTrying zone transfer first...\n\nUnsuccessful in zone transfer (it was worth a shot)\nOkay, trying the good old fashioned way... brute force\n\nChecking for wildcard DNS...\nNope. Good.\nNow performing 2280 test(s)...\n\nKilled\n\n\n', 'Result --> -1', u'No reverse dns for ip -->192.168.179.136']
+2016-10-18 01:53:50,875 - Commands Logger - DEBUG - My var : '$.Entries."domain_2"'
+2016-10-18 01:53:50,875 - Commands Logger - DEBUG - Result --> : Command Executed :fierce -dns 192.168.179.136 -threads 10
+
+
+Result:
+No reverse dns for ip -->192.168.179.136
+2016-10-18 01:53:50,878 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:53:50,880 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :In Dns_recon check
+2016-10-18 01:53:50,886 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Dns reverse lookup
+2016-10-18 01:53:51,105 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :1
+2016-10-18 01:53:51,106 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Reverse dns Failed
+2016-10-18 01:53:51,106 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Before : 
+After : 
+Server:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+2016-10-18 01:53:51,106 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Closing Child now !!
+2016-10-18 01:53:51,208 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -D name_list.txt
+2016-10-18 01:53:51,208 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Comamnd to be launched -->dnsrecon -d <reversehost> -a
+2016-10-18 01:53:51,208 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Launching Command --> :dnsrecon -d 192.168.179.136 -t zonewalk
+2016-10-18 01:54:00,833 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[*] Name Server 198.41.0.4 will be used
+[*] 	 A 192.168.179.136 192.168.179.136
+[-] A timeout error occurred while performing the zone walk please make 
+[-] sure you can reach the target DNS Servers directly and requests
+[-] are not being filtered. Increase the timeout to a higher number
+[-] with --lifetime <time> option.
+[*] 1 records found
+
+
+2016-10-18 01:54:00,835 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_3  Message --> :Saving details :
+2016-10-18 01:54:00,840 - Commands Logger - DEBUG - Command id is ->domain_3
+2016-10-18 01:54:00,840 - Commands Logger - DEBUG - commands are : ['Dns check : 192.168.179.136', 'Res:-1', u'dnsrecon -d 192.168.179.136 -t zonewalk\n', '[*] Performing NSEC Zone Walk for 192.168.179.136\n[*] Getting SOA record for 192.168.179.136\n[*] Name Server 198.41.0.4 will be used\n[*] \t A 192.168.179.136 192.168.179.136\n[-] A timeout error occurred while performing the zone walk please make \n[-] sure you can reach the target DNS Servers directly and requests\n[-] are not being filtered. Increase the timeout to a higher number\n[-] with --lifetime <time> option.\n[*] 1 records found\n']
+2016-10-18 01:54:00,841 - Commands Logger - DEBUG - My var : '$.Entries."domain_3"'
+2016-10-18 01:54:00,841 - Commands Logger - DEBUG - Result --> : Command Executed :Dns check : 192.168.179.136
+
+Result :
+[*] Performing NSEC Zone Walk for 192.168.179.136
+[*] Getting SOA record for 192.168.179.136
+[*] Name Server 198.41.0.4 will be used
+[*] 	 A 192.168.179.136 192.168.179.136
+[-] A timeout error occurred while performing the zone walk please make 
+[-] sure you can reach the target DNS Servers directly and requests
+[-] are not being filtered. Increase the timeout to a higher number
+[-] with --lifetime <time> option.
+[*] 1 records found
+
+2016-10-18 01:54:00,860 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:54:00,863 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:54:00,875 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-10-18 01:54:02,034 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Thread finished
+2016-10-18 01:54:02,035 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_4  Message --> :Saving details :
+2016-10-18 01:54:02,136 - Commands Logger - DEBUG - Command id is ->domain_4
+2016-10-18 01:54:02,143 - Commands Logger - DEBUG - commands are : [u'nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:54:02,144 - Commands Logger - DEBUG - My var : '$.Entries."domain_4"'
+2016-10-18 01:54:02,144 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:54 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00038s latency).
+PORT   STATE SERVICE
+53/udp open  domain
+|_dns-recursion: Recursion appears to be enabled
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.11 seconds
+
+
+
+2016-10-18 01:54:02,242 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:54:02,276 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:54:02,280 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-10-18 01:54:25,077 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Thread finished
+2016-10-18 01:54:25,077 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_5  Message --> :Saving details :
+2016-10-18 01:54:25,078 - Commands Logger - DEBUG - Command id is ->domain_5
+2016-10-18 01:54:25,079 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 53 192.168.179.136', '\nEnd']
+2016-10-18 01:54:25,079 - Commands Logger - DEBUG - My var : '$.Entries."domain_5"'
+2016-10-18 01:54:25,079 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 53 192.168.179.136
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-18 01:54 EDT
+Nmap scan report for 192.168.179.136
+Host is up (0.00048s latency).
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  ISC BIND 9.4.2
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 22.77 seconds
+
+
+
+2016-10-18 01:54:25,083 - Commands Logger - DEBUG - Finished!!!
+2016-10-18 01:54:25,089 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-18 01:54:25,101 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-10-18 01:54:25,274 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Thread finished
+2016-10-18 01:54:25,275 - Commands Logger - DEBUG - Command Logger --->Command id --> domain_6  Message --> :Saving details :
+2016-10-18 01:54:25,280 - Commands Logger - DEBUG - Command id is ->domain_6
+2016-10-18 01:54:25,281 - Commands Logger - DEBUG - commands are : [u'nslookup 192.168.179.136', '\nEnd']
+2016-10-18 01:54:25,281 - Commands Logger - DEBUG - My var : '$.Entries."domain_6"'
+2016-10-18 01:54:25,282 - Commands Logger - DEBUG - Result --> : Command Executed :nslookup 192.168.179.136
+
+ResultServer:		192.168.179.2
+Address:	192.168.179.2#53
+
+** server can't find 136.179.168.192.in-addr.arpa: NXDOMAIN
+
+
+
+
+2016-10-18 01:54:25,294 - Commands Logger - DEBUG - Finished!!!

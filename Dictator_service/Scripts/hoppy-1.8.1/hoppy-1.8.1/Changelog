@@ -1,0 +1,212 @@
+<1.8.1> - 30/09/2009 - Added depths limits to spider (new flag -d)
+					   Added support for python 2.6 withou a deprecated ssl warning.
+					   Fixed Proxyport issue
+ 
+
+
+<1.8.0-rcX> - N/A - Added Interesting methods parsing
+					Summary output is saved in .summary file when -S is called
+					Command line now printed in output
+					Date/Time of test added to output
+					Added depths limits to spider (new flag -d)
+					Fixed proxy port with / at the end causing a problem
+					Fixed bug with (location) / (loop) in http-methos
+					Fixed response retrieval bug if Content-Length does not have a number after it!
+					Better handling of unicode from NTLM host name
+					  
+<1.7.4> - 22/10/2008 - Added SSL/TLS exception handler for python 2.3 users.
+					   Fixed Bug when hitting a basic/digest auth page without a realm
+					   Fixed bug with path extraction (spenlt message correctly rather than massge) 
+
+<1.7.3> - 22/10/2008 - Added file output to spider
+					   added clobber protection for output files
+					   modified the cecking for TRACK/TRACE more user friendly
+					   Added URL to link parser in spider
+
+<1.7.2> - 04/10/2008 - Fixed spider
+					   Added cookie header so now we can use them
+					   Fixed Problem With Basic Auth
+					   Modified PUT/DELETE Methid check to be safer
+					   Fixed (again) the length claculation on the recieved data
+
+<1.7.1> - 30/09/2008 - Added parsing to extract basic/digest auth realm
+					   broke spider
+					   this relese was never made public cause of above
+
+<1.7.0> - 12/09/2008 - Added spider to general scanning to test for webdav on many directories
+					   Fixed bugs with regex matching
+					   Improved Handling of chunked server responces
+					   Added - to host name as
+					   Made the spider threaded
+					   Removed {extract} from verbose output
+					   added colour highlighting for data matching
+					   truncate line for path leakage improved
+					   added more syntax highlighting 
+					  
+<1.6.4> - 21/08/2008 - Fixed bug with new host stuff as I forgot number is the regex
+
+<1.6.3> - 20/08/2008 - Added host parsing so that http://user:pass@domain.com:port/location/file.txt will get correctly parsed
+
+<1.6.2> - 12/08/2008 - Added crossdomin.xml to list
+					   Added some more extraction data
+					   Changed Full test mode behaviour so no duplicated needed in request list
+					   Fixed --apponly cla
+
+<1.6.1> - 01/08/2008 - Fixed thread detection so it actually disables if python is built without threads
+					   Rearranges error messages so output is a little cleaner
+
+
+<1.6.0> - 19/06/2008 - Added -H flag which puts it into app only mode. This will only do tests with a corrcet vhost
+					   Added methods to test with a bad vhost name
+					   Fixed Proxy bug {It Didn't work!}
+
+<1.5.12> - 17/06/2008 - broke backwards compatability with python <2.5 in 1.5.10 now fixed
+
+<1.5.11> - 02/06/2008 - now checks for thread support and disables if nescesary
+
+<1.5.10> - 29/05/2008 - added thread locking so output is not jumbuled on screen/disk
+						modified the keyboard handler so CTRL-C is caught twice, 
+												once to wait for threads second to not
+						fixed threading problem so that max thread count is adhered to
+
+<1.5.9> - 20/05/2008 - fixed a bug with the printing of what is being done in verbose mode
+					   added two new methods of detecting track/trace
+					   removed the :(port) directive from the standard methods file as some servers seemed to not
+					   properly associate vhosts
+
+<1.5.8> - 03/04/2008 - fixed a bug with the check done when settign a port number
+
+<1.5.7> - 29/02/2008 - fixed bug in finding http-methods file if installed into a dirrerent location
+		   			   on the 29th just because i could
+
+<1.5.6> - 26/02/2008 - fixed some bugs in handling wierd server headers
+		   			   fixed a bug with mutlipart encoding
+					   added some more info methods
+
+<1.5.5> - 07/02/2008 - changed the location syntax no longer do you put the trailing / on the dir
+		   			   it missed an internal IP hence the above change and the addition of a method
+					   
+<1.5.4> - 21/01/2008 - bugfixes in summry output
+
+<1.5.3> - 21/12/2007 - it's now multi threaded
+				       added data extract mode (2 in responce keywords)
+	 	      	       tweaked the output when erroring in test file
+				       fixed exception handling of CTRL-C to exit in verbose mode
+				       better handling of a server dying in mid test
+
+<1.5.2> - 14/12/2007 - added proper IP parsing
+                       added robots.txt check
+
+<1.5.1> - 26/11/2207 - fixed bugs with Directory disclosure matching
+					   fixed handling of some fail cases
+
+<1.5.0> - 13/11/2207 - Complete hoppy rewrite now is OO
+					   Added (-S) save to file
+					   Added (-L) loop round file
+					   Added phpinfo.php check
+					   numerous bug fixes spotted when re testing code
+					   modded connection check code
+
+
+<1.1.1> - 22/10/2007 - Changed Invalid method test to HOPPY from S**T
+					   Added small case get tests
+					   Changed IP matching (slightly)
+					   Added strip to Imformation Leanage Text
+
+<1.1.0> - 13/10/2007 - Moved files to /usr/share and added config file to /etc/hoppy like nikto does
+					   Added verbose output to incorrect command line args
+					   edited makefile to resembple new file layout 
+
+<1.0.1r1> - ? - Fixed problem when not using burp as a proxy
+
+<1.0.1> - 21/09/2007 - Implemented Proxy Server Facility
+					 - Tidied up output
+					 - Added Progress Bar
+
+<1.0.0> - 20/09/2007 - Fixed Track/Trace Method balls-up
+					 - Added IIS Cookie: =cookie=weofiejwf Vulnerability
+
+
+<1.0.0rc2> - 23/08/2007	- Can add -r if using through stunnel to set actual hostname
+						- improved NTLM auth Base64 decode Handling
+						- added resolved ip address into output
+
+
+<1.0.0rc1> - 23/08/2007	- Added basic Auth 
+						  now looks in current directory for config files too
+
+
+<0.9.9> - 20/08/2007 - Added Via keyword
+					   Fixed bug in handling bad ssl connection (with some python builds)	
+
+<0.9.8> - 30/07/2007 - reordered methods file to leave server as we found it if put/delete etc work
+					   added ansi highlighting of IP addresses (and file path disclosure)
+					   split info leakage into sections
+
+<0.9.7> - 23/07/2007 - fixed socket read loop problems
+					   added digest auth detection
+					   tested (again)
+					   reordered file put, delete slightly
+					   added error report in summary
+					   released to PTT
+					   
+<0.9.6> - 20/07/2007 - tidied up code a little
+					   added base64 decode for NTLM check
+					   added variable timeout on socket
+					   documented new features
+					   added TODO
+					   fixed data read so quickmode is obselete
+					   added http/https host name parseing
+					   added Content-Length Parsing in server response
+					   added a bit of chunk decoding 
+					   added regex match to windows filename
+
+<0.9.5> - 19/07/2007 - really fixed broken head data check (my bad)
+					   added apache expect method XSS check
+					   
+<0.9.4> - 18/07/2007 - added support for (wait) on 100 continue
+					   added mode to get all data from server (default)
+					   added quick mode (previouse default, just does one read from socket)
+
+<0.9.3> - 17/07/2007 - added print just summary option
+					   default behaviour is just summary
+					   added switch for 404 supression
+					   fixed broken head data check
+					   improved config file error detection
+
+<0.9.2>	- 17/07/2007 - added summary of results parser
+					   passed to mark for testing
+
+<0.9.1> - 17/07/2007 - streamlined the methods and keywords file input parser
+					   added check function to test config files
+					   added frontpage checks
+
+<0.9r2> - 16/07/2007 - added apache multiview detection
+					   moved keyword matching to it's own file
+					   added detection for bad line in keyword and methods files
+
+<0.9r1> - 16/07/2007 - rewrote the http-methods file following the reading of david litchfield IIS paper
+					   moved http-methods to /etc/hoppy
+					   added support for user options file
+					   added WWW-Authenticate Matching in parser - untested
+					   added very verbose option
+					   added GPL license
+					   added Makefile to copy files to proper locations
+					   added branding
+					   released to PTT as hoppy
+					   
+<0.7> - http_options become the more catchy 'hoppy'
+		perl version has become depreciated
+
+<0.5> - stopped quitting when a single method check failed 
+
+<0.3> - Moved option checking out of main loop into methods file
+		added head method to check we have a connection
+		added (file) and (location) settings
+		
+<0.1> - 14/03/2007 - http_options.py in both perl and python are born, used to test allowed http methods as all the tools i've found  				     are shite or overkill (or .net based not sure which category this fits in, if any)
+					 released to PTT as 	http_options.pl (perl)
+											http_options.py (python)
+		
+
+

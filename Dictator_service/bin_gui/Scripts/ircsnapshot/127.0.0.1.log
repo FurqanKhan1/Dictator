@@ -1,0 +1,16 @@
+[2016-09-10 20:29:32,371] Logger initiated
+[2016-09-10 20:29:32,372] {"real": "wMBvsvqnNT", "nick": "MKubaOUbPg", "config": {"proxyport": 9050, "real": "wMBvsvqnNT", "listDelay": null, "nolist": false, "ssl": false, "throttleLevel": 1.0, "user": "wAGLYmsktE", "pass": null, "server": "127.0.0.1", "outputdir": ".", "channelstocheck": null, "proxyhost": null, "port": "6667", "nick": "MKubaOUbPg"}, "user": "wAGLYmsktE"}
+[2016-09-10 20:29:32,373] An error occurred while connected to the IRC server
+[2016-09-10 20:29:32,373] Still going to write out the results
+[2016-09-10 20:29:32,373] <class 'socket.error'>
+[2016-09-10 20:29:32,373] [Errno 111] Connection refused
+[2016-09-10 20:29:32,373] ['  File "ircsnapshot.py", line 646, in <module>\n    bot.start()\n', '  File "ircsnapshot.py", line 205, in start\n    self.bot.start()\n', '  File "ircsnapshot.py", line 515, in start\n    self.sock.connect((self.server, self.port))\n', '  File "/usr/lib/python2.7/socket.py", line 224, in meth\n    return getattr(self._sock,name)(*args)\n']
+[2016-09-10 20:29:33,518] finished
+[2016-09-10 20:31:27,062] Logger initiated
+[2016-09-10 20:31:27,062] {"real": "fQfVksDqYO", "nick": "CHbWeztnUz", "config": {"proxyport": 9050, "real": "fQfVksDqYO", "listDelay": null, "nolist": false, "ssl": false, "throttleLevel": 1.0, "user": "ykeRkpPLOW", "pass": null, "server": "127.0.0.1", "outputdir": ".", "channelstocheck": null, "proxyhost": null, "port": "6665", "nick": "CHbWeztnUz"}, "user": "ykeRkpPLOW"}
+[2016-09-10 20:31:27,063] An error occurred while connected to the IRC server
+[2016-09-10 20:31:27,063] Still going to write out the results
+[2016-09-10 20:31:27,063] <class 'socket.error'>
+[2016-09-10 20:31:27,063] [Errno 111] Connection refused
+[2016-09-10 20:31:27,065] ['  File "ircsnapshot.py", line 646, in <module>\n    bot.start()\n', '  File "ircsnapshot.py", line 205, in start\n    self.bot.start()\n', '  File "ircsnapshot.py", line 515, in start\n    self.sock.connect((self.server, self.port))\n', '  File "/usr/lib/python2.7/socket.py", line 224, in meth\n    return getattr(self._sock,name)(*args)\n']
+[2016-09-10 20:31:28,220] finished

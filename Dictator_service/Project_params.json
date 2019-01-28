@@ -1,0 +1,10 @@
+{
+	"Default":
+	{
+		"User":"admin",
+		"Password":"admin_123",
+		"Domain":"localhost",
+		"User_sid":"1234567890"
+			
+	}
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+  <action nil="true"></action>
+  <controller></controller>
+  <created-at type="datetime">2010-07-09T22:50:13Z</created-at>
+  <error-class>IntegrityError</error-class>
+  <error-message>IntegrityError: (1062, "Duplicate entry 'Susan_Shan' for key 'member_id'")</error-message>
+  <file>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/db/models/query.py</file>
+  <id type="integer">2035230</id>
+  <lighthouse-ticket-id type="integer">175</lighthouse-ticket-id>
+  <line-number type="integer">381</line-number>
+  <most-recent-notice-at type="datetime">2010-08-04T15:51:42Z</most-recent-notice-at>
+  <notice-hash>add20366cc3edaf17c2320c98e1715ea</notice-hash>
+  <notices-count type="integer">6</notices-count>
+  <project-id type="integer">13025</project-id>
+  <rails-env>PRODUCTION</rails-env>
+  <resolved type="boolean">true</resolved>
+  <updated-at type="datetime">2010-08-04T15:51:42Z</updated-at>
+  <environment>
+    <ignorable-404-starts>('/cgi-bin/', '/_vti_bin', '/_vti_inf')</ignorable-404-starts>
+    <wsgi-url-scheme>http</wsgi-url-scheme>
+    <thousand-separator>,</thousand-separator>
+    <comments-first-few>0</comments-first-few>
+    <database-routers>[]</database-routers>
+    <decimal-separator>.</decimal-separator>
+    <secret-key>********************</secret-key>
+    <git-commit></git-commit>
+    <test-runner>django_nose.NoseTestSuiteRunner</test-runner>
+    <bueda-key>r9WkJ2AdbejXFuTRcx2ciXKn5obrXgcnU5wKrQ</bueda-key>
+    <login-url>/account/login/</login-url>
+    <session-file-path>None</session-file-path>
+    <static-media-server>False</static-media-server>
+    <allowed-include-roots>()</allowed-include-roots>
+    <max-cache-entries>10000</max-cache-entries>
+    <year-month-format>F Y</year-month-format>
+    <http-referer>http://www.fivebybueda.com/admin/campaign/campaign/</http-referer>
+    <language-cookie-name>django_language</language-cookie-name>
+    <session-cookie-domain>None</session-cookie-domain>
+    <email-host-password>********************</email-host-password>
+    <default-index-tablespace></default-index-tablespace>
+    <cache-backend>memcached://127.0.0.1:11211/?timeout=60&amp;max_entries=10000</cache-backend>
+    <content-length>117</content-length>
+    <authentication-backends>('django.contrib.auth.backends.ModelBackend',)</authentication-backends>
+    <wsgi-multiprocess>False</wsgi-multiprocess>
+    <default-charset>utf-8</default-charset>
+    <twitter-max-users>5</twitter-max-users>
+    <server-email>Bueda Operations &lt;ops@bueda.com&gt;</server-email>
+    <mod-wsgi-script-reloading>1</mod-wsgi-script-reloading>
+    <session-cookie-name>sessionid</session-cookie-name>
+    <mod-wsgi-reload-mechanism>1</mod-wsgi-reload-mechanism>
+    <request-uri>http://www.fivebybueda.com/admin/campaign/campaign/</request-uri>
+    <test-database-name>None</test-database-name>
+    <piston-email-errors>False</piston-email-errors>
+    <http-origin>http://www.fivebybueda.com</http-origin>
+    <path-translated>/var/django/five/releases/current/wsgi/five.wsgi/admin/campaign/campaign/</path-translated>
+    <document-root>/htdocs</document-root>
+    <template-loaders>(('django.template.loaders.cached.Loader', ('django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader', 'django.template.loaders.eggs.Loader')),)</template-loaders>
+    <session-cookie-path>/</session-cookie-path>
+    <remote-addr>67.186.58.235</remote-addr>
+    <prepend-www>False</prepend-www>
+    <file-charset>utf-8</file-charset>
+    <twitter-user-agent>Bueda</twitter-user-agent>
+    <first-day-of-week>0</first-day-of-week>
+    <server-addr>10.209.95.116</server-addr>
+    <script-name></script-name>
+    <mod-wsgi-listener-host></mod-wsgi-listener-host>
+    <languages>(('ar', 'Arabic'), ('bg', 'Bulgarian'), ('bn', 'Bengali'), ('bs', 'Bosnian'), ('ca', 'Catalan'), ('cs', 'Czech'), ('cy', 'Welsh'), ('da', 'Danish'), ('de', 'German'), ('el', 'Greek'), ('en', 'English'), ('en-gb', 'British English'), ('es', 'Spanish'), ('es-ar', 'Argentinean Spanish'), ('et', 'Estonian'), ('eu', 'Basque'), ('fa', 'Persian'), ('fi', 'Finnish'), ('fr', 'French'), ('fy-nl', 'Frisian'), ('ga', 'Irish'), ('gl', 'Galician'), ('he', 'Hebrew'), ('hi', 'Hindi'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('id', 'Indonesian'), ('is', 'Icelandic'), ('it', 'Italian'), ('ja', 'Japanese'), ('ka', 'Georgian'), ('km', 'Khmer'), ('kn', 'Kannada'), ('ko', 'Korean'), ('lt', 'Lithuanian'), ('lv', 'Latvian'), ('mk', 'Macedonian'), ('mn', 'Mongolian'), ('nl', 'Dutch'), ('no', 'Norwegian'), ('nb', 'Norwegian Bokmal'), ('nn', 'Norwegian Nynorsk'), ('pl', 'Polish'), ('pt', 'Portuguese'), ('pt-br', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru', 'Russian'), ('sk', 'Slovak'), ('sl', 'Slovenian'), ('sq', 'Albanian'), ('sr', 'Serbian'), ('sr-latn', 'Serbian Latin'), ('sv', 'Swedish'), ('ta', 'Tamil'), ('te', 'Telugu'), ('th', 'Thai'), ('tr', 'Turkish'), ('uk', 'Ukrainian'), ('vi', 'Vietnamese'), ('zh-cn', 'Simplified Chinese'), ('zh-tw', 'Traditional Chinese'))</languages>
+    <admin-for>()</admin-for>
+    <message-storage>django.contrib.messages.storage.user_messages.LegacyFallbackStorage</message-storage>
+    <http-cache-control>max-age=0</http-cache-control>
+    <email-host-user>noreply@bueda.com</email-host-user>
+    <test-database-collation>None</test-database-collation>
+    <installed-apps>['django.contrib.auth', 'django.contrib.admin', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.sites', 'django.contrib.markup', 'django.contrib.messages', 'djcelery', 'ghettoq', 'api', 'contentsource', 'market', 'core', 'plan', 'tag', 'campaign', 'seed', 'twitter', 'media', 'users', 'stats', 'comrade.core', 'comrade.cronjobs', 'limitedregistration', 'registration', 'south']</installed-apps>
+    <csrf-cookie-domain>None</csrf-cookie-domain>
+    <root-urlconf>urls</root-urlconf>
+    <languages-bidi>('he', 'ar', 'fa')</languages-bidi>
+    <test-database-charset>None</test-database-charset>
+    <database-host></database-host>
+    <default-file-storage>django.core.files.storage.FileSystemStorage</default-file-storage>
+    <time-input-formats>('%H:%M:%S', '%H:%M')</time-input-formats>
+    <file-upload-permissions>None</file-upload-permissions>
+    <http-accept-charset>ISO-8859-1,utf-8;q=0.7,*;q=0.3</http-accept-charset>
+    <transactions-managed>False</transactions-managed>
+    <use-i18n>False</use-i18n>
+    <url-validator-user-agent>Django/1.2.1 (http://www.djangoproject.com)</url-validator-user-agent>
+    <request-method>POST</request-method>
+    <format-module-path>None</format-module-path>
+    <email-use-tls>True</email-use-tls>
+    <force-script-name>None</force-script-name>
+    <session-cookie-secure>False</session-cookie-secure>
+    <http-connection>keep-alive</http-connection>
+    <maintenance-ignore-urls>('^/media/.*', '^/site_media/.*', '^/admin/.*')</maintenance-ignore-urls>
+    <path-info>/admin/campaign/campaign/</path-info>
+    <database-engine></database-engine>
+    <append-slash>True</append-slash>
+    <language-code>en-us</language-code>
+    <ignorable-404-ends>('mail.pl', 'mailform.pl', 'mail.cgi', 'mailform.cgi', 'favicon.ico', '.php')</ignorable-404-ends>
+    <debug>False</debug>
+    <database-name></database-name>
+    <wsgi-version>(1, 0)</wsgi-version>
+    <carrot-backend>ghettoq.taproot.Database</carrot-backend>
+    <default-content-type>text/html</default-content-type>
+    <cache-timeout>60</cache-timeout>
+    <max-radius>2500</max-radius>
+    <http-x-forwarded-for>67.186.58.235</http-x-forwarded-for>
+    <server-software>Apache</server-software>
+    <stop-words>('a', 'about', 'above', 'across', 'after', 'again', 'against', 'all', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'among', 'an', 'and', 'another', 'any', 'anybody', 'anyone', 'anything', 'anywhere', 'are', 'area', 'areas', 'around', 'as', 'ask', 'asked', 'asking', 'asks', 'at', 'away', 'a', 'b', 'back', 'backed', 'backing', 'backs', 'be', 'became', 'because', 'become', 'becomes', 'been', 'before', 'began', 'behind', 'being', 'beings', 'best', 'better', 'between', 'big', 'both', 'but', 'by', 'c', 'came', 'can', 'cannot', 'case', 'cases', 'certain', 'certainly', 'clear', 'clearly', 'come', 'could', 'd', 'did', 'differ', 'different', 'differently', 'do', 'does', 'done', 'down', 'downed', 'downing', 'downs', 'during', 'e', 'each', 'early', 'either', 'end', 'ended', 'ending', 'ends', 'enough', 'even', 'evenly', 'ever', 'every', 'everybody', 'everyone', 'everything', 'everywhere', 'f', 'face', 'faces', 'fact', 'facts', 'far', 'felt', 'few', 'find', 'finds', 'first', 'for', 'four', 'from', 'full', 'fully', 'further', 'furthered', 'furthering', 'furthers', 'g', 'gave', 'general', 'generally', 'get', 'gets', 'give', 'given', 'gives', 'go', 'going', 'good', 'goods', 'got', 'great', 'greater', 'greatest', 'group', 'grouped', 'grouping', 'groups', 'h', 'had', 'has', 'have', 'having', 'he', 'her', 'here', 'herself', 'high', 'higher', 'highest', 'him', 'himself', 'his', 'how', 'however', 'i', 'if', 'important', 'in', 'interest', 'interested', 'interesting', 'interests', 'into', 'is', 'it', 'its', 'itself', 'j', 'just', 'k', 'keep', 'keeps', 'kind', 'knew', 'know', 'known', 'knows', 'l', 'large', 'largely', 'last', 'later', 'latest', 'least', 'less', 'let', 'lets', 'like', 'likely', 'long', 'longer', 'longest', 'm', 'made', 'make', 'making', 'man', 'many', 'may', 'me', 'member', 'members', 'men', 'might', 'more', 'most', 'mostly', 'mr', 'mrs', 'much', 'must', 'my', 'myself', 'n', 'necessary', 'need', 'needed', 'needing', 'needs', 'never', 'new', 'newer', 'newest', 'next', 'no', 'nobody', 'non', 'noone',</stop-words>
+    <databases>{'default': {'ENGINE': 'django.db.backends.mysql', 'TEST_MIRROR': None, 'NAME': 'five', 'TEST_CHARSET': None, 'TIME_ZONE': 'UTC', 'TEST_COLLATION': None, 'PORT': '', 'HOST': 'django-rds.cvks7ybkczu6.us-east-1.rds.amazonaws.com', 'USER': 'five', 'TEST_NAME': None, 'PASSWORD': '********************', 'OPTIONS': {}}}</databases>
+    <http-cookie>__utmz=95173003.1280848873.35.11.utmcsr=bueda.com|utmccn=(referral)|utmcmd=referral|utmcct=/products/; sessionid=878f1c37b9c4ef47be925169b37ec7c4; __utma=95173003.319444960.1276894830.1280869131.1280936588.38; __utmc=95173003; __utmb=95173003.60.10.1280936588; csrftoken=04a9b76a327845390a5138f868facdd6</http-cookie>
+    <deployment>PRODUCTION</deployment>
+    <file-upload-handlers>('django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler')</file-upload-handlers>
+    <root>/var/django/five/releases/current</root>
+  </environment>
+  <session>
+    <data>
+      <auth-user-id>7</auth-user-id>
+      <auth-user-backend>django.contrib.auth.backends.ModelBackend</auth-user-backend>
+    </data>
+  </session>
+  <request>
+    <rails-root>/var/django/five/releases/current/apps</rails-root>
+    <url>http://www.fivebybueda.com/admin/campaign/campaign/</url>
+    <params>
+      <csrfmiddlewaretoken>04a9b76a327845390a5138f868facdd6</csrfmiddlewaretoken>
+      <action></action>
+      <controller></controller>
+      <select-across>0</select-across>
+      <index>0</index>
+      <selected-action>68</selected-action>
+    </params>
+  </request>
+  <backtrace>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/db/models/query.py:381:in `get_or_create'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/db/models/manager.py:135:in `get_or_create'</line>
+    <line>/var/django/five/releases/current/apps/campaign/models.py:76:in `_seed'</line>
+    <line>/var/django/five/releases/current/apps/campaign/models.py:53:in `seed'</line>
+    <line>/var/django/five/releases/current/apps/campaign/admin.py:9:in `seed_campaign'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/contrib/admin/options.py:749:in `response_action'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/contrib/admin/options.py:991:in `changelist_view'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/utils/decorators.py:17:in `bound_func'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/utils/decorators.py:76:in `_wrapped_view'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/utils/decorators.py:21:in `_wrapper'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/contrib/admin/sites.py:190:in `inner'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/views/decorators/cache.py:69:in `_wrapped_view_func'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/utils/decorators.py:76:in `_wrapped_view'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/contrib/admin/options.py:239:in `wrapper'</line>
+    <line>/var/django/five/releases/current/env/lib/python2.6/site-packages/django/core/handlers/base.py:100:in `get_response'</line>
+  </backtrace>
+</group>

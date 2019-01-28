@@ -1,0 +1,8 @@
+Inside INVOKER.PY 
+
+
+('test-host', 'test_path', 'test-port', '1', 'test-switch', '301', 'g-start', 'test-assessment', '1')
+
+
+
+ Exiting Bye Bye !!!

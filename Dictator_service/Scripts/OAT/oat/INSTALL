@@ -1,0 +1,27 @@
+Oracle Auditing Tools by patrik@cqure.net
+-----------------------------------------
+
+Requirements
+------------
+Oracle JDBC driver, which can be obtained at www.oracle.com or
+simply by searching the internet with eg. google for classess111.zip.
+
+Unix
+----
+Modify the path to the java binary in the .sh files.
+Modify the path to the JDBC driver, normaly:
+
+<ORACLE_HOME>/jdbc/lib/classes111.zip
+or
+<ORACLE_HOME>/jdbc/lib/classes12.zip
+
+Windows
+-------
+Modify the path to the java binary in the .bat files.
+Modify the path to the JDBC driver, normaly:
+
+<ORACLE_HOME>\jdbc\lib\classes111.zip
+or
+<ORACLE_HOME>\jdbc\lib\classes12.zip
+
+Patrik Karlsson, http://www.cqure.net

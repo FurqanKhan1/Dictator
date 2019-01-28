@@ -1,0 +1,107 @@
+TERM environment variable not set.
+Inside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('127.0.0.1', 'projecct_test', '443', '1', '-T4 -A -v -Pn -n', '729', 'g-start', '8461bf0a-66fb-11e7-92ab-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(127.0.0.1', 'projecct_test', '443', '1', '-T4 -A -v -Pn -n', '729', 'g-start', '8461bf0a-66fb-11e7-92ab-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start and profile at main : 2
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in else
+Started
+ended
+Ended
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 139998715717264)>]
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['127.0.0.1']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 139998715717264)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+Started Simple acanner
+Started
+
+Started thread for IP :127.0.0.1 --> Thread is : <Thread(Thread-1, started daemon 139998607480576)>
+Ended
+Reached port scanner module with record id --> 2533
+Starting the scan with the switch :-T4 -A -v -Pn -n
+Reached Debug 1
+Reached Debug 2
+Up host status is :1
+Reached Debug 3
+[31m----------------------------------------------[0m
+Reached Debug 4
+Result for IP : 127.0.0.1
+Protocol : TCP
+Reached Debug 5
+[34mport : [33m443 	 [32mopen 	[31mhttps[0m
+[31m----------------------------------------------[0m
+Reached Debug 6
+Started
+Stopped
+Reached Debug 8
+
+
+ Finished subprocess for ip 127.0.0.1 and Process : <Process(Process-1, stopped)>
+Ended Simple acanner
+
+
+Thread ended with host ip -127.0.0.1
+
+
+**Pooling started :**
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 139998715717264)>, <_DummyThread(Dummy-2, started daemon 139998781388544)>]
+
+[31m----------------------------------------------[0m
+None
+Obtained dummy thread <_DummyThread(Dummy-2, started daemon 139998781388544)>
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139998715717264)>, <_DummyThread(Dummy-2, started daemon 139998781388544)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139998715717264)>, <_DummyThread(Dummy-2, started daemon 139998781388544)>]
+Reached here as well !!!
+# of threads Alive are :2
+
+Now stopping and saving Global Project Id : 729
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 108.703441143

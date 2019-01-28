@@ -1,0 +1,206 @@
+2016-09-26 14:47:46,340 - Info Logger - DEBUG - 
+
+
+ STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 185 and id : 185
+2016-09-26 14:47:46,346 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-09-26 14:47:46,349 - Info Logger - DEBUG - Starting method --> InsertIPExploits()
+2016-09-26 14:47:46,357 - Info Logger - DEBUG - Starting method --> launchConfiguration()Projectc id --> 185
+2016-09-26 14:47:46,358 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-09-26 14:47:52,995 - Info Logger - DEBUG - Started method LaunchExploits()
+2016-09-26 14:47:52,997 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-09-26 14:47:53,003 - Info Logger - DEBUG - Service,Host,port  is -->ftp  192.168.179.136  21
+2016-09-26 14:47:53,004 - Info Logger - DEBUG - Command id --> ftp_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:47:53,004 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Inside command_meta
+2016-09-26 14:48:30,987 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Everything Fine till now-->Launching run command
+2016-09-26 14:48:36,096 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Module Execution completed
+2016-09-26 14:48:36,097 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Exiting  from msfconsole !!!
+2016-09-26 14:48:38,309 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Saving details :
+2016-09-26 14:48:41,333 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Details Updated successfully
+2016-09-26 14:48:41,334 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Exiting custom_meta !!
+2016-09-26 14:48:41,334 - Info Logger - DEBUG - Command id --> ftp_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:48:41,335 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Inside command_meta
+2016-09-26 14:49:08,938 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Everything Fine till now-->Launching run command
+2016-09-26 14:49:14,047 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Module Execution completed
+2016-09-26 14:49:14,048 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Exiting  from msfconsole !!!
+2016-09-26 14:49:16,258 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Saving details :
+2016-09-26 14:49:19,268 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Details Updated successfully
+2016-09-26 14:49:19,269 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Exiting custom_meta !!
+2016-09-26 14:49:19,269 - Info Logger - DEBUG - Command id --> ftp_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:49:19,270 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Starting FTP Login --Anonmous
+2016-09-26 14:49:25,749 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Login Successful
+2016-09-26 14:49:25,853 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Saving details :
+2016-09-26 14:49:28,869 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Details Updated successfully
+2016-09-26 14:49:28,869 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Exiting method Ftp interactive !!
+2016-09-26 14:49:28,870 - Info Logger - DEBUG - Command id --> ftp_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:49:28,870 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:49:28,872 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Thread started --with command nmap -sV --script=ftp-bounce.nse -p 21 192.168.179.136
+2016-09-26 14:49:30,541 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Saving details :
+2016-09-26 14:49:33,551 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Details Updated successfully
+2016-09-26 14:49:33,552 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Thread finished
+2016-09-26 14:49:33,562 - Info Logger - DEBUG - Command id --> ftp_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:49:33,562 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:49:33,569 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 21 192.168.179.136
+2016-09-26 14:49:35,234 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Saving details :
+2016-09-26 14:49:38,240 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Details Updated successfully
+2016-09-26 14:49:38,241 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Thread finished
+2016-09-26 14:49:38,289 - Info Logger - DEBUG - Command id --> ftp_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:49:38,289 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:49:38,298 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Thread started --with command nmap --script=ftp-anon.nse -p 21 192.168.179.136
+2016-09-26 14:49:39,355 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Saving details :
+2016-09-26 14:49:42,362 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Details Updated successfully
+2016-09-26 14:49:42,363 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Thread finished
+2016-09-26 14:49:42,395 - Info Logger - DEBUG - Service,Host,port  is -->ftp  192.168.179.136  2121
+2016-09-26 14:49:42,395 - Info Logger - DEBUG - Command id --> ftp_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:49:42,396 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Inside command_meta
+2016-09-26 14:50:15,659 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Everything Fine till now-->Launching run command
+2016-09-26 14:50:20,766 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Module Execution completed
+2016-09-26 14:50:20,767 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Exiting  from msfconsole !!!
+2016-09-26 14:50:22,975 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Saving details :
+2016-09-26 14:50:25,984 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Details Updated successfully
+2016-09-26 14:50:25,984 - Info Logger - DEBUG - Command id --> ftp_1  Message --> :Exiting custom_meta !!
+2016-09-26 14:50:25,985 - Info Logger - DEBUG - Command id --> ftp_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:50:25,986 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Inside command_meta
+2016-09-26 14:50:53,344 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Everything Fine till now-->Launching run command
+2016-09-26 14:50:58,453 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Module Execution completed
+2016-09-26 14:50:58,454 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Exiting  from msfconsole !!!
+2016-09-26 14:51:00,668 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Saving details :
+2016-09-26 14:51:03,681 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Details Updated successfully
+2016-09-26 14:51:03,682 - Info Logger - DEBUG - Command id --> ftp_2  Message --> :Exiting custom_meta !!
+2016-09-26 14:51:03,682 - Info Logger - DEBUG - Command id --> ftp_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:51:03,685 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Starting FTP Login --Anonmous
+2016-09-26 14:51:10,161 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Login Successful
+2016-09-26 14:51:10,265 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Saving details :
+2016-09-26 14:51:13,278 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Details Updated successfully
+2016-09-26 14:51:13,282 - Info Logger - DEBUG - Command id --> ftp_3  Message --> :Exiting method Ftp interactive !!
+2016-09-26 14:51:13,282 - Info Logger - DEBUG - Command id --> ftp_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:51:13,286 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:51:13,289 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Thread started --with command nmap -sV --script=ftp-bounce.nse -p 2121 192.168.179.136
+2016-09-26 14:51:14,922 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Saving details :
+2016-09-26 14:51:17,936 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Details Updated successfully
+2016-09-26 14:51:17,939 - Info Logger - DEBUG - Command id --> ftp_4  Message --> :Thread finished
+2016-09-26 14:51:17,941 - Info Logger - DEBUG - Command id --> ftp_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:51:17,942 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:51:17,943 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 2121 192.168.179.136
+2016-09-26 14:51:19,642 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Saving details :
+2016-09-26 14:51:22,653 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Details Updated successfully
+2016-09-26 14:51:22,654 - Info Logger - DEBUG - Command id --> ftp_5  Message --> :Thread finished
+2016-09-26 14:51:22,700 - Info Logger - DEBUG - Command id --> ftp_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:51:22,700 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:51:22,705 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Thread started --with command nmap --script=ftp-anon.nse -p 2121 192.168.179.136
+2016-09-26 14:51:23,689 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Saving details :
+2016-09-26 14:51:26,701 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Details Updated successfully
+2016-09-26 14:51:26,702 - Info Logger - DEBUG - Command id --> ftp_6  Message --> :Thread finished
+2016-09-26 14:51:26,745 - Info Logger - DEBUG - Service,Host,port  is -->domain  192.168.179.136  53
+2016-09-26 14:51:26,745 - Info Logger - DEBUG - Command id --> domain_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:51:26,745 - Info Logger - DEBUG - Command id --> domain_1  Message --> :Launching Domain Interactive ::<--- Command :--->nslookup
+2016-09-26 14:51:33,375 - Info Logger - DEBUG - Command id --> domain_1  Message --> :Dns lookup finished with changed dns server 
+2016-09-26 14:51:33,480 - Info Logger - DEBUG - Command id --> domain_1  Message --> :Saving details :
+2016-09-26 14:51:36,490 - Info Logger - DEBUG - Command id --> domain_1  Message --> :Details Updated successfully
+2016-09-26 14:51:36,492 - Info Logger - DEBUG - Command id --> domain_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:51:36,493 - Info Logger - DEBUG - Command id --> domain_2  Message --> :Launching FierceCheck with the given host --> 192.168.179.136
+2016-09-26 14:52:45,688 - Info Logger - DEBUG - Command id --> domain_2  Message --> :Dns reverse lookup
+2016-09-26 14:52:45,969 - Info Logger - DEBUG - Command id --> domain_2  Message --> :Reverse dns Failed
+2016-09-26 14:52:45,969 - Info Logger - DEBUG - Command id --> domain_2  Message --> :Exiting getReverseDns()
+2016-09-26 14:52:46,070 - Info Logger - ERROR - Command id --> domain_2  Message --> :Exception in Dns_FierceCheck cannot concatenate 'str' and 'int' objects
+2016-09-26 14:52:46,071 - Info Logger - DEBUG - Command id --> domain_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:52:46,071 - Info Logger - DEBUG - Command id --> domain_3  Message --> :In Dns_recon check
+2016-09-26 14:52:46,072 - Info Logger - DEBUG - Command id --> domain_3  Message --> :Dns reverse lookup
+2016-09-26 14:52:46,352 - Info Logger - DEBUG - Command id --> domain_3  Message --> :Reverse dns Failed
+2016-09-26 14:52:46,352 - Info Logger - DEBUG - Command id --> domain_3  Message --> :Exiting getReverseDns()
+2016-09-26 14:52:46,455 - Info Logger - ERROR - Command id --> domain_3  Message --> :Exception dns recon cannot concatenate 'str' and 'int' objects
+2016-09-26 14:52:46,455 - Info Logger - DEBUG - Command id --> domain_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:52:46,456 - Info Logger - DEBUG - Command id --> domain_4  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:52:46,460 - Info Logger - DEBUG - Command id --> domain_4  Message --> :Thread started --with command nmap -sU --script=dns-recursion.nse -p 53 192.168.179.136
+2016-09-26 14:52:47,771 - Info Logger - DEBUG - Command id --> domain_4  Message --> :Saving details :
+2016-09-26 14:52:50,781 - Info Logger - DEBUG - Command id --> domain_4  Message --> :Details Updated successfully
+2016-09-26 14:52:50,782 - Info Logger - DEBUG - Command id --> domain_4  Message --> :Thread finished
+2016-09-26 14:52:50,821 - Info Logger - DEBUG - Command id --> domain_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:52:50,822 - Info Logger - DEBUG - Command id --> domain_5  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:52:50,824 - Info Logger - DEBUG - Command id --> domain_5  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 53 192.168.179.136
+2016-09-26 14:53:13,590 - Info Logger - DEBUG - Command id --> domain_5  Message --> :Saving details :
+2016-09-26 14:53:16,603 - Info Logger - DEBUG - Command id --> domain_5  Message --> :Details Updated successfully
+2016-09-26 14:53:16,604 - Info Logger - DEBUG - Command id --> domain_5  Message --> :Thread finished
+2016-09-26 14:53:16,651 - Info Logger - DEBUG - Command id --> domain_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:53:16,652 - Info Logger - DEBUG - Command id --> domain_6  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:53:16,658 - Info Logger - DEBUG - Command id --> domain_6  Message --> :Thread started --with command nslookup 192.168.179.136
+2016-09-26 14:53:16,699 - Info Logger - DEBUG - Command id --> domain_6  Message --> :Saving details :
+2016-09-26 14:53:19,705 - Info Logger - DEBUG - Command id --> domain_6  Message --> :Details Updated successfully
+2016-09-26 14:53:19,707 - Info Logger - DEBUG - Command id --> domain_6  Message --> :Thread finished
+2016-09-26 14:53:19,739 - Info Logger - DEBUG - Service,Host,port  is -->rpcbind  192.168.179.136  111
+2016-09-26 14:53:19,739 - Info Logger - DEBUG - Command id --> rpcbind_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:53:19,740 - Info Logger - DEBUG - Command id --> rpcbind_1  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:53:19,747 - Info Logger - DEBUG - Command id --> rpcbind_1  Message --> :Thread started --with command rpcinfo -p  192.168.179.136
+2016-09-26 14:53:19,774 - Info Logger - DEBUG - Command id --> rpcbind_1  Message --> :Saving details :
+2016-09-26 14:53:22,781 - Info Logger - DEBUG - Command id --> rpcbind_1  Message --> :Details Updated successfully
+2016-09-26 14:53:22,783 - Info Logger - DEBUG - Command id --> rpcbind_1  Message --> :Thread finished
+2016-09-26 14:53:22,817 - Info Logger - DEBUG - Command id --> rpcbind_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:53:22,817 - Info Logger - DEBUG - Command id --> rpcbind_2  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:53:22,821 - Info Logger - DEBUG - Command id --> rpcbind_2  Message --> :Thread started --with command nmap -v -sR 192.168.179.136
+2016-09-26 14:53:40,174 - Info Logger - DEBUG - Command id --> rpcbind_2  Message --> :Saving details :
+2016-09-26 14:53:43,186 - Info Logger - DEBUG - Command id --> rpcbind_2  Message --> :Details Updated successfully
+2016-09-26 14:53:43,187 - Info Logger - DEBUG - Command id --> rpcbind_2  Message --> :Thread finished
+2016-09-26 14:53:43,221 - Info Logger - DEBUG - Command id --> rpcbind_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:53:43,221 - Info Logger - DEBUG - Command id --> rpcbind_3  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:53:43,225 - Info Logger - DEBUG - Command id --> rpcbind_3  Message --> :Thread started --with command nmap -sV --script=nfs-showmount.nse -p 111 192.168.179.136
+2016-09-26 14:53:50,863 - Info Logger - DEBUG - Command id --> rpcbind_3  Message --> :Saving details :
+2016-09-26 14:53:53,890 - Info Logger - DEBUG - Command id --> rpcbind_3  Message --> :Details Updated successfully
+2016-09-26 14:53:53,892 - Info Logger - DEBUG - Command id --> rpcbind_3  Message --> :Thread finished
+2016-09-26 14:53:53,934 - Info Logger - DEBUG - Command id --> rpcbind_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:53:53,935 - Info Logger - DEBUG - Command id --> rpcbind_4  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:53:53,942 - Info Logger - DEBUG - Command id --> rpcbind_4  Message --> :Thread started --with command nmap -sR -p 111 192.168.179.136
+2016-09-26 14:54:01,649 - Info Logger - DEBUG - Command id --> rpcbind_4  Message --> :Saving details :
+2016-09-26 14:54:04,659 - Info Logger - DEBUG - Command id --> rpcbind_4  Message --> :Details Updated successfully
+2016-09-26 14:54:04,660 - Info Logger - DEBUG - Command id --> rpcbind_4  Message --> :Thread finished
+2016-09-26 14:54:04,709 - Info Logger - DEBUG - Command id --> rpcbind_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:54:04,710 - Info Logger - DEBUG - Command id --> rpcbind_5  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:54:04,718 - Info Logger - DEBUG - Command id --> rpcbind_5  Message --> :Thread started --with command nmap -sV --script=rpcinfo.nse -p 111 192.168.179.136
+2016-09-26 14:54:12,362 - Info Logger - DEBUG - Command id --> rpcbind_5  Message --> :Saving details :
+2016-09-26 14:54:15,372 - Info Logger - DEBUG - Command id --> rpcbind_5  Message --> :Details Updated successfully
+2016-09-26 14:54:15,374 - Info Logger - DEBUG - Command id --> rpcbind_5  Message --> :Thread finished
+2016-09-26 14:54:15,424 - Info Logger - DEBUG - Service,Host,port  is -->http  192.168.179.136  80
+2016-09-26 14:54:15,425 - Info Logger - DEBUG - Command id --> http_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:54:15,426 - Info Logger - DEBUG - Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:54:15,434 - Info Logger - DEBUG - Command id --> http_1  Message --> :Thread started --with command nikto -h  192.168.179.136:80
+2016-09-26 14:54:41,490 - Info Logger - DEBUG - Command id --> http_1  Message --> :Saving details :
+2016-09-26 14:54:44,506 - Info Logger - DEBUG - Command id --> http_1  Message --> :Details Updated successfully
+2016-09-26 14:54:44,506 - Info Logger - DEBUG - Command id --> http_1  Message --> :Thread finished
+2016-09-26 14:54:44,526 - Info Logger - DEBUG - Command id --> http_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 14:54:44,527 - Info Logger - DEBUG - Command id --> http_2  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 14:54:44,530 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread started --with command hoppy -t 12 -h 192.168.179.136:80
+2016-09-26 15:04:44,532 - Info Logger - DEBUG - Command id --> http_2  Message --> :Terminating process
+2016-09-26 15:04:44,572 - Info Logger - DEBUG - Command id --> http_2  Message --> :Saving details :
+2016-09-26 15:04:47,604 - Info Logger - DEBUG - Command id --> http_2  Message --> :Details Updated successfully
+2016-09-26 15:04:47,606 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread finished
+2016-09-26 15:04:47,607 - Info Logger - DEBUG - Command id --> http_2  Message --> :Kill result is --> 137
+2016-09-26 15:04:47,607 - Info Logger - DEBUG - Command id --> http_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 15:04:47,608 - Info Logger - DEBUG - Command id --> http_3  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 15:04:47,626 - Info Logger - DEBUG - Command id --> http_3  Message --> :Thread started --with command  perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://192.168.179.136:80
+2016-09-26 15:14:47,628 - Info Logger - DEBUG - Command id --> http_3  Message --> :Terminating process
+2016-09-26 15:14:47,688 - Info Logger - DEBUG - Command id --> http_3  Message --> :Saving details :
+2016-09-26 15:14:47,691 - Info Logger - ERROR - Command id --> http_3  Message --> :Exception in killing process --> 137[Errno 3] No such process
+2016-09-26 15:14:47,691 - Info Logger - DEBUG - Command id --> http_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 15:14:47,694 - Info Logger - DEBUG - Command id --> http_4  Message --> :Starting Special char-Interactive Session with command --> w3af_console and timeout 1200
+2016-09-26 15:14:50,701 - Info Logger - DEBUG - Command id --> http_4  Message --> :Details Updated successfully
+2016-09-26 15:14:50,703 - Info Logger - DEBUG - Command id --> http_4  Message --> :Thread finished
+2016-09-26 15:14:51,230 - Info Logger - DEBUG - Command id --> http_4  Message --> :Results not as expected --> see aurguments 
+2016-09-26 15:14:51,230 - Info Logger - DEBUG - Command id --> http_4  Message --> :Saving details :
+2016-09-26 15:14:54,241 - Info Logger - DEBUG - Command id --> http_4  Message --> :Details Updated successfully
+2016-09-26 15:14:54,550 - Info Logger - DEBUG - Command id --> http_4  Message --> :Exiting general Interactive with special char()
+2016-09-26 15:14:54,550 - Info Logger - DEBUG - Command id --> http_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 15:14:54,551 - Info Logger - DEBUG - Command id --> http_5  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 15:14:54,554 - Info Logger - DEBUG - Command id --> http_5  Message --> :Thread started --with command nmap --script=banner.nse -p 80 192.168.179.136
+2016-09-26 15:15:05,501 - Info Logger - DEBUG - Command id --> http_5  Message --> :Saving details :
+2016-09-26 15:15:08,514 - Info Logger - DEBUG - Command id --> http_5  Message --> :Details Updated successfully
+2016-09-26 15:15:08,515 - Info Logger - DEBUG - Command id --> http_5  Message --> :Thread finished
+2016-09-26 15:15:08,540 - Info Logger - DEBUG - Command id --> http_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 15:15:08,540 - Info Logger - DEBUG - Command id --> http_6  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 15:15:08,541 - Info Logger - DEBUG - Command id --> http_6  Message --> :Thread started --with command nmap --script=http-trace.nse -p 80 192.168.179.136
+2016-09-26 15:15:09,468 - Info Logger - DEBUG - Command id --> http_6  Message --> :Saving details :
+2016-09-26 15:15:12,484 - Info Logger - DEBUG - Command id --> http_6  Message --> :Details Updated successfully
+2016-09-26 15:15:12,485 - Info Logger - DEBUG - Command id --> http_6  Message --> :Thread finished
+2016-09-26 15:15:12,528 - Info Logger - DEBUG - Command id --> http_7  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 185
+2016-09-26 15:15:12,528 - Info Logger - DEBUG - Command id --> http_7  Message --> :In method SingleLineCommands_Timeout()
+2016-09-26 15:15:12,530 - Info Logger - DEBUG - Command id --> http_7  Message --> :Thread started --with command nmap -sV --script=http-iis-webdav-vuln.nse -p 80 192.168.179.136
+2016-09-26 15:15:20,490 - Info Logger - DEBUG - Command id --> http_7  Message --> :Saving details :
+2016-09-26 15:15:23,501 - Info Logger - DEBUG - Command id --> http_7  Message --> :Details Updated successfully
+2016-09-26 15:15:23,502 - Info Logger - DEBUG - Command id --> http_7  Message --> :Thread finished

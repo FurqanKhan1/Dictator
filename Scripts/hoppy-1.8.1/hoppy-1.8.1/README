@@ -1,0 +1,138 @@
+
+[H]ttp [O]ptions [P]rober in [PY]thon - 1.8.1 
+
+This is hoppy, a http method prober, it is a python script which tests http methods for configuration issues leaking information or just to see if they are enabled.
+
+
+== What's new in 1.7.0 ==
+
+Version 1.7 now contains a crude spider, this, when run in default mode will spider the sire looking for directories. Any it finds will have webDav ,ethods tested against them. Not sure how effective this will be but we'll see
+
+
+== What's new in 1.6.0 ==
+
+Version 1.6 now contains functionality so that you can run hoppy in app only mode, this means if you are only supposed to be testing a particular vhost and not the server hoppy won't make any requests outside of this scope
+
+== What's new in 1.5.0 ==
+
+Version 1.5 has been a almost complete rewrite to an OO form, this has made the test handling and printing functionality much easier to control.
+
+=== New Features ===
+
+*	-S save output to a file
+*	-L loop over a file - see later on for a exmaple of use   
+
+== Requirements == 
+
+Python is requied (obviously) and so are the following modules:
+
+	socket
+	getopt
+	base64
+	re (regex)
+	sys
+	os
+	
+== Files ==
+
+hoppy - main python file, run this!
+lib/hopclass.py - internal class's for hoppy
+http-methods - default file containing a honed list of methods
+response-keywords - keywords which hoppy uses to summarise results
+example-methods/ - same example method files for specific uses
+hoppy.conf - config file for hoppy
+
+== What Does it Do ==
+
+
+hoppy takes a methods file containg the list of test to perform and just squirts them at the webserver, replacing key words on the way.
+
+hoppy tries to parse the sever response for useful information but is not very clever, it will though dump the complete conversation (-vvv) so you can see exactly what went down and if anything needs further investigation. By default the summary does not include any 404, 100, 301 ot 000 (errors), but this can be overridded with the -4 switch.
+
+I haven't tested it much in the wild so I'm hoping 2s is reasnable default for the socket timeout.
+
+The proxy can be enabled by creaating the environemt variable HTTP_PROXY with the location of the proxy server you wish to use. This behaviour can be removed by setting the -N (--no-proxy) flag to go back to a direct connection
+
+
+The progress bar prints a . if the test was sucessful and a ! if a timeout occured on the socket read.
+
+Having a large number of failed tests is not a great concern as sometimes these are flase positives such as as erver not reponding with a 100 continue when one is expected also some proxy servers will drop the connection with some of the malformed requests that are sent.
+
+== Usage == 
+
+note [] is optional
+  Usage: /usr/local/bin/hoppy -h <[http[s]://][user:pass@]hostname[:port][/location/][file.txt]> [options]
+
+         -h [http[s]]://]hostname[:port] [--host=]       (required or -H)
+         -H [http[s]]://]hostname[:port] [--host=]       (app only, shortcut for -h host -A)
+         -p port [--port=]                               (default 80)
+         -l location [--location=]                       (default /images)
+         -f file [--file=]                               (default dummy.txt)
+         -o methods_file [--options=]                    (default /usr/local/share/http-methods)
+         -k keywords_file [--keywords=]                  (default /usr/local/share/response-keywords)
+         -r realhostname [--name=]                       (default same as hostname)
+         -t port-timeout [--timeout=]                    (default 10s)
+         -T max_thread_count [--threads=]                (default 20)
+         -a username:password [--auth=]                  (Basic Auth only)
+         -C config_file [--config=]                      (Load an alternative for /etc/hoppy/hoppy.conf)
+         -S file [--save=]                               (save output to file)
+         -L file [--loop=]                               (loop around valid methods)
+         -A [--apponly]                                  (disable the host checks)
+         -E [--nospider]								 (disable the auto spider)
+         -s [--ssl]                                      (use ssl)
+         -n [--nossl]                                    (disable ssl, takes precedence)
+         -4 [--404]                                      (do not supress 404's, 100's or 400 or 000 errors)
+         -N [--no-proxy]                                 (disable proxy use, even if HTTP_PROXY is set)
+         -v [--verbose]                                  (be verbose, print parsed output as we go along)
+         -vv                                             (be very verbose, print server response)
+         -vvv                                            (be very very verbose, print our test and server response)
+         -c [--check]                                    (check the config files for errors, do nothing else)
+
+  To use a web proxy set the ENV vairable HTTP_PROXY to [http[s]://]proxyserver:port
+         
+Hopefully the usage is explanitary enough but if not ....
+
+-h hostname is the URL of the webserver you wish to test e.g. www.google.com or http://www.google.com:80. If www.google.com:443 is used ssl negotiation is autoenabled, https://www.google.com will auto set port to 443 unless it has explcitly ser elsewhere and put on the ssl negotiation.
+
+-H shortcut for -h host -A (see below for -A)
+
+-p port if you need this explained then maybe you shouldn't be using this tool
+
+-l location is the directory with which to test eg bin will test www.google.com/bin/(file)
+
+-f file is the file with which to test eg tet.html will test www.google.com/(location)/test.html
+
+-o use an alternative methods file
+
+-k use an alternative keywords file
+
+-r use to supply the real hostname is going through a mitm proxy or stunnel
+
+-t port time out, if you get alot of 000 errors (which can be seen by adding the -4 switch) try increasing this
+
+-a adds Basic Authetication to the requests which have the (auth) keyword in the methods file 
+
+-S output result to a file
+
+-L loop around valid methods, this function repeats all methods that contain the (loop) keyword replacing the keyword each time with a new entry from the loop file. This is particularily useful when you wish to test for webDav in a number of location on a webserver. By using this the spider is automoatically turned off
+
+-A Runs in application only mode, this will only send requests with a correctly formatted Host: header. This will miss some Internal
+   IP addresses but will stick to your vhost!
+
+-E This flag disables the auto spider
+
+-s switch on ssl negotioation
+
+-4 404 supression is enabled by default, this behaviour can be removed by this switch
+
+-N disable the proxy if one is set in the HTTP_PROXY env var.
+
+-n force ssl off (will override -s or port 443 auto on)
+
+-v will print what is going on as we progress through the test
+-vv will print the entire server response
+-vvv will print both the request sent and the server respose. 
+
+Hope that all makes sense
+
+deanx 

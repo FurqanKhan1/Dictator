@@ -1,0 +1,27 @@
+"""
+@Author		:Furqan Khan
+@Email		:furqankhan08@gmail.com
+@Date 		:1/2/2017
+
+Objective :
+The purpose of this file /module /Class is to read from exploits table present in the database by invoking appropriate exploits table model class and once it rreads the details it will generate the final report which contains mapped exploits with cve's or OSVDB id's.
+
+Basically this module is used for on the fly nessus/qualys report to cve mapping.
+A user can invoke this code by passing the nessus or qualys file (one of two at one time) and user may choose final format of report.This module will invoke the nessus or qualys parser depending upon the input tyoe and will then get parsed data from nessus/qualys parser and finally would traverse through thae data and would map cve to exploits and produce final report.
+"""
+import time
+class SimpleLogger:
+	def __init__(self):
+		self.logger=None
+		self.Log_file=None
+		self.loggerInfo=None
+	
+	def log(file_path,message):
+		try:
+			output = open(file_path,"a") #create a html report file and open it
+			output.write(message)
+			output.close()
+		except Exception ,ee:
+			print "EXception while logging at simple logger"
+			
+

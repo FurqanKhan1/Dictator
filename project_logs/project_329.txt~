@@ -1,0 +1,326 @@
+[3;J[H[2JInside INIT
+Inside INVOKER.PY 
+
+
+('192.168.17.128', 'launch_concurrent_02', '1-65500', '1', '1', '329', 'g-start', '1', '1', '1')
+Reached !!!@@@###
+('(192.168.17.128', 'launch_concurrent_02', '1-65500', '1', '1', '329', 'g-start', '1', '1)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in elif(1)
+Scanning remaining ports
+Range is :60001-65500
+
+
+
+
+
+Loop executed : 9
+Started
+ended
+Ended
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['192.168.17.128']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 140685257033680)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+Started Simple acanner
+Started
+Ended
+
+Started thread for IP :192.168.17.128 --> Thread is : <Thread(Thread-1, started daemon 140685146900224)>
+Reached port scanner module with record id --> 17369
+[31m----------------------------------------------[0m
+Result for IP : 192.168.17.128
+Protocol : TCP
+[34mport : [33m54628 	 [32mopen 	[31munknown[0m
+[31m----------------------------------------------[0m
+Started
+Stopped
+
+
+ Project id is :	329
+
+
+Initialising parent directory 
+INitialised
+
+
+
+Data path is -->/root/Django-projects/Dictator/Dictator_service/Results/Data_329
+Log file is --> 329_Log_file_info.txtand log file path is : /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+
+@@@@
+
+hello@@
+->
+
+
+Log file passed is /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+Printing to log 
+Printed to log
+
+
+Starting 
+
+
+
+hello !!!  Logger is set
+Log file is : 329_Log_file
+Printing to log 
+Printed to log
+
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 329
+
+Projects instance has no attribute 'getServicesDetected'
+Error occured in Main method Projects instance has no attribute 'getServicesDetected'
+
+Reached port scanner module with record id --> 17370
+Reached port scanner module with record id --> 17364
+Reached port scanner module with record id --> 17362
+[31m----------------------------------------------[0m
+Result for IP : 192.168.17.128
+Protocol : TCP
+[34mport : [33m21 	 [32mopen 	[31mftp[0m
+[34mport : [33m22 	 [32mopen 	[31mssh[0m
+[34mport : [33m23 	 [32mopen 	[31mtelnet[0m
+[34mport : [33m25 	 [32mopen 	[31msmtp[0m
+[34mport : [33m53 	 [32mopen 	[31mdomain[0m
+[34mport : [33m80 	 [32mopen 	[31mhttp[0m
+[34mport : [33m111 	 [32mopen 	[31mrpcbind[0m
+[34mport : [33m139 	 [32mopen 	[31mnetbios-ssn[0m
+[34mport : [33m445 	 [32mopen 	[31mmicrosoft-ds[0m
+[34mport : [33m512 	 [32mopen 	[31mexec[0m
+[34mport : [33m513 	 [32mopen 	[31mlogin[0m
+[34mport : [33m514 	 [32mopen 	[31mshell[0m
+[34mport : [33m1099 	 [32mopen 	[31mrmiregistry[0m
+[34mport : [33m1524 	 [32mopen 	[31mingreslock[0m
+[34mport : [33m2049 	 [32mopen 	[31mnfs[0m
+[34mport : [33m2121 	 [32mopen 	[31mccproxy-ftp[0m
+[34mport : [33m3306 	 [32mopen 	[31mmysql[0m
+[34mport : [33m3632 	 [32mopen 	[31mdistccd[0m
+[34mport : [33m5432 	 [32mopen 	[31mpostgresql[0m
+[34mport : [33m5900 	 [32mopen 	[31mvnc[0m
+[34mport : [33m6000 	 [32mopen 	[31mX11[0m
+[34mport : [33m6667 	 [32mopen 	[31mirc[0m
+[34mport : [33m6697 	 [32mopen 	[31munknown[0m
+[31m----------------------------------------------[0m
+Started
+Stopped
+
+
+ Project id is :	329
+
+
+Initialising parent directory 
+INitialised
+
+
+
+Data path is -->/root/Django-projects/Dictator/Dictator_service/Results/Data_329
+Log file is --> 329_Log_file_info.txtand log file path is : /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+
+@@@@
+
+hello@@
+->
+
+
+Log file passed is /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+Printing to log 
+Printed to log
+
+
+Starting 
+
+
+
+hello !!!  Logger is set
+Log file is : 329_Log_file
+Printing to log 
+Printed to log
+
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 329
+
+Projects instance has no attribute 'getServicesDetected'
+Error occured in Main method Projects instance has no attribute 'getServicesDetected'
+
+Reached port scanner module with record id --> 17367
+[31m----------------------------------------------[0m
+Result for IP : 192.168.17.128
+Protocol : TCP
+[34mport : [33m40787 	 [32mopen 	[31munknown[0m
+[31m----------------------------------------------[0m
+Started
+Stopped
+
+
+ Project id is :	329
+
+
+Initialising parent directory 
+INitialised
+
+
+
+Data path is -->/root/Django-projects/Dictator/Dictator_service/Results/Data_329
+Log file is --> 329_Log_file_info.txtand log file path is : /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+
+@@@@
+
+hello@@
+->
+
+
+Log file passed is /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+Printing to log 
+Printed to log
+
+
+Starting 
+
+
+
+hello !!!  Logger is set
+Log file is : 329_Log_file
+Printing to log 
+Printed to log
+
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 329
+
+Projects instance has no attribute 'getServicesDetected'
+Error occured in Main method Projects instance has no attribute 'getServicesDetected'
+
+Reached port scanner module with record id --> 17368
+Reached port scanner module with record id --> 17363
+[31m----------------------------------------------[0m
+Result for IP : 192.168.17.128
+Protocol : TCP
+[34mport : [33m7900 	 [32mfiltered 	[31mmevent[0m
+[34mport : [33m8000 	 [32mfiltered 	[31mhttp-alt[0m
+[34mport : [33m8009 	 [32mopen 	[31majp13[0m
+[34mport : [33m8080 	 [32mfiltered 	[31mhttp-proxy[0m
+[34mport : [33m8088 	 [32mfiltered 	[31mradan-http[0m
+[34mport : [33m8180 	 [32mopen 	[31munknown[0m
+[34mport : [33m8787 	 [32mopen 	[31munknown[0m
+[34mport : [33m8888 	 [32mfiltered 	[31msun-answerbook[0m
+[34mport : [33m11523 	 [32mfiltered 	[31munknown[0m
+[31m----------------------------------------------[0m
+Started
+Stopped
+
+
+ Project id is :	329
+
+
+Initialising parent directory 
+INitialised
+
+
+
+Data path is -->/root/Django-projects/Dictator/Dictator_service/Results/Data_329
+Log file is --> 329_Log_file_info.txtand log file path is : /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+
+@@@@
+
+hello@@
+->
+
+
+Log file passed is /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+Printing to log 
+Printed to log
+
+
+Starting 
+
+
+
+hello !!!  Logger is set
+Log file is : 329_Log_file
+Printing to log 
+Printed to log
+
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 329
+
+Projects instance has no attribute 'getServicesDetected'
+Error occured in Main method Projects instance has no attribute 'getServicesDetected'
+
+Reached port scanner module with record id --> 17365
+Reached port scanner module with record id --> 17366
+[31m----------------------------------------------[0m
+Result for IP : 192.168.17.128
+Protocol : TCP
+[34mport : [33m34673 	 [32mopen 	[31munknown[0m
+[34mport : [33m35257 	 [32mopen 	[31munknown[0m
+[31m----------------------------------------------[0m
+Started
+Stopped
+
+
+ Project id is :	329
+
+
+Initialising parent directory 
+INitialised
+
+
+
+Data path is -->/root/Django-projects/Dictator/Dictator_service/Results/Data_329
+Log file is --> 329_Log_file_info.txtand log file path is : /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+
+@@@@
+
+hello@@
+->
+
+
+Log file passed is /root/Django-projects/Dictator/Dictator_service/Results/Data_329/329_Log_file_info.txt
+Printing to log 
+Printed to log
+
+
+Starting 
+
+
+
+hello !!!  Logger is set
+Log file is : 329_Log_file
+Printing to log 
+Printed to log
+
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 329
+
+Projects instance has no attribute 'getServicesDetected'
+Error occured in Main method Projects instance has no attribute 'getServicesDetected'
+

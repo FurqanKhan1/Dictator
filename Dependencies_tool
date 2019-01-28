@@ -1,0 +1,24 @@
+perl dependency --> installXML:: sIMPLE -->On cpam with folowing command 
+  perl -MCPAN -e shell
+  cpan> install XML::Simple
+
+
+Python hoppy :cd hoppy master
+python setup.py install
+another way :cd hoppy-1.8.1
+sudo make install
+
+
+ cpan
+cpan[1]> install Encoding::BER
+
+apt-get install mdns-scan
+
+install Encoding::BER
+
+
+Report Parsing:
+Install nmap report parser (Python)- Look at source code to update this
+Install nessus report parser p-->pip install python-libnessus
+(To make it give better results-->including the exploits also ,edit the file Reportitem.py under dist-packages/libnessus and add edb-id to it 
+Install lxml

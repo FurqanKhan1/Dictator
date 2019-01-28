@@ -1,0 +1,15 @@
+There are two headers, Set-Cookie and Cookie, that are related to cookies. The Set-Cookie header is sent by the server in response to an HTTP request, which is used to create a cookie on the user's system. The Cookie header is included by the client application with an HTTP request sent to a server, if there is a cookie that has a matching domain and path.
+setcookie("user_name", $user_name, time() + 3600);
+
+A cookie is created and stored in the browser with the name user_name.
+
+When you do:
+
+$_SESSION['user_name'] = $user_name;
+
+A session is generated in the server which has a field called user_name. Now this session information is passed between the browser and server in the form of a cookie that only has the information pertaining to accessing the session as opposed to having all the session data in it.
+
+Since this session is not named, it will use the name of the default PHPSESSID
+
+Apart from the fact that cookies are involved in both operations they do not have anything else in common. The only time you need to be careful is if you name your session and an unrelated cookie with the same name. Values inside session are bound inside that scope and it does not matter - as in the example you gave.
+

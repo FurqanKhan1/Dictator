@@ -1,0 +1,64 @@
+[3;J[H[2JInside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('', '', '', '2', '-T4 -A -v -Pn -n', '666', 'g-resume', '', '', '0')
+Reached !!!@@@###
+('(', '', '', '2', '-T4 -A -v -Pn -n', '666', 'g-resume', '', ')')
+
+
+ Hello world 
+
+
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 140136239098128)>]
+Reached Here in Launch Paused Scan !!!
+
+Started Launch Paused 
+Started
+The current status is : processing
+Ended
+started
+Started DH
+Ended DH
+Ended
+
+
+Main thread starting Polling .........
+
+
+Main Thread Starting pooling in 10 sec :
+Pooling started :
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 140136239098128)>]
+
+[31m----------------------------------------------[0m
+None
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140136239098128)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140136239098128)>]
+Reached here as well !!!
+# of threads Alive are :1
+
+Now stopping and saving Global Project Id : 666
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 105.283723831

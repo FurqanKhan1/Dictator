@@ -1,0 +1,11 @@
+apt-get install python-magic #for validation of uploaded files
+sudo pip install python-magic
+
+<<<<<<< HEAD
+
+Dump and recover database :
+Dump :mysqldump -u root -p  nmapscan > nmapscan.sql
+
+Recover :mysql -p -u root nmanscan < nmapscan.sql
+=======
+>>>>>>> b6b8e9ee72399e3d683c7808a85d7f1c8ce3cbf6

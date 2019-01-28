@@ -1,0 +1,23 @@
+#
+#  PRE: update if
+#
+update control {
+	Cleartext-Password := 'hello'
+}
+
+if (User-Name == "bob") {
+	update reply {
+		Filter-Id := "filter"
+	}
+
+	#
+	#  We need this because the "return" below
+	#  will prevent the "pap" module from being run
+	#  in the "authorize" section.
+	#
+	update control {
+		Auth-Type := PAP
+	}
+
+	#
+	# 

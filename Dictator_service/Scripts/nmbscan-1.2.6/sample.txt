@@ -1,0 +1,35 @@
+nmbscan version 1.2.1 - obelix - Sun Dec 23 15:43:31 CET 2001
+domain SAMBUR
+  master-browser GBARBIER 192.168.1.3 polarix.village-gaulois.fr
+  server GBARBIER
+    ip-address 192.168.1.3
+      ip-name polarix.village-gaulois.fr
+      mac-address 00:01:03:7C:F6:1F
+    server-software Samba 2.0.7
+    operating-system Unix
+domain VILLAGE-GAULOIS
+  master-browser IDEFIX 192.168.1.2 idefix.village-gaulois.fr
+  server GBARBIER
+    ip-address 192.168.1.3
+      ip-name polarix.village-gaulois.fr
+      mac-address 00:01:03:7C:F6:1F
+    server-software Samba 2.0.7
+    operating-system Unix
+  server GIGANTIX
+    ip-address 192.168.1.1
+      ip-name obelix.village-gaulois.fr
+    user-candidate GIGANTIX
+    server-software Samba 2.0.7
+    operating-system Unix
+  server IDEFIX
+    ip-address 192.168.1.2
+      ip-name idefix.village-gaulois.fr
+      mac-address 00:40:05:62:D6:5B
+    server-software Samba 2.0.6
+    operating-system Unix
+  server OBELIX
+    ip-address 192.168.1.1
+      ip-name obelix.village-gaulois.fr
+    user-candidate GIGANTIX
+    server-software Samba 2.0.7
+    operating-system Unix

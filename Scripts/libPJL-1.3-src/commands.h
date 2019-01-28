@@ -1,0 +1,34 @@
+/* $Id: commands.h,v 1.5 2005/04/21 07:37:28 fx Exp fx $ */
+#ifndef __COMMANDS_H__
+#define __COMMANDS_H__
+
+
+#define PJL_ENDSEQ			"\r\n\x0c"
+#define PJL_START			"\033%-12345X@PJL "
+#define PJL_FINISH			"\033%-12345X\r\n"
+
+#define PJL_INFO_VAR		"INFO VARIABLES\r\n"
+#define PJL_INFO_ID			"INFO ID\r\n"
+#define PJL_INFO_FILESYS	"INFO FILESYS\r\n"
+#define PJL_USTATUS			"USTATUS DEVICE="
+#define PJL_DEFAULT			"DEFAULT "
+#define PJL_RDYMSG			"RDYMSG DISPLAY = "
+#define PJL_OPMSG			"OPMSG DISPLAY = "
+#define PJL_FSDIRLIST		"FSDIRLIST NAME="
+#define PJL_FSQUERY			"FSQUERY NAME="
+#define PJL_FSDELETE		"FSDELETE NAME="
+#define PJL_FSMKDIR			"FSMKDIR NAME="
+#define PJL_FSUPLOAD		"FSUPLOAD NAME="
+#define PJL_FSDOWNLOAD		"FSDOWNLOAD FORMAT:BINARY "
+#define PJL_FSAPPEND		"FSAPPEND FORMAT:BINARY "
+#define PJL_FSINIT		"FSINIT VOLUME="
+#define PJL_PRINTERNAME		"DEFAULT PRINTERNAME="
+#define PJL_SELFTEST		"SET TESTPAGE="
+
+
+#define PJLFS_NOTFOUND		(-1)
+#define PJLFS_DIR			0
+#define PJLFS_FILE			1
+
+
+#endif //__COMMANDS_H__

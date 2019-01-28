@@ -1,0 +1,4 @@
+Gitorious page (with web-based repository browser and git access):
+http://gitorious.org/nmbscan
+
+You can send git patches to the author by mail (man git-format-patch).

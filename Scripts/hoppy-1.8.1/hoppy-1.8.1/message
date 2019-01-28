@@ -1,0 +1,17 @@
+
+
+
+
+########
+##
+##	Please note that the default install loction has changes as of version 1.5.1!
+##	
+##	The new location is /usr/local/share and /usr/local/bin (note the added local)
+##
+##	Please make sure you remove all the old files to stop any conflicts
+##
+########
+
+
+
+

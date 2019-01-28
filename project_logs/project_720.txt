@@ -1,0 +1,182 @@
+TERM environment variable not set.
+Inside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('192.168.182.128', 'Seq_default', 'top_ports', '1', ' -Pn -sS -sV -n --max-retries 3 --max-rtt-timeout 1000ms --top-ports 1000', '720', 'g-start', '02cf4510-5662-11e7-90dd-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(192.168.182.128', 'Seq_default', 'top_ports', '1', ' -Pn -sS -sV -n --max-retries 3 --max-rtt-timeout 1000ms --top-ports 1000', '720', 'g-start', '02cf4510-5662-11e7-90dd-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start and profile at main : 2
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in else
+Started
+ended
+Ended
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 140682056382736)>]
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['192.168.182.128']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 140682056382736)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+
+Started thread for IP :192.168.182.128 --> Thread is : <Thread(Thread-1, started daemon 140681948141312)>
+Started Simple acanner
+Started
+Ended
+Reached port scanner module with record id --> 2517
+Starting the scan with the switch : -Pn -sS -sV -n --max-retries 3 --max-rtt-timeout 1000ms --top-ports 1000
+Reached Debug 1
+Reached Debug 2
+Up host status is :1
+Reached Debug 3
+[31m----------------------------------------------[0m
+Reached Debug 4
+Result for IP : 192.168.182.128
+Protocol : TCP
+Reached Debug 5
+[34mport : [33m21 	 [32mopen 	[31mftp[0m
+[34mport : [33m22 	 [32mopen 	[31mssh[0m
+[34mport : [33m23 	 [32mopen 	[31mtelnet[0m
+[34mport : [33m25 	 [32mopen 	[31msmtp[0m
+[34mport : [33m53 	 [32mopen 	[31mdomain[0m
+[34mport : [33m80 	 [32mopen 	[31mhttp[0m
+[34mport : [33m111 	 [32mopen 	[31mrpcbind[0m
+[34mport : [33m139 	 [32mopen 	[31mnetbios-ssn[0m
+[34mport : [33m445 	 [32mopen 	[31mnetbios-ssn[0m
+[34mport : [33m512 	 [32mopen 	[31mexec[0m
+[34mport : [33m513 	 [32mopen 	[31mlogin[0m
+[34mport : [33m514 	 [32mopen 	[31mtcpwrapped[0m
+[34mport : [33m1099 	 [32mopen 	[31mrmiregistry[0m
+[34mport : [33m1524 	 [32mopen 	[31mshell[0m
+[34mport : [33m2049 	 [32mopen 	[31mnfs[0m
+[34mport : [33m2121 	 [32mopen 	[31mftp[0m
+[34mport : [33m3306 	 [32mopen 	[31mmysql[0m
+[34mport : [33m5432 	 [32mopen 	[31mpostgresql[0m
+[34mport : [33m5900 	 [32mopen 	[31mvnc[0m
+[34mport : [33m6000 	 [32mopen 	[31mX11[0m
+[34mport : [33m6667 	 [32mopen 	[31mirc[0m
+[34mport : [33m8009 	 [32mopen 	[31majp13[0m
+[34mport : [33m8180 	 [32mopen 	[31mhttp[0m
+[31m----------------------------------------------[0m
+Reached Debug 6
+Started
+Stopped
+Reached Debug 8
+
+
+ Finished subprocess for ip 192.168.182.128 and Process : <Process(Process-1, stopped)>
+Ended Simple acanner
+
+
+Thread ended with host ip -192.168.182.128
+
+
+**Pooling started :**
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 140682056382736)>, <_DummyThread(Dummy-2, started daemon 140682122049280)>]
+
+[31m----------------------------------------------[0m
+None
+Obtained dummy thread <_DummyThread(Dummy-2, started daemon 140682122049280)>
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140682056382736)>, <_DummyThread(Dummy-2, started daemon 140682122049280)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140682056382736)>, <_DummyThread(Dummy-2, started daemon 140682122049280)>]
+Reached here as well !!!
+# of threads Alive are :2
+
+Now stopping and saving Global Project Id : 720
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 119.345398188
+Inside INIT
+Inside INIT
+INVOKED Driver meta main with record_list : [] and  concurrent status : False and skip_init_check status as :False and continue =False
+
+
+
+
+
+P_id ---> 720
+
+
+ Project id is :	720
+
+
+valid projects are ['720']
+IN exists with Pid720
+Connection init done()
+Logg printed
+here#@@
+0
+Initialising parent directory 
+INitialised
+Hello
+here reached 
+I am in parse and process
+Missed services does contain data !!!
+
+
+ Inside insert IPexploits --
+
+
+
+[32m[+] Launching configuration ....[0m
+success
+Row found UNknown also with 0th element as :20820
+Row found UNknown also with 0th element as :20821
+Row found UNknown also with 0th element as :20822
+Row found UNknown also with 0th element as :20823
+
+
+About to return now !!!
+success fully done till now
+folder name is : /root/Django-projects/Dictator/Dictator_service
+
+
+
+
+
+Inside update --Obtained process id is ->15336  and project_id is : 720
+Concurrent is false and updating with above values
+ended
+Stopped
+Successfully launched exploits in seq-def mode.Reffer to exploits logs from here on 

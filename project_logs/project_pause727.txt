@@ -1,0 +1,11 @@
+Inside INIT
+Inside Stopper.PY 
+
+
+('', '', '', '2', '', '727', 'g-stop', '', '')
+Project id is :727
+8525
+psutil.Process(pid=8525, name='python')
+Killing Process with id -->psutil.Process(pid=8558, name='nmap')
+Killed Process with id -->psutil.Process(pid=8558, name='nmap')
+Parent Process already KIlled

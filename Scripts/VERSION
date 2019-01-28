@@ -1,0 +1,13 @@
+Index: pcap_ex.c
+===================================================================
+--- pcap_ex.c   (revision 85)
++++ pcap_ex.c   (working copy)
+@@ -12,7 +12,7 @@
+ # include <signal.h>
+ # include <unistd.h>
+ #endif
+-
++#define HAVE_PCAP_FILE
+ #include <pcap.h>
+ #ifdef HAVE_PCAP_INT_H
+ # include <pcap-int.h>

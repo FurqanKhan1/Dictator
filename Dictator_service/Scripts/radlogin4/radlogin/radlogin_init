@@ -1,0 +1,27 @@
+#! /bin/sh
+#
+# chkconfig: 345 90 20
+# description: Radlogin server
+
+case "$1" in
+  start)
+
+	echo "Starting Radlogin server "
+	/usr/local/radius/radlogin
+	;;
+  stop)
+	echo -n "Stopping Radlogin server "
+	killall radlogin
+	;;
+  status)
+	;;
+  reload)
+	;;
+  restart)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|status|restart}"
+	exit 1
+	;;
+esac
+exit 0

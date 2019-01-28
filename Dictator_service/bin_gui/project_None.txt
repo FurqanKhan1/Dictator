@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "invoker.py", line 11, in <module>
+    targethosts=sys.argsv[1]
+NameError: name 'sys' is not defined
+
+
+
+ Exiting Bye Bye !!!

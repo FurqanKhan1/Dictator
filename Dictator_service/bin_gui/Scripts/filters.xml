@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<filters>
+	<filter>
+		<name>avoid_encryption</name>
+		<type>server</type>
+		<contains>&lt;stream:features&gt;</contains>
+		<remove>(?=&lt;starttls).*(?&lt;=&lt;/starttls&gt;)</remove>
+		<repeat/>
+	</filter>
+	<filter>
+		<name>google_plain_mechanism</name>
+		<type>internal</type>
+		<enabled/>
+	</filter>
+	<filter>
+		<name>google_inject_mail_feed</name>
+		<type>client</type>
+		<waitfor>(?=&lt;presence&gt;).*(?&lt;=&lt;/presence&gt;)</waitfor>
+		<stanza>&lt;iq type="get" id="1000"&gt;&lt;query xmlns="google:mail:notify" q="in:anywhere"/&gt;&lt;/iq&gt;</stanza>
+	</filter>
+	<!--<filter>
+		<name>example</name>						>> Filter name
+		<type>internal|client|server</type>			>> Filter type, internal for filters implemented internally,
+													   client for user stream and server for xmpp server stream manipulation
+		<contains>(string:not_regex)</contains>		>> Process the filter only if the stream contains that string (not_regex)
+		<replace>									>> Replace data (a filter can have more than one)
+			<regex>(string)</regex>						>> The regular expression to which this string is to be matched
+			<replacement>(string)</replacement>			>> The string to be substituted for each match
+		</replace>
+		<remove>(string:regex)</remove>				>> Remove data (a filter can have more than one)
+														>> The regular expression to which this string is to be matched
+		<search>									>> Search information inside data and process it
+			<regex>(string)</regex>						>> The regular expression to which this string is to be matched
+			<output>(string:path)</output>				>> File where is stored the information (optional)
+		</search>
+		<stanza></stanza>							>> Stanza to be injected
+		<repeat/>									>> Check filter allways or disable it after one execution
+	</filter>-->
+</filters>

@@ -1,0 +1,8 @@
+# Nmap 6.49BETA4 scan initiated Sat Sep 10 09:26:15 2016 as: nmap -p 22 --script ssl-enum-ciphers -oN freak_22 192.168.179.136
+Nmap scan report for 192.168.179.136
+Host is up (0.00053s latency).
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 00:0C:29:25:59:EA (VMware)
+
+# Nmap done at Sat Sep 10 09:26:16 2016 -- 1 IP address (1 host up) scanned in 1.24 seconds

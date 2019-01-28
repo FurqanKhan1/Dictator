@@ -1,0 +1,148 @@
+[3;J[H[2JInside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('192.168.182.128', 'se_def_test1', '1-30', '1', '-T4 -A -n', '567', 'g-start', 'eb768d20-f6ac-11e6-876e-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(192.168.182.128', 'se_def_test1', '1-30', '1', '-T4 -A -n', '567', 'g-start', 'eb768d20-f6ac-11e6-876e-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in elif(1)
+Started
+ended
+Ended
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 139875515897648)>]
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['192.168.182.128']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 139875515897648)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+
+Started thread for IP :192.168.182.128 --> Thread is : <Thread(Thread-1, started daemon 139875405391616)>
+Started Simple acanner
+Started
+Ended
+Reached port scanner module with record id --> 398
+Starting the scan with the switch :-T4 -A -n
+Reached Debug 1
+Reached Debug 2
+Up host status is :1
+Reached Debug 3
+[31m----------------------------------------------[0m
+Reached Debug 4
+Result for IP : 192.168.182.128
+Protocol : TCP
+Reached Debug 5
+[34mport : [33m21 	 [32mopen 	[31mftp[0m
+[34mport : [33m22 	 [32mopen 	[31mssh[0m
+[34mport : [33m23 	 [32mopen 	[31mtelnet[0m
+[34mport : [33m25 	 [32mopen 	[31msmtp[0m
+[31m----------------------------------------------[0m
+Reached Debug 6
+Started
+Stopped
+Reached Debug 8
+
+
+ Finished subprocess for ip 192.168.182.128 and Process : <Process(Process-1, stopped)>
+Ended Simple acanner
+
+
+Thread ended with host ip -192.168.182.128
+
+
+**Pooling started :**
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 139875515897648)>, <_DummyThread(Dummy-2, started daemon 139875572803328)>]
+
+[31m----------------------------------------------[0m
+None
+Obtained dummy thread <_DummyThread(Dummy-2, started daemon 139875572803328)>
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139875515897648)>, <_DummyThread(Dummy-2, started daemon 139875572803328)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139875515897648)>, <_DummyThread(Dummy-2, started daemon 139875572803328)>]
+Reached here as well !!!
+# of threads Alive are :2
+
+Now stopping and saving Global Project Id : 567
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 132.758284807
+Inside INIT
+Inside INIT
+INVOKED Driver meta main with record_list : [] and  concurrent status : False and skip_init_check status as :False and continue =False
+
+
+
+
+
+P_id ---> 567
+
+
+ Project id is :	567
+
+
+valid projects are ['567']
+IN exists with Pid567
+Connection init done()
+Logg printed
+here#@@
+0
+Initialising parent directory 
+INitialised
+Hello
+ss is set(['ftp', 'smtp', 'ssh', 'telnet']) and lst is {'ftp': [['192.168.182.128', '21', 'open', 'vsftpd2.3.4']], 'smtp': [['192.168.182.128', '25', 'open', 'Postfix smtpd']], 'telnet': [['192.168.182.128', '23', 'open', 'Linux telnetd']], 'ssh': [['192.168.182.128', '22', 'open', 'OpenSSH4.7p1 Debian 8ubuntu1']]}and lst1 is :[['host', 'protocol', 'port', 'name', 'state', 'product', 'extrainfo', 'reason', 'version', 'conf', 'cpe\r'], ['192.168.182.128', 'tcp', '21', 'ftp', 'open', 'vsftpd', '', 'syn-ack', 'vsftpd2.3.4', '10', 'cpe:/a:vsftpd:vsftpd:2.3.4\r'], ['192.168.182.128', 'tcp', '22', 'ssh', 'open', 'OpenSSH', 'protocol 2.0', 'syn-ack', 'OpenSSH4.7p1 Debian 8ubuntu1', '10', 'cpe:/o:linux:linux_kernel\r'], ['192.168.182.128', 'tcp', '23', 'telnet', 'open', 'Linux telnetd', '', 'syn-ack', 'Linux telnetd', '10', 'cpe:/o:linux:linux_kernel\r'], ['192.168.182.128', 'tcp', '25', 'smtp', 'open', 'Postfix smtpd', '', 'syn-ack', 'Postfix smtpd', '10', 'cpe:/a:postfix:postfix\r'], ['']]
+here reached 
+I am in parse and process
+
+
+ Inside insert IPexploits --
+
+
+[31m{+}______________Launching with selected configuration !!!__________________[0m
+
+[32m[+] Launching configuration ....[0m
+success
+
+
+About to return now !!!
+success fully done till now

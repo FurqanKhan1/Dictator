@@ -1,0 +1,1980 @@
+<!doctype html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <title>auto_commands API documentation</title>
+    <meta name="description" content="@Author         :Furqan Khan
+@Email          :furqankhan08@gmail.com
+@Date           :12/30/2016    ..." />
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+  
+  <style type="text/css">
+  
+* {
+  box-sizing: border-box;
+}
+/*! normalize.css v1.1.1 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    background: #fff; /* 1 */
+    color: #000; /* 2 */
+    font-size: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 4 */
+    -ms-text-size-adjust: 100%; /* 4 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+p,
+pre {
+    margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+
+q {
+    quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+  </style>
+
+  <style type="text/css">
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+  body {
+    background: #fff;
+    font-family: "Source Sans Pro", "Helvetica Neueue", Helvetica, sans;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+  #content {
+    width: 70%;
+    max-width: 850px;
+    float: left;
+    padding: 30px 60px;
+    border-left: 1px solid #ddd;
+  }
+  #sidebar {
+    width: 25%;
+    float: left;
+    padding: 30px;
+    overflow: hidden;
+  }
+  #nav {
+    font-size: 130%;
+    margin: 0 0 15px 0;
+  }
+
+  #top {
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    font-size: .85em;
+    text-transform: uppercase;
+  }
+
+  #footer {
+    font-size: .75em;
+    padding: 5px 30px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+  }
+    #footer p {
+      margin: 0 0 0 30px;
+      display: inline-block;
+    }
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 300;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.1em;
+    margin: 0 0 .50em 0;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    margin: 1em 0 .50em 0;
+  }
+
+  h3 {
+    margin: 25px 0 10px 0;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 105%;
+  }
+
+  a {
+    color: #058;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+  }
+
+  a:hover {
+    color: #e08524;
+    transition: color .3s ease-in-out;
+  }
+
+  pre, code, .mono, .name {
+    font-family: "Ubuntu Mono", "Cousine", "DejaVu Sans Mono", monospace;
+  }
+
+  .title .name {
+    font-weight: bold;
+  }
+  .section-title {
+    margin-top: 2em;
+  }
+  .ident {
+    color: #900;
+  }
+
+  code {
+    background: #f9f9f9;
+  } 
+
+  pre {
+    background: #fefefe;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 0 #f3f3f3;
+    margin: 0 30px;
+    padding: 15px 30px;
+  }
+
+  .codehilite {
+    margin: 0 30px 10px 30px;
+  }
+
+    .codehilite pre {
+      margin: 0;
+    }
+    .codehilite .err { background: #ff3300; color: #fff !important; } 
+
+  table#module-list {
+    font-size: 110%;
+  }
+
+    table#module-list tr td:first-child {
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+    table#module-list td {
+      vertical-align: top;
+      padding-bottom: 8px;
+    }
+
+      table#module-list td p {
+        margin: 0 0 7px 0;
+      }
+
+  .def {
+    display: table;
+  }
+
+    .def p {
+      display: table-cell;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .def p:first-child {
+      white-space: nowrap;
+    }
+
+    .def p:last-child {
+      width: 100%;
+    }
+
+
+  #index {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+    ul#index .class_name {
+      /* font-size: 110%; */
+      font-weight: bold;
+    }
+    #index ul {
+      margin: 0;
+    }
+
+  .item {
+    margin: 0 0 15px 0;
+  }
+
+    .item .class {
+      margin: 0 0 25px 30px;
+    }
+
+      .item .class ul.class_list {
+        margin: 0 0 20px 0;
+      }
+
+    .item .name {
+      background: #fafafa;
+      margin: 0;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 3px;
+      display: inline-block;
+      min-width: 40%;
+    }
+      .item .name:hover {
+        background: #f6f6f6;
+      }
+
+    .item .empty_desc {
+      margin: 0 0 5px 0;
+      padding: 0;
+    }
+
+    .item .inheritance {
+      margin: 3px 0 0 30px;
+    }
+
+    .item .inherited {
+      color: #666;
+    }
+
+    .item .desc {
+      padding: 0 8px;
+      margin: 0;
+    }
+
+      .item .desc p {
+        margin: 0 0 10px 0;
+      }
+
+    .source_cont {
+      margin: 0;
+      padding: 0;
+    }
+
+    .source_link a {
+      background: #ffc300;
+      font-weight: 400;
+      font-size: .75em;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 1px 1px 0 #f4b700;
+      
+      padding: 3px 8px;
+      border-radius: 2px;
+      transition: background .3s ease-in-out;
+    }
+      .source_link a:hover {
+        background: #FF7200;
+        text-shadow: none;
+        transition: background .3s ease-in-out;
+      }
+
+    .source {
+      display: none;
+      max-height: 600px;
+      overflow-y: scroll;
+      margin-bottom: 15px;
+    }
+
+      .source .codehilite {
+        margin: 0;
+      }
+
+  .desc h1, .desc h2, .desc h3 {
+    font-size: 100% !important;
+  }
+  .clear {
+    clear: both;
+  }
+
+  @media all and (max-width: 950px) {
+    #sidebar {
+      width: 35%;
+    }
+    #content {
+      width: 65%;
+    }
+  }
+  @media all and (max-width: 650px) {
+    #top {
+      display: none;
+    }
+    #sidebar {
+      float: none;
+      width: auto;
+    }
+    #content {
+      float: none;
+      width: auto;
+      padding: 30px;
+    }
+
+    #index ul {
+      padding: 0;
+      margin-bottom: 15px;
+    }
+    #index ul li {
+      display: inline-block;
+      margin-right: 30px;
+    }
+    #footer {
+      text-align: left;
+    }
+    #footer p {
+      display: block;
+      margin: inherit;
+    }
+  }
+
+  /*****************************/
+
+  </style>
+
+  <style type="text/css">
+  .codehilite .hll { background-color: #ffffcc }
+.codehilite  { background: #f8f8f8; }
+.codehilite .c { color: #408080; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+.codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #FF0000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #00A000 } /* Generic.Inserted */
+.codehilite .go { color: #888888 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #7D9029 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #A0A000 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+  </style>
+
+  <style type="text/css">
+  
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+  </style>
+
+  <script type="text/javascript">
+  function toggle(id, $link) {
+    $node = document.getElementById(id);
+    if (!$node)
+    return;
+    if (!$node.style.display || $node.style.display == 'none') {
+    $node.style.display = 'block';
+    $link.innerHTML = 'Hide source &nequiv;';
+    } else {
+    $node.style.display = 'none';
+    $link.innerHTML = 'Show source &equiv;';
+    }
+  }
+  </script>
+</head>
+<body>
+<a href="#" id="top">Top</a>
+
+<div id="container">
+    
+  
+  <div id="sidebar">
+    <h1>Index</h1>
+    <ul id="index">
+    <li class="set"><h3><a href="#header-variables">Module variables</a></h3>
+      
+  <ul>
+    <li class="mono"><a href="#auto_commands.PIPE">PIPE</a></li>
+    <li class="mono"><a href="#auto_commands.STDOUT">STDOUT</a></li>
+  </ul>
+
+    </li>
+
+
+    <li class="set"><h3><a href="#header-classes">Classes</a></h3>
+      <ul>
+        <li class="mono">
+        <span class="class_name"><a href="#auto_commands.Commands">Commands</a></span>
+        
+          
+  <ul>
+    <li class="mono"><a href="#auto_commands.Commands.__init__">__init__</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.Display_msg">Display_msg</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.Dns_FierceCheck">Dns_FierceCheck</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.Dns_ReconCheck">Dns_ReconCheck</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.Nfs_Mount_intaractive">Nfs_Mount_intaractive</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.SaveDetails">SaveDetails</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.cleanUp">cleanUp</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.custom_meta">custom_meta</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.domain_interactive">domain_interactive</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.execute_singleLine">execute_singleLine</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.exit_child">exit_child</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.ftp_interactive">ftp_interactive</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.generalCommands_Tout_Sniff">generalCommands_Tout_Sniff</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.general_interactive">general_interactive</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.general_interactive_special_char">general_interactive_special_char</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.getHost">getHost</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.getReverseDns">getReverseDns</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.http_based">http_based</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.imap_interactive">imap_interactive</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.init_connection">init_connection</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.meta_commands">meta_commands</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.print_Error">print_Error</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.print_Error_info">print_Error_info</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.print_Log">print_Log</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.print_Log_info">print_Log_info</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.set_log_file">set_log_file</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.singleLineCommands">singleLineCommands</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.singleLineCommands_Timeout">singleLineCommands_Timeout</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.ssh_check_execution">ssh_check_execution</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.ssh_interactive">ssh_interactive</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.start_sniffing">start_sniffing</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.start_wireshark">start_wireshark</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.test_ssl">test_ssl</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.threadControllor">threadControllor</a></li>
+    <li class="mono"><a href="#auto_commands.Commands.time_out_command">time_out_command</a></li>
+  </ul>
+
+        </li>
+      </ul>
+    </li>
+
+    </ul>
+  </div>
+
+    <article id="content">
+      
+  
+
+  
+
+
+  <header id="section-intro">
+  <h1 class="title"><span class="name">auto_commands</span> module</h1>
+  <p>@Author         :Furqan Khan
+@Email          :furqankhan08@gmail.com
+@Date           :12/30/2016                     </p>
+<p>Objective :
+The purpose of this file /module /Class is to actually execute the external scripts for vulnerability assessment and scanning.It runs metasploit modules ,external python ,ruby,bash,shell,java class files and some perl as well as NSE scripts.This file is invoked from driver_meta.py and it invokes appropriate method at 1 time depending upon the type of service and checks to be carried.
+Thus there are various method catagories like :</p>
+<p>(1) Single line  :For the scripts that only require to be invoked and they return data after completion of execution .
+(2) Interactive :This catagory of methods create a virtual terminal to execute the commands in interactive manner ,where the next input given to virtual terminal depends upon the output produced from the preceeding command.
+(3) Sniffing :This catagory generates triffic sniffing files for the service /port being testes
+(4) Metasploit :This catagory will invoke the metasploit modules and would execute them and collect data from the execution
+(5) Single line timeout :THis catagory comes with a timeout parameter which will wait for external script to finish its execution for some specified time</p>
+  
+
+  </header>
+
+  <section id="section-items">
+    <h2 class="section-title" id="header-variables">Module variables</h2>
+      <div class="item">
+      <p id="auto_commands.PIPE" class="name">var <span class="ident">PIPE</span></p>
+      
+  
+  <div class="source_cont">
+</div>
+
+      </div>
+      <div class="item">
+      <p id="auto_commands.STDOUT" class="name">var <span class="ident">STDOUT</span></p>
+      
+  
+  <div class="source_cont">
+</div>
+
+      </div>
+
+
+    <h2 class="section-title" id="header-classes">Classes</h2>
+      
+      <div class="item">
+      <p id="auto_commands.Commands" class="name">class <span class="ident">Commands</span></p>
+      
+  
+    <div class="desc"><p>Objective :
+The following class Commands has got all the catagories of methods discussed above</p></div>
+  <div class="source_cont">
+</div>
+
+
+      <div class="class">
+          <h3>Ancestors (in MRO)</h3>
+          <ul class="class_list">
+          <li><a href="#auto_commands.Commands">Commands</a></li>
+          </ul>
+          <h3>Instance variables</h3>
+            <div class="item">
+            <p id="auto_commands.Commands.Auto_logger" class="name">var <span class="ident">Auto_logger</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.IPexploitObj" class="name">var <span class="ident">IPexploitObj</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.Log_file" class="name">var <span class="ident">Log_file</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.Log_file_info" class="name">var <span class="ident">Log_file_info</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.command_id" class="name">var <span class="ident">command_id</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.con" class="name">var <span class="ident">con</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.current_host" class="name">var <span class="ident">current_host</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.current_port" class="name">var <span class="ident">current_port</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.current_record_id" class="name">var <span class="ident">current_record_id</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.cursor" class="name">var <span class="ident">cursor</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.data_path" class="name">var <span class="ident">data_path</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.exploit_results" class="name">var <span class="ident">exploit_results</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.general_op" class="name">var <span class="ident">general_op</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.lock" class="name">var <span class="ident">lock</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.logger" class="name">var <span class="ident">logger</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.logger_info" class="name">var <span class="ident">logger_info</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.method_id" class="name">var <span class="ident">method_id</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+            <div class="item">
+            <p id="auto_commands.Commands.project_id" class="name">var <span class="ident">project_id</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+          <h3>Methods</h3>
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.__init__">
+    <p>def <span class="ident">__init__</span>(</p><p>self)</p>
+    </div>
+    
+
+    
+  
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.Display_msg">
+    <p>def <span class="ident">Display_msg</span>(</p><p>self, child)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would pass the debugging messages to print_Log method to keep track of execution flow</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.Dns_FierceCheck">
+    <p>def <span class="ident">Dns_FierceCheck</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to check /conduct various checks related to DNS.
+It does dns fierce check for the host and also then for reverse dns of the host.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.Dns_ReconCheck">
+    <p>def <span class="ident">Dns_ReconCheck</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to check /conduct various checks related to DNS.
+It does dns_recon check for the host and also then for reverse dns of the host.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.Nfs_Mount_intaractive">
+    <p>def <span class="ident">Nfs_Mount_intaractive</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+Nfs mount is used for service NFS and this check will attempt to mount directories of remote system             to local machine .The method is interacive and is customizd only for this purpose.</p>
+<p>Todo :
+For now we are hard coding--&gt;assuming root permission --&gt;later try to parse the directories which
+have permission and mount them only.It assumes /temp/ directory is created already</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.SaveDetails">
+    <p>def <span class="ident">SaveDetails</span>(</p><p>self, commands, result)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method is commonly shared amongst all catagories of methods
+(singleline ,interactive ,metasploit ,sniffing and etc) which are responsible for invoking 
+the external scripts as well as the metasploit modules .Actually when ever the methods execute the 
+external scripts teh recived data from external scripts is passed on to this method and it saves the
+findings inside the databse table</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.cleanUp">
+    <p>def <span class="ident">cleanUp</span>(</p><p>self)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would clean up the virtual console</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.custom_meta">
+    <p>def <span class="ident">custom_meta</span>(</p><p>self, commands)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would take the list of commands as aurgument and would invoke metasploit as a subprocess
+in virtual console and would execute the commands and would collect the resukts and finally would
+pass the findings to savedetails method to save the results</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.domain_interactive">
+    <p>def <span class="ident">domain_interactive</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to check /conduct various checks related to domain server /DNS
+service like (zone transfers ,guessing subdomains and etc).Altough the same task could be
+achived by passing appropriate aurguments to General_interactive catagory of methods ,but this
+method was developed before developemt of General_interactive and thus is customized only for
+Domain server checks using interactive mode with virtual console</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.execute_singleLine">
+    <p>def <span class="ident">execute_singleLine</span>(</p><p>self, cmd, result_=False)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to execute scripts that can be invoked by single line command
+and no timeout parameter is used here.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.exit_child">
+    <p>def <span class="ident">exit_child</span>(</p><p>self, child)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would gracefully exit the msfconsole when all metasploit commands are ececuted</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.ftp_interactive">
+    <p>def <span class="ident">ftp_interactive</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to check weather anonymous login is allowed on ftp service
+on the given remote host.Altough the same task could be achived by passing appropriate
+aurguments to General_interactive catagory of methos ,but this method was developed before
+developemt of General_interactive and thus is customized only for anonymous FTP check using
+interactive mode with virtual console</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.generalCommands_Tout_Sniff">
+    <p>def <span class="ident">generalCommands_Tout_Sniff</span>(</p><p>self, arg, interactive=False)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to start a traffic sniffer and immidiately after that execute the
+external script which would do vulnerability scanning on given service and the sniffer would
+capture traffic in the background.The moment the external script would finish execution the 
+method would stop the sniffer.Important point is thet ,the external script is executed with
+timeout value.If the script does not complete within given time frame both sniffer and external                         process would be stopped</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.general_interactive">
+    <p>def <span class="ident">general_interactive</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This is a generic and important method and the purpose of this method is to accomdate most of
+the interactive commands /tools that require user interaction.It automates the whole process
+and there are various scripts that are executed using this method by passing appripriate
+script aurguments to this method.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.general_interactive_special_char">
+    <p>def <span class="ident">general_interactive_special_char</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to execute teh interactive scripts or kali tools which 
+return various special charactes which need to be decoded first to interpret meaning from them
+before passing the next command of interaction</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.getHost">
+    <p>def <span class="ident">getHost</span>(</p><p>self, result)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to parse the output from nslookup and return host from ip.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.getReverseDns">
+    <p>def <span class="ident">getReverseDns</span>(</p><p>self, host)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to use nslookup to transform ip-&gt;domain name"</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.http_based">
+    <p>def <span class="ident">http_based</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to execute http based checks that request external urls using
+python get request to fetch data.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.imap_interactive">
+    <p>def <span class="ident">imap_interactive</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to check /conduct various checks related to Imap service.</p>
+<p>To do :
+Right now teh username and password passed to this module are (msfadmin,msfadmin).Add additional
+aurguments to the master json file for this service to take username password from master json
+or name list to brute force login attempt.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.init_connection">
+    <p>def <span class="ident">init_connection</span>(</p><p>self)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would initialize the database connection</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.meta_commands">
+    <p>def <span class="ident">meta_commands</span>(</p><p>self, commands)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method is obselete and is not used in final draft of code.Its purpose was to use github
+version of code for metasploit modules execution ,but due to its unstable nature we adapted 
+our own custom methodology using Python's pexpect</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.print_Error">
+    <p>def <span class="ident">print_Error</span>(</p><p>self, message)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method log any exception or error to the logger with the flag info as ERROR</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.print_Error_info">
+    <p>def <span class="ident">print_Error_info</span>(</p><p>self, message)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would log errors pertaining to execution flow with flag set as 'Error'</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.print_Log">
+    <p>def <span class="ident">print_Log</span>(</p><p>self, message)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would log the command id and message (obtained results) to the log file</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.print_Log_info">
+    <p>def <span class="ident">print_Log_info</span>(</p><p>self, message)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would log the execution flow to the different log file (info) .The purpose of this log                      is to do debugging and track execution flow of commands</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.set_log_file">
+    <p>def <span class="ident">set_log_file</span>(</p><p>self)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+When invoked from the GUI the whole code executes in the background and in order to track the 
+details of execution we log the debugging messages that help us track the execution flow.This                   method initilizes the logger class and sets a logger file for the current project (scanning phase                       only)</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.singleLineCommands">
+    <p>def <span class="ident">singleLineCommands</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to execute scripts that can be invoked with single line command
+and it internally invokes the earlier discussed single_line command method without timeout.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.singleLineCommands_Timeout">
+    <p>def <span class="ident">singleLineCommands_Timeout</span>(</p><p>self, arg)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to execute scripts that can be invoked with single line command
+and it internally invokes the earlier discussed single_line command method.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.ssh_check_execution">
+    <p>def <span class="ident">ssh_check_execution</span>(</p><p>self, child, commands_executed)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>This method works in conjuction with ssh_root_login check/ssh_interactive</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.ssh_interactive">
+    <p>def <span class="ident">ssh_interactive</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to check weather root login is allowed on ssh service
+on the given remote host.Altough the same task could be achived by passing appropriate
+aurguments to General_interactive catagory of methods ,but this method was developed before
+developemt of General_interactive and thus is customized only for SSH root login check using
+interactive mode with virtual console</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.start_sniffing">
+    <p>def <span class="ident">start_sniffing</span>(</p><p>self, interface, timeout)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to sniff network packets for various services using 
+terminal version of wireshark called as Tshark.This method would start the sniffer on 
+given interface.</p>
+<p>Todo:
+Right now the interface name is hardcoded to 'eth0' ,add additional aurguments to master json
+to accomdate this flexibility</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.start_wireshark">
+    <p>def <span class="ident">start_wireshark</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+This method would start python version of wireshark called as pyshark for traffic sniffing</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.test_ssl">
+    <p>def <span class="ident">test_ssl</span>(</p><p>self, args)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to execute test_ssl.py script .The script detects various ciphers
+used and is only customized for this purpose.It could have not been accomdated in
+General_interactive catagory and thus we had to write custom code for this</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.threadControllor">
+    <p>def <span class="ident">threadControllor</span>(</p><p>self, cmd, timeout=100)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to start a new thread which will inturn launch a new subprocess 
+and that subprocess will actually execute the external script.Further more the thread will wait 
+for the subprocess to complete its execution for the time specified in timeout parameter 
+(in secconds) ,and if teh sub process dors not finish within that time ,the thread kills the
+subprocess and recursively kills all its children processes(external scripts)</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="auto_commands.Commands.time_out_command">
+    <p>def <span class="ident">time_out_command</span>(</p><p>self, arg, timeout)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Objective :
+The purpose of this method is to accomdate execution of all scripts that can be invoked with a
+single command along with host and port info and do not require any further interaction with
+the user.The timeout parameter asks the controllor thread to wait for "n" units of time and
+even then if the external script does not finish execution then abort the execution of external
+script such that other services and scriptsare not starved for execution.</p></div>
+  <div class="source_cont">
+</div>
+
+  </div>
+  
+      </div>
+      </div>
+
+  </section>
+
+    </article>
+  <div class="clear"> </div>
+  <footer id="footer">
+    <p>
+      Documentation generated by
+      <a href="https://github.com/BurntSushi/pdoc">pdoc 0.3.2</a>
+    </p>
+
+    <p>pdoc is in the public domain with the
+      <a href="http://unlicense.org">UNLICENSE</a></p>
+
+    <p>Design by <a href="http://nadh.in">Kailash Nadh</a></p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+# This is the the Methods file for hoppy
+#			by deanx
+# format:
+#
+# method_name, interesting_resp_code, send_to_server
+#
+# (host) will be replaced by the hostname
+# (port) will be replace by the port
+# (location) will be replace by (location) to test with webDAV
+# (file) will be replace by file to test with webDAV
+# (wait) will cause the client to wait for a server respose i.e. 100 Continue
+# (auth) will be replaced by the basic auth credentials if supplied
+# (loop) will be replaced in a loop with all entries in the loop file
+# (cookie) will be replaced by the cookies passed to hoppy 
+# 
+# Supplied with hoppy 1.8.1 
+
+
+# Base Case Analysis
+
+Invalid Method, X, HOPPY (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+
+# Options Methods
+
+Options, X, OPTIONS / HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Options, X, OPTIONS * HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+
+# Good Get's
+
+Info, X, GET (location)/(file) HTTP/1.0\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/ HTTP/1.0\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location) HTTP/1.0\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET / HTTP/1.0\nHost: (host)\n(cookie)\n(auth)\n\n
+
+# Malformed Get's
+
+Info, X, GET (location) HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, GET /images HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, GET /images HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, GET /aspnet_client HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, GET /aspnet_client HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, GET / HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, GET / HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, GET /images HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, GET /aspnet_client HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, GET (location) HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, GET (location) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, get (location) HTTP/1.0\n(cookie)\n(auth)\n\n
+Info (loop), X, GET (loop) HTTP/1.0\n(cookie)\n(auth)\n\n
+Info (loop), X, get (loop) HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, get (location)/images HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, get /images HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, get /images HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, get (location)/aspnet_client  HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, get /aspnet_client  HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, get /aspnet_client  HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, get / HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, get / HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, get /images HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, get /aspnet_client  HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, get (location) HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, get (location) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/(file) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, 500, GET (location)/|.asp HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, 500, GET (location)/~.asp HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/trace.asp HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, 500, GET (location)/|.aspx HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, 500, GET (location)/~.aspx HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/trace.asp HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, 500, GET (location)/|.axd HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, 500, GET (location)/~.axd HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/trace.axd HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET /trace.axd HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/trace.axd?id=0 HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET /trace.axd?id= HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/trace.axd?id=0 HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, GET /trace.axd?id= HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\nColdfusion XSS, X, GET /CFIDE/probe.cfm HTTP/1.1\nHost: (host)\nUser-Agent: Firefox</td><script>ColdfusionXSSdetect<script>\n(cookie)\n(auth)\n\n
+Info, X, GET (location)/NULL.REM HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Info, X, OPTIONS / HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, OPTIONS * HTTP/1.1\n(cookie)\n(auth)\n\n
+Info, X, OPTIONS / HTTP/1.0\n(cookie)\n(auth)\n\n
+Info, X, OPTIONS * HTTP/1.0\n(cookie)\n(auth)\n\n
+
+# IIS Trace
+
+IIS Trace, 200, GET (location)/trace.axd HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+IIS Trace, 200, GET /trace.axd HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+# Track and Trace
+
+Trace, 200, TRACE /anything\nCookie: MirroredBack\n(cookie)\n(auth)\n\n
+Track, 200, TRACK /anything\nCookie: MirroredBack\n(cookie)\n(auth)\n\n
+Trace, 200, TRACE /<script>XSSdetect</script>\n(cookie)\n(auth)\n\n
+Track, 200, TRACK /<script>XSSdetect</script>\n(cookie)\n(auth)\n\n
+
+Track, 200, TRACK (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nTRACE /anything\nCookie: MirroredBack\n\n
+Trace, 200, TRACE (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nTRACE /anything\nCookie: MirroredBack\n\n
+
+Track, 200, TRACK (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nTRACK <script>XSSdetect</script>\n\n
+Trace, 200, TRACE (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nTRACE <script>XSSdetect</script>\n\n
+
+Track, 200, TRACK / HTTP/1.1\nHost: (host)\nCookie: MirroredBack\nVia: <script>XSSdetect</script>\n(cookie)\n(auth)\n\n
+Trace, 200, TRACE / HTTP/1.1\nHost: (host)\nCookie: MirroredBack\nVia: <script>XSSdetect</script>\n(cookie)\n(auth)\n\n
+
+Trace, 200, TRACE /<script>XSSdetect</script> HTTP/1.1\nHost: (host)\nCookie: MirroredBack\n(cookie)\n(auth)\n\n
+Track, 200, TRACK /<script>XSSdetect</script> HTTP/1.1\nHost: (host)\nCookie: MirroredBack\n(cookie)\n(auth)\n\n
+
+
+# File Methods
+Copy, 207, COPY (location)/(file) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nDestination: http:/(host)(location)/(file).copy\nOverwrite: T\n\n
+Put (location)/(file).put, 201, PUT (location)/(file).put HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\nContent-Length: 6\n\n(wait)testme\n\n
+Put (location)/(file).put, 201, PUT (location)/(file).put HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\n\n
+Delete (location)/(file).put, 200, DELETE (location)/(file).put HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Debug, 200, DEBUG (location)/(file).aspx HTTP/1.0\nAccept: */*\nHost :(host)\n(cookie)\n(auth)\nContent-Length: 0\nCommand: stop-debug\nConnection: closed\n\n
+
+# WebDAV
+
+Put (location)/(file).put, 201, PUT (location)/(file).put HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\nContent-Length: 6\n\n(wait)testme\n\n
+Copy, 207, COPY (location)/(file) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nDestination: http:/(host)(location)/(file).html\nOverwrite: T\n\n
+Lock, 207, LOCK (location)/(file) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nTimeout: Second-100\nDepth: 0\nContent-Type: text/xml\nTranslate: f\nContent-Length: 0\n\n
+Lock, 207, LOCK (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nTimeout: Second-100\nDepth: 0\nContent-Type: text/xml\nTranslate: f\nContent-Length: 0\n\n
+unLock, 412, UNLOCK (location)/(file) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nLock-Token: <>\n\n
+unLock, 412, UNLOCK (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nLock-Token: <>\n\n
+Move, 207, MOVE (location)/(file).put HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nDestination: http:/(host)(location)/(file).html\n\n
+mkcol, 201, MKCOL (location)/(file).dir HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nDestination: http:/(host)(location)/test\n\n
+Delete (location)/(file).put, 200, DELETE (location)/(file).put HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Copy, 207, COPY (location)/(file).copy HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nDestination: http:/(host)(location)/(file)\nOverwrite: T\n\n
+
+Propfind (location)/, 207, PROPFIND (location)/ HTTP/1.1\nHost:\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Propfind (location)/, 207, PROPFIND (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Propfind /, 207, PROPFIND / HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Propfind /images, 207, PROPFIND /images HTTP/1.1\nHost:\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Propfind /images, 207, PROPFIND /images HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Propfind (location)/(file), X, PROPFIND (location)/(file) HTTP/1.1\nhost: (host)\n(cookie)\n(auth)\nDepth: 1\nContent-Type: text/xml\nExpect: 100-continue\nContent-Length: 143\nTranslate: f\n\n(wait)<?xml version="1.0" encoding="utf-8" ?>\n<propfind xmlns="DAV:">\n<prop>\n<checked-in />\n<checked-out />\n</prop>\n<dead-props />\n</propfind>\n\n
+Propfind (location)/, 207, PROPFIND (location)/ HTTP/1.1\nhost: (host)\n(cookie)\n(auth)\nDepth: 1\nContent-Type: text/xml\nExpect: 100-continue\nContent-Length: 143\nTranslate: f\n\n(wait)<?xml version="1.0" encoding="utf-8" ?>\n<propfind xmlns="DAV:">\n<prop>\n<checked-in />\n<checked-out />\n</prop>\n<dead-props />\n</propfind>\n\n
+Proppatch (location)/(file), 207, PROPPATCH (location)/(file) HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nContent-Type: text/xml\nExpect: 100-continue\nContent-Length: 300\nTranslate: F\n\n(wait)<?xml version="1.0" encoding="utf-8" ?>\n<D:propertyupdate xmlns:D="DAV:" xmlns:Z="http://www.w3.com/standards/z39.50/">\n<D:set>\n<D:prop>\n<Z:authors>\n<Z:Author>deanx</Z:Author>\n</Z:authors>\n</D:prop>\n</D:set>\n<D:remove>\n<D:prop><Z:Copyright-Owner/></D:prop>\n</D:remove>\n</D:propertyupdate>\n\n
+Proppatch (location)/, 207, PROPPATCH (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nContent-Type: text/xml\nExpect: 100-continue\nContent-Length: 300\nTranslate: F\n\n(wait)<?xml version="1.0" encoding="utf-8" ?>\n<D:propertyupdate xmlns:D="DAV:" xmlns:Z="http://www.w3.com/standards/z39.50/">\n<D:set>\n<D:prop>\n<Z:authors>\n<Z:Author>deanx</Z:Author>\n</Z:authors>\n</D:prop>\n</D:set>\n<D:remove>\n<D:prop><Z:Copyright-Owner/></D:prop>\n</D:remove>\n</D:propertyupdate>\n\n
+
+
+# Auth tests
+
+Basic Auth, X, GET /default.asp HTTP/1.1\nHost: (host)\nAuthorization: Basic c2x1Z3M6a2lja2Fzcw==\n\n
+Basic Auth, X, GET /default.asp HTTP/1.1\nHost: \nAuthorization: Basic c2x1Z3M6a2lja2Fzcw==\n\n
+Basic Auth, X, GET (location)/(file) HTTP/1.1\nHost: (host)\nAuthorization: Basic c2x1Z3M6a2lja2Fzcw==\n\n
+Basic Auth, X, GET (location)/(file) HTTP/1.1\nHost: \nAuthorization: Basic c2x1Z3M6a2lja2Fzcw==\n\n
+Basic Auth, X, GET /exchange/(file) HTTP/1.1\nHost: \nAuthorization: Basic c2x1Z3M6a2lja2Fzcw==\n\n
+NTLM Auth, X, GET / HTTP/1.1\nHost: (host)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM Auth, X, GET (location)/(file) HTTP/1.1\nHost: (host)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM Auth, X, GET /exchange/(file) HTTP/1.1\nHost: (host)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+Digest Auth, X, GET / HTTP/1.1\nHost: (host)\nAuthorization: Digest Digest username="test", X, realm="slugs", X, qop="auth", X, algorithm="MD5", X, uri="/", X, nonce="Ny8yLzIwMDIgMzoyNjoyNCBQTQ", X, nc=00000001, X, cnonce="c51b5139556f939768f770dab8e5277a", X, opaque="0000000000000000", X, response="afa30c6445a14e2817a423ca4a143792"\n\n
+Digest Auth, X, GET (location)/(file) HTTP/1.1\nHost: (host)\nAuthorization: Digest Digest username="test", X, realm="slugs", X, qop="auth", X, algorithm="MD5", X, uri="(location)/(file)", X, nonce="Ny8yLzIwMDIgMzoyNjoyNCBQTQ", X, nc=00000001, X, cnonce="c51b5139556f939768f770dab8e5277a", X, opaque="0000000000000000", X, response="afa30c6445a14e2817a423ca4a143792"\n\n
+Digest Auth, X, GET /exchange/(file) HTTP/1.1\nHost: (host)\nAuthorization: Digest Digest username="test", X, realm="slugs", X, qop="auth", X, algorithm="MD5", X, uri="(location)/(file)", X, nonce="Ny8yLzIwMDIgMzoyNjoyNCBQTQ", X, nc=00000001, X, cnonce="c51b5139556f939768f770dab8e5277a", X, opaque="0000000000000000", X, response="afa30c6445a14e2817a423ca4a143792"\n\n
+
+# IIS Cookie test
+
+IIS Cookie Test, 500, GET /default.asp HTTP/1.1\nHost: (host)\nCookie: =badthingsmayhapped=good\n(cookie)\n(auth)\n\n
+IIS Cookie Test, 500, GET /index.html HTTP/1.1\nHost: (host)\nCookie: =badthingsmayhapped=good\n(cookie)\n(auth)\n\n
+IIS Cookie Test, 500, GET (location)/ HTTP/1.1\nHost: (host)\nCookie: =badthingsmayhapped=good\n(cookie)\n(auth)\n\n
+IIS Cookie Test, 500, GET (location)/(file) HTTP/1.1\nHost: (host)\nCookie: =badthingsmayhapped=good\n(cookie)\n(auth)\n\n
+IIS Cookie Test, 500, GET (location)/(file).asp HTTP/1.1\nHost: (host)\nCookie: =badthingsmayhapped=good\n(cookie)\n(auth)\n\n
+
+# Default Extension Mappings
+
+.printer, 500, GET (location)/foo.printer HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.idc, 500, GET (location)/foo.idc HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.idq, 200, GET (location)/foo.idq HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.ida, 200, GET (location)/foo.ida HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.htr, 200, GET (location)/foo.htr HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.htw, 200, GET (location)/foo.htw HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.stm, 200, GET (location)/foo.stm HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.shtm, 200, GET (location)/foo.shtm HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+.shtml, 200, GET (location)/foo.shtml HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+# Frontpage Extensions
+
+Frontpage Config Inf, 200, GET /_vti_inf.html HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage Post Inf, 200, GET /postinfo.html HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage shtml.dll, 200, GET /_vti_bin/shtml.dll HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage Anon Login, 200, POST /_vti_bin/shtml.dll/_vti_adm/admin.dll HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\nContent-Length: 58\nContent-Type: application/x-www-form-urlencoded\nMIME-Version: 1.0\nX-Vermeer-Content-Type: application/x-www-form-urlencoded\n\n(wait)method=open+service%3a3%2e0%2e2%2e1105&service%5fname=%2f\n\n
+Frontpage Anon Login, 200, POST /_vti_bin/shtml.dll/_vti_aut/author.dll HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\nContent-Length: 58\nContent-Type: application/x-www-form-urlencoded\nMIME-Version: 1.0\nX-Vermeer-Content-Type: application/x-www-form-urlencoded\n\n(wait)method=open+service%3a3%2e0%2e2%2e1105&service%5fname=%2f\n\n
+Frontpage dir (bin), 200, GET /_vti_bin/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage dir (pvt), 200, GET /_vti_pvt/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage dir (cnf), 200, GET /_vti_cnf/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage dir (log), 200, GET /_vti_log/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage dir (script), 200, GET /_vti_script/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage dir (txt), 200, GET /_vti_txt/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+Frontpage leakage, 200, POST /_vti_bin/shtml.dll/_vti_rpc HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\nContent-Length: 58\nContent-Type: application/x-www-form-urlencoded\nMIME-Version: 1.0\nX-Vermeer-Content-Type: application/x-www-form-urlencoded\n\n(wait)method=open+service%3a3%2e0%2e2%2e1105&service%5fname=%2f\n\n
+
+# Apache 
+
+MultiViews Check, 417, GET /index HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nAccept: application/whatever; q=1.0\n\n
+Expect Header XSS, X, GET (location)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: <script>XSSdetect</script>\n\n
+Expect Header XSS, X, GET / HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: <script>XSSdetect</script>\n\n
+413 XSS, X, <script>XSSdetect</script> / HTTP/1.1\nHost: (host)\nContent-length: -1\n(cookie)\n(auth)\n\n
+# Proxy Connection Tests
+
+# Add lcoalhost check on some ports
+
+Proxy Connect, 302, CONNECT www.google.com:443 HTTP/1.1\nHost: www.google.com:443\n(cookie)\n(auth)\n\n
+Proxy, 302, GET http://www.google.com/ HTTP/1.1\nHost: www.google.com:80\n(cookie)\n(auth)\n\n
+
+
+# phpinfo check
+
+phpinfo, 200, GET /phpinfo.php HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+phpinfo, 200, GET /config/index.php HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+phpinfo, 200, GET /index.php?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000 HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+# Robots.txt
+
+Robots.txt, 200, GET /robots.txt HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+crossdomain.xml, 200, GET /crossdomain.xml HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+
+# propfind loop
+
+webDavPUT on (loop), 201, PUT (loop)/dnehoppy.html HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nExpect: 100-continue\nContent-Length: 6\n\n(wait)testme\n\n
+webDavDELETE on (loop)/dnehoppy.html, 200, DELETE (loop)/dnehoppy.html HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+webDav on (loop), 207, PROPFIND (loop)/ HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Propfind, 207, PROPFIND (loop)/ HTTP/1.1\nHost:\n(cookie)\n(auth)\nContent-Length: 0\n\n
+Info, X, GET (loop) HTTP/1.1\nHost:\n(cookie)\n(auth)\n\n
+Info, X, GET (loop) HTTP/1.0\n(cookie)\n(auth)\n\n
+
+# tomcat manager
+
+tomcat manager, 401, GET /manager/html HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+tomcat admin, 401, GET /admin HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+JBoss JMX-Server, 200, GET /jmx-console HTTP/1.1\nHost: (host)\n(cookie)\n(auth)\n\n
+
+

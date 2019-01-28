@@ -1,0 +1,10 @@
+root
+msfadmin
+daemon
+abc
+lp
+sync
+shutdown
+halt
+mail
+news

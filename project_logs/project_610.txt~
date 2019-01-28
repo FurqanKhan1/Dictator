@@ -1,0 +1,385 @@
+[3;J[H[2JInside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('10.0.1.1/26', 'project_64_hosts', '1-65000', '1', '-T4 -A -n', '610', 'g-start', '4f402ec8-fef6-11e6-bf6e-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(10.0.1.1/26', 'project_64_hosts', '1-65000', '1', '-T4 -A -n', '610', 'g-start', '4f402ec8-fef6-11e6-bf6e-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:64
+in elif(1)
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+Scanning remaining ports
+Range is :60001-65000
+
+
+
+
+
+Loop executed : 513
+Started
+EXception in insert all (1452, 'Cannot add or update a child row: a foreign key constraint fails (`nmapscan`.`IPtable`, CONSTRAINT `IP_FK` FOREIGN KEY (`project`) REFERENCES `project` (`id`))')
+EXception in insert all (1452, 'Cannot add or update a child row: a foreign key constraint fails (`nmapscan`.`IPtable`, CONSTRAINT `IP_FK` FOREIGN KEY (`project`) REFERENCES `project` (`id`))')
+Some error occured while bulk insertion
+Ended
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 140367776139216)>]
+started
+Started DH
+Ended DH
+Ended
+**Pooling started :**
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 140367776139216)>]
+
+[31m----------------------------------------------[0m
+None
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140367776139216)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140367776139216)>]
+Reached here as well !!!
+# of threads Alive are :1
+
+Now stopping and saving Global Project Id : 610
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 154.605638027

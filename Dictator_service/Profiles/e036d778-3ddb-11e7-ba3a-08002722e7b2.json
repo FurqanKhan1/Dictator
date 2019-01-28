@@ -1,0 +1,499 @@
+{
+    "dhcps": {
+        "Test_cases": [
+            "dhcpc", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "domain": {
+        "Test_cases": [
+            "domain_1", 
+            "domain_2", 
+            "domain_3", 
+            "domain_4", 
+            "domain_5", 
+            "domain_6"
+        ], 
+        "Custom": false
+    }, 
+    "rpcbind": {
+        "Test_cases": [
+            "rpcbind_1", 
+            "rpcbind_2", 
+            "rpcbind_3", 
+            "rpcbind_4", 
+            "rpcbind_5"
+        ], 
+        "Custom": false
+    }, 
+    "mstsc": {
+        "Test_cases": [], 
+        "Custom": false
+    }, 
+    "msrpc": {
+        "Test_cases": [
+            "msrpc_1", 
+            "msrpc_2"
+        ], 
+        "Custom": false
+    }, 
+    "soap-http": {
+        "Test_cases": [
+            "soap-http_1"
+        ], 
+        "Custom": false
+    }, 
+    "smtp": {
+        "Test_cases": [
+            "smtp_4", 
+            "smtp_1", 
+            "smtp_2", 
+            "smtp_3", 
+            "smtp_5", 
+            "smtp_6", 
+            "smtp_7"
+        ], 
+        "Custom": false
+    }, 
+    "squid-http": {
+        "Test_cases": [
+            "squid-http_1", 
+            "squid-http_2", 
+            "squid-http_3", 
+            "squid-http_4"
+        ], 
+        "Custom": false
+    }, 
+    "netbios-ssn": {
+        "Test_cases": [
+            "netbios-ssn_1", 
+            "netbios-ssn_2", 
+            "netbios-ssn_3", 
+            "netbios-ssn_4", 
+            "netbios-ssn_5"
+        ], 
+        "Custom": false
+    }, 
+    "dhcpc": {
+        "Test_cases": [
+            "dhcpc_1", 
+            "dhcpc_2", 
+            "dhcpc_3"
+        ], 
+        "Custom": false
+    }, 
+    "ipp": {
+        "Test_cases": [
+            "ipp_1", 
+            "ipp_2"
+        ], 
+        "Custom": false
+    }, 
+    "radius": {
+        "Test_cases": [
+            "radius_1"
+        ], 
+        "Custom": false
+    }, 
+    "rsftp": {
+        "Test_cases": [
+            "rsftp_1"
+        ], 
+        "Custom": false
+    }, 
+    "mysql": {
+        "Test_cases": [
+            "mysql_1", 
+            "mysql_2", 
+            "mysql_3", 
+            "mysql_4", 
+            "mysql_5", 
+            "mysql_6", 
+            "mysql_7", 
+            "mysql_8", 
+            "mysql_9", 
+            "mysql_10"
+        ], 
+        "Custom": false
+    }, 
+    "vnc": {
+        "Test_cases": [
+            "vnc_1", 
+            "vnc_2", 
+            "vnc_3", 
+            "vnc_4"
+        ], 
+        "Custom": false
+    }, 
+    "ms-wbt-server": {
+        "Test_cases": [
+            "ms-wbt-server_1", 
+            "ms-wbt-server_2", 
+            "ms-wbt-server_3", 
+            "ms-wbt-server_4", 
+            "ms-wbt-server_5"
+        ], 
+        "Custom": false
+    }, 
+    "upnp": {
+        "Test_cases": [
+            "upnp_1", 
+            "upnp_2", 
+            "upnp_3", 
+            "upnp_4", 
+            "upnp_5", 
+            "upnp_6"
+        ], 
+        "Custom": false
+    }, 
+    "ftp": {
+        "Test_cases": [
+            "ftp_sniff_1", 
+            "ftp_1", 
+            "ftp_2", 
+            "ftp_3", 
+            "ftp_4", 
+            "ftp_5", 
+            "ftp_6"
+        ], 
+        "Custom": false
+    }, 
+    "mdns": {
+        "Test_cases": [
+            "mdns_1"
+        ], 
+        "Custom": false
+    }, 
+    "sip": {
+        "Test_cases": [
+            "sip_1", 
+            "sip_1_a", 
+            "sip_2", 
+            "sip_2_a", 
+            "sip_3", 
+            "sip_4"
+        ], 
+        "Custom": false
+    }, 
+    "xmpp-client": {
+        "Test_cases": [
+            "xmpp-client_1", 
+            "xmpp-client_2"
+        ], 
+        "Custom": false
+    }, 
+    "ms-sql-s": {
+        "Test_cases": [
+            "ms-sql-s_1", 
+            "ms-sql-s_2", 
+            "ms-sql-s_3", 
+            "ms-sql-s_4", 
+            "ms-sql-s_5", 
+            "ms-sql-s_6"
+        ], 
+        "Custom": false
+    }, 
+    "snmp": {
+        "Test_cases": [
+            "snmp_1", 
+            "snmp_2", 
+            "snmp_3", 
+            "snmp_4", 
+            "snmp_5", 
+            "snmp_6", 
+            "snmp_7", 
+            "snmp_8", 
+            "snmp_9", 
+            "snmp_10", 
+            "snmp_11", 
+            "snmp_12", 
+            "snmp_13", 
+            "snmp_14", 
+            "snmp_15", 
+            "snmp_16", 
+            "snmp_17", 
+            "snmp_18", 
+            "snmp_19", 
+            "snmp_20"
+        ], 
+        "Custom": false
+    }, 
+    "ldaps": {
+        "Test_cases": [
+            "ldap", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "isakmp": {
+        "Test_cases": [
+            "isakmp_1", 
+            "isakmp_2"
+        ], 
+        "Custom": false
+    }, 
+    "finger": {
+        "Test_cases": [
+            "finger_1", 
+            "finger_2", 
+            "finger_3", 
+            "finger_4"
+        ], 
+        "Custom": false
+    }, 
+    "https": {
+        "Test_cases": [
+            "http", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "ldap": {
+        "Test_cases": [
+            "ldap_1"
+        ], 
+        "Custom": false
+    }, 
+    "irc": {
+        "Test_cases": [
+            "irc_1", 
+            "irc_2", 
+            "irc_3"
+        ], 
+        "Custom": false
+    }, 
+    "nntp": {
+        "Test_cases": [
+            "nntp_1"
+        ], 
+        "Custom": false
+    }, 
+    "imaps": {
+        "Test_cases": [
+            "imap", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "ms-sql-m": {
+        "Test_cases": [
+            "ms-sql-m_1", 
+            "ms-sql-m_2", 
+            "ms-sql-m_3", 
+            "ms-sql-m_4", 
+            "ms-sql-m_5", 
+            "ms-sql-m_6"
+        ], 
+        "Custom": false
+    }, 
+    "shell": {
+        "Test_cases": [
+            "shell_1"
+        ], 
+        "Custom": false
+    }, 
+    "http": {
+        "Test_cases": [
+            "http_6", 
+            "http_7"
+        ], 
+        "Custom": false
+    }, 
+    "exec": {
+        "Test_cases": [
+            "exec_1"
+        ], 
+        "Custom": false
+    }, 
+    "ntp": {
+        "Test_cases": [
+            "ntp_1", 
+            "ntp_2", 
+            "ntp_3", 
+            "ntp_4"
+        ], 
+        "Custom": false
+    }, 
+    "openvpn": {
+        "Test_cases": [
+            "openvpn_1", 
+            "openvpn_2"
+        ], 
+        "Custom": false
+    }, 
+    "rsync": {
+        "Test_cases": [
+            "rsync_1"
+        ], 
+        "Custom": false
+    }, 
+    "telnet": {
+        "Test_cases": [
+            "telnet_1", 
+            "telnet_http", 
+            "telnet_sniff_1"
+        ], 
+        "Custom": false
+    }, 
+    "pop3": {
+        "Test_cases": [
+            "pop3_1", 
+            "pop3_2", 
+            "pop3_3"
+        ], 
+        "Custom": false
+    }, 
+    "ssl": {
+        "Test_cases": [
+            "ssl_1", 
+            "ssl_2", 
+            "ssl_3", 
+            "ssl_4", 
+            "ssl_5", 
+            "ssl_6", 
+            "ssl_7", 
+            "ssl_8", 
+            "ssl_9", 
+            "ssl_10"
+        ], 
+        "Custom": false
+    }, 
+    "ssh": {
+        "Test_cases": [
+            "ssh_1", 
+            "ssh_2", 
+            "ssh_3", 
+            "ssh_4", 
+            "ssh_5", 
+            "ssh_6"
+        ], 
+        "Custom": false
+    }, 
+    "microsoft-ds": {
+        "Test_cases": [
+            "microsoft-ds_1", 
+            "microsoft-ds_2", 
+            "microsoft-ds_3", 
+            "microsoft-ds_4", 
+            "microsoft-ds_5", 
+            "microsoft-ds_6", 
+            "microsoft-ds_7", 
+            "microsoft-ds_8", 
+            "microsoft-ds_9", 
+            "microsoft-ds_10", 
+            "microsoft-ds_11", 
+            "microsoft-ds_12", 
+            "microsoft-ds_13", 
+            "microsoft-ds_14", 
+            "microsoft-ds_15", 
+            "microsoft-ds_16", 
+            "microsoft-ds_17", 
+            "microsoft-ds_18", 
+            "microsoft-ds_19", 
+            "microsoft-ds_20"
+        ], 
+        "Custom": false
+    }, 
+    "imap": {
+        "Test_cases": [
+            "imap_1", 
+            "imap_2"
+        ], 
+        "Custom": false
+    }, 
+    "postgresql": {
+        "Test_cases": [
+            "postgresql_1", 
+            "postgresql_2", 
+            "postgresql_3"
+        ], 
+        "Custom": false
+    }, 
+    "xmpp-server": {
+        "Test_cases": [
+            "xmpp-server_1", 
+            "xmpp-server_2", 
+            "xmpp-server_3"
+        ], 
+        "Custom": false
+    }, 
+    "ldapssl": {
+        "Test_cases": [
+            "ldap", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "smtps": {
+        "Test_cases": [
+            "smtp", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "compaq-https": {
+        "Test_cases": [
+            "compaq-https_1"
+        ], 
+        "Custom": false
+    }, 
+    "nfs": {
+        "Test_cases": [
+            "nfs_1", 
+            "nfs_2", 
+            "nfs_3", 
+            "nfs_4"
+        ], 
+        "Custom": false
+    }, 
+    "netbios-ns": {
+        "Test_cases": [
+            "netbios-ns_1", 
+            "netbios-ns_2", 
+            "netbios-ns_3", 
+            "netbios-ns_4", 
+            "netbios-ns_5", 
+            "netbios-ns_6", 
+            "netbios-ns_7", 
+            "netbios-ns_8"
+        ], 
+        "Custom": false
+    }, 
+    "www": {
+        "Test_cases": [
+            "http", 
+            "ssl"
+        ], 
+        "Custom": true
+    }, 
+    "oracle": {
+        "Test_cases": [
+            "oracle_1", 
+            "oracle_2", 
+            "oracle_2_a", 
+            "oracle_3", 
+            "oracle_4", 
+            "oracle_5"
+        ], 
+        "Custom": false
+    }, 
+    "tftp": {
+        "Test_cases": [
+            "tftp_1", 
+            "tftp_2"
+        ], 
+        "Custom": false
+    }, 
+    "login": {
+        "Test_cases": [
+            "login_1", 
+            "login_2"
+        ], 
+        "Custom": false
+    }, 
+    "jetdirect": {
+        "Test_cases": [], 
+        "Custom": false
+    }
+}

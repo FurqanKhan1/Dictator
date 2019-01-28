@@ -1,0 +1,448 @@
+
+
+
+Service : dhcps
+Test cases for service dhcp
+Test cases for service ssl
+
+
+
+Service : domain
+nslookup
+fierce -dns 
+<host>
+nmap -sU --script=dns-recursion.nse -p <port> <host>
+nmap -sV --script=banner.nse -p <port> <host>
+nslookup <host>
+
+
+
+Service : ms-sql-s
+use scanner/mssql/mssql_login
+use scanner/mssql/mssql_login
+use admin/mssql/mssql_enum
+nmap -sV --script=ms-sql-info.nse -p <port> <host>
+nmap --script broadcast-ms-sql-discover <host>
+nmap --script=ms-sql-dac.nse -p <port> <host>
+
+
+
+Service : mstsc
+
+
+
+Service : msrpc
+nmap --script=smb-check-vulns.nse -p <port> <host>
+nmap --script=msrpc-enum.nse -p <port> <host>
+
+
+
+Service : soap-http
+use auxiliary/scanner/http/soap_xml
+
+
+
+Service : ldapssl
+Test cases for service ldap
+Test cases for service ssl
+
+
+
+Service : squid-http
+perl Scripts/beast.pl <host>
+use auxiliary/scanner/http/squid_pivot_scanning
+use auxiliary/scanner/http/squid_pivot_scanning
+nmap -sS -sV --script http-open-proxy.nse -p <port> <host>
+
+
+
+Service : netbios-ssn
+nmap --script=smb-enum-shares.nse -p <port> <host>
+nmap --script=smb-enum-domains.nse -p <port> <host>
+nmap -sU -sS --script=smb-os-discovery.nse -p <port> <host>
+nmap --script=smb-enum-users.nse -p <port> <host>
+nmap -sV --script=smb-os-discovery.nse -p <port> <host>
+
+
+
+Service : dhcpc
+python Scripts/get-dhcp-opts.py <host>
+nmap -sV --script=dhcp-discover.nse -p <port> <host>
+nmap -sV --script=broadcast-dhcp-discover.nse -p <port> <host>
+
+
+
+Service : ipp
+nmap -sV --script cups-queue-info -p <port> <host>
+nmap -sV --script cups-info -p <port> <host>
+
+
+
+Service : rpcbind
+rpcinfo -p  <host>
+nmap -v -sR <host>
+nmap -sV --script=nfs-showmount.nse -p <port> <host>
+nmap -sR -p <port> <host>
+nmap -sV --script=rpcinfo.nse -p <port> <host>
+
+
+
+Service : radius
+nc -vnzu <host> <port>
+
+
+
+Service : mysql
+use auxiliary/scanner/mysql/mysql_version
+use auxiliary/scanner/mysql/mysql_login
+use auxiliary/scanner/mysql/mysql_login
+use auxiliary/scanner/mysql/mysql_login
+use auxiliary/scanner/mysql/mysql_login
+nmap --script mysql-query --script-args='query="show databases;",username=root' -p <port> <host>
+nmap -sV -sC -p <port> <host>
+nmap -sV --script=mysql-info.nse -p <port> <host>
+nmap --script mysql-audit --script-args "mysql-audit.username='root',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'" -p <port> <host>
+nmap -sV --script=mysql-databases --script-args'=mysqluser= root' <host>
+
+
+
+Service : vnc
+use auxiliary/scanner/vnc/vnc_login
+use auxiliary/scanner/vnc/vnc_none_auth
+nmap -sV --script=realvnc-auth-bypass.nse -p <port> <host>
+nmap -sV --script=vnc-info.nse -p <port> <host>
+
+
+
+Service : ms-wbt-server
+perl Scripts/rdp-sec-check.pl <host>:<port>
+python Scripts/rdp_check_ciphers.py <host> <port>
+perl Scripts/ssl-cipher-suite-enum.pl --rdp <host>:<port>
+nmap --script=rdp-enum-encryption.nse -p <port> <host>
+nmap -sV --script=ssl-enum-ciphers.nse -p <port> <host>
+
+
+
+Service : upnp
+python Scripts/upnp.py target <host>
+miranda -i eth0 -v
+use auxiliary/scanner/upnp/ssdp_msearch
+msfconsole -q
+nmap -sV --script=broadcast-upnp-info <host>
+nmap -sU --script=upnp-info -p <port> <host>
+
+
+
+Service : ftp
+ftp <host> <port>
+use auxiliary/scanner/ftp/ftp_login
+use auxiliary/scanner/ftp/anonymous
+ftp <host>
+nmap -sV --script=ftp-bounce.nse -p <port> <host>
+nmap -sV --script=banner.nse -p <port> <host>
+nmap --script=ftp-anon.nse -p <port> <host>
+
+
+
+Service : mdns
+mdns-scan <host>
+
+
+
+Service : sip
+svmap -p <port> <host> -m INVITE
+sipvicious/svmap.py -p <port> <host> -m INVITE
+svwar -e <port> <host> <host>:<port>
+sipvicious/svwar.py -e <port> <host> <host>:<port>
+svcrack -u <port> <host>
+use voip/sip_invite_spoof
+
+
+
+Service : xmpp-client
+java -jar Scripts/XMPPloit.jar <host>
+use auxiliary/scanner/http/http_login
+
+
+
+Service : smtp
+nmap --script=smtp-open-relay.nse -p <port> <host>
+python Scripts/smtp-vrfy-check.py -h <host> -p <port> -u Scripts/names.txt -v 0
+python Scripts/smtp-vrfy.py -t <host> -p <port> -f Scripts/names.txt
+nmap -sV --script=banner.nse -p <port> <host>
+nmap --script=smtp-enum-users.nse -p <port> <host>
+nmap --script=ssl-heartbleed.nse -p <port> <host>
+nmap --script=smtp-strangeport.nse -p <port> <host>
+
+
+
+Service : jetdirect
+
+
+
+Service : snmp
+onesixtyone  -c Scripts/password.txt <host>
+onesixtyone  <host>
+use auxiliary/scanner/snmp/snmp_enum
+use auxiliary/scanner/snmp/snmp_enumshares
+perl Scripts/snmpenum.pl <host> public Scripts/linux.txt
+perl Scripts/snmpenum.pl <host> public Scripts/windows.txt
+perl Scripts/snmpcheck.pl -t <host> 
+snmpwalk -v2c -c public  <host> 
+nmap -sU --script=snmp-processes -p <port> <host>
+nmap -sU --script=snmp-netstat -p <port> <host>
+nmap -sU --script=snmp-win32-shares -p <port> <host>
+nmap -sV --script=snmp-info.nse -p <port> <host>
+nmap -sU --script snmp-hh3c-logins --script-args snmpcommunity='public' -p <port> <host>
+nmap -sU --script snmp-ios-config --script-args snmpcommunity='public' -p <port> <host>
+nmap -sU --script=snmp-win32-users -p <port> <host>
+nmap -sU --script snmp-sysdescr -p <port> <host>
+nmap -sU --script=snmp-win32-software -p <port> <host>
+nmap -sU --script=snmp-interfaces -p <port> <host>
+nmap -sU --script=snmp-win32-services  -p <port> <host>
+nmap -sU --script snmp-brute -p <port> <host>
+
+
+
+Service : ldaps
+Test cases for service ldap
+Test cases for service ssl
+
+
+
+Service : isakmp
+ike-scan <host>
+nmap -v -sU -p <port> <host>
+
+
+
+Service : finger
+use auxiliary/scanner/finger/finger_users
+perl Scripts/finger-user-enum.pl -U Scripts/names.txt -t <host>
+finger @<host>
+nmap -sV -sC <host>
+
+
+
+Service : https
+Test cases for service http
+Test cases for service ssl
+
+
+
+Service : ldap
+nmap -p <port> --script ldap-search --script-args 'ldap.username="cn=ldaptest,cn=users,dc=cqure,dc=net",ldap.password=ldaptest,ldap.qfilter=users,ldap.attrib=sAMAccountName' <host>
+
+
+
+Service : irc
+python Scripts/ircsnapshot/ircsnapshot.py <host>
+nmap  --script=irc-botnet-channels -p <port> <host>
+nmap -sV -sC -p <port> <host>
+
+
+
+Service : nntp
+nmap --script nntp-ntlm-info -p <port> <host>
+
+
+
+Service : imaps
+Test cases for service imap
+Test cases for service ssl
+
+
+
+Service : ms-sql-m
+use scanner/mssql/mssql_login
+use scanner/mssql/mssql_login
+use admin/mssql/mssql_enum
+nmap --script broadcast-ms-sql-discover <host>
+nmap -sV --script=ms-sql-info.nse -p <port> <host>
+nmap --script=ms-sql-dac.nse -p <port> <host>
+
+
+
+Service : shell
+rsh -l dummyuser <host>
+
+
+
+Service : http
+nmap --script=banner.nse -p <port> <host>
+nmap --script=http-trace.nse -p <port> <host>
+nmap -sV --script=http-iis-webdav-vuln.nse -p <port> <host>
+nikto -h  <host>:<port>
+hoppy -t 12 -h <host>:<port>
+ perl Scripts/http-dir-enum/http-dir-enum.pl -m 10 -f Scripts/http-dir-enum/directory-names.txt http://<host>:<port>
+w3af_console
+
+
+
+Service : exec
+use auxiliary/scanner/rservices/rexec_login
+
+
+
+Service : ntp
+ruby Scripts/ntp-rev-dos.rb <host>
+python Scripts/ntpd-mode7-check.py -h  <host>
+use auxiliary/dos/ntp/ntpd_reserved_dos
+nmap -sU --script=ntp-info.nse -p <port> <host>
+
+
+
+Service : openvpn
+python Scripts/heartbleed_test_openvpn.py <host>
+nmap -p <port> --script ssl-heartbleed <host>
+
+
+
+Service : rsync
+nmap  --script rsync-list-modules -p <port> <host>
+
+
+
+Service : telnet
+nmap -p <port> <host> --script telnet-encryption
+nikto -h  <host>:<port>
+telnet <host> <port>
+
+
+
+Service : pop3
+https://ssl-tools.net/mailservers/gmail.com
+use auxiliary/scanner/pop3/pop3_version
+nmap -sS -sV -p <port> <host>
+
+
+
+Service : rsftp
+nc -v <host> 21
+
+
+
+Service : ssh
+use auxiliary/scanner/ssh/ssh_login
+java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>
+nc -zvn <host> 22
+ssh root@<host>
+nmap -sV --script=ssh2-enum-algos.nse -p <port> <host>
+nmap -sV --script=banner.nse -p <port> <host>
+
+
+
+Service : microsoft-ds
+enum4linux <host>
+nbtscan -h <host>
+use auxiliary/scanner/smb/pipe_auditor
+use auxiliary/scanner/smb/pipe_auditor
+use auxiliary/scanner/smb/pipe_dcerpc_auditor
+use auxiliary/scanner/smb/smb2
+use auxiliary/scanner/smb/smb_enumshares
+use auxiliary/scanner/smb/smb_enumshares
+use auxiliary/scanner/smb/smb_enumusers
+use auxiliary/scanner/smb/smb_enumusers
+use auxiliary/scanner/smb/smb_login
+use auxiliary/scanner/smb/smb_login
+use auxiliary/scanner/smb/smb_version
+perl Scripts/acccheck.pl -t <host> -U Scripts/users.txt -P Scripts/password.txt -v
+nmap --script=smb-enum-shares.nse -p <port> <host>
+nmap -sV --script=smb-os-discovery.nse -p <port> <host>
+nmap --script=smb-enum-domains.nse -p <port> <host>
+nmap --script=nbstat.nse -p <port> <host>
+nmap -sU -sS --script=smb-os-discovery.nse -p <port> <host>
+nmap --script=smb-enum-users.nse -p <port> <host>
+
+
+
+Service : imap
+telnet <host> <port>
+telnet <host> <port>
+
+
+
+Service : postgresql
+use auxiliary/admin/postgres/postgres_sql
+sslyze <host>:<port>
+nmap -sV  -p <port> <host>
+
+
+
+Service : xmpp-server
+java -jar Scripts/XMPPloit.jar <host>
+use auxiliary/scanner/http/http_login
+nmap --script xmpp-info.nse -p <port> <host>
+
+
+
+Service : ssl
+sslyze <host>:<port>
+4000
+java -jar Scripts/TestSSLServer.jar <host> <port>
+nmap -sV --script=ssl-poodle.nse -p <port> <host>
+ nmap --script ssl-cert -p <port> <host>
+nmap --script ssl-enum-ciphers -p <port> <host>
+perl Scripts/ssl-cipher-suite-enum.pl --rdp <host>:<port>
+nmap -p <port> --script ssl-heartbleed <host>
+nmap -sV --reason -PN -n -p <port> <host>
+perl Scripts/beast.pl <host>
+
+
+
+Service : smtps
+Test cases for service smtp
+Test cases for service ssl
+
+
+
+Service : compaq-https
+https://<host>:<port>
+
+
+
+Service : nfs
+rpcinfo -p  <host>
+perl Scripts/nfsping.pl <host>
+showmount -e <host>
+mount -t nfs <host>:/ /temp
+
+
+
+Service : netbios-ns
+nbtscan  <host>
+nbtscan -v  <host>
+nmap --script=smb-enum-shares.nse -p <port> <host>
+nmap -sV --script=smb-os-discovery.nse -p <port> <host>
+nmap --script=smb-enum-domains.nse -p <port> <host>
+nmap --script=nbstat.nse -p <port> <host>
+nmap -sU -sS --script=smb-os-discovery.nse -p <port> <host>
+nmap --script=smb-enum-users.nse -p <port> <host>
+
+
+
+Service : www
+Test cases for service http
+Test cases for service ssl
+
+
+
+Service : oracle
+perl Scripts/tnscmd.pl -h <host>
+tnscmd10g -h <host>
+/usr/bin/tnscmd10g.pl -h <host>
+sidguess -i <host> -d Scripts/oracle_users.txt
+(cd Scripts;sh osd.sh -s <host> -p msfadmin -u msfadmin)
+nmap --script oracle-enum-users --script-args oracle-enum-users.sid=ORCL,userdb=Scripts/oracle_users.txt -p <port> <host>
+
+
+
+Service : tftp
+use auxiliary/scanner/tftp/tftpbrute
+nmap -sU --script tftp-enum.nse --script-args="tftp-enum.filelist=Scripts/customlist.txt" -p <port> <host>
+
+
+
+Service : login
+rlogin -l root  <host>
+perl Scripts/rsh-grind.pl -U Scripts/names.txt <host>

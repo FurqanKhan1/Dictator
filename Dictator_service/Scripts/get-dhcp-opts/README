@@ -1,0 +1,34 @@
+----------------
+Get DHCP Options
+----------------
+
+get-dhcp-opts.py is a tool to discover DHCP/BOOTP servers on your LAN, and dump the DHCP/BOOTP options.
+
+
+Usage
+-----
+Edit the file and update the "CONFIG OPTIONS" (default values must works)
+
+root@machine:~# ./get-dhcp-opts.py <network interface>
+
+  Command line Options
+  --------------------
+    - <network interface>    :(optional), set the network interface where you want to discover the DHCP/BOOTP server.
+
+  Configuration Options
+  ---------------------
+    - interface              : set the network interface where you want to discover the DHCP/BOOTP server. It could be overritten by the command line options.
+    - verbose                : display all the DHCP OFFER packet
+    - timeout                : Seconds waiting for a DHCP OFFER after send the DHCP Discover
+    - retries                : Number of retries if no DHCP OFFER after the Discover Timeout
+    - rogue                  : Detect multiple DHCP servers at the same LAN (Rogue DHCP Servers). Disable this option to speed up the program (but it doesn't check if there are multiple DHCP servers on the network, and display the first OFFER received)
+
+
+
+Notes
+-----
+get-dhcp-opts only sends DHCP Discover packets, so if the DHCP is OK, it don't reserve the IP for your MAC.
+
+More info about the DHCP protocol/options:
+* http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
+

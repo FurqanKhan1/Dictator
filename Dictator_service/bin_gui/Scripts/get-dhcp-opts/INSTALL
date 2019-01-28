@@ -1,0 +1,11 @@
+No install required, just use it: ./get-dhcp-opts.py
+
+Dependencies:
+
+* python
+* python-scapy
+
+
+Tested with:
+* python 2.7.3
+* python-scapy 2.2.0

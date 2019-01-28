@@ -1,0 +1,15 @@
+{
+    "channels": {},
+    "linkList": {},
+    "links": [
+        {
+            "hopcount": "0",
+            "info": "Test IRC Server",
+            "mask": "irc.Metasploitable.LAN",
+            "server": "irc.Metasploitable.LAN"
+        }
+    ],
+    "userDetails": {},
+    "userList": {},
+    "users": {}
+}

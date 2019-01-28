@@ -1,0 +1,406 @@
+2016-09-11 12:28:14,615 INFO  Constant - Created directory /root/paros/
+2016-09-11 12:28:14,617 INFO  Constant - Copying defaults from xml/config.xml to /root/paros/config.xml
+2016-09-11 12:28:14,667 INFO  Constant - Creating directory /root/paros/session
+2016-09-11 12:28:14,667 INFO  Paros - Paros 3.2.13 started.
+2016-09-11 12:28:24,320 INFO  PluginFactory - loaded plugin Password Autocomplete in browser
+2016-09-11 12:28:24,320 INFO  PluginFactory - loaded plugin Secure page browser cache
+2016-09-11 12:28:24,320 INFO  PluginFactory - loaded plugin Cross site scripting
+2016-09-11 12:28:24,321 INFO  PluginFactory - loaded plugin Cross site scripting without brackets
+2016-09-11 12:28:24,321 INFO  PluginFactory - loaded plugin Cold Fusion default file
+2016-09-11 12:28:24,322 INFO  PluginFactory - loaded plugin Lotus Domino default files
+2016-09-11 12:28:24,322 INFO  PluginFactory - loaded plugin IIS default file
+2016-09-11 12:28:24,322 INFO  PluginFactory - loaded plugin Macromedia JRun default files
+2016-09-11 12:28:24,323 INFO  PluginFactory - loaded plugin Tomcat source file disclosure
+2016-09-11 12:28:24,323 INFO  PluginFactory - loaded plugin BEA WebLogic example files
+2016-09-11 12:28:24,323 INFO  PluginFactory - loaded plugin IBM WebSphere default files
+2016-09-11 12:28:24,323 INFO  PluginFactory - loaded plugin Directory browsing
+2016-09-11 12:28:24,324 INFO  PluginFactory - loaded plugin Private IP disclosure
+2016-09-11 12:28:24,324 INFO  PluginFactory - loaded plugin Session ID in URL rewrite
+2016-09-11 12:28:24,324 INFO  PluginFactory - loaded plugin CRLF injection
+2016-09-11 12:28:24,324 INFO  PluginFactory - loaded plugin MS SQL Injection Enumeration
+2016-09-11 12:28:24,325 INFO  PluginFactory - loaded plugin SQL Injection
+2016-09-11 12:28:24,325 INFO  PluginFactory - loaded plugin SQL Injection Fingerprinting
+2016-09-11 12:28:24,325 INFO  PluginFactory - loaded plugin Obsolete file
+2016-09-11 12:28:24,325 INFO  PluginFactory - loaded plugin Obsolete file extended check
+2016-09-11 12:28:24,325 INFO  PluginFactory - loaded plugin Parameter tampering
+2016-09-11 12:28:24,326 INFO  PluginFactory - loaded plugin Server side include
+2016-09-11 12:28:24,537 INFO  FilterFactory - loaded filter Change user agent to other browsers.
+2016-09-11 12:28:24,537 INFO  FilterFactory - loaded filter Detect insecure or potentially malicious content in HTTP responses.
+2016-09-11 12:28:24,537 INFO  FilterFactory - loaded filter Detect and alert 'Set-cookie' attempt in HTTP response for modification.
+2016-09-11 12:28:24,537 INFO  FilterFactory - loaded filter Avoid browser cache (strip off IfModifiedSince)
+2016-09-11 12:28:24,537 INFO  FilterFactory - loaded filter Log cookies sent by browser.
+2016-09-11 12:28:24,537 INFO  FilterFactory - loaded filter Log unique GET queries into file (filter/get.xls)
+2016-09-11 12:28:24,538 INFO  FilterFactory - loaded filter Log unique POST queries into file (filter/post.xls)
+2016-09-11 12:28:24,538 INFO  FilterFactory - loaded filter Log request and response into file (filter/message.txt)
+2016-09-11 12:28:24,538 INFO  FilterFactory - loaded filter Replace HTTP request body using defined pattern.
+2016-09-11 12:28:24,538 INFO  FilterFactory - loaded filter Replace HTTP request header using defined pattern.
+2016-09-11 12:28:24,538 INFO  FilterFactory - loaded filter Replace HTTP response body using defined pattern.
+2016-09-11 12:28:24,538 INFO  FilterFactory - loaded filter Replace HTTP response header using defined pattern.
+2016-09-11 12:28:25,338 INFO  MenuFileControl - new session file created
+2016-09-11 13:01:20,312 INFO  Spider - spider started.
+2016-09-11 13:01:24,847 INFO  Spider - Spider completed
+2016-09-11 13:01:56,440 INFO  Scanner - scanner started
+2016-09-11 13:02:00,221 INFO  Scanner - scanner completed in 3.78s
+2016-09-11 13:05:23,720 INFO  Spider - spider started.
+2016-09-11 13:05:28,231 INFO  Spider - Spider completed
+2016-09-11 13:13:11,125 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:16,127 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:19,891 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,022 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,066 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,097 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,161 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,170 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,187 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,188 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,534 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,544 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:20,630 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:24,997 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:29,545 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:34,479 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:13:51,652 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:01,817 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,848 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,890 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,907 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,916 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,963 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,964 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,981 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,983 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:25,994 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,035 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,051 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,069 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,071 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,187 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,226 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,242 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:26,243 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,063 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,097 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,098 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,117 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,119 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,145 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,285 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,305 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,316 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,362 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,364 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,369 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,384 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,440 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,533 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,562 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:39,567 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,790 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,804 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,853 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,893 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,895 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,908 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,964 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,965 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:48,971 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,039 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,047 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,094 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,100 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,105 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,330 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,346 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:14:49,376 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:13,955 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:13,964 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:13,969 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,010 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,081 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,083 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,087 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,090 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,108 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,178 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,180 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,195 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,197 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,219 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,249 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,259 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,316 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,342 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,360 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:15:14,368 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 13:37:18,811 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 14:06:47,158 INFO  Spider - seeding https://www.facebook.com
+2016-09-11 14:06:47,475 INFO  Spider - seeding https://www.facebook.com/frkn.khan
+2016-09-11 14:06:47,492 INFO  Spider - seeding https://www.facebook.com/messages
+2016-09-11 14:06:47,496 INFO  Spider - seeding https://www.facebook.com/messages/new/
+2016-09-11 14:06:47,510 INFO  Spider - spider started.
+2016-09-11 14:06:49,380 INFO  Spider - crawled https://www.facebook.com
+2016-09-11 14:06:49,938 INFO  Spider - crawled https://www.facebook.com/frkn.khan
+2016-09-11 14:06:52,308 INFO  Spider - crawled https://www.facebook.com/messages/new/
+2016-09-11 14:06:52,909 INFO  Spider - crawled https://www.facebook.com/messages
+2016-09-11 14:06:53,268 INFO  Spider - crawled https://www.facebook.com/unsupportedbrowser
+2016-09-11 14:06:53,905 INFO  Spider - crawled https://www.facebook.com/recover/initiate?lwv=110
+2016-09-11 14:06:54,039 INFO  Spider - crawled https://www.facebook.com/
+2016-09-11 14:06:54,622 INFO  Spider - crawled https://www.facebook.com/legal/terms
+2016-09-11 14:06:54,892 INFO  Spider - crawled https://www.facebook.com/about/privacy
+2016-09-11 14:06:55,894 INFO  Spider - crawled https://www.facebook.com/help/cookies
+2016-09-11 14:06:56,186 INFO  Spider - crawled https://www.facebook.com/pages/create/?ref_type=registration_form
+2016-09-11 14:06:56,847 INFO  Spider - crawled https://www.facebook.com/r.php
+2016-09-11 14:06:57,013 INFO  Spider - crawled https://www.facebook.com/login/
+2016-09-11 14:06:57,635 INFO  Spider - crawled https://www.facebook.com/mobile/?ref=pf
+2016-09-11 14:06:57,694 INFO  Spider - crawled https://www.facebook.com/lite/
+2016-09-11 14:06:58,171 INFO  Spider - crawled https://www.facebook.com/find-friends?ref=pf
+2016-09-11 14:06:58,606 INFO  Spider - crawled https://www.facebook.com/badges/?ref=pf
+2016-09-11 14:06:59,115 INFO  Spider - crawled https://www.facebook.com/directory/people/
+2016-09-11 14:06:59,591 INFO  Spider - crawled https://www.facebook.com/directory/pages/
+2016-09-11 14:07:00,379 INFO  Spider - crawled https://www.facebook.com/places/
+2016-09-11 14:07:00,898 INFO  Spider - crawled https://www.facebook.com/games/
+2016-09-11 14:07:02,056 INFO  Spider - crawled https://www.facebook.com/directory/places/
+2016-09-11 14:07:02,332 INFO  Spider - crawled https://www.facebook.com/directory/celebrities/
+2016-09-11 14:07:03,309 INFO  Spider - crawled https://www.facebook.com/directory/groups/
+2016-09-11 14:07:04,396 INFO  Spider - crawled https://www.facebook.com/facebook
+2016-09-11 14:07:04,551 INFO  Spider - crawled https://www.facebook.com/campaign/landing.php?placement=pflo&campaign_id=402047449186&extra_1=auto
+2016-09-11 14:07:05,339 INFO  Spider - crawled https://www.facebook.com/pages/create/?ref_type=sitefooter
+2016-09-11 14:07:05,753 INFO  Spider - crawled https://www.facebook.com/careers/?ref=pf
+2016-09-11 14:07:06,198 INFO  Spider - crawled https://www.facebook.com/privacy/explanation
+2016-09-11 14:07:07,040 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 14:07:07,047 INFO  Spider - crawled https://www.facebook.com/help/cookies/?ref=sitefooter
+2016-09-11 14:07:07,537 INFO  Spider - crawled https://www.facebook.com/help/568137493302217
+2016-09-11 14:07:07,912 INFO  Spider - crawled https://www.facebook.com/policies/?ref=pf
+2016-09-11 14:07:08,592 INFO  Spider - crawled https://www.facebook.com/settings
+2016-09-11 14:07:08,624 INFO  Spider - crawled https://www.facebook.com/help/?ref=pf
+2016-09-11 14:07:09,413 INFO  Spider - crawled https://www.facebook.com/login.php?login_attempt=1&amp;lwv=110
+2016-09-11 14:07:09,993 INFO  Spider - crawled https://www.facebook.com/?_fb_noscript=1
+2016-09-11 14:07:10,250 INFO  Spider - crawled https://www.facebook.com/?ref=logo
+2016-09-11 14:07:10,578 INFO  Spider - crawled https://www.facebook.com/me/allactivity?privacy_source=activity_log&log_filter=search
+2016-09-11 14:07:11,051 INFO  Spider - crawled https://www.facebook.com/?ref=tn_tnmn
+2016-09-11 14:07:11,072 INFO  Spider - crawled https://www.facebook.com/messages/
+2016-09-11 14:07:11,582 INFO  Spider - crawled https://www.facebook.com/settings?tab=notifications&section=on_facebook
+2016-09-11 14:07:11,872 INFO  Spider - crawled https://www.facebook.com/notifications
+2016-09-11 14:07:12,072 INFO  Spider - crawled https://www.facebook.com/settings/?tab=privacy&privacy_source=privacy_lite
+2016-09-11 14:07:12,378 INFO  Spider - crawled https://www.facebook.com/about/basics/
+2016-09-11 14:07:12,852 INFO  Spider - crawled https://www.facebook.com/help/?ref=privacy_lite
+2016-09-11 14:07:13,056 INFO  Spider - crawled https://www.facebook.com/settings?ref=mb&drop
+2016-09-11 14:07:13,753 INFO  Spider - crawled https://www.facebook.com/photo.php?fbid=405155729572265&set=a.405155586238946.97691.100002335247230&type=3
+2016-09-11 14:07:15,024 INFO  Spider - crawled https://www.facebook.com/profile/wizard/async/dialog/
+2016-09-11 14:07:15,119 INFO  Spider - crawled https://www.facebook.com/photo.php?fbid=936940633060436&set=a.104335596320948.13981.100002335247230&type=3&source=11
+2016-09-11 14:07:16,916 INFO  Spider - crawled https://www.facebook.com/inder.toofani?fref=nf
+2016-09-11 14:07:17,807 INFO  Spider - crawled https://www.facebook.com/games/manage/
+2016-09-11 14:07:18,393 INFO  Spider - crawled https://www.facebook.com/l.php?u=https%3A%2F%2Fapps.facebook.com%2Fchessfb%2F%3Ffb_source%3Dsidebar_bookmark&h=BAQFWqeFO&s=1
+2016-09-11 14:07:18,761 INFO  Spider - crawled https://www.facebook.com/games/steal-diamonds/?fbs=1303
+2016-09-11 14:07:19,211 INFO  Spider - crawled https://www.facebook.com/games/sniper-team/?fbs=1303
+2016-09-11 14:07:19,625 INFO  Spider - crawled https://www.facebook.com/games/dt_beta_webgl/?fbs=1303
+2016-09-11 14:07:19,972 INFO  Spider - crawled https://www.facebook.com/?sk=ff
+2016-09-11 14:07:20,288 INFO  Spider - crawled https://www.facebook.com/friends/requests/?fcref=jwl
+2016-09-11 14:07:21,421 INFO  Spider - crawled https://www.facebook.com/pages/NITK-Surathkal/110595978964234?ref=br_rs
+2016-09-11 14:07:22,919 INFO  Spider - crawled https://www.facebook.com/pages/Srinagar-Jammu-and-Kashmir/108636802501973?ref=br_rs
+2016-09-11 14:07:24,796 INFO  Spider - crawled https://www.facebook.com/GalgotiasUniversity/?ref=br_rs
+2016-09-11 14:07:26,148 INFO  Spider - spider stopped.
+2016-09-11 14:07:42,984 INFO  Spider - seeding http://192.168.179.136
+2016-09-11 14:07:42,985 INFO  Spider - seeding http://192.168.179.136/favicon.ico
+2016-09-11 14:07:42,986 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/
+2016-09-11 14:07:42,986 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin
+2016-09-11 14:07:42,987 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/index.php?token=ff14ac52c96fa3870761e5c77ced7a90
+2016-09-11 14:07:42,988 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/phpmyadmin.css.php?lang=en-utf-8&convcharset=utf-8&token=ff14ac52c96fa3870761e5c77ced7a90&js_frame=right&nocache=2457687151
+2016-09-11 14:07:42,989 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/phpmyadmin.css.php?token=ff14ac52c96fa3870761e5c77ced7a90&js_frame=right&nocache=2457687233
+2016-09-11 14:07:42,990 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/print.css
+2016-09-11 14:07:42,990 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:42,991 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:42,991 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/themes
+2016-09-11 14:07:42,992 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/themes/original
+2016-09-11 14:07:42,992 INFO  Spider - seeding http://192.168.179.136/phpMyAdmin/themes/original/img
+2016-09-11 14:07:42,993 INFO  Spider - spider started.
+2016-09-11 14:07:43,126 INFO  Spider - crawled http://192.168.179.136
+2016-09-11 14:07:43,400 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/
+2016-09-11 14:07:43,540 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin
+2016-09-11 14:07:43,683 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php?token=ff14ac52c96fa3870761e5c77ced7a90
+2016-09-11 14:07:43,766 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/phpmyadmin.css.php?lang=en-utf-8&convcharset=utf-8&token=ff14ac52c96fa3870761e5c77ced7a90&js_frame=right&nocache=2457687151
+2016-09-11 14:07:43,917 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/phpmyadmin.css.php?token=ff14ac52c96fa3870761e5c77ced7a90&js_frame=right&nocache=2457687233
+2016-09-11 14:07:43,934 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/print.css
+2016-09-11 14:07:44,411 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:44,476 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:44,561 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes
+2016-09-11 14:07:44,662 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original
+2016-09-11 14:07:44,766 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/img
+2016-09-11 14:07:44,860 INFO  Spider - crawled http://192.168.179.136/twiki/
+2016-09-11 14:07:45,121 INFO  Spider - crawled http://192.168.179.136/mutillidae/
+2016-09-11 14:07:45,522 INFO  Spider - crawled http://192.168.179.136/dvwa/
+2016-09-11 14:07:45,657 INFO  Spider - crawled http://192.168.179.136/dav/
+2016-09-11 14:07:45,846 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:46,045 INFO  Spider - crawled http://192.168.179.136/index.php
+2016-09-11 14:07:46,056 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:46,211 INFO  Spider - crawled http://192.168.179.136/index.php
+2016-09-11 14:07:46,351 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:46,589 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:46,682 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:07:47,076 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/?C=N;O=D
+2016-09-11 14:07:47,132 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/?C=M;O=A
+2016-09-11 14:07:47,315 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/?C=S;O=A
+2016-09-11 14:07:47,410 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/?C=D;O=A
+2016-09-11 14:07:47,663 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=N;O=D
+2016-09-11 14:07:47,764 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=M;O=A
+2016-09-11 14:07:47,883 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=S;O=A
+2016-09-11 14:07:47,982 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=D;O=A
+2016-09-11 14:07:48,083 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/
+2016-09-11 14:07:48,702 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=N;O=D
+2016-09-11 14:07:48,803 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=M;O=A
+2016-09-11 14:07:48,905 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=S;O=A
+2016-09-11 14:07:49,010 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=D;O=A
+2016-09-11 14:07:49,111 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/
+2016-09-11 14:08:01,187 INFO  Spider - crawled http://192.168.179.136/twiki/readme.txt
+2016-09-11 14:08:01,286 INFO  Spider - crawled http://192.168.179.136/twiki/license.txt
+2016-09-11 14:08:01,433 INFO  Spider - crawled http://192.168.179.136/twiki/TWikiDocumentation.html
+2016-09-11 14:08:01,498 INFO  Spider - crawled http://192.168.179.136/twiki/TWikiHistory.html
+2016-09-11 14:08:01,855 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebHome
+2016-09-11 14:08:02,320 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=home.php
+2016-09-11 14:08:02,416 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=login.php
+2016-09-11 14:08:03,199 INFO  Spider - crawled http://192.168.179.136/mutillidae/set-up-database.php
+2016-09-11 14:08:03,215 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=show-log.php
+2016-09-11 14:08:03,506 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=captured-data.php
+2016-09-11 14:08:03,550 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=credits.php
+2016-09-11 14:08:03,862 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=user-info.php
+2016-09-11 14:08:04,005 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=register.php
+2016-09-11 14:08:04,151 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=view-someones-blog.php
+2016-09-11 14:08:04,298 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=add-to-your-blog.php
+2016-09-11 14:08:04,444 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=site-footer-xss-discussion.php
+2016-09-11 14:08:04,612 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=html5-storage.php
+2016-09-11 14:08:04,827 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=capture-data.php
+2016-09-11 14:08:04,946 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=dns-lookup.php
+2016-09-11 14:08:05,197 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php
+2016-09-11 14:08:05,335 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=password-generator.php&username=anonymous
+2016-09-11 14:08:05,491 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=user-poll.php
+2016-09-11 14:08:05,655 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=set-background-color.php
+2016-09-11 14:08:05,793 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=pen-test-tool-lookup.php
+2016-09-11 14:08:05,939 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=text-file-viewer.php
+2016-09-11 14:08:06,094 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=view-someones-blog.php
+2016-09-11 14:08:06,234 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=show-log.php
+2016-09-11 14:08:06,366 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=text-file-viewer.php
+2016-09-11 14:08:06,490 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=user-info.php
+2016-09-11 14:08:06,793 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=login.php
+2016-09-11 14:08:07,078 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=source-viewer.php
+2016-09-11 14:08:07,386 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=arbitrary-file-inclusion.php
+2016-09-11 14:08:07,686 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=add-to-your-blog.php
+2016-09-11 14:08:07,789 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=browser-info.php
+2016-09-11 14:08:07,971 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=secret-administrative-pages.php
+2016-09-11 14:08:08,193 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=credits.php
+2016-09-11 14:08:08,541 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=source-viewer.php
+2016-09-11 14:08:08,605 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=framing.php
+2016-09-11 14:08:08,837 INFO  Spider - crawled http://192.168.179.136/mutillidae/framer.html
+2016-09-11 14:08:09,012 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=change-log.htm
+2016-09-11 14:08:09,134 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=installation.php
+2016-09-11 14:08:09,222 INFO  Spider - crawled http://192.168.179.136/mutillidae/documentation/mutillidae-installation-on-xampp-win7.pdf
+2016-09-11 14:08:09,424 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=documentation/vulnerabilities.php
+2016-09-11 14:08:09,543 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=documentation/how-to-access-Mutillidae-over-Virtual-Box-network.php
+2016-09-11 14:08:09,731 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=usage-instructions.php
+2016-09-11 14:08:09,851 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=php-errors.php
+2016-09-11 14:08:10,039 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=notes.php
+2016-09-11 14:08:10,246 INFO  Spider - crawled http://192.168.179.136/dvwa/login.php
+2016-09-11 14:08:10,282 INFO  Spider - crawled http://192.168.179.136/dav/?C=N;O=D
+2016-09-11 14:08:10,413 INFO  Spider - crawled http://192.168.179.136/dav/?C=M;O=A
+2016-09-11 14:08:10,515 INFO  Spider - crawled http://192.168.179.136/dav/?C=S;O=A
+2016-09-11 14:08:10,617 INFO  Spider - crawled http://192.168.179.136/dav/?C=D;O=A
+2016-09-11 14:08:10,742 INFO  Spider - crawled http://192.168.179.136/
+2016-09-11 14:08:10,898 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:11,177 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:11,214 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:11,528 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:11,647 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:11,920 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:11,931 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:12,256 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:12,353 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:12,743 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:12,770 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:13,077 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:13,159 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:13,320 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=N;O=A
+2016-09-11 14:08:13,396 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/index.php
+2016-09-11 14:08:13,463 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/darkblue_orange/
+2016-09-11 14:08:13,562 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=M;O=D
+2016-09-11 14:08:13,796 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=D;O=D
+2016-09-11 14:08:13,805 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/?C=S;O=D
+2016-09-11 14:08:13,946 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=N;O=A
+2016-09-11 14:08:14,059 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/screen.png
+2016-09-11 14:08:14,174 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/layout.inc.php
+2016-09-11 14:08:14,264 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/info.inc.php
+2016-09-11 14:08:14,364 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/img/
+2016-09-11 14:08:14,458 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/css/
+2016-09-11 14:08:14,641 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=M;O=D
+2016-09-11 14:08:14,790 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=S;O=D
+2016-09-11 14:08:14,933 INFO  Spider - crawled http://192.168.179.136/phpMyAdmin/themes/original/?C=D;O=D
+2016-09-11 14:08:15,555 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/WebHome
+2016-09-11 14:08:15,820 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Know/WebHome
+2016-09-11 14:08:16,386 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/TWikiUsers
+2016-09-11 14:08:16,390 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Sandbox/WebHome
+2016-09-11 14:08:16,874 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/TWikiGroups
+2016-09-11 14:08:17,147 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/OfficeLocations
+2016-09-11 14:08:17,329 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebChanges
+2016-09-11 14:08:17,853 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebIndex
+2016-09-11 14:08:17,959 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebSearch
+2016-09-11 14:08:18,274 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/WelcomeGuest
+2016-09-11 14:08:18,432 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebPreferences
+2016-09-11 14:08:18,617 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiRegistration
+2016-09-11 14:08:18,762 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/StartingPoints
+2016-09-11 14:08:19,309 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/WebSearch
+2016-09-11 14:08:19,379 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/WebChanges
+2016-09-11 14:08:19,835 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/WebPreferences
+2016-09-11 14:08:20,288 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiForms
+2016-09-11 14:08:20,399 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Know/WebChanges
+2016-09-11 14:08:20,758 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Know/WebSearch
+2016-09-11 14:08:20,913 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Know/WebPreferences
+2016-09-11 14:08:21,370 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Sandbox/WebChanges
+2016-09-11 14:08:21,408 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Sandbox/WebSearch
+2016-09-11 14:08:21,844 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Sandbox/WebPreferences
+2016-09-11 14:08:22,022 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebTopicList
+2016-09-11 14:08:22,315 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebNotify
+2016-09-11 14:08:22,378 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebStatistics
+2016-09-11 14:08:22,840 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiPreferences
+2016-09-11 14:08:22,847 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiSite
+2016-09-11 14:08:23,329 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiFAQ
+2016-09-11 14:08:23,943 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiHistory
+2016-09-11 14:08:24,616 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/GoodStyle
+2016-09-11 14:08:24,789 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TWikiDocumentation
+2016-09-11 14:08:25,036 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TextFormattingRules
+2016-09-11 14:08:25,551 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/TWiki/TextFormattingFAQ
+2016-09-11 14:08:25,928 INFO  Spider - crawled http://192.168.179.136/twiki/bin/edit/Main/WebHome?t=1473564581
+2016-09-11 14:08:26,303 INFO  Spider - crawled http://192.168.179.136/twiki/bin/attach/Main/WebHome
+2016-09-11 14:08:26,690 INFO  Spider - crawled http://192.168.179.136/twiki/bin/search/Main/SearchResult?scope=text&regex=on&search=Web%20*Home%5B%5EA-Za-z%5D
+2016-09-11 14:08:26,815 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebHome?skin=print
+2016-09-11 14:08:27,147 INFO  Spider - crawled http://192.168.179.136/twiki/bin/rdiff/Main/WebHome?rev1=1.20&rev2=1.19
+2016-09-11 14:08:27,899 INFO  Spider - crawled http://192.168.179.136/twiki/bin/rdiff/Main/WebHome
+2016-09-11 14:08:28,498 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebHome?rev=1.19
+2016-09-11 14:08:28,745 INFO  Spider - crawled http://192.168.179.136/twiki/bin/rdiff/Main/WebHome?rev1=1.19&rev2=1.18
+2016-09-11 14:08:28,879 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/WebHome?rev=1.18
+2016-09-11 14:08:29,020 INFO  Spider - crawled http://192.168.179.136/twiki/bin/oops/Main/WebHome?template=oopsmore&param1=1.20&param2=1.20
+2016-09-11 14:08:29,162 INFO  Spider - crawled http://192.168.179.136/twiki/bin/view/Main/PeterThoeny
+2016-09-11 14:08:29,208 INFO  Spider - crawled http://192.168.179.136/twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif
+2016-09-11 14:08:29,347 INFO  Spider - crawled http://192.168.179.136/twiki/pub/TWiki/TWikiLogos/twikiRobot131x64.gif
+2016-09-11 14:08:29,899 INFO  Spider - crawled http://192.168.179.136/mutillidae/?page=register.php
+2016-09-11 14:08:29,917 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=login.php
+2016-09-11 14:08:30,878 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.irongeek.com/
+2016-09-11 14:08:30,988 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.owasp.org
+2016-09-11 14:08:31,147 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.issa-kentuckiana.org/
+2016-09-11 14:08:31,253 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.owasp.org/index.php/Louisville
+2016-09-11 14:08:31,380 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.pocodoy.com/blog/
+2016-09-11 14:08:31,502 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.room362.com/
+2016-09-11 14:08:31,677 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.isd-podcast.com/
+2016-09-11 14:08:31,764 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://pauldotcom.com/
+2016-09-11 14:08:31,928 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=http://www.php.net/
+2016-09-11 14:08:32,033 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=redirectandlog.php&forwardurl=https://addons.mozilla.org/en-US/firefox/collections/jdruin/pr/
+2016-09-11 14:08:32,506 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=user-info.php&page=user-info.php&username=1&user-info-php-submit-button=View+Account+Details
+2016-09-11 14:08:32,890 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=register.php
+2016-09-11 14:08:33,257 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=view-someones-blog.php
+2016-09-11 14:08:33,595 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=add-to-your-blog.php
+2016-09-11 14:08:34,136 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=html5-storage.php
+2016-09-11 14:08:36,683 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=dns-lookup.php
+2016-09-11 14:32:44,262 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 14:32:51,073 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 14:33:02,290 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 14:33:02,293 WARN  ProxyThread - Received fatal alert: unknown_ca
+2016-09-11 15:44:44,487 INFO  Spider - spider stopped.
+2016-09-11 15:45:06,416 INFO  Spider - crawled http://192.168.179.136/mutillidae/index.php?page=user-poll.php&choice=nmap&choice=wireshark&choice=tcpdump&choice=netcat&choice=metasploit&choice=kismet&choice=Cain&choice=Ettercap&choice=Paros&choice=Burp+Suite&choice=Sysinternals&choice=inSIDDer&initials=1&user-poll-php-submit-button=Submit+Vote
+2016-09-11 15:45:07,864 INFO  MenuFileControl - Paros 3.2.13 terminated.

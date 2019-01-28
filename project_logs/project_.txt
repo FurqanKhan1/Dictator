@@ -1,0 +1,15 @@
+[3;J[H[2JInside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('192.168.182.132', 'project_profile', '1-100', '1', '-T4 -A -v -Pn -n', '', 'g-start', '66f2a844-361d-11e7-aeb0-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(192.168.182.132', 'project_profile', '1-100', '1', '-T4 -A -v -Pn -n', '', 'g-start', '66f2a844-361d-11e7-aeb0-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start and profile at main : 0
+Exception in driver() invalid literal for int() with base 10: ''

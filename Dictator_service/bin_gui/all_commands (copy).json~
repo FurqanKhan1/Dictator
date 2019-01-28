@@ -1,0 +1,2749 @@
+{
+  "ssl_class":
+	{
+	"Commands":["ssl"],
+	"Custom":true
+	},
+   "ssl":
+	{
+	}
+	,
+  "www": {
+    "Commands": ["http","https"
+  
+    ], 
+    "Custom": true
+  },
+  "compaq-https": {
+    "Commands": [
+      {
+        "args": [
+          "https://<host>:<port>"
+        ], 
+        "id": "compaq-https_1", 
+        "method": "http_based", 
+        "title": "Compac Http Check--Hp System management"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "dhcpc": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "python Scripts/get-dhcp-opts.py <host>"
+        ], 
+        "id": "dhcpc_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "(RDP) :DHCP CHECK Python script -->  python get-dhcp-opts.py <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=dhcp-discover.nse -p <port> <host>"
+        ], 
+        "id": "dhcpc_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Local Conf info on port 68"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=broadcast-dhcp-discover.nse -p <port> <host>"
+        ], 
+        "id": "dhcpc_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Rogue DHCP Server on port 68"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "dhcps": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "python Scripts/get-dhcp-opts.py <host>"
+        ], 
+        "id": "dhcps_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "(RDP) :DHCP CHECK Python script -->  python get-dhcp-opts.py <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=broadcast-dhcp-discover.nse -p <port> <host>"
+        ], 
+        "id": "dhcps_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Rogue DHCP Server on port 67"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=dhcp-discover.nse -p <port> <host>"
+        ], 
+        "id": "dhcps_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Local Conf info on port 67"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "domain": {
+    "Commands": [
+      {
+        "args": [
+          "nslookup", 
+          "server <host>", 
+          "cricinfo.com"
+        ], 
+        "id": "domain_1", 
+        "method": "domain_interactive", 
+        "title": "Domain Recursive check by nslookup "
+      }, 
+      {
+        "args": [
+          "fierce -dns ", 
+          "<host>", 
+          " -threads 10"
+        ], 
+        "id": "domain_2", 
+        "method": "Dns_FierceCheck", 
+        "title": "Domain(dns) fierce check --Fierce.pl"
+      }, 
+      {
+        "args": [
+          "<host>", 
+          "dnsrecon -d <reversehost> -D name_list.txt", 
+          "dnsrecon -d <reversehost> -a", 
+          "dnsrecon -d <host> -t zonewalk"
+        ], 
+        "id": "domain_3", 
+        "method": "Dns_ReconCheck", 
+        "title": "Domain(dns) Recon check--Recon.py--Checks(Brute force,zone walking ,zone-transfer )"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=dns-recursion.nse -p <port> <host>"
+        ], 
+        "id": "domain_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "DNS server set in recursion mode"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=banner.nse -p <port> <host>"
+        ], 
+        "id": "domain_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Domain banner"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nslookup <host>"
+        ], 
+        "id": "domain_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NS reverse Lookup"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "exec": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/rservices/rexec_login\n", 
+          "set RHOSTS <host>\n"
+        ], 
+        "id": "exec_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Rexec--Login auxillary"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "finger": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/finger/finger_users\n", 
+          "set RHOSTS <host>\n"
+        ], 
+        "id": "finger_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Finger  auxillary"
+      }, 
+      {
+        "args": [
+          "60", 
+          "perl Scripts/finger-user-enum.pl -U Scripts/names.txt -t <host>"
+        ], 
+        "id": "finger_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Finger -Perl --> finger-user-enum- <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "finger @<host>"
+        ], 
+        "id": "finger_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Finger command --> finger @<host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV -sC <host>"
+        ], 
+        "id": "finger_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Finger Nse Enumeration "
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ftp": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/ftp/ftp_login\n", 
+          "set RHOSTS <host>\n", 
+          "set USERNAME msfadmin\n", 
+          "set PASSWORD msfadmin\n", 
+          "set VERBOSE false\n"
+        ], 
+        "id": "ftp_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Ftp_Login auxillary"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/ftp/anonymous\n", 
+          "set RHOSTS <host>\n", 
+          "set VERBOSE false\n"
+        ], 
+        "id": "ftp_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit Ftp_anonymous auxillary"
+      }, 
+      {
+        "args": [
+          "ftp <host>"
+        ], 
+        "id": "ftp_3", 
+        "method": "ftp_interactive", 
+        "title": "Ftp_Login Anonymous shell"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=ftp-bounce.nse -p <port> <host>"
+        ], 
+        "id": "ftp_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ftp Bounce Attck"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=banner.nse -p <port> <host>"
+        ], 
+        "id": "ftp_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ftp banner"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=ftp-anon.nse -p <port> <host>"
+        ], 
+        "id": "ftp_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "anonymous_login"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "http": {
+    "Commands": [
+      {
+        "args": [
+          "2400", 
+          "nikto -h  <host>:<port>"
+        ], 
+        "id": "http_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP Nikto check :"
+      }, 
+      {
+        "args": [
+          "3000", 
+          "hoppy -t 12 -h <host>:<port>"
+        ], 
+        "id": "http_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP Hoppy Python check :"
+      }, 
+      {
+        "args": [
+          "3000", 
+          " perl Scripts/http-dir-enum/http-dir-enum.pl -m 10 -f Scripts/http-dir-enum/directory-names.txt http://<host>:<port>"
+        ], 
+        "id": "http_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP-dir enum perl check :"
+      }, 
+      {
+        "args": [
+          "1200", 
+          "w3af_console", 
+          [
+            "0,2", 
+            ".*w3af>>> ", 
+            "[$,#]",
+		".*Usage of w3af for sending any traffic.*"
+          ], 
+	    "Y",
+	    [
+            "0", 
+            ".*w3af>>> ", 
+            "[$,#]",
+		".*Usage of w3af for sending any traffic.*"
+          ], 
+          "misc-settings", 
+          [
+            "0", 
+            ".*w3af/config:misc-settings>>> "
+          ], 
+          "set max_discovery_time 7", 
+          [
+            "0", 
+            ".*w3af/config:misc-settings>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "http-settings", 
+          [
+            "0", 
+            ".*w3af/config:http-settings>>> "
+          ], 
+          "set timeout 10", 
+          [
+            "0", 
+            ".*w3af/config:http-settings>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "target", 
+          [
+            "0", 
+            ".*w3af/config:target>>> "
+          ], 
+          "set target <host>:<port>", 
+          [
+            "0", 
+            ".*w3af/config:target>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "plugins", 
+          [
+            "0", 
+            ".*w3af/plugins>>> "
+          ], 
+          "audit sqli xss csrf", 
+          [
+            "0", 
+            ".*w3af/plugins>>> "
+          ], 
+          "crawl web_spider", 
+          [
+            "0", 
+            ".*w3af/plugins>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "start", 
+          [
+            "0,1,2", 
+            ".*w3af>>> "
+          ], 
+          "exit", 
+          [
+            "0,1", 
+            "", 
+            "\n"
+          ]
+        ], 
+        "id": "http_4", 
+        "method": "general_interactive_special_char", 
+        "title": "HTTP W3af Check"
+      }, 
+      {
+        "args": [
+          "500", 
+          "nmap --script=banner.nse -p <port> <host>"
+        ], 
+        "id": "http_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP banner"
+      }, 
+      {
+        "args": [
+          "500", 
+          "nmap --script=http-trace.nse -p <port> <host>"
+        ], 
+        "id": "http_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP Method Enabled"
+      }, 
+      {
+        "args": [
+          "500", 
+          "nmap -sV --script=http-iis-webdav-vuln.nse -p <port> <host>"
+        ], 
+        "id": "http_7", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "WebDav is enabled"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "https": {
+    "Commands": [
+      {
+        "args": [
+          "800", 
+          "nikto -h  <host>:<port>"
+        ], 
+        "id": "https_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP Nikto check :"
+      }, 
+      {
+        "args": [
+          "2400", 
+          "hoppy -t 12 -h <host>:<port>"
+        ], 
+        "id": "https_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP Hoppy Python check :"
+      }, 
+      {
+        "args": [
+          "1200", 
+          " perl Scripts/http-dir-enum/http-dir-enum.pl -m 10 -f Scripts/http-dir-enum/directory-names.txt https://<host>:<port>"
+        ], 
+        "id": "https_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "HTTP-dir enum perl check :"
+      }, 
+      {
+        "args": [
+          "2200", 
+          "w3af_console", 
+          [
+            "0", 
+            ".*w3af>>> ", 
+            "[$,#]"
+          ], 
+          "misc-settings", 
+          [
+            "0", 
+            ".*w3af/config:misc-settings>>> "
+          ], 
+          "set max_discovery_time 7", 
+          [
+            "0", 
+            ".*w3af/config:misc-settings>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "http-settings", 
+          [
+            "0", 
+            ".*w3af/config:http-settings>>> "
+          ], 
+          "set timeout 10", 
+          [
+            "0", 
+            ".*w3af/config:http-settings>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "target", 
+          [
+            "0", 
+            ".*w3af/config:target>>> "
+          ], 
+          "set target <host>:<port>", 
+          [
+            "0", 
+            ".*w3af/config:target>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "plugins", 
+          [
+            "0", 
+            ".*w3af/plugins>>> "
+          ], 
+          "audit sqli xss csrf", 
+          [
+            "0", 
+            ".*w3af/plugins>>> "
+          ], 
+          "crawl web_spider", 
+          [
+            "0", 
+            ".*w3af/plugins>>> "
+          ], 
+          "back", 
+          [
+            "0", 
+            ".*w3af>>> "
+          ], 
+          "start", 
+          [
+            "0,1,2", 
+            ".*w3af>>> "
+          ], 
+          "exit", 
+          [
+            "0,1", 
+            "", 
+            "\n"
+          ], 
+          {
+            "args": [
+              "sslyze <host>:<port>"
+            ], 
+            "method": "singleLineCommands", 
+            "title": "HTTPS sslyze.py"
+          }, 
+          {
+            "args": [
+		  "3000",
+              "bash Scripts/testssl.sh -B -A -F -p -J -f <host>:<port>"
+            ], 
+            "method": "test_ssl", 
+            "title": "HTTPS testssl.sh"
+          }, 
+          {
+            "args": [
+              "java -jar Scripts/TestSSLServer.jar <host> <port>"
+            ], 
+            "method": "singleLineCommands", 
+            "title": "HTTPS TestSSLserver.jar"
+          }
+        ], 
+        "id": "https_4", 
+        "method": "general_interactive", 
+        "title": "HTTP W3af Check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=ssl-poodle.nse -p <port> <host>"
+        ], 
+        "id": "https_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Poodle"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "imap": {
+    "Commands": [
+      {
+        "args": [
+          "telnet <host> <port>"
+        ], 
+        "id": "imap_1", 
+        "method": "imap_interactive", 
+        "title": "Telnet on Imap "
+      }, 
+      {
+        "args": [
+          "60", 
+          "Telnet <host> <port>"
+        ], 
+        "id": "imap_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Is_Imap"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "imaps": {
+    "Commands": [
+      {
+        "args": [
+          "telnet <host> <port>"
+        ], 
+        "id": "imaps_1", 
+        "method": "imap_interactive", 
+        "title": "Telnet on Imaps "
+      }, 
+      {
+        "args": [
+          "3000", 
+          "bash Scripts/testssl.sh -B -A -F -p -J -f <host>:<port>"
+        ], 
+        "id": "imaps_2", 
+        "method": "test_ssl", 
+        "title": "Imaps testssl.sh"
+      }, 
+      {
+        "args": [
+          "60", 
+          "sslyze <host>:<port>"
+        ], 
+        "id": "imaps_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Imaps sslyze.py"
+      }, 
+      {
+        "args": [
+          "60", 
+          "java -jar Scripts/TestSSLServer.jar <host> <port>"
+        ], 
+        "id": "imaps_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Imaps TestSSLserver.jar"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ipp": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script cups-queue-info -p <port> <host>"
+        ], 
+        "id": "ipp_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ipp cups queue info "
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script cups-info -p <port> <host>"
+        ], 
+        "id": "ipp_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ipp cups info "
+      }
+    ], 
+    "Custom": false
+  }, 
+  "irc": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "python Scripts/ircsnapshot/ircsnapshot.py <host> <port>"
+        ], 
+        "id": "irc_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "IRC Python check :"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap  --script=irc-botnet-channels -p <port> <host>"
+        ], 
+        "id": "irc_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Irc botnet check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV -sC -p <port> <host>"
+        ], 
+        "id": "irc_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Irc info"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "isakmp": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "ike-scan <host>"
+        ], 
+        "id": "isakmp_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Remote Ike --> ike-scan <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -v -sU -p520 <host>"
+        ], 
+        "id": "isakmp_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "R_Ike"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "jetdirect": {
+    "Commands": [], 
+    "Custom": false
+  }, 
+  "ldap": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap -p 389 --script ldap-search --script-args 'ldap.username=\"cn=ldaptest,cn=users,dc=cqure,dc=net\",ldap.password=ldaptest,ldap.qfilter=users,ldap.attrib=sAMAccountName' <host>"
+        ], 
+        "id": "ldap_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ldap search"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ldaps": {
+    "Commands": [
+      {
+        "args": [
+          "120", 
+          "sslyze <host>:<port>"
+        ], 
+        "id": "ldaps_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ldaps sslyze.py"
+      }, 
+      {
+        "args": [
+          "3000", 
+          "bash Scripts/testssl.sh -B -A -F -p -J -f <host>:<port>"
+        ], 
+        "id": "ldaps_2", 
+        "method": "test_ssl", 
+        "title": "Ldaps testssl.sh"
+      }, 
+      {
+        "args": [
+          "140", 
+          "java -jar Scripts/TestSSLServer.jar <host> <port>"
+        ], 
+        "id": "ldaps_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ldaps TestSSLserver.jar"
+      }, 
+      {
+        "args": [
+          "60", 
+          " nmap --script ssl-cert -p636 <host>"
+        ], 
+        "id": "ldaps_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl encryption"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script ssl-enum-ciphers -p636 <host>"
+        ], 
+        "id": "ldaps_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl cert"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --reason -PN -n 636 <host>"
+        ], 
+        "id": "ldaps_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl info"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ldapssl": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "sslyze <host>:<port>"
+        ], 
+        "id": "ldapssl_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ldaps sslyze.py"
+      }, 
+      {
+        "args": [
+          "3000", 
+          "bash Scripts/testssl.sh -B -A -F -p -J -f <host>:<port>"
+        ], 
+        "id": "ldapssl_2", 
+        "method": "test_ssl", 
+        "title": "Ldaps testssl.sh"
+      }, 
+      {
+        "args": [
+          "60", 
+          "java -jar Scripts/TestSSLServer.jar <host> <port>"
+        ], 
+        "id": "ldapssl_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ldaps TestSSLserver.jar"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "login": {
+    "Commands": [
+      {
+	    "args": [
+          "300", 
+          "rlogin -l root  <host>", 
+          [
+            "0,1,2", 
+            ".*password: .*", 
+            "[$,#]", 
+            ".*No route to host.*"
+          ], 
+          "root", 
+          [
+            "0,1,2", 
+            ".*password: .*", 
+            "[$,#]", 
+            ".*No route to host.*"
+          ]],
+       
+        "id": "login_1", 
+        "method": "general_interactive", 
+        "title": "Rlogin with root by rlogin client -->  rlogin -l root IP"
+      }, 
+      {
+        "args": [
+          "60", 
+          "perl Scripts/rsh-grind.pl -U Scripts/names.txt <host>:<port>"
+        ], 
+        "id": "login_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Rlogin Perl RshGrind rsh-grind.pl -u [filename] <host>"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "mdns": {
+    "Commands": [
+      {
+        "args": [
+          "200", 
+          "mdns-scan <host>"
+        ], 
+        "id": "mdns_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mdns Scan"
+      }
+      
+    ], 
+    "Custom": false
+  }, 
+  "microsoft-ds": {
+    "Commands": [
+      {
+        "args": [
+          "200", 
+          "enum4linux <host>"
+        ], 
+        "id": "microsoft-ds_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NetBios Enum4 linux"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nbtscan -h <host>"
+        ], 
+        "id": "microsoft-ds_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NMB Scan kali "
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/pipe_auditor", 
+          "set RHOSTS <host>"
+        ], 
+        "id": "microsoft-ds_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Pipe auditor"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/pipe_auditor", 
+          "set RHOSTS <host>", 
+          "set SMBPass msfadmin", 
+          "set SMBUser msfadmin"
+        ], 
+        "id": "microsoft-ds_4", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Pipe auditor with auth"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/pipe_dcerpc_auditor", 
+          "set RHOSTS <host>"
+        ], 
+        "id": "microsoft-ds_5", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Pipe Dcerpc-auditor"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb2", 
+          "set RHOSTS <host>"
+        ], 
+        "id": "microsoft-ds_6", 
+        "method": "custom_meta", 
+        "title": "Metasploit smb2  auxillary"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_enumshares", 
+          "set RHOSTS <host>"
+        ], 
+        "id": "microsoft-ds_7", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary SMB Enum shares"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_enumshares", 
+          "set RHOSTS <host>", 
+          "set SMBPass msfadmin", 
+          "set SMBUser msfadmin"
+        ], 
+        "id": "microsoft-ds_8", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Smb enumshare  with auth"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_enumusers", 
+          "set RHOSTS <host>"
+        ], 
+        "id": "microsoft-ds_9", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary SMB Enum Users"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_enumusers", 
+          "set RHOSTS <host>", 
+          "set SMBPass msfadmin", 
+          "set SMBUser msfadmin"
+        ], 
+        "id": "microsoft-ds_10", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Smb enum Users  with auth"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set SMBPass msfadmin", 
+          "set SMBUser msfadmin"
+        ], 
+        "id": "microsoft-ds_11", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Smb Login with auth"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_login", 
+          "set RHOSTS <host>", 
+          "set rport  <port>", 
+          "set PASS_FILE Scripts/password.txt", 
+          "set USER_FILE Scripts/users.txt", 
+          "set VERBOSE false"
+        ], 
+        "id": "microsoft-ds_12", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Smb Login Brute"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/smb/smb_version", 
+          "set RHOSTS <host>"
+        ], 
+        "id": "microsoft-ds_13", 
+        "method": "custom_meta", 
+        "title": "Metasploit NetBios  auxillary -Smbversion"
+      }, 
+      {
+        "args": [
+          "600", 
+          "perl Scripts/acccheck.pl -t <host> -U Scripts/users.txt -P Scripts/password.txt -v"
+        ], 
+        "id": "microsoft-ds_14", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Access check perl script"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-shares.nse -p <port> <host>"
+        ], 
+        "id": "microsoft-ds_15", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Shares"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=smb-os-discovery.nse -p <port> <host>"
+        ], 
+        "id": "microsoft-ds_16", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "OS discovery on microsoft-ds"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-domains.nse -p <port> <host>"
+        ], 
+        "id": "microsoft-ds_17", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Domains"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=nbstat.nse -p <port> <host>"
+        ], 
+        "id": "microsoft-ds_18", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Share is enabled"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU -sS --script=smb-os-discovery.nse -p <port> <host>"
+        ], 
+        "id": "microsoft-ds_19", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "OS discovery"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-users.nse -p <port> <host>"
+        ], 
+        "id": "microsoft-ds_20", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Users"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ms-sql-m": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use scanner/mssql/mssql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "ms-sql-m_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Mysql Login  auxillary without password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use scanner/mssql/mssql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set password admin"
+        ], 
+        "id": "ms-sql-m_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit Mysql Login  auxillary with password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use admin/mssql/mssql_enum", 
+          "set RHOST <host>", 
+          "set rport <port>"
+        ], 
+        "id": "ms-sql-m_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit Mysql Login  enum"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script broadcast-ms-sql-discover <host>"
+        ], 
+        "id": "ms-sql-m_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mssql Discoverer"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=ms-sql-info.nse -p <port> <host>"
+        ], 
+        "id": "ms-sql-m_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mssql Version Info on port 1434"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=ms-sql-dac.nse -p <port> <host>"
+        ], 
+        "id": "ms-sql-m_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mssql DAC enabled on port 1434"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ms-sql-s": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use scanner/mssql/mssql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "ms-sql-s_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Mysql Login  auxillary without password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use scanner/mssql/mssql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set password admin"
+        ], 
+        "id": "ms-sql-s_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit Mysql Login  auxillary with password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use admin/mssql/mssql_enum", 
+          "set RHOST <host>", 
+          "set rport <port>"
+        ], 
+        "id": "ms-sql-s_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit Mysql Login  enum"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=ms-sql-info.nse -p <port> <host>"
+        ], 
+        "id": "ms-sql-s_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mssql Version Info on port 1433"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script broadcast-ms-sql-discover <host>"
+        ], 
+        "id": "ms-sql-s_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mssql Discoverer"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=ms-sql-dac.nse -p <port> <host>"
+        ], 
+        "id": "ms-sql-s_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Mssql DAC enabled port 1433"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ms-wbt-server": {
+    "Commands": [
+      {
+        "args": [
+          "180", 
+          "perl Scripts/rdp-sec-check.pl <host>:<port>"
+        ], 
+        "id": "ms-wbt-server_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "(RDP) :Remote Desktop protocol check-Perl script --> perl rdp-sec-check.pl <host>"
+      }, 
+      {
+        "args": [
+          "180", 
+          "python Scripts/rdp_check_ciphers.py <host> <port>"
+        ], 
+        "id": "ms-wbt-server_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "(RDP) :Remote Desktop protocol check-Python script --> python rdp_check_ciphers.py <host> <port>"
+      }, 
+      {
+        "args": [
+          "180", 
+          "perl Scripts/ssl-cipher-suite-enum.pl --rdp <host>:<port>"
+        ], 
+        "id": "ms-wbt-server_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "(RDP) SSL ciper suite Enumeration -->perl ssl-cipher-suite-enum.pl --rdp <host>:<port>"
+      }, 
+      {
+        "args": [
+          "140", 
+          "nmap --script=rdp-enum-encryption.nse -p <port> <host>"
+        ], 
+        "id": "ms-wbt-server_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Supported Encrption"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=ssl-enum-ciphers.nse -p <port> <host>"
+        ], 
+        "id": "ms-wbt-server_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Supported Ciphers"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "msrpc": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-check-vulns.nse -p <port> <host>"
+        ], 
+        "id": "msrpc_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "smb-check-vuln"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=msrpc-enum.nse -p <port> <host>"
+        ], 
+        "id": "msrpc_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "msrpc-enum"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "mstsc": {
+    "Commands": [], 
+    "Custom": false
+  }, 
+  "mysql": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/mysql/mysql_version", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set threads 1"
+        ], 
+        "id": "mysql_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit mysql Login-auxillary--Version detection"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/mysql/mysql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set USERNAME root", 
+          "set threads 1"
+        ], 
+        "id": "mysql_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit mysql Login-auxillary--Default username -No password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/mysql/mysql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set USERNAME root", 
+          "set PASSWORD root", 
+          "set threads 1"
+        ], 
+        "id": "mysql_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit mysql Login-auxillary--Default username -Default password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/mysql/mysql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set  USER_FILE Scripts/users.txt", 
+          "set threads 10"
+        ], 
+        "id": "mysql_4", 
+        "method": "custom_meta", 
+        "title": "Metasploit mysql Login-auxillary--List of usernames -List ofUsernames -No password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/mysql/mysql_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set  USERPASS_FILE Scripts/password.txt", 
+          "set  USER_FILE Scripts/users.txt", 
+          "set threads 10"
+        ], 
+        "id": "mysql_5", 
+        "method": "custom_meta", 
+        "title": "Metasploit mysql Login-auxillary--List of usernames -List of password <Brute>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script mysql-query --script-args='query=\"show databases;\",username=root' -p <port> <host>"
+        ], 
+        "id": "mysql_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "MySql Query"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV -sC -p<port> <host>"
+        ], 
+        "id": "mysql_7", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "MySql info:"
+      }, 
+      {
+        "args": [
+          "120", 
+          "nmap -sV --script=mysql-info.nse -p <port> <host>"
+        ], 
+        "id": "mysql_8", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "MySql Version Info"
+      }, 
+      {
+        "args": [
+          "120", 
+          "nmap --script mysql-audit --script-args \"mysql-audit.username='root',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'\" -p <port> <host>"
+        ], 
+        "id": "mysql_9", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "MySql audit "
+      }, 
+      {
+        "args": [
+          "300", 
+          "nmap -sV --script=mysql-databases --script-args'=mysqluser= root' <host>"
+        ], 
+        "id": "mysql_10", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "MySql show databases"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "netbios-ns": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nbtscan  <host>"
+        ], 
+        "id": "netbios-ns_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NetBios Scan--nbtscan<host> "
+      }, 
+      {
+        "args": [
+          "60", 
+          "nbtscan -v  <host>"
+        ], 
+        "id": "netbios-ns_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NetBios Scan With verbose --nbtscan<host> "
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-shares.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ns_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Shares"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=smb-os-discovery.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ns_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "OS discovery on netbios-ns"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-domains.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ns_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Domains"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=nbstat.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ns_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Share is enabled"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU -sS --script=smb-os-discovery.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ns_7", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "OS discovery"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-users.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ns_8", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Users"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "netbios-ssn": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-shares.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ssn_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Shares"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-domains.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ssn_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Domains"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU -sS --script=smb-os-discovery.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ssn_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "OS discovery "
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smb-enum-users.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ssn_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Enum Users"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=smb-os-discovery.nse -p <port> <host>"
+        ], 
+        "id": "netbios-ssn_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "OS discovery on netbios-ssn"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "nfs": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "rpcinfo -p  <host>"
+        ], 
+        "id": "nfs_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NFS RPC Info --> rpcinfo <host>"
+      }, 
+      {
+        "args": [
+          "180", 
+          "perl Scripts/nfsping.pl <host>"
+        ], 
+        "id": "nfs_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NFS Ping Info --> perl nfsping.pl <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "showmount -e <host>"
+        ], 
+        "id": "nfs_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ShowMount <host>"
+      }, 
+      {
+        "args": [
+          "mount -t nfs <host>:/ /temp", 
+          "cd /temp", 
+          "ls", 
+          "mkdir test_directory", 
+          "cd ..", 
+          "umount /temp/"
+        ], 
+        "id": "nfs_4", 
+        "method": "Nfs_Mount_intaractive", 
+        "title": "ShowMount <host> -Attempting to mount Root"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "nntp": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap --script nntp-ntlm-info -p <port> <host>"
+        ], 
+        "id": "nntp_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "nntp info"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ntp": {
+    "Commands": [
+      {
+        "args": [
+          "180", 
+          "ruby Scripts/ntp-rev-dos.rb <host>"
+        ], 
+        "id": "ntp_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ntp Ruby check--> ruby ntp-rev-dos.rb <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "python Scripts/ntpd-mode7-check.py -h  <host>"
+        ], 
+        "id": "ntp_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Ntp Python script  check--> python ntpd-mode7-check.py <host>"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/dos/ntp/ntpd_reserved_dos\n", 
+          "set RHOSTS <host>\n", 
+          "set LHOST 192.168.179.136\n"
+        ], 
+        "id": "ntp_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit ntp auxillary"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=ntp-info.nse -p <port> <host>"
+        ], 
+        "id": "ntp_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NTP Info gather"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "openvpn": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "python Scripts/heartbleed_test_openvpn.py <host>"
+        ], 
+        "id": "openvpn_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Open VPN --> heartbleed_test_openvpn.py- <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -p<port> --script ssl-heartbleed <host>"
+        ], 
+        "id": "openvpn_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl-heartbleed."
+      }
+    ], 
+    "Custom": false
+  }, 
+  "oracle": {
+    "Commands": [
+      {
+        "args": [
+          "300", 
+          "perl Scripts/tnscmd.pl -h <host>"
+        ], 
+        "id": "oracle_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Oracle check perl script -->-perl tnscmd.pl -h <host>"
+      }, 
+      {
+        "args": [
+          "300", 
+          "tnscmd10g -h <host>"
+        ], 
+        "id": "oracle_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Oracle 10g check kali-->tnscmd10g -h <host> "
+      }, 
+      {
+        "args": [
+          "300", 
+          "sidguess -i <host> -d Scripts/oracle_users.txt"
+        ], 
+        "id": "oracle_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Oracle Sid Guess Kali-->sidguess -i <host> -d oracle_users.txt"
+      }, 
+      {
+        "args": [
+          "300", 
+          "(cd Scripts;sh Scripts/osd.sh -s <host> -p msfadmin -u msfadmin)"
+        ], 
+        "id": "oracle_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Oracle OSD Tools Check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script oracle-enum-users --script-args oracle-enum-users.sid=ORCL,userdb=Scripts/oracle_users.txt -p <port> <host>"
+        ], 
+        "id": "oracle_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Oracle enum"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "pop3": {
+    "Commands": [
+      {
+        "args": [
+          "https://ssl-tools.net/mailservers/gmail.com"
+        ], 
+        "id": "pop3_1", 
+        "method": "http_based", 
+        "title": "SSL-Tools-Mail server check"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/pop3/pop3_version\n", 
+          "set RHOSTS <host>\n"
+        ], 
+        "id": "pop3_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit POP3 version"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sS -sV -p110 <host>"
+        ], 
+        "id": "pop3_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "POP3 Banner"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "postgresql": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          " workspace Metasploit_automation", 
+          "use auxiliary/admin/postgres/postgres_sql", 
+          "set RHOST <host>", 
+          "set rport <port>"
+        ], 
+        "id": "postgresql_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit POSTGRESQL  <Brute>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "sslyze <host>:<port>"
+        ], 
+        "id": "postgresql_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Postgres sslyze.py"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV  -p <port> <host>"
+        ], 
+        "id": "postgresql_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Postgresql info "
+      }
+    ], 
+    "Custom": false
+  }, 
+  "radius": {
+    "Commands": [
+      {
+        "args": [
+          "300", 
+          "nc -vnzu <host> <port>"
+        ], 
+        "id": "radius_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Radius Ns check--> nc -vnzu <host> <port>"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "rpcbind": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "rpcinfo -p  <host>"
+        ], 
+        "id": "rpcbind_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NFS RPC Info --> rpcinfo <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -v -sR <host>"
+        ], 
+        "id": "rpcbind_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "rpc nmap check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=nfs-showmount.nse -p <port> <host>"
+        ], 
+        "id": "rpcbind_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "NFS export is enabled"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sR -p <port> <host>"
+        ], 
+        "id": "rpcbind_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Rpcbind Info gather cross check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=rpcinfo.nse -p <port> <host>"
+        ], 
+        "id": "rpcbind_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Rpcbind Info gather"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "rsftp": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nc -v <host> 21", 
+          [
+            "0", 
+            ".*220.*", 
+            "[$,#]"
+          ], 
+          "test", 
+          [
+            "0", 
+            ".* Please login with USER and PASS.*", 
+            "[$/#]"
+          ], 
+          "user anonymous", 
+          [
+            "0", 
+            ".*Please specify the password.*", 
+            "[$/#]"
+          ], 
+          "pass", 
+          [
+            "0", 
+            ".*Login successful.*"
+          ]
+        ], 
+        "id": "rsftp_1", 
+        "interactive": "1", 
+        "method": "generalCommands_Tout_Sniff", 
+        "title": "RSFTP check  nc -v <host> 26"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "rsync": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap  --script rsync-list-modules -p <port> <host>"
+        ], 
+        "id": "rsync_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Rsync list modules"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "shell": {
+    "Commands": [
+      {
+        "args": [
+          "200", 
+          "rsh -l dummyuser <host>", 
+          [
+            "0,1,2,3,4", 
+            ".*password.*", 
+            "[$,#]",
+		".*No route to host.*",
+		".*Connection refused.*",
+		".*(yes/no)?.*"
+          ],
+	    "yes",
+	    [
+            "0,1,2,3", 
+            ".*password.*", 
+            "[$,#]",
+		".*No route to host.*",
+		".*Connection refused.*"
+		
+          ], 
+          "dummyuserpass", 
+          [
+            "0,1,2", 
+            ".*password.*", 
+            "[$/#]", 
+            ".*No route to host.*",
+		".*Connection refused.*"
+          ], 
+		"root", 
+          [
+            "0,1,2", 
+            ".*password.*", 
+            "[$/#]", 
+            ".*No route to host.*",
+		".*Connection refused.*"
+          ]
+        ], 
+        "id": "shell_1", 
+        "interactive": "1", 
+        "method": "generalCommands_Tout_Sniff", 
+        "title": "Shell check and sniff --> rsh 192.168.179.136 -l dummy_username"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "sip": {
+    "Commands": [
+      {
+        "args": [
+          "300", 
+          "svmap -p <port> <host> -m INVITE"
+        ], 
+        "id": "sip_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SIP Check - SVMAP :"
+      }, 
+      {
+        "args": [
+          "500", 
+          "svwar -e <port> <host> <host>:<port>"
+        ], 
+        "id": "sip_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SIP Check - SVWAR:"
+      }, 
+      {
+        "args": [
+          "500", 
+          "svcrack -u <port> <host>"
+        ], 
+        "id": "sip_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SIP - SvCrack check"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          " workspace Metasploit_automation", 
+          "use voip/sip_invite_spoof", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "sip_4", 
+        "method": "custom_meta", 
+        "title": "Metasploit SIP  Auxillary"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "smtp": {
+    "Commands": [
+      {
+        "args": [
+          "python Scripts/smtp-vrfy-check.py -h <host> -p <port> -u Scripts/names.txt -v 0"
+        ], 
+        "id": "smtp_1", 
+        "method": "singleLineCommands", 
+        "title": "SMTP-vrfy-check.py"
+      }, 
+      {
+        "args": [
+          "python Scripts/smtp-vrfy.py -t <host> -p <port> -f Scripts/names.txt"
+        ], 
+        "id": "smtp_2", 
+        "method": "singleLineCommands", 
+        "title": "SMTP-Security Scanner"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=banner.nse -p <port> <host>"
+        ], 
+        "id": "smtp_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Smtp banner"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smtp-open-relay.nse -p <port> <host>"
+        ], 
+        "id": "smtp_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SMTP Open Relay Check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smtp-enum-users.nse -p <port> <host>"
+        ], 
+        "id": "smtp_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "User Enum"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=ssl-heartbleed.nse -p <port> <host>"
+        ], 
+        "id": "smtp_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Vulnerable to heartbleed"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script=smtp-strangeport.nse -p <port> <host>"
+        ], 
+        "id": "smtp_7", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SMTP Strange Port Detection"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "smtps": {
+    "Commands": [
+      {
+        "args": [
+          "sslyze <host>:465"
+        ], 
+        "id": "smtps_1", 
+        "method": "singleLineCommands", 
+        "title": "SMTP sslyze.py"
+      }, 
+      {
+        "args": [
+	    "3000",
+          "bash Scripts/testssl.sh -B -A -F -p -J -f <host>:<port>"
+        ], 
+        "id": "smtps_2", 
+        "method": "test_ssl", 
+        "title": "SMTPS testssl.sh"
+      }, 
+      {
+        "args": [
+          "java -jar Scripts/TestSSLServer.jar <host> <port>"
+        ], 
+        "id": "smtps_3", 
+        "method": "singleLineCommands", 
+        "title": "Smtps TestSSLserver.jar"
+      }, 
+      {
+        "args": [
+          "60", 
+          " nmap --script ssl-cert -p <port> <host>"
+        ], 
+        "id": "smtps_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl encryption"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script ssl-enum-ciphers -p <port> <host>"
+        ], 
+        "id": "smtps_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl cert"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --reason -PN -n <port> <host>"
+        ], 
+        "id": "smtps_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssl info"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "snmp": {
+    "Commands": [
+      {
+        "args": [
+          "90", 
+          "onesixtyone  -c Scripts/password.txt <host>"
+        ], 
+        "id": "snmp_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Snmp with onesixtyone script and password"
+      }, 
+      {
+        "args": [
+          "60", 
+          "onesixtyone  <host>"
+        ], 
+        "id": "snmp_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Snmp with onesixtyone without password"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/snmp/snmp_enum", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "snmp_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit SNMP_Enum  auxillary"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/snmp/snmp_enumshares", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "snmp_4", 
+        "method": "custom_meta", 
+        "title": "Metasploit SNMP_Enum_Shares  auxillary"
+      }, 
+      {
+        "args": [
+          "600", 
+          "perl Scripts/snmpenum.pl <host> public Scripts/linux.txt"
+        ], 
+        "id": "snmp_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Snmp with Perl snmpenum script Linux"
+      }, 
+      {
+        "args": [
+          "600", 
+          "perl Scripts/snmpenum.pl <host> public Scripts/windows.txt"
+        ], 
+        "id": "snmp_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Snmp with Perl snmpenum script Windows"
+      }, 
+      {
+        "args": [
+          "600", 
+          "perl Scripts/snmpcheck.pl -t <host> "
+        ], 
+        "id": "snmp_7", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SnmpCheck with Perl snmpcheck.pl -t <host>"
+      }, 
+      {
+        "args": [
+          "600", 
+          "snmpwalk -v2c -c public  <host> "
+        ], 
+        "id": "snmp_8", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SnmpWalk Kali Utility --> snmpwalk [options] <host>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=snmp-processes -p <port> <host>"
+        ], 
+        "id": "snmp_9", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Process"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=snmp-netstat -p <port> <host>"
+        ], 
+        "id": "snmp_10", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Net stat"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=snmp-win32-shares -p <port> <host>"
+        ], 
+        "id": "snmp_11", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP win32-shares"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=snmp-info.nse -p <port> <host>"
+        ], 
+        "id": "snmp_12", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Info gather"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script snmp-hh3c-logins --script-args snmpcommunity='public' -p <port> <host>"
+        ], 
+        "id": "snmp_13", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP hh3c"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script snmp-ios-config --script-args snmpcommunity='public' -p <port> <host>"
+        ], 
+        "id": "snmp_14", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Ios config"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU -p 161 --script=snmp-win32-users -p <port> <host>"
+        ], 
+        "id": "snmp_15", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP win32-users"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script snmp-sysdescr -p <port> <host>"
+        ], 
+        "id": "snmp_16", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Sysdescr"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=snmp-win32-software -p <port> <host>"
+        ], 
+        "id": "snmp_17", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP win32-software"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=snmp-interfaces -p <port> <host>"
+        ], 
+        "id": "snmp_18", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Interfaces"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=snmp-win32-services  -p <port> <host>"
+        ], 
+        "id": "snmp_19", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP win32 services"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script snmp-brute -p <port> <host>"
+        ], 
+        "id": "snmp_20", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "SNMP Brute"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "soap-http": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          " workspace Metasploit_automation", 
+          "use auxiliary/scanner/http/soap_xml", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "soap-http_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Soap Http Auxillary"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "squid-http": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "perl Scripts/beast.pl <host>"
+        ], 
+        "id": "squid-http_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Perl Beast Check for Squid Fttp<host>"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/http/squid_pivot_scanning", 
+          "set RHOSTS <host>", 
+          "set range <host>", 
+          "set threads 1"
+        ], 
+        "id": "squid-http_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit Squid-http auxillary--Default port 80"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/http/squid_pivot_scanning", 
+          "set RHOSTS <host>", 
+          "set range <host>", 
+          "set threads 1", 
+          "set rport <port>"
+        ], 
+        "id": "squid-http_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit Squid-http auxillary--Custom port"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sS -sV --script http-open-proxy.nse -p <port> <host>"
+        ], 
+        "id": "squid-http_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "squid-Http"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "ssh": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 1", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/ssh/ssh_login", 
+          "set RHOSTS <host>", 
+          "set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt", 
+          "set VERBOSE false"
+        ], 
+        "id": "ssh_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit SSH auxillary"
+      }, 
+      {
+        "args": [
+          "java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>"
+        ], 
+        "id": "ssh_2", 
+        "method": "singleLineCommands", 
+        "title": "SSH Cipher Check <ssh-cipher-check.jar> "
+      }, 
+      {
+        "args": [
+          "nc -zvn <host> 22"
+        ], 
+        "id": "ssh_3", 
+        "method": "singleLineCommands", 
+        "title": "NC  Check <nc -zvn >"
+      }, 
+      {
+        "args": [
+          "ssh root@<host>"
+        ], 
+        "id": "ssh_4", 
+        "method": "ssh_interactive", 
+        "title": "SSH Root shell check"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=ssh2-enum-algos.nse -p <port> <host>"
+        ], 
+        "id": "ssh_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Unsafe algorithms used by SSH"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=banner.nse -p <port> <host>"
+        ], 
+        "id": "ssh_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "ssh banner"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "telnet": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "nmap -p 23 <host> --script telnet-encryption"
+        ], 
+        "id": "telnet_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "telnet encryption"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "tftp": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "set THREADS 3", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/tftp/tftpbrute", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "tftp_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit tftp_brute  auxillary"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script tftp-enum.nse --script-args=\"tftp-enum.filelist=Scripts/customlist.txt\" -p <port> <host>"
+        ], 
+        "id": "tftp_2", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "tftp enum"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "upnp": {
+    "Commands": [
+      {
+        "args": [
+          "60", 
+          "python Scripts/upnp.py target <host>"
+        ], 
+        "id": "upnp_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Python Upnp Script--python upnp.py <host>"
+      }, 
+      {
+        "args": [
+          "200", 
+          "miranda -i eth0 -v", 
+          [
+            "0", 
+            ".*upnp>.*", 
+            "[$,#]", 
+            ".*Failed to find interface.*"
+          ], 
+          "msearch", 
+          [
+            "0", 
+            ".*Entering discovery mode.*"
+          ]
+        ], 
+        "id": "upnp_2", 
+        "method": "general_interactive", 
+        "title": "Miranda Check"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          "workspace Metasploit_automation", 
+          "use auxiliary/scanner/upnp/ssdp_msearch", 
+          "set RHOSTS <host>", 
+          "set rport <port>"
+        ], 
+        "id": "upnp_3", 
+        "method": "custom_meta", 
+        "title": "Metasploit UPNP  auxillary"
+      }, 
+      {
+        "args": [
+          "600", 
+          "msfconsole -q", 
+          [
+            "0", 
+            ".*> "
+          ], 
+          "use auxiliary/scanner/upnp/ssdp_msearch", 
+          [
+            "0", 
+            ".*> "
+          ], 
+          "set RHOSTS <host>", 
+          [
+            "0", 
+            ".*> "
+          ], 
+          "set rport <port>", 
+          [
+            "0", 
+            ".*> "
+          ], 
+          "run", 
+          [
+            "0", 
+            ".*> "
+          ], 
+          "exit", 
+          [
+            "1,2", 
+            ".*> "
+          ]
+        ], 
+        "id": "upnp_4", 
+        "method": "general_interactive", 
+        "title": "MetaSploit module with General Interactive Auxillary Upnp"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=broadcast-upnp-info <host>"
+        ], 
+        "id": "upnp_5", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "upnp  broadcast-upnp-info"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sU --script=upnp-info -p <port> <host>"
+        ], 
+        "id": "upnp_6", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "upnp info "
+      }
+    ], 
+    "Custom": false
+  }, 
+  "vnc": {
+    "Commands": [
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/vnc/vnc_login\n", 
+          "set RHOSTS <host>\n", 
+          "set BRUTEFORCE_SPEED 1\n"
+        ], 
+        "id": "vnc_1", 
+        "method": "custom_meta", 
+        "title": "Metasploit Vnc Brute auxillary"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation\n", 
+          "set THREADS 1\n", 
+          "workspace Metasploit_automation\n", 
+          "use auxiliary/scanner/vnc/vnc_none_auth\n", 
+          "set RHOSTS <host>\n"
+        ], 
+        "id": "vnc_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit Vnc No Auth auxillary"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=realvnc-auth-bypass.nse -p <port> <host>"
+        ], 
+        "id": "vnc_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "RealVNC auth bypass"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap -sV --script=vnc-info.nse -p <port> <host>"
+        ], 
+        "id": "vnc_4", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Vnc Info gathering"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "xmpp-client": {
+    "Commands": [
+      {
+        "args": [
+          "180", 
+          "java -jar Scripts/XMPPloit.jar <host>"
+        ], 
+        "id": "xmpp-client_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Xmpp Client check script XMPPloit.jar"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          " workspace Metasploit_automation", 
+          "use auxiliary/scanner/http/http_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set  USERPASS_FILE ", 
+          "set threads 1"
+        ], 
+        "id": "xmpp-client_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit HTTP/XAMPP <Brute>"
+      }
+    ], 
+    "Custom": false
+  }, 
+  "xmpp-server": {
+    "Commands": [
+      {
+        "args": [
+          "180", 
+          "java -jar Scripts/XMPPloit.jar <host>"
+        ], 
+        "id": "xmpp-server_1", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "Xmpp Client check script XMPPloit.jar"
+      }, 
+      {
+        "args": [
+          "workspace -a Metasploit_automation", 
+          " workspace Metasploit_automation", 
+          "use auxiliary/scanner/http/http_login", 
+          "set RHOSTS <host>", 
+          "set rport <port>", 
+          "set  USERPASS_FILE ", 
+          "set threads 1"
+        ], 
+        "id": "xmpp-server_2", 
+        "method": "custom_meta", 
+        "title": "Metasploit HTTP/XAMPP <Brute>"
+      }, 
+      {
+        "args": [
+          "60", 
+          "nmap --script xmpp-info.nse -p <port> <host>"
+        ], 
+        "id": "xmpp-server_3", 
+        "method": "singleLineCommands_Timeout", 
+        "title": "xmpp server info"
+      }
+    ], 
+    "Custom": false
+  }
+}

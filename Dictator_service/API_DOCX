@@ -1,0 +1,440 @@
+URL :
+
+url(r'^scan/', views.StartScan.as_view()),
+
+Expected input -Json :{"app_key":"","project_name":"","IP_range":"","Port_range":"","switch":"","assessment_id":""}'
+
+Curl Request :
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_name":"test_project","IP_range":"10.0.1.39","Port_range":"1-65500","switch":"1","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/scan/
+
+Response produced :
+"{\"status\":\"success\",\"project_id\":\"343\",\"value\":\"343\"}"
+
+
+Url :
+url(r'^stop/', views.StopScan.as_view()),
+
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"343","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000/stop/
+
+Response Produced :
+"{\"status\":\"success\",\"response_code\":\"1\",\"value\":\"1\"}"
+
+
+
+
+Url :
+url(r'^scan_concurrent/', views.StartScanConcurrent.as_view())
+
+Expected input -Json {"app_key":"","project_name":"","IP_range":"","Port_range":"","switch":"","assessment_id":""}'
+
+Curl Request:
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_name":"launch_concurrent_p_r","IP_range":"10.0.1.37,10.0.1.39,192.168.17.128","Port_range":"1-65500","switch":"1","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/scan_concurrent/
+
+Response :
+"{\"status\":\"success\",\"project_id\":\"344\",\"value\":\"344\"}"
+
+
+
+Url:
+url(r'^stop_conc/', views.StopScanConc.as_view()),
+
+
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"344","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/stop_conc/
+
+Response :
+"{\"status\":\"success\",\"response_code\":\"1\"}"
+
+
+
+Url: Purpose is to give and update config for the records for which the discovery would be over-conc mode
+	It will get the config of records where read init status='false'
+url(r'^polling/', views.PollingConfig.as_view())
+
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl request:
+
+Get :
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"410"}'  http://127.0.0.1:8001/polling/
+
+
+Response Format :
+
+The response obtained will be the configuration as a dictionary containing list of
+dictionaries when status !='empty'.
+
+Following represents the structure of data returned:
+
+{status:success/failure,record_list:[] ,
+		data:[{"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p 
+ 		<host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":
+		\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sR -p <port> <host>\"]
+		,\"title\":\"Rpcbind Info gather cross check\",\"id\":\"rpcbind_4\",\"method\"
+		:\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=rpcinfo.nse
+ 		-p <port> <host>\"],\"title\":\"Rpcbind Info gather\",\"id\":\"rpcbind_5\",\"method\"
+		:\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_statu
+		s\":\"complete\",\"port\":\"111\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2665},{},{}]}
+
+
+
+Response:
+"{\"status\":\"empty\",\"value\":\"0\"}" -when no portion of scan is complete
+Response:
+"{\"status\":\"success\",\"data\":[{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p  <host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -v -sR <host>\"],\"title\":\"rpc nmap check\",\"id\":\"rpcbind_2\",\"method\":\"singleLineCommands_Timeout\"}}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_status\":\"init\",\"port\":\"111\",\"host\":\"10.0.1.37\",\"project_id\":346,\"id\":2746},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"workspace -a Metasploit_automation\",\"set THREADS 1\",\"workspace Metasploit_automation\",\"use auxiliary/scanner/ssh/ssh_login\",\"set RHOSTS <host>\",\"set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\",\"set VERBOSE false\"],\"title\":\"Metasploit SSH auxillary\",\"id\":\"ssh_1\",\"method\":\"custom_meta\"},{\"include\":true,\"args\":[\"1000\",\"java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>\"],\"title\":\"SSH Cipher Check <ssh-cipher-check.jar> \",\"id\":\"ssh_2\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"100\",\"nc -zvn <host> 22\"],\"title\":\"NC  Check <nc -zvn >\",\"id\":\"ssh_3\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"ssh\",\"project_status\":\"init\",\"port\":\"22\",\"host\":\"10.0.1.37\",\"project_id\":346,\"id\":2747},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"60\",\"nmap --script=smb-check-vulns.nse -p <port> <host>\"],\"title\":\"smb-check-vuln\",\"id\":\"msrpc_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"60\",\"nmap --script=msrpc-enum.nse -p <port> <host>\"],\"title\":\"msrpc-enum\",\"id\":\"msrpc_2\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"msrpc\",\"project_status\":\"init\",\"port\":\"135\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2759},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"vnc-http\",\"project_status\":\"init\",\"port\":\"5800\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2748},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"IIS\",\"project_status\":\"init\",\"port\":\"1027\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2749},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"unknown\",\"project_status\":\"init\",\"port\":\"1028\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2751},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"iss-realsecure\",\"project_status\":\"init\",\"port\":\"902\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2757}],\"record_list\":[2746,2747,2758,2759,2760,2761,2762,2763,2748,2749,2750,2751,2752,2753,2754,2755,2756,2757]}"
+
+Curl Post Request: Will update status and mark read_init_status=True
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","record_list":[2667,2668,2665,2669]}' http://127.0.0.1:8001/polling/
+
+Response :
+"{\"status\":\"success\",\"value\":\"Data updated\"}"
+
+
+URL:
+url(r'^percentPolling/', views.PercentPolling.as_view()),
+
+
+Expected input -Json :{"app_key":"","project_id":"","source":"scan/discovery"}
+
+Curl Request:
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"338","source":"scan"}'  http://127.0.0.1:8000/percentPolling/
+
+curl -X GET -H 'Content-Type:application/json' 92-11e6-844d-080027f12676","project_id":"338","source":"discovery"}'  http://127.0.0.1:8000/percentPolling/
+
+
+Response :
+
+"{\"status\":\"success\",\"data\":5.8824,\"value\":5.8824}"
+
+
+
+
+URL: Purpose is to cetch intermediate results every time exploit /vul scan is finished for a record.It works for sequential mode .Thus on get it will fetch results of records where the vul scan would be having project_status as complete and read_final_status=false.When the ui would read the intermediate results then we must make the read_final_status='true' for the records for which status would be read so that the polling schedule does not again fetch these records which is achieved by post
+
+url(r'^polling_scanning/', views.PollingExploit.as_view())
+
+
+Expected input -Json :{"app_key":"","project_id":"",record_list":[]}
+
+Curl Request:
+
+Get:
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"410"}'  http://127.0.0.1:8000/polling_exploit/
+
+Get Response:
+
+{status:success/failure,record_list:[] ,
+		data:[{"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p 
+ 		<host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":
+		\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sR -p <port> <host>\"]
+		,\"title\":\"Rpcbind Info gather cross check\",\"id\":\"rpcbind_4\",\"method\"
+		:\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=rpcinfo.nse
+ 		-p <port> <host>\"],\"title\":\"Rpcbind Info gather\",\"id\":\"rpcbind_5\",\"method\"
+		:\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_statu
+		s\":\"complete\",\"port\":\"111\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2665},{},{}]}
+
+
+Post:
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","record_list":[2665,2666]}' http://127.0.0.1:8000/polling_scanning/
+
+Post Response :
+
+"{\"status\":\"success\",\"value\":\"Data updated\"}"
+
+
+
+URL:
+url(r'^stop_scanning/', views.StopExploits.as_view()),
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","concurrent":false,"assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000/stop_scanning/
+
+
+Response:
+
+"{\"status\":\"success\",\"response_code\":\"1\",\"value\":\"1\"}"
+
+
+URL:
+url(r'^resume/', views.ResumeScan.as_view())
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+CurlRequest:
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"312","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8002/resume/
+
+Response:
+
+"{\"status\":\"success\",\"project_id\":\"345\",\"value\":\"345\"}"
+
+
+
+
+URL:
+url(r'^resume_conc/', views.ResumeScanConc.as_view())
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"345","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000/resume_conc/
+
+Response:
+"{\"status\":\"success\",\"project_id\":\"345\",\"value\":\"345\"}"
+
+
+
+URL:
+url(r'^resume_scanning/', views.ResumeExploits.as_view())
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"345","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/resume_scanning/
+
+Response:
+"{\"status\":\"success\",\"project_id\":\"345\",\"value\":\"345\"}"
+
+
+
+
+URL:
+url(r'^projects/', views.ExploitableProjects.as_view()),
+
+Expected input -Json :{"app_key":""}
+
+Curl Request:
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676"}'  http://127.0.0.1:8000/projects/
+
+Response:
+"{\"status\":\"success\",\"data\":[{\"id\":1,\"name\":\"basic\"},{\"id\":11,\"name\":\"testing\"},{\"id\":12,\"name\":\"testing\"},{\"id\":13,\"name\":\"testing\"},{\"id\":14,\"name\":\"testing\"},{\"id\":15,\"name\":\"testing\"},{\"id\":16,\"name\":\"testing11\"},{\"id\":18,\"name\":\"testing112\"},{\"id\":23,\"name\":\"my_test\"},{\"id\":24,\"name\":\"my_test\"},{\"id\":25,\"name\":\"my_test\"}]
+
+
+
+
+URL:
+url(r'^config/', views.ExploitConfig.as_view()),
+
+Expected input -Json :{"app_key":"","project_id":""}
+Curl Request:
+ Get :
+	curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-
+	ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/config/
+ Get Response:
+	"{\"status\":\"exists\",\"value\":\"It seems ,you have already launched exploits for this project .Proceeding further would overwrie old logs.Do you wish to continue\"}"
+
+ Get :
+	curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-
+	ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/config/
+
+ Get Response :
+
+	"{{\"status\":\"success\",\"data\":[{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p  <host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -v -sR <host>\"],\"title\":\"rpc nmap check\",\"id\":\"rpcbind_2\",\"method\":\"singleLineCommands_Timeout\"}}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_status\":\"init\",\"port\":\"111\",\"host\":\"10.0.1.37\",\"project_id\":346,\"id\":2746},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"workspace -a Metasploit_automation\",\"set THREADS 1\",\"workspace Metasploit_automation\",\"use auxiliary/scanner/ssh/ssh_login\",\"set RHOSTS <host>\",\"set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\",\"set VERBOSE false\"],\"title\":\"Metasploit SSH auxillary\",\"id\":\"ssh_1\",\"method\":\"custom_meta\"},{\"include\":true,\"args\":[\"1000\",\"java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>\"],\"title\":\"SSH Cipher Check <ssh-cipher-check.jar> \",\"id\":\"ssh_2\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"100\",\"nc -zvn <host> 22\"],\"title\":\"NC  Check <nc -zvn >\",\"id\":\"ssh_3\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"ssh\",\"project_status\":\"init\",\"port\":\"22\",\"host\":\"10.0.1.37\",\"project_id\":346,\"id\":2747},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"60\",\"nmap --script=smb-check-vulns.nse -p <port> <host>\"],\"title\":\"smb-check-vuln\",\"id\":\"msrpc_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"60\",\"nmap --script=msrpc-enum.nse -p <port> <host>\"],\"title\":\"msrpc-enum\",\"id\":\"msrpc_2\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"msrpc\",\"project_status\":\"init\",\"port\":\"135\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2759},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"vnc-http\",\"project_status\":\"init\",\"port\":\"5800\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2748},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"IIS\",\"project_status\":\"init\",\"port\":\"1027\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2749},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"unknown\",\"project_status\":\"init\",\"port\":\"1028\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2751},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"iss-realsecure\",\"project_status\":\"init\",\"port\":\"902\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2757}]}"
+
+ Post:  Note the post request is used to update the configuration of some obtained records:
+		The request will have reconfig_service=True for records where we wish to change service/host/port/all
+		The request will have reconfig_exploit=True for records where we wish to exclude any vul scanning
+		script.Note this would further point to entry marked as True/False .
+		The args of each vul scanning entry are like {entry:True ,args:[]},for the entries where we wish to
+		include exclude any vul scanning command/script we need to mark parent reconfig_exploit as true and
+		then internally for the ones we do not wish to include we have to mark the include:False for each.
+
+		The response obtained will be the updated configuration as a dictionary containing list of
+ 		dictionaries.Follwing gives the parameters and pattern of response:
+		
+		{status:success/failure,value :[status:"",service:"",value:""] ,
+		data:[{"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p 
+ 		<host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":
+		\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sR -p <port> <host>\"]
+		,\"title\":\"Rpcbind Info gather cross check\",\"id\":\"rpcbind_4\",\"method\"
+		:\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=rpcinfo.nse
+ 		-p <port> <host>\"],\"title\":\"Rpcbind Info gather\",\"id\":\"rpcbind_5\",\"method\"
+		:\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_statu
+		s\":\"complete\",\"port\":\"111\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2665},{},{}]}
+
+ Post Request : EXpected Input for post can be ssenin following example:
+
+		curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","concurrent":"1","data":[{"reconfig_exploit":false,"Commands":[{"include":true,"args":["300","rpcinfo -p  <host>"],"title":"NFS RPC Info --> rpcinfo <host>","id":"rpcbind_1","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -v -sR <host>"],"title":"rpc nmap check","id":"rpcbind_2","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sV --script=nfs-showmount.nse -p <port> <host>"],"title":"NFS export is enabled","id":"rpcbind_3","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sR -p <port> <host>"],"title":"Rpcbind Info gather cross check","id":"rpcbind_4","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sV --script=rpcinfo.nse -p <port> <host>"],"title":"Rpcbind Info gather","id":"rpcbind_5","method":"singleLineCommands_Timeout"}],"reconfig_service":false,"service":"rpcbind","project_status":"init","port":"111","host":"127.0.0.1","project_id":310,"id":2665},{"reconfig_exploit":false,"Commands":[{"include":false,"args":["workspace -a Metasploit_automation","set THREADS 1","workspace Metasploit_automation","use auxiliary/scanner/ssh/ssh_login","set RHOSTS <host>","set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt","set VERBOSE false"],"title":"Metasploit SSH auxillary","id":"ssh_1","method":"custom_meta"},{"include":true,"args":["1000","java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>"],"title":"SSH Cipher Check <ssh-cipher-check.jar> ","id":"ssh_2","method":"singleLineCommands_Timeout"},{"include":true,"args":["100","nc -zvn <host> 22"],"title":"NC  Check <nc -zvn >","id":"ssh_3","method":"singleLineCommands_Timeout"},{"include":true,"args":["ssh root@<host>"],"title":"SSH Root shell check","id":"ssh_4","method":"ssh_interactive"},{"include":true,"args":["60","nmap -sV --script=ssh2-enum-algos.nse -p <port> <host>"],"title":"Unsafe algorithms used by SSH","id":"ssh_5","method":"singleLineCommands_Timeout"},{"include":false,"args":["60","nmap -sV --script=banner.nse -p <port> <host>"],"title":"ssh banner","id":"ssh_6","method":"singleLineCommands_Timeout"}],"reconfig_service":true,"service":"ftp","project_status":"init","port":"80","host":"127.0.0.1","project_id":310,"id":2666}]}' http://127.0.0.1:8000/config/
+
+	
+  Post Response:
+
+	"{\"status\":\"success\",\"data\":[{\"status\":\"success\",\"value\":[{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p  <host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -v -sR <host>\"],\"title\":\"rpc nmap check\",\"id\":\"rpcbind_2\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=nfs-showmount.nse -p <port> <host>\"],\"title\":\"NFS export is enabled\",\"id\":\"rpcbind_3\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sR -p <port> <host>\"],\"title\":\"Rpcbind Info gather cross check\",\"id\":\"rpcbind_4\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=rpcinfo.nse -p <port> <host>\"],\"title\":\"Rpcbind Info gather\",\"id\":\"rpcbind_5\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_status\":\"complete\",\"port\":\"111\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2665},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"workspace -a Metasploit_automation\\n\",\"set THREADS 1\\n\",\"workspace Metasploit_automation\\n\",\"use auxiliary/scanner/ftp/ftp_login\\n\",\"set RHOSTS <host>\\n\",\"set USERNAME msfadmin\\n\",\"set PASSWORD msfadmin\\n\",\"set VERBOSE false\\n\"],\"title\":\"Metasploit Ftp_Login auxillary\",\"id\":\"ftp_1\",\"method\":\"custom_meta\"},{\"include\":true,\"args\":[\"workspace -a Metasploit_automation\\n\",\"set THREADS 1\\n\",\"workspace Metasploit_automation\\n\",\"use auxiliary/scanner/ftp/anonymous\\n\",\"set RHOSTS <host>\\n\",\"set VERBOSE false\\n\"],\"title\":\"Metasploit Ftp_anonymous auxillary\",\"id\":\"ftp_2\",\"method\":\"custom_meta\"},{\"include\":true,\"args\":[\"ftp <host>\"],\"title\":\"Ftp_Login Anonymous shell\",\"id\":\"ftp_3\",\"method\":\"ftp_interactive\"},{\"include\":true,\"args\":[\"60\",\"nmap -sV --script=ftp-bounce.nse -p <port> <host>\"],\"title\":\"ftp Bounce Attck\",\"id\":\"ftp_4\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"60\",\"nmap -sV --script=banner.nse -p <port> <host>\"],\"title\":\"ftp banner\",\"id\":\"ftp_5\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"60\",\"nmap --script=ftp-anon.nse -p <port> <host>\"],\"title\":\"anonymous_login\",\"id\":\"ftp_6\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"ftp\",\"project_status\":\"complete\",\"port\":\"80\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2666},{\"reconfig_exploit\":false,\"Commands\":}],\"value\":[{\"status\":\"no_update\",\"value\":\"For this service the configuration parameters did not point to any update\",\"service\":\"rpcbind\"},{\"status\":\"success\",\"value\":\"Updated Successfully\",\"service\":\"ftp\"}]}"
+
+
+URL: This is used in conc mode.Polling will fetch the config immidiately after the discover is over for n records ,but config_conc will fetch configuration for all records in conc mode
+
+url(r'^config_conc/', views.ExploitConfigConc.as_view()),
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"346"}'  http://127.0.0.1:8000/config_conc/
+
+Response Format :
+
+The response obtained will be the configuration as a dictionary containing list of
+dictionaries when status !='empty'.
+
+Following represents the structure of data returned:
+
+{status:success/failure,record_list:[] ,
+		data:[{"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p 
+ 		<host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":
+		\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sR -p <port> <host>\"]
+		,\"title\":\"Rpcbind Info gather cross check\",\"id\":\"rpcbind_4\",\"method\"
+		:\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=rpcinfo.nse
+ 		-p <port> <host>\"],\"title\":\"Rpcbind Info gather\",\"id\":\"rpcbind_5\",\"method\"
+		:\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_statu
+		s\":\"complete\",\"port\":\"111\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2665},{},{}]}
+
+
+Response :
+
+
+"{\"status\":\"success\",\"data\":[{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p  <host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -v -sR <host>\"],\"title\":\"rpc nmap check\",\"id\":\"rpcbind_2\",\"method\":\"singleLineCommands_Timeout\"}}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_status\":\"init\",\"port\":\"111\",\"host\":\"10.0.1.37\",\"project_id\":346,\"id\":2746},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"workspace -a Metasploit_automation\",\"set THREADS 1\",\"workspace Metasploit_automation\",\"use auxiliary/scanner/ssh/ssh_login\",\"set RHOSTS <host>\",\"set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\",\"set VERBOSE false\"],\"title\":\"Metasploit SSH auxillary\",\"id\":\"ssh_1\",\"method\":\"custom_meta\"},{\"include\":true,\"args\":[\"1000\",\"java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>\"],\"title\":\"SSH Cipher Check <ssh-cipher-check.jar> \",\"id\":\"ssh_2\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"100\",\"nc -zvn <host> 22\"],\"title\":\"NC  Check <nc -zvn >\",\"id\":\"ssh_3\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"ssh\",\"project_status\":\"init\",\"port\":\"22\",\"host\":\"10.0.1.37\",\"project_id\":346,\"id\":2747},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"60\",\"nmap --script=smb-check-vulns.nse -p <port> <host>\"],\"title\":\"smb-check-vuln\",\"id\":\"msrpc_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"60\",\"nmap --script=msrpc-enum.nse -p <port> <host>\"],\"title\":\"msrpc-enum\",\"id\":\"msrpc_2\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"msrpc\",\"project_status\":\"init\",\"port\":\"135\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2759},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"vnc-http\",\"project_status\":\"init\",\"port\":\"5800\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2748},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"IIS\",\"project_status\":\"init\",\"port\":\"1027\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2749},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"unknown\",\"project_status\":\"init\",\"port\":\"1028\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2751},{\"reconfig_exploit\":false,\"Commands\":{\"status\":\"empty\"},\"reconfig_service\":false,\"service\":\"iss-realsecure\",\"project_status\":\"init\",\"port\":\"902\",\"host\":\"10.0.1.39\",\"project_id\":346,\"id\":2757}],\"record_list\":[2746,2747,2758,2759,2760,2761,2762,2763,2748,2749,2750,2751,2752,2753,2754,2755,2756,2757]}"
+
+
+URL:
+url(r'^config_overwrite/', views.ExploitConfig_overwrite.as_view())
+
+Curl Request:
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/config_overwrite/
+
+
+Post Response : It will overwrite the results and return the default configuration
+
+
+"{\"status\":\"success\",\"data\":[{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"300\",\"rpcinfo -p  <host>\"],\"title\":\"NFS RPC Info --> rpcinfo <host>\",\"id\":\"rpcbind_1\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -v -sR <host>\"],\"title\":\"rpc nmap check\",\"id\":\"rpcbind_2\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=nfs-showmount.nse -p <port> <host>\"],\"title\":\"NFS export is enabled\",\"id\":\"rpcbind_3\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sR -p <port> <host>\"],\"title\":\"Rpcbind Info gather cross check\",\"id\":\"rpcbind_4\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"300\",\"nmap -sV --script=rpcinfo.nse -p <port> <host>\"],\"title\":\"Rpcbind Info gather\",\"id\":\"rpcbind_5\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"rpcbind\",\"project_status\":\"init\",\"port\":\"111\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2805},{\"reconfig_exploit\":false,\"Commands\":[{\"include\":true,\"args\":[\"workspace -a Metasploit_automation\",\"set THREADS 1\",\"workspace Metasploit_automation\",\"use auxiliary/scanner/ssh/ssh_login\",\"set RHOSTS <host>\",\"set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\",\"set VERBOSE false\"],\"title\":\"Metasploit SSH auxillary\",\"id\":\"ssh_1\",\"method\":\"custom_meta\"},{\"include\":true,\"args\":[\"1000\",\"java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>\"],\"title\":\"SSH Cipher Check <ssh-cipher-check.jar> \",\"id\":\"ssh_2\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"100\",\"nc -zvn <host> 22\"],\"title\":\"NC  Check <nc -zvn >\",\"id\":\"ssh_3\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"ssh root@<host>\"],\"title\":\"SSH Root shell check\",\"id\":\"ssh_4\",\"method\":\"ssh_interactive\"},{\"include\":true,\"args\":[\"60\",\"nmap -sV --script=ssh2-enum-algos.nse -p <port> <host>\"],\"title\":\"Unsafe algorithms used by SSH\",\"id\":\"ssh_5\",\"method\":\"singleLineCommands_Timeout\"},{\"include\":true,\"args\":[\"60\",\"nmap -sV --script=banner.nse -p <port> <host>\"],\"title\":\"ssh banner\",\"id\":\"ssh_6\",\"method\":\"singleLineCommands_Timeout\"}],\"reconfig_service\":false,\"service\":\"ssh\",\"project_status\":\"init\",\"port\":\"22\",\"host\":\"127.0.0.1\",\"project_id\":310,\"id\":2806}]}"
+
+
+
+
+URL:
+url(r'^launch_scanning/', views.LaunchExploits.as_view()),
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/launch_exploits/
+
+Response:
+"{\"status\":\"success\",\"value\":\"Process id is :9774and details saved successfully\"}"
+
+
+URL:
+url(r'^launch_scanning_concurrent/',views.LaunchExploitsConcurrent.as_view()),
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request: Suppose in conc mode if we would have reconfigured exploits for multiple records then
+			  we would want to launch vul scanning for it.That can be achieved this way
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310","record_list":[2665,2666]}'  http://127.0.0.1:8000/launch_scanning_concurrent/
+
+Response:
+"{\"status\":\"success\",\"value\":\"Process id is :10559and details saved successfully\"}"
+
+
+URL:
+url(r'^upload/', views.UploadNmapXml.as_view()),
+
+Expected input -Multipart/Formdata :"app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=test" -F "filename=@tcp1.xml"
+
+Curl request: To upload nmap xml
+curl -i -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=test" -F "filename=@tcp1.xml" http://127.0.0.1:8000/upload/
+
+Response :
+"{\"status\":\"success\",\"value\":\"349\"}" The value reuened would be the value of the new project id
+
+
+
+URL:
+url(r'^uploadNessus/', views.UploadNessusXml.as_view()),
+
+Expected input -Multipart/Formdata :"app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=test" -F "filename=@tcp1.xml"
+
+Curl Request:
+curl -i -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=246" -F "filename=@m.nessus" http://127.0.0.1:8000/uploadNessus/
+
+
+Response :
+"{\"status\":\"success\",\"value\":\"246\"}"
+
+
+
+URL:
+url(r'^uploadQualys/', views.UploadQualysXml.as_view()),
+
+Expected input -Multipart/Formdata :"app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=test" -F "filename=@tcp1.xml"
+
+
+Curl Request:
+curl -i -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=246" -F "filename=@metasploit.xml" http://127.0.0.1:8000/uploadQualys/
+
+
+Response:
+"{\"status\":\"success\",\"value\":\"246\"}"
+
+
+URL:
+url(r'^mergeReports/', views.MergeReports.as_view())
+
+Expected input -Json :{"app_key":"","project_id":"","report_format":"html/csv/xml/json"}
+
+Curl Request:
+curl -o test.zip -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"246","report_format":"html"}' http://127.0.0.1:8000/mergeReports/
+
+
+Response:
+Http resposnse
+Response body :zipped folder containing report
+Response Header :response['content-Disposition']="attachment;filename='result.zip'"
+							
+
+
+URL:
+url(r'^reportOnFly/', views.ReportOnFly.as_view())
+
+Expected input -Multipart/Formdata :"app_key=2af82185-ac92-11e6-844d-080027f12676" -F "source=nessus/qualys" -F "filename=@tcp1.xml" -F "report_format=html"
+
+Curl Request:
+curl -o testing_folder -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "source=nessus" -F "filename=@m.nessus" -F "report_format=html" http://127.0.0.1:8000/reportOnFly/
+
+curl -o testing_folder -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "source=qualys" -F "filename=@metasploit.xml" -F "report_format=html" http://127.0.0.1:8000/reportOnFly/
+
+Response:
+Http resposnse
+Response body :zipped folder containing report
+Response Header :response['content-Disposition']="attachment;filename='result.zip'"
+
+
+
+
+url(r'^downloadAll/', views.DownloadAllMannual.as_view()),
+
+Expected input -Json :{"app_key":"","project_id":""}
+
+Curl Request:
+curl -o output.zip -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"246"}'  http://127.0.0.1:8000/downloadAll/
+
+Response:
+Http resposnse
+Response body :zipped folder containing report
+Response Header :response['content-Disposition']="attachment;filename='result.zip'"
+
+
+
+

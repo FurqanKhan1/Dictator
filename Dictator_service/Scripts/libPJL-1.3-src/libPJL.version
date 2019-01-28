@@ -1,0 +1,24 @@
+Project:	libPJL
+		Printer Job Language library
+
+Author:		FX <fx@phenoelit.de>
+Origanization:	Phenoelit (http://www.phenoelit.de/)
+
+Version:	$Id: libPJL.version,v 1.3 2005/04/21 07:37:47 fx Exp fx $
+
+Copyright:	(c) 2002
+
+License:	Currently: PRIVATE CODE
+		later see http://www.phenoelit.de/fr/license.html
+
+Documentation:	not available
+
+Changes:
+		1.3
+		- Fixed a number of compile errors with #endif and std vs. ::
+		1.2
+		- Fixed off-by-one error in environment variable reading 
+		  (last entry)
+		- Fixed variable option assignment for multiple variables with
+		  the same name but different language types.
+

@@ -1,0 +1,290 @@
+2016-10-06 08:15:19,553 - Info Logger - DEBUG - 
+
+
+ STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 238
+2016-10-06 08:15:19,735 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-10-06 08:15:19,738 - Info Logger - DEBUG - {*}-Starting method --> InsertIPExploits()
+2016-10-06 08:15:19,739 - Info Logger - DEBUG - Inserting many records
+2016-10-06 08:15:19,749 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-06 08:15:19,750 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+hello world
+2016-10-06 09:13:49,427 - Info Logger - DEBUG - 
+
+Starting 
+
+
+2016-10-06 09:13:55,430 - Info Logger - DEBUG - 
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 238
+2016-10-06 09:13:55,437 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-10-06 09:13:55,460 - Info Logger - DEBUG - {*}-Starting method --> InsertIPExploits()
+2016-10-06 09:13:55,461 - Info Logger - DEBUG - Inserting many records
+2016-10-06 09:13:55,537 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-06 09:13:55,587 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 09:14:00,279 - Info Logger - DEBUG - Started method Reconfigure
+2016-10-06 09:14:00,284 - Info Logger - DEBUG - Started getUNknown Services()
+2016-10-06 09:14:00,288 - Info Logger - DEBUG - Started method UpdateUnknownServices
+2016-10-06 09:14:04,100 - Info Logger - DEBUG - Stopped method UpdateUnknownServices
+2016-10-06 09:14:04,101 - Info Logger - DEBUG - Started method InsertAdditionalServices()
+2016-10-06 09:14:07,173 - Info Logger - DEBUG - Stopped method InsertAdditionalServices()
+2016-10-06 09:14:10,134 - Info Logger - DEBUG - Ending method Reconfigure()
+2016-10-06 09:14:10,135 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-06 09:14:10,170 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 09:14:13,559 - Info Logger - DEBUG - Started method LaunchExploits()
+2016-10-06 09:14:13,603 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 09:14:13,672 - Info Logger - DEBUG - Service,Host,port  is -->shell  45.33.32.156  514
+2016-10-06 09:14:13,672 - Info Logger - DEBUG - Command id --> shell_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 09:14:13,673 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-06 09:14:13,673 - Info Logger - DEBUG - Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-06 09:14:16,679 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-06 09:15:38,155 - Info Logger - DEBUG - 
+
+Starting 
+
+
+2016-10-06 09:15:44,173 - Info Logger - DEBUG - 
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 238
+2016-10-06 09:15:44,218 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-10-06 09:15:44,234 - Info Logger - DEBUG - {*}-Starting method --> InsertIPExploits()
+2016-10-06 09:15:44,235 - Info Logger - DEBUG - Inserting many records
+2016-10-06 09:15:44,307 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-06 09:15:44,346 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 09:15:48,984 - Info Logger - DEBUG - Started method LaunchExploits()
+2016-10-06 09:15:49,195 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 09:15:49,232 - Info Logger - DEBUG - Service,Host,port  is -->shell  45.33.32.156  514
+2016-10-06 09:15:49,232 - Info Logger - DEBUG - Command id --> shell_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 09:15:49,233 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-06 09:15:49,234 - Info Logger - DEBUG - Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-06 09:15:52,237 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-06 09:17:32,277 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting Start_sniffing() method
+2016-10-06 09:18:14,990 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Saving details :
+2016-10-06 09:18:15,325 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Details Updated successfully
+2016-10-06 09:18:15,526 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting General_interactive()
+2016-10-06 09:18:15,526 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting general_commands_tout_sniff()
+2016-10-06 09:18:15,526 - Info Logger - DEBUG - Service,Host,port  is -->http  45.33.32.156  80
+2016-10-06 09:18:15,527 - Info Logger - DEBUG - Command id --> http_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 09:18:15,527 - Info Logger - DEBUG - Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 09:18:15,530 - Info Logger - DEBUG - Command id --> http_1  Message --> :Thread started --with command nikto -h  45.33.32.156:80
+2016-10-06 17:44:10,737 - Info Logger - DEBUG - 
+
+Starting 
+
+
+2016-10-06 17:44:16,774 - Info Logger - DEBUG - 
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 238
+2016-10-06 17:44:17,502 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-10-06 17:44:17,792 - Info Logger - DEBUG - {*}-Starting method --> InsertIPExploits()
+2016-10-06 17:44:17,793 - Info Logger - DEBUG - Inserting many records
+2016-10-06 17:44:18,501 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-06 17:44:18,655 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 17:44:31,808 - Info Logger - DEBUG - Started method LaunchExploits()
+2016-10-06 17:44:31,834 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-06 17:44:32,052 - Info Logger - DEBUG - Service,Host,port  is -->shell  45.33.32.156  514
+2016-10-06 17:44:32,053 - Info Logger - DEBUG - Command id --> shell_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 17:44:32,053 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-06 17:44:32,097 - Info Logger - DEBUG - Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-06 17:44:35,100 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-06 17:46:44,214 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting Start_sniffing() method
+2016-10-06 17:46:58,232 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Saving details :
+2016-10-06 17:47:00,221 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Details Updated successfully
+2016-10-06 17:47:00,440 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting General_interactive()
+2016-10-06 17:47:00,441 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting general_commands_tout_sniff()
+2016-10-06 17:47:00,441 - Info Logger - DEBUG - Service,Host,port  is -->http  45.33.32.156  80
+2016-10-06 17:47:00,441 - Info Logger - DEBUG - Command id --> http_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 17:47:00,443 - Info Logger - DEBUG - Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 17:47:00,448 - Info Logger - DEBUG - Command id --> http_1  Message --> :Thread started --with command nikto -h  45.33.32.156:80
+2016-10-06 18:27:00,556 - Info Logger - DEBUG - Command id --> http_1  Message --> :Terminating process
+2016-10-06 18:27:01,138 - Info Logger - DEBUG - Command id --> http_1  Message --> :Killing Process with id -->psutil.Process(pid=13865, name='nikto')
+2016-10-06 18:27:01,195 - Info Logger - DEBUG - Command id --> http_1  Message --> :Killed Process with id -->psutil.Process(pid=13865, name='nikto')
+2016-10-06 18:27:02,462 - Info Logger - DEBUG - Command id --> http_1  Message --> :Saving details :
+2016-10-06 18:27:03,032 - Info Logger - DEBUG - Command id --> http_1  Message --> :Details Updated successfully
+2016-10-06 18:27:03,033 - Info Logger - DEBUG - Command id --> http_1  Message --> :Thread finished
+2016-10-06 18:27:03,034 - Info Logger - DEBUG - Command id --> http_1  Message --> :Kill result is --> -9
+2016-10-06 18:27:03,034 - Info Logger - DEBUG - Command id --> http_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:27:03,063 - Info Logger - DEBUG - Command id --> http_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:27:03,075 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread started --with command hoppy -t 12 -h 45.33.32.156:80
+2016-10-06 18:30:35,727 - Info Logger - DEBUG - Command id --> http_2  Message --> :Saving details :
+2016-10-06 18:30:36,212 - Info Logger - DEBUG - Command id --> http_2  Message --> :Details Updated successfully
+2016-10-06 18:30:36,213 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread finished
+2016-10-06 18:30:36,218 - Info Logger - DEBUG - Command id --> http_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:30:36,219 - Info Logger - DEBUG - Command id --> http_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:30:36,220 - Info Logger - DEBUG - Command id --> http_3  Message --> :Thread started --with command  perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80
+2016-10-06 18:32:08,430 - Info Logger - DEBUG - Command id --> http_3  Message --> :Saving details :
+2016-10-06 18:32:08,634 - Info Logger - DEBUG - Command id --> http_3  Message --> :Details Updated successfully
+2016-10-06 18:32:08,635 - Info Logger - DEBUG - Command id --> http_3  Message --> :Thread finished
+2016-10-06 18:32:08,685 - Info Logger - DEBUG - Command id --> http_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:32:08,749 - Info Logger - DEBUG - Command id --> http_4  Message --> :Starting Special char-Interactive Session with command --> w3af_console and timeout 1200
+2016-10-06 18:32:18,165 - Info Logger - DEBUG - Command id --> http_4  Message --> :Results not as expected --> see aurguments 
+2016-10-06 18:32:18,165 - Info Logger - DEBUG - Command id --> http_4  Message --> :Saving details :
+2016-10-06 18:32:18,443 - Info Logger - DEBUG - Command id --> http_4  Message --> :Details Updated successfully
+2016-10-06 18:32:18,647 - Info Logger - DEBUG - Command id --> http_4  Message --> :Exiting general Interactive with special char()
+2016-10-06 18:32:18,648 - Info Logger - DEBUG - Command id --> http_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:32:18,648 - Info Logger - DEBUG - Command id --> http_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:32:18,650 - Info Logger - DEBUG - Command id --> http_5  Message --> :Thread started --with command nmap --script=banner.nse -p 80 45.33.32.156
+2016-10-06 18:32:20,491 - Info Logger - DEBUG - Command id --> http_5  Message --> :Saving details :
+2016-10-06 18:32:20,683 - Info Logger - DEBUG - Command id --> http_5  Message --> :Details Updated successfully
+2016-10-06 18:32:20,683 - Info Logger - DEBUG - Command id --> http_5  Message --> :Thread finished
+2016-10-06 18:32:20,707 - Info Logger - DEBUG - Command id --> http_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:32:20,708 - Info Logger - DEBUG - Command id --> http_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:32:20,710 - Info Logger - DEBUG - Command id --> http_6  Message --> :Thread started --with command nmap --script=http-trace.nse -p 80 45.33.32.156
+2016-10-06 18:32:21,697 - Info Logger - DEBUG - Command id --> http_6  Message --> :Saving details :
+2016-10-06 18:32:21,904 - Info Logger - DEBUG - Command id --> http_6  Message --> :Details Updated successfully
+2016-10-06 18:32:21,905 - Info Logger - DEBUG - Command id --> http_6  Message --> :Thread finished
+2016-10-06 18:32:21,954 - Info Logger - DEBUG - Command id --> http_7  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:32:21,955 - Info Logger - DEBUG - Command id --> http_7  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:32:21,957 - Info Logger - DEBUG - Command id --> http_7  Message --> :Thread started --with command nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156
+2016-10-06 18:32:24,285 - Info Logger - DEBUG - Command id --> http_7  Message --> :Saving details :
+2016-10-06 18:32:24,349 - Info Logger - DEBUG - Command id --> http_7  Message --> :Details Updated successfully
+2016-10-06 18:32:24,349 - Info Logger - DEBUG - Command id --> http_7  Message --> :Thread finished
+2016-10-06 18:32:24,397 - Info Logger - DEBUG - Service,Host,port  is -->ssh  45.33.32.156  22
+2016-10-06 18:32:24,398 - Info Logger - DEBUG - Command id --> ssh_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:32:24,398 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Inside command_meta
+2016-10-06 18:33:24,467 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Everything Fine till now-->Launching run command
+2016-10-06 18:37:36,885 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Module Execution completed
+2016-10-06 18:37:36,917 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Exiting  from msfconsole !!!
+2016-10-06 18:37:39,143 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Saving details :
+2016-10-06 18:37:39,470 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Details Updated successfully
+2016-10-06 18:37:39,470 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Exiting custom_meta !!
+2016-10-06 18:37:39,470 - Info Logger - DEBUG - Command id --> ssh_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:37:39,471 - Info Logger - DEBUG - Command id --> ssh_2  Message --> :Invoking Single line command -->Title-->java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+2016-10-06 18:37:48,023 - Info Logger - DEBUG - Command id --> ssh_2  Message --> :Saving details :
+2016-10-06 18:37:48,169 - Info Logger - DEBUG - Command id --> ssh_2  Message --> :Details Updated successfully
+2016-10-06 18:37:48,170 - Info Logger - DEBUG - Command id --> ssh_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:37:48,172 - Info Logger - DEBUG - Command id --> ssh_3  Message --> :Invoking Single line command -->Title-->nc -zvn 45.33.32.156 22
+2016-10-06 18:37:48,537 - Info Logger - DEBUG - Command id --> ssh_3  Message --> :Saving details :
+2016-10-06 18:37:48,684 - Info Logger - DEBUG - Command id --> ssh_3  Message --> :Details Updated successfully
+2016-10-06 18:37:48,685 - Info Logger - DEBUG - Command id --> ssh_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:37:48,686 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Starting ssh--INteractive
+2016-10-06 18:37:51,814 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Root is expecting a pssword--supplying default password
+2016-10-06 18:37:56,534 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Permission Denied at inception for root--Good 
+2016-10-06 18:37:56,942 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Saving details :
+2016-10-06 18:37:56,995 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Details Updated successfully
+2016-10-06 18:37:56,995 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Exiting method ssh interactive!!
+2016-10-06 18:37:56,995 - Info Logger - DEBUG - Command id --> ssh_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:37:56,996 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:37:56,997 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Thread started --with command nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156
+2016-10-06 18:37:58,257 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Saving details :
+2016-10-06 18:37:58,348 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Details Updated successfully
+2016-10-06 18:37:58,349 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Thread finished
+2016-10-06 18:37:58,356 - Info Logger - DEBUG - Command id --> ssh_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-06 18:37:58,357 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:37:58,367 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 22 45.33.32.156
+2016-10-06 18:37:59,680 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Saving details :
+2016-10-06 18:37:59,711 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Details Updated successfully
+2016-10-06 18:37:59,711 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Thread finished
+2016-10-07 00:59:08,150 - Info Logger - ERROR - EXception in connection-->closing a closed connection
+2016-10-07 08:23:37,578 - Info Logger - DEBUG - 
+
+Starting 
+
+
+2016-10-07 08:23:43,682 - Info Logger - DEBUG - 
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 238
+2016-10-07 08:23:43,808 - Info Logger - DEBUG - Starting method --> parse_and_process()
+2016-10-07 08:23:43,821 - Info Logger - DEBUG - {*}-Starting method --> InsertIPExploits()
+2016-10-07 08:23:43,821 - Info Logger - DEBUG - Inserting many records
+2016-10-07 08:23:43,840 - Info Logger - DEBUG - Starting method --> launchConfiguration()Project id --> 238
+2016-10-07 08:23:43,850 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-07 08:28:44,624 - Info Logger - DEBUG - Started method LaunchExploits()
+2016-10-07 08:28:44,626 - Info Logger - DEBUG - Starting method --> GetIPExploits()
+2016-10-07 08:28:44,628 - Info Logger - DEBUG - Service,Host,port  is -->shell  45.33.32.156  514
+2016-10-07 08:28:44,630 - Info Logger - DEBUG - Command id --> shell_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 08:28:44,719 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-07 08:28:44,723 - Info Logger - DEBUG - Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-07 08:28:47,726 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-07 08:29:10,149 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Saving details :
+2016-10-07 08:29:10,254 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Details Updated successfully
+2016-10-07 08:29:10,457 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting General_interactive()
+2016-10-07 08:29:10,457 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Terminating Sniffing process
+2016-10-07 08:29:10,501 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting Start_sniffing() method
+2016-10-07 08:29:10,504 - Info Logger - DEBUG - Command id --> shell_1  Message --> :Exiting general_commands_tout_sniff()
+2016-10-07 08:29:10,504 - Info Logger - DEBUG - Service,Host,port  is -->http  45.33.32.156  80
+2016-10-07 08:29:10,504 - Info Logger - DEBUG - Command id --> http_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 08:29:10,504 - Info Logger - DEBUG - Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 08:29:10,507 - Info Logger - DEBUG - Command id --> http_1  Message --> :Thread started --with command nikto -h  45.33.32.156:80
+2016-10-07 09:09:10,508 - Info Logger - DEBUG - Command id --> http_1  Message --> :Terminating process
+2016-10-07 09:09:10,536 - Info Logger - DEBUG - Command id --> http_1  Message --> :Killing Process with id -->psutil.Process(pid=3412, name='nikto')
+2016-10-07 09:09:10,641 - Info Logger - DEBUG - Command id --> http_1  Message --> :Killed Process with id -->psutil.Process(pid=3412, name='nikto')
+2016-10-07 09:09:10,642 - Info Logger - DEBUG - Command id --> http_1  Message --> :Kill result is --> 137
+2016-10-07 09:09:10,642 - Info Logger - DEBUG - Command id --> http_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:09:10,643 - Info Logger - DEBUG - Command id --> http_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:09:10,676 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread started --with command hoppy -t 12 -h 45.33.32.156:80
+2016-10-07 09:09:10,751 - Info Logger - DEBUG - Command id --> http_2  Message --> :Saving details :
+2016-10-07 09:09:10,770 - Info Logger - DEBUG - Command id --> http_2  Message --> :Details Updated successfully
+2016-10-07 09:09:10,771 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread finished
+2016-10-07 09:13:03,237 - Info Logger - DEBUG - Command id --> http_2  Message --> :Saving details :
+2016-10-07 09:13:03,262 - Info Logger - DEBUG - Command id --> http_2  Message --> :Details Updated successfully
+2016-10-07 09:13:03,262 - Info Logger - DEBUG - Command id --> http_2  Message --> :Thread finished
+2016-10-07 09:13:03,292 - Info Logger - DEBUG - Command id --> http_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:13:03,292 - Info Logger - DEBUG - Command id --> http_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:13:03,293 - Info Logger - DEBUG - Command id --> http_3  Message --> :Thread started --with command  perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80
+2016-10-07 09:14:35,204 - Info Logger - DEBUG - Command id --> http_3  Message --> :Saving details :
+2016-10-07 09:14:35,213 - Info Logger - DEBUG - Command id --> http_3  Message --> :Details Updated successfully
+2016-10-07 09:14:35,213 - Info Logger - DEBUG - Command id --> http_3  Message --> :Thread finished
+2016-10-07 09:14:35,214 - Info Logger - DEBUG - Command id --> http_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:14:35,216 - Info Logger - DEBUG - Command id --> http_4  Message --> :Starting Special char-Interactive Session with command --> w3af_console and timeout 1200
+2016-10-07 09:14:40,783 - Info Logger - DEBUG - Command id --> http_4  Message --> :Results not as expected --> see aurguments 
+2016-10-07 09:14:40,783 - Info Logger - DEBUG - Command id --> http_4  Message --> :Saving details :
+2016-10-07 09:14:40,793 - Info Logger - DEBUG - Command id --> http_4  Message --> :Details Updated successfully
+2016-10-07 09:14:41,002 - Info Logger - DEBUG - Command id --> http_4  Message --> :Exiting general Interactive with special char()
+2016-10-07 09:14:41,003 - Info Logger - DEBUG - Command id --> http_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:14:41,003 - Info Logger - DEBUG - Command id --> http_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:14:41,005 - Info Logger - DEBUG - Command id --> http_5  Message --> :Thread started --with command nmap --script=banner.nse -p 80 45.33.32.156
+2016-10-07 09:14:45,074 - Info Logger - DEBUG - Command id --> http_5  Message --> :Saving details :
+2016-10-07 09:14:45,088 - Info Logger - DEBUG - Command id --> http_5  Message --> :Details Updated successfully
+2016-10-07 09:14:45,089 - Info Logger - DEBUG - Command id --> http_5  Message --> :Thread finished
+2016-10-07 09:14:45,117 - Info Logger - DEBUG - Command id --> http_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:14:45,118 - Info Logger - DEBUG - Command id --> http_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:14:45,120 - Info Logger - DEBUG - Command id --> http_6  Message --> :Thread started --with command nmap --script=http-trace.nse -p 80 45.33.32.156
+2016-10-07 09:14:48,523 - Info Logger - DEBUG - Command id --> http_6  Message --> :Saving details :
+2016-10-07 09:14:48,534 - Info Logger - DEBUG - Command id --> http_6  Message --> :Details Updated successfully
+2016-10-07 09:14:48,536 - Info Logger - DEBUG - Command id --> http_6  Message --> :Thread finished
+2016-10-07 09:14:48,585 - Info Logger - DEBUG - Command id --> http_7  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:14:48,586 - Info Logger - DEBUG - Command id --> http_7  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:14:48,587 - Info Logger - DEBUG - Command id --> http_7  Message --> :Thread started --with command nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156
+2016-10-07 09:14:52,600 - Info Logger - DEBUG - Command id --> http_7  Message --> :Saving details :
+2016-10-07 09:14:52,607 - Info Logger - DEBUG - Command id --> http_7  Message --> :Details Updated successfully
+2016-10-07 09:14:52,607 - Info Logger - DEBUG - Command id --> http_7  Message --> :Thread finished
+2016-10-07 09:14:52,650 - Info Logger - DEBUG - Service,Host,port  is -->ssh  45.33.32.156  22
+2016-10-07 09:14:52,650 - Info Logger - DEBUG - Command id --> ssh_1  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:14:52,650 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Inside command_meta
+2016-10-07 09:15:44,710 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Everything Fine till now-->Launching run command
+2016-10-07 09:20:09,750 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Module Execution completed
+2016-10-07 09:20:09,751 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Exiting  from msfconsole !!!
+2016-10-07 09:20:11,962 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Saving details :
+2016-10-07 09:20:11,980 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Details Updated successfully
+2016-10-07 09:20:11,980 - Info Logger - DEBUG - Command id --> ssh_1  Message --> :Exiting custom_meta !!
+2016-10-07 09:20:11,980 - Info Logger - DEBUG - Command id --> ssh_2  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:20:11,981 - Info Logger - DEBUG - Command id --> ssh_2  Message --> :Invoking Single line command -->Title-->java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+2016-10-07 09:20:14,590 - Info Logger - DEBUG - Command id --> ssh_2  Message --> :Saving details :
+2016-10-07 09:20:14,603 - Info Logger - DEBUG - Command id --> ssh_2  Message --> :Details Updated successfully
+2016-10-07 09:20:14,605 - Info Logger - DEBUG - Command id --> ssh_3  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:20:14,606 - Info Logger - DEBUG - Command id --> ssh_3  Message --> :Invoking Single line command -->Title-->nc -zvn 45.33.32.156 22
+2016-10-07 09:20:14,953 - Info Logger - DEBUG - Command id --> ssh_3  Message --> :Saving details :
+2016-10-07 09:20:14,966 - Info Logger - DEBUG - Command id --> ssh_3  Message --> :Details Updated successfully
+2016-10-07 09:20:14,967 - Info Logger - DEBUG - Command id --> ssh_4  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:20:14,969 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Starting ssh--INteractive
+2016-10-07 09:20:17,423 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Root is expecting a pssword--supplying default password
+2016-10-07 09:20:21,707 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Permission Denied at inception for root--Good 
+2016-10-07 09:20:22,120 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Saving details :
+2016-10-07 09:20:22,133 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Details Updated successfully
+2016-10-07 09:20:22,134 - Info Logger - DEBUG - Command id --> ssh_4  Message --> :Exiting method ssh interactive!!
+2016-10-07 09:20:22,134 - Info Logger - DEBUG - Command id --> ssh_5  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:20:22,136 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:20:22,140 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Thread started --with command nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156
+2016-10-07 09:20:25,782 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Saving details :
+2016-10-07 09:20:25,793 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Details Updated successfully
+2016-10-07 09:20:25,794 - Info Logger - DEBUG - Command id --> ssh_5  Message --> :Thread finished
+2016-10-07 09:20:25,802 - Info Logger - DEBUG - Command id --> ssh_6  Message --> : STARTING EXPLOITS  FOR PROJECT ID --> 238
+2016-10-07 09:20:25,802 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:20:25,803 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 22 45.33.32.156
+2016-10-07 09:20:29,254 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Saving details :
+2016-10-07 09:20:29,263 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Details Updated successfully
+2016-10-07 09:20:29,263 - Info Logger - DEBUG - Command id --> ssh_6  Message --> :Thread finished

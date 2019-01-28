@@ -1,0 +1,183 @@
+{"project_name":"test project"}
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"project_name":"launch_service_01","IP_range":"10.0.1.9,10.0.1.10,10.0.1.39","Port_range":"1-65500","switch":"1","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/scan/
+
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_name":"<script>alert(xss)</script>","IP_range":"10.0.1.39","Port_range":"1-65500","switch":"1","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/scan/
+
+
+
+project id --312
+
+
+stopping:
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"311","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000/stop/
+
+
+
+Resuming:
+
+curl -X Post -H 'Content-Type:application/json' -d '{"project_id":"311","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000/resume/
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","concurrent":false,"assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/stop_exploits/
+
+curl -X Post -H 'Contentc92-11e6-844d-080027f12676","project_id":"338","concurrent":false,"assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000/stop_conc/
+
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/stop_conc/
+
+
+
+
+
+
+
+
+With Curl the post request looks like the following :
+curl -X Post -H 'Content-Type:application/json' -d '{"project_name":"test"}'  http://127.0.0.1:8000/scan/
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"project_id":"312","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8002/resume/
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_name":"launch_concurrent","IP_range":"192.168.17.128","Port_range":"1-65500","switch":"1","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/scan/
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_name":"launch_concurrent_p_r","IP_range":"192.168.17.128","Port_range":"1-65500","switch":"1","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8001/scan_concurrent/
+
+curl -X Post -H 'Content-Type:application/json' -d '{"project_id":"312","assessment_id":"1","app_id":"1"}'  http://127.0.0.1:8000
+
+curl -X Post -H 'X-Api-Key:222' -H 'Content-Type:application/json' -d '{"project_id":"313","assessment_id":"1","app_id":"1","app_key":"2af82185-ac92-11e6-844d-080027f12676"}'  http://127.0.0.1:8001/stop/
+
+
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676"}'  http://127.0.0.1:8000/projects/
+
+
+Proper way of posting application/json data  (NOt required):
+curl -X Post -H 'Accept:applicacation/json' -d '{"json":{"project_id":"314","assessment_id":"1","app_id":"1","app_key":"2af82185-ac92-11e6-844d-080027f12676"}}'  http://127.0.0.1:8001/stop/
+
+
+
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/config/
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"410"}'  http://127.0.0.1:8000/polling/
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"410","record_list":[1,2,3,4,5]}' http://127.0.0.1:8000/polling/
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","record_list":[2667,2668,2665,2669]}' http://127.0.0.1:8001/polling/
+
+
+
+
+
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","concurrent":"0","data":[{"reconfig_exploit":false,"Commands":[{"include":true,"args":["300","rpcinfo -p  <host>"],"title":"NFS RPC Info --> rpcinfo <host>","id":"rpcbind_1","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -v -sR <host>"],"title":"rpc nmap check","id":"rpcbind_2","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sV --script=nfs-showmount.nse -p <port> <host>"],"title":"NFS export is enabled","id":"rpcbind_3","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sR -p <port> <host>"],"title":"Rpcbind Info gather cross check","id":"rpcbind_4","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sV --script=rpcinfo.nse -p <port> <host>"],"title":"Rpcbind Info gather","id":"rpcbind_5","method":"singleLineCommands_Timeout"}],"reconfig_service":false,"service":"rpcbind","project_status":"init","port":"111","host":"127.0.0.1","project_id":310,"id":2613},{"reconfig_exploit":true,"Commands":[{"include":"<","args":["workspace -a Metasploit_automation","set THREADS 1","workspace Metasploit_automation","use auxiliary/scanner/ssh/ssh_login","set RHOSTS <host>","set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt","set VERBOSE false"],"title":"Metasploit SSH auxillary","id":"ssh_1","method":"custom_meta"},{"include":true,"args":["1000","java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>"],"title":"SSH Cipher Check <ssh-cipher-check.jar> ","id":"ssh_2","method":"singleLineCommands_Timeout"},{"include":true,"args":["100","nc -zvn <host> 22"],"title":"NC  Check <nc -zvn >","id":"ssh_3","method":"singleLineCommands_Timeout"},{"include":true,"args":["ssh root@<host>"],"title":"SSH Root shell check","id":"ssh_4","method":"ssh_interactive"},{"include":true,"args":["60","nmap -sV --script=ssh2-enum-algos.nse -p <port> <host>"],"title":"Unsafe algorithms used by SSH","id":"ssh_5","method":"singleLineCommands_Timeout"},{"include":false,"args":["60","nmap -sV --script=banner.nse -p <port> <host>"],"title":"ssh banner","id":"ssh_6","method":"singleLineCommands_Timeout"}],"reconfig_service":false,"service":"ftp","project_status":"init","port":"80","host":"127.0.0.1","project_id":310,"id":2666}]}' http://127.0.0.1:8000/config/
+
+
+
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","concurrent":"1","project_id":310,"data":[{"reconfig_exploit":false,"Commands":[{"include":true,"args":["300","rpcinfo -p  <host>"],"title":"NFS RPC Info --> rpcinfo <host>","id":"rpcbind_1","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -v -sR <host>"],"title":"rpc nmap check","id":"rpcbind_2","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sV --script=nfs-showmount.nse -p <port> <host>"],"title":"NFS export is enabled","id":"rpcbind_3","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sR -p <port> <host>"],"title":"Rpcbind Info gather cross check","id":"rpcbind_4","method":"singleLineCommands_Timeout"},{"include":true,"args":["300","nmap -sV --script=rpcinfo.nse -p <port> <host>"],"title":"Rpcbind Info gather","id":"rpcbind_5","method":"singleLineCommands_Timeout"}],"reconfig_service":false,"service":"rpcbind","project_status":"init","port":"111","host":"127.0.0.1","project_id":310,"id":2665},{"reconfig_exploit":false,"Commands":[{"include":false,"args":["workspace -a Metasploit_automation","set THREADS 1","workspace Metasploit_automation","use auxiliary/scanner/ssh/ssh_login","set RHOSTS <host>","set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt","set VERBOSE false"],"title":"Metasploit SSH auxillary","id":"ssh_1","method":"custom_meta"},{"include":true,"args":["1000","java -cp Scripts/'ssh-cipher-check.jar' SSHCipherCheck <host> <port>"],"title":"SSH Cipher Check <ssh-cipher-check.jar> ","id":"ssh_2","method":"singleLineCommands_Timeout"},{"include":true,"args":["100","nc -zvn <host> 22"],"title":"NC  Check <nc -zvn >","id":"ssh_3","method":"singleLineCommands_Timeout"},{"include":true,"args":["ssh root@<host>"],"title":"SSH Root shell check","id":"ssh_4","method":"ssh_interactive"},{"include":true,"args":["60","nmap -sV --script=ssh2-enum-algos.nse -p <port> <host>"],"title":"Unsafe algorithms used by SSH","id":"ssh_5","method":"singleLineCommands_Timeout"},{"include":false,"args":["60","nmap -sV --script=banner.nse -p <port> <host>"],"title":"ssh banner","id":"ssh_6","method":"singleLineCommands_Timeout"}],"reconfig_service":true,"service":"ftp","project_status":"init","port":"80","host":"127.0.0.1","project_id":310,"id":2666}]}' http://127.0.0.1:8000/config/
+
+
+
+
+
+
+
+
+
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/config_overwrite/
+
+
+
+
+
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/launch_exploits/
+
+
+
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335"}'  http://127.0.0.1:8001/launch_exploits/
+
+curl -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310","record_list":[2665,2666]}'  http://127.0.0.1:8000/launch_exploits_concurrent/
+
+
+
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"410"}'  http://127.0.0.1:8000/polling/
+
+
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"410"}'  http://127.0.0.1:8000/polling_exploit/
+
+
+
+
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","record_list":[2665,2666]}' http://127.0.0.1:8001/polling_exploit/
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"335","record_list":[2665,2666]}' http://127.0.0.1:8001/polling_scanning/
+
+
+
+curl -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"246","report_format":"html"}' http://127.0.0.1:8000/mergeReports/
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"310"}'  http://127.0.0.1:8000/config_conc/
+
+
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"246"}'  http://127.0.0.1:8000/percentPolling/
+
+
+Upload :
+Upload Nmap
+curl -i -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=test" -F "filename=@tcp1.xml" http://127.0.0.1:8000/upload/
+
+Upload Nessus
+curl -i -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=246" -F "filename=@m.nessus" http://127.0.0.1:8000/uploadNessus/
+
+Upload Qualys
+curl -i -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "project_name=246" -F "filename=@metasploit.xml" http://127.0.0.1:8000/uploadQualys/
+
+
+Download Report Curl :
+curl -o test.zip -X Post -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"246","report_format":"html"}' http://127.0.0.1:8000/mergeReports/
+
+
+Upload and Download instant cve_exploit_mapping:
+
+curl -o testing.zip -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "source=nessus" -F "filename=@m.nessus" -F "report_format=html" http://127.0.0.1:8000/reportOnFly
+
+curl -o testing.zip -X Post -H 'Content-Type:multipart/form-data' -F "app_key=2af82185-ac92-11e6-844d-080027f12676" -F "source=nessus" -F "filename=@m.nessus" -F "report_format=html" http://127.0.0.1:8000/reportOnFly/
+
+
+Download All :
+curl -o output.zip -X POST -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"246"}'  http://127.0.0.1:8000/downloadAll/
+
+
+
+PercentPolling
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"338","source":"scan"}'  http://127.0.0.1:8000/percentPolling/ 
+
+
+
+CSRF-Token
+
+
+curl -v -X Post -H 'X-Api-Key:222' -H 'Content-Type:application/json' -H 'X-CSRFToken:YdhC7mMDV3xwykwJAH4ABAAVmaHUXx2YOh4aY0XVK0pAH0fERhrwl244ACy2Ss2C' -H 'Cookie:csrftoken=YdhC7mMDV3xwykwJAH4ABAAVmaHUXx2YOh4aY0XVK0pAH0fERhrwl244ACy2Ss2C' -d '{"project_id":"313","assessment_id":"1","app_id":"1","app_key":"2af82185-ac92-11e6-844d-080027f12676"}'  http://127.0.0.1:8001/stop/
+
+curl -v -X Post -H 'X-Api-Key:222' -H 'Content-Type:application/json' -H 'X-CSRFToken:WbGH8JlSOR1sPud944YktOZrJO0AmpEDs6Oj0jszl2kiZn7mPcAv2OPVtM3XPQ4p' -H 'Cookie:csrftoken=WbGH8JlSOR1sPud944YktOZrJO0AmpEDs6Oj0jszl2kiZn7mPcAv2OPVtM3XPQ4p' -d '{"project_id":"313","assessment_id":"1","app_id":"1","app_key":"2af82185-ac92-11e6-844d-080027f12676"}'  http://127.0.0.1:8001/stop/
+
+
+curl -v -X Post -H 'X-Api-Key:222' -H 'Content-Type:application/json' -H 'X-CSRFToken:1111111111111111111111111111111111111111111111111111111111111111' -H 'Cookie:csrftoken=1111111111111111111111111111111111111111111111111111111111111111' -d '{"project_id":"313","assessment_id":"1","app_id":"1","app_key":"2af82185-ac92-11e6-844d-080027f12676"}'  http://127.0.0.1:8001/stop/
+
+
+
+
+curl -X GET -H 'Content-Type:application/json' -d '{"app_key":"2af82185-ac92-11e6-844d-080027f12676","project_id":"338","source":"scan"}'  http://127.0.0.1:8008/ScanProfiles
+

@@ -1,0 +1,13 @@
+2012-11-19 get-dhcp-opts v0.8
+
+* Rogue DHCP Detection
+
+
+2012-11-16 get-dhcp-opts v0.7
+
+* If the field is't printable: now dump hex, formatstring, decimal and/or IP.
+
+
+2012-11-15 get-dhcp-opts v0.6
+
+* Initial release

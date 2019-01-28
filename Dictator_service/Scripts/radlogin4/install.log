@@ -1,0 +1,13 @@
+Mon Sep 19 03:35:34 2016 Directory /usr/lib32 created with mode 0700
+Mon Sep 19 03:35:34 2016 Directory //usr/local/iea created with mode 0700
+Mon Sep 19 03:35:34 2016 Directory //usr/local/radius created with mode 0700
+Mon Sep 19 03:35:34 2016 Copy lib/libstdc++-libc6.1-1.so.2 -> /usr/lib/libstdc++-libc6.1-1.so.2 (Linux compat library) [OK]
+Mon Sep 19 03:35:34 2016 Copy lib/libstdc++-libc6.1-1.so.2 -> /usr/lib32/libstdc++-libc6.1-1.so.2 (Linux compat library) [OK]
+Mon Sep 19 03:35:34 2016 Installation Completed Successfully.
+Mon Sep 19 03:41:59 2016 /usr/lib/libstdc++-libc6.1-1.so.2 already exists.  Skipping copy.
+Mon Sep 19 03:41:59 2016 /usr/lib32/libstdc++-libc6.1-1.so.2 already exists.  Skipping copy.
+Mon Sep 19 03:41:59 2016 Required file radlogin/radlogin (radlogin server) missing from archive.  Reinstall this distribution.
+Mon Sep 19 03:41:59 2016 Installation Aborted
+Mon Sep 19 03:42:23 2016 /usr/lib/libstdc++-libc6.1-1.so.2 already exists.  Skipping copy.
+Mon Sep 19 03:42:23 2016 /usr/lib32/libstdc++-libc6.1-1.so.2 already exists.  Skipping copy.
+Mon Sep 19 03:42:23 2016 Installation Completed Successfully.

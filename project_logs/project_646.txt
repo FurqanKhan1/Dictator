@@ -1,0 +1,96 @@
+[3;J[H[2JInside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('192.168.182.132', 'project_profile', '1-100', '1', '-T4 -A -v -Pn -n', '646', 'g-start', '928ef046-361f-11e7-aeb0-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(192.168.182.132', 'project_profile', '1-100', '1', '-T4 -A -v -Pn -n', '646', 'g-start', '928ef046-361f-11e7-aeb0-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start and profile at main : 0
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in elif(1)
+Started
+ended
+Ended
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 140362158626928)>]
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['192.168.182.132']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 140362158626928)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+Started Simple acanner
+Started
+
+Started thread for IP :192.168.182.132 --> Thread is : <Thread(Thread-1, started daemon 140362046908160)>
+Ended
+Reached port scanner module with record id --> 2501
+Starting the scan with the switch :-T4 -A -v -Pn -n
+Reached Debug 1
+Reached Debug 2
+Up host status is :1
+Reached Debug 3
+Reached Debug 8
+
+
+ Finished subprocess for ip 192.168.182.132 and Process : <Process(Process-1, stopped)>
+Ended Simple acanner
+
+
+Thread ended with host ip -192.168.182.132
+
+
+**Pooling started :**
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 140362158626928)>, <_DummyThread(Dummy-2, started daemon 140362215655168)>]
+
+[31m----------------------------------------------[0m
+None
+Obtained dummy thread <_DummyThread(Dummy-2, started daemon 140362215655168)>
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140362158626928)>, <_DummyThread(Dummy-2, started daemon 140362215655168)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 140362158626928)>, <_DummyThread(Dummy-2, started daemon 140362215655168)>]
+Reached here as well !!!
+# of threads Alive are :2
+
+Now stopping and saving Global Project Id : 646
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 119.685853004

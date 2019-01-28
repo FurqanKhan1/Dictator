@@ -1,0 +1,24 @@
+# http methods file to keep trying ntml auth to test for loadbalancers
+
+
+
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n
+NTLM, X, GET (location)(file) HTTP/1.1\nHost: (host):(port)\nAuthorization: Negotiate TlRMTVNTUAABAAAAB4IAoAAAAAAAAAAAAAAAAAAAAAA=\n\n

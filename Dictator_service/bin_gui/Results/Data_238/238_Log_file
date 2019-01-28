@@ -1,0 +1,1675 @@
+2016-10-06 09:14:13,673 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-06 09:14:13,673 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-06 09:14:13,674 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :sniffing command is --> tshark -i eth0 -a duration:100 -w Results/Data_238/238_45.33.32.156_514_capture-output.pcap
+2016-10-06 09:14:16,677 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-06 09:14:16,884 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 09:14:16,923 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', u'4', '5', '6']
+2016-10-06 09:15:49,232 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-06 09:15:49,234 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-06 09:15:49,235 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :sniffing command is --> tshark -i eth0 -a duration:100 -w Results/Data_238/238_45.33.32.156_514_capture-output.pcap
+2016-10-06 09:15:52,236 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-06 09:15:52,368 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 09:15:52,417 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', u'4', '5', '6']
+2016-10-06 09:15:56,445 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :
+After :  j is 4
+2016-10-06 09:15:56,547 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  yes
+2016-10-06 09:15:58,550 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 09:15:58,551 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', '4', '5']
+2016-10-06 09:16:02,682 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :dummyuser@45.33.32.156's password: 
+Permission denied
+After : , j is 1
+2016-10-06 09:16:02,784 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  dummyuserpass
+2016-10-06 09:16:04,787 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 09:16:04,787 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', '4', '5']
+2016-10-06 09:18:08,880 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before : please try again.
+dummyuser@45.33.32.156's password: 
+Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+After : <class 'pexpect.TIMEOUT'> j is 4
+2016-10-06 09:18:08,982 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  root
+2016-10-06 09:18:10,986 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 09:18:10,986 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', '4', '5']
+2016-10-06 09:18:14,990 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before : please try again.
+dummyuser@45.33.32.156's password: 
+Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+Connection closed by 45.33.32.156
+
+After : <class 'pexpect.EOF'> j is 5
+2016-10-06 09:18:14,990 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Saving details :
+2016-10-06 09:18:15,122 - Commands Logger - DEBUG - Command id is ->shell_1
+2016-10-06 09:18:15,122 - Commands Logger - DEBUG - commands are : [u'rsh -l dummyuser 45.33.32.156\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", '\nThe index of item that console produced is :4\n\n\n:\n\n', u'yes\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :1\n\ndummyuser@45.33.32.156's password: \r\nPermission denied\n:,\n\n", u'dummyuserpass\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :4\n\n please try again.\r\r\ndummyuser@45.33.32.156's password: \r\nPermission denied, please try again.\r\r\ndummyuser@45.33.32.156's password: \n:Time out\n\n", u'root\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :5\n\n please try again.\r\r\ndummyuser@45.33.32.156's password: \r\nPermission denied, please try again.\r\r\ndummyuser@45.33.32.156's password: \r\nConnection closed by 45.33.32.156\r\r\n\n:Console Ended\n\n"]
+2016-10-06 09:18:15,123 - Commands Logger - DEBUG - My var : '$.Entries."shell_1"'
+2016-10-06 09:18:15,123 - Commands Logger - DEBUG - Result --> : Command Executed :rsh -l dummyuser 45.33.32.156
+
+
+Output
+
+The index of item that console produced is :5
+
+ please try again.
+dummyuser@45.33.32.156's password: 
+Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+Connection closed by 45.33.32.156
+
+:Console Ended
+
+
+2016-10-06 09:18:15,324 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 09:18:15,325 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :  please try again.
+dummyuser@45.33.32.156's password: 
+Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+Connection closed by 45.33.32.156
+After : <class 'pexpect.EOF'>
+2016-10-06 09:18:15,325 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Closing Child now !!
+2016-10-06 09:18:15,527 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 09:18:15,529 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Thread started --with command nikto -h  45.33.32.156:80
+2016-10-06 17:44:32,053 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-06 17:44:32,092 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-06 17:44:32,097 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :sniffing command is --> tshark -i eth0 -a duration:100 -w Results/Data_238/238_45.33.32.156_514_capture-output.pcap
+2016-10-06 17:44:35,099 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-06 17:44:35,490 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 17:44:35,514 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', u'4', '5', '6']
+2016-10-06 17:44:39,626 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :
+After :  j is 4
+2016-10-06 17:44:39,739 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  yes
+2016-10-06 17:44:41,742 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 17:44:41,742 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', '4', '5']
+2016-10-06 17:46:45,862 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :yes
+dummyuser@45.33.32.156's password: 
+After : <class 'pexpect.TIMEOUT'> j is 4
+2016-10-06 17:46:45,988 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  dummyuserpass
+2016-10-06 17:46:47,990 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 17:46:47,990 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', '4', '5']
+2016-10-06 17:46:51,996 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :yes
+dummyuser@45.33.32.156's password: 
+Connection closed by 45.33.32.156
+
+After : <class 'pexpect.EOF'> j is 5
+2016-10-06 17:46:52,174 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  root
+2016-10-06 17:46:54,177 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 17:46:54,178 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', '4', '5']
+2016-10-06 17:46:58,232 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :root
+
+After : <class 'pexpect.EOF'> j is 5
+2016-10-06 17:46:58,232 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Saving details :
+2016-10-06 17:46:59,422 - Commands Logger - DEBUG - Command id is ->shell_1
+2016-10-06 17:46:59,422 - Commands Logger - DEBUG - commands are : [u'rsh -l dummyuser 45.33.32.156\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", '\nThe index of item that console produced is :4\n\n\n:\n\n', u'yes\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :4\n\nyes\r\ndummyuser@45.33.32.156's password: \n:Time out\n\n", u'dummyuserpass\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :5\n\nyes\r\ndummyuser@45.33.32.156's password: \r\nConnection closed by 45.33.32.156\r\r\n\n:Console Ended\n\n", u'root\n', "\nThe console would produce a pattern similar to following :\n [u'.*Password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", '\nThe index of item that console produced is :5\n\nroot\r\n\n:Console Ended\n\n']
+2016-10-06 17:46:59,422 - Commands Logger - DEBUG - My var : '$.Entries."shell_1"'
+2016-10-06 17:46:59,422 - Commands Logger - DEBUG - Result --> : Command Executed :rsh -l dummyuser 45.33.32.156
+
+
+Output
+
+The index of item that console produced is :5
+
+root
+
+:Console Ended
+
+
+2016-10-06 17:47:00,220 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 17:47:00,221 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before : root
+After : <class 'pexpect.EOF'>
+2016-10-06 17:47:00,221 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Closing Child now !!
+2016-10-06 17:47:00,442 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 17:47:00,446 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Thread started --with command nikto -h  45.33.32.156:80
+2016-10-06 18:27:00,511 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Terminating process
+2016-10-06 18:27:02,462 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Saving details :
+2016-10-06 18:27:02,666 - Commands Logger - DEBUG - Command id is ->http_1
+2016-10-06 18:27:02,667 - Commands Logger - DEBUG - commands are : [u'nikto -h  45.33.32.156:80', 'End']
+2016-10-06 18:27:02,667 - Commands Logger - DEBUG - My var : '$.Entries."http_1"'
+2016-10-06 18:27:02,667 - Commands Logger - DEBUG - Result --> : Command Executed :nikto -h  45.33.32.156:80
+
+Result- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          45.33.32.156
++ Target Hostname:    45.33.32.156
++ Target Port:        80
++ Start Time:         2016-10-06 17:47:13 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html
++ Apache/2.4.7 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.
++ Allowed HTTP Methods: OPTIONS, GET, HEAD, POST 
++ OSVDB-3268: /images/: Directory indexing found.
++ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
++ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
++ OSVDB-3233: /icons/README: Apache default file found.
+
+
+
+2016-10-06 18:27:03,032 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:27:03,033 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Thread finished
+2016-10-06 18:27:03,033 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Kill result is --> -9
+2016-10-06 18:27:03,062 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:27:03,075 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Thread started --with command hoppy -t 12 -h 45.33.32.156:80
+2016-10-06 18:30:35,726 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Saving details :
+2016-10-06 18:30:35,858 - Commands Logger - DEBUG - Command id is ->http_2
+2016-10-06 18:30:35,859 - Commands Logger - DEBUG - commands are : [u'hoppy -t 12 -h 45.33.32.156:80', 'End']
+2016-10-06 18:30:35,859 - Commands Logger - DEBUG - My var : '$.Entries."http_2"'
+2016-10-06 18:30:35,859 - Commands Logger - DEBUG - Result --> : Command Executed :hoppy -t 12 -h 45.33.32.156:80
+
+Result
+[+] hoppy 1.8.1 run @ Thu Oct  6 18:27:04 2016:
+
+	[+] hoppy -t 12 -h 45.33.32.156:80
+
+[+] Configuring Test Environment
+
+	[+] Setup complete :-)
+
+[+] Initialising Connection
+
+	[+] Test host 45.33.32.156 resolves to 45.33.32.156
+
+	[+] Testing Connection to 45.33.32.156:80  - OK Data Recieved
+
+[+] Beginning spider with '/' and '/images/dummy.txt' as start points:
+
+		/shared/ 
+		/shared/images/ 
+		/shared/css/ 
+		/images/ 
+		//g.adspeed.net/ 
+		//nmap.org/ 
+		//nmap.org/book/ 
+		/nmap-announce/ 
+		/nmap-dev/ 
+		/bugtraq/ 
+		/fulldisclosure/ 
+		/pen-test/ 
+		/basics/ 
+		/tag/ 
+		/tag/pass-audit/ 
+		/tag/sniffers/ 
+		/tag/vuln-scanners/ 
+		/tag/web-scanners/ 
+		/tag/wireless/ 
+		/tag/sploits/ 
+		/tag/packet-crafters/ 
+		/fyodor/ 
+		/free-network-vulnerability-scan/ 
+		/shared/images/Acunetix/ 
+		/lp/ 
+		/lp/campaigns/ 
+		/lp/campaigns/nessus-manager/ 
+		/shared/images/tenable/ 
+		/// 
+		/netsparker-web-application-security-scanner/ 
+		/netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner/ 
+		/shared/images/netsparker/ 
+		/icons/ 
+		/shared/error/ 
+		/shared/templates/ 
+		/shared/error/includes/ 
+		/zenmap/ 
+		/zenmap/images/ 
+
+	[+] Spider Completed :-) 
+
+	[+] Found 38 directories for testing
+
+[+] Testing http://45.33.32.156:80 [45.33.32.156] with /images/dummy.txt as webDAV location
+
+	[+] ............................................................................................................................................................................................................................................................................................................................................!!!.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+	[+] Done :-)
+
+[+] Summary of Findings
+
+	[+] Method Responses:
+
+		Copy                      -	 HTTP/1.1 405 Method Not Allowed
+		Debug                     -	 HTTP/1.1 501 Not Implemented
+		Delete /images/dummy.txt.put -	 HTTP/1.1 405 Method Not Allowed
+		Digest Auth               -	 HTTP/1.1 200 OK
+		Expect Header XSS         -	 HTTP/1.1 417 Expectation Failed
+		IIS Cookie Test           -	 HTTP/1.1 200 OK
+		Invalid Method            -	 HTTP/1.1 501 Not Implemented
+		Lock                      -	 HTTP/1.1 405 Method Not Allowed
+		Move                      -	 HTTP/1.1 405 Method Not Allowed
+		MultiViews Check          -	 HTTP/1.1 406 Not Acceptable
+		NTLM Auth                 -	 HTTP/1.1 200 OK
+		Options                   -	 HTTP/1.1 200 OK
+		Propfind /                -	 HTTP/1.1 405 Method Not Allowed
+		Propfind /images/         -	 HTTP/1.1 405 Method Not Allowed
+		Propfind /images/dummy.txt -	 HTTP/1.1 405 Method Not Allowed
+		Propfind                  -	 HTTP/1.1 405 Method Not Allowed
+		Proppatch /images/        -	 HTTP/1.1 405 Method Not Allowed
+		Proppatch /images/dummy.txt -	 HTTP/1.1 405 Method Not Allowed
+		Proxy Connect             -	 HTTP/1.1 405 Method Not Allowed
+		Proxy                     -	 HTTP/1.1 200 OK
+		Put /images/dummy.txt.put -	 HTTP/1.1 405 Method Not Allowed
+		Trace                     -	 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+		Trace                     -	 HTTP/1.1 405 Method Not Allowed
+		Track                     -	 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+		Track                     -	 HTTP/1.1 501 Not Implemented
+		mkcol                     -	 HTTP/1.1 405 Method Not Allowed
+		unLock                    -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //%c0%afg.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //%c0%afnmap.org -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //%c0%afnmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //              -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //g.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //nmap.org      -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //nmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /b%c0%afasics   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /b%c0%afugtraq  -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /basics         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /bugtraq        -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /f%c0%afree-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /f%c0%afulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /f%c0%afyodor   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /free-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /fulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /fyodor         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /i%c0%afcons    -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /i%c0%afmages   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /icons          -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /images         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /l%c0%afp       -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /l%c0%afp/campaigns -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /l%c0%afp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /lp             -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /lp/campaigns   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /lp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afetsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afetsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afmap-announce -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afmap-dev -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /netsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /nmap-announce  -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /nmap-dev       -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /p%c0%afen-test -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /pen-test       -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/css -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/error -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/css     -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/error   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images  -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag      -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/sniffers -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/sploits -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/wireless -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag            -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/sniffers   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/sploits    -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/wireless   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /z%c0%afenmap   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /z%c0%afenmap/images -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /zenmap         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /zenmap/images  -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //%c0%afg.adspeed.net/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //%c0%afnmap.org/book/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //%c0%afnmap.org/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on ///dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //g.adspeed.net/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //nmap.org/book/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //nmap.org/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /b%c0%afasics/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /b%c0%afugtraq/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /basics/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /bugtraq/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /f%c0%afree-network-vulnerability-scan/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /f%c0%afulldisclosure/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /f%c0%afyodor/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /free-network-vulnerability-scan/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /fulldisclosure/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /fyodor/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /i%c0%afcons/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /i%c0%afmages/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /icons/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /l%c0%afp/campaigns/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /l%c0%afp/campaigns/nessus-manager/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /l%c0%afp/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /lp/campaigns/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /lp/campaigns/nessus-manager/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /lp/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afetsparker-web-application-security-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afetsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afmap-announce/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afmap-dev/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /netsparker-web-application-security-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /nmap-announce/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /nmap-dev/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /p%c0%afen-test/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /pen-test/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/css/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/error/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/error/includes/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/Acunetix/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/netsparker/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/tenable/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/templates/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/css/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/error/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/error/includes/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/Acunetix/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/netsparker/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/tenable/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/templates/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/packet-crafters/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/pass-audit/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/sniffers/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/sploits/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/vuln-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/web-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/wireless/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/packet-crafters/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/pass-audit/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/sniffers/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/sploits/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/vuln-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/web-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/wireless/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /z%c0%afenmap/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /z%c0%afenmap/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /zenmap/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /zenmap/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //%c0%afg.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //%c0%afnmap.org -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //%c0%afnmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //           -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //g.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //nmap.org   -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //nmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /b%c0%afasics -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /b%c0%afugtraq -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /basics      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /bugtraq     -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /f%c0%afree-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /f%c0%afulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /f%c0%afyodor -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /free-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /fulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /fyodor      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /i%c0%afcons -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /i%c0%afmages -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /icons       -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /images      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /l%c0%afp    -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /l%c0%afp/campaigns -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /l%c0%afp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /lp          -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /lp/campaigns -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /lp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afetsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afetsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afmap-announce -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afmap-dev -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /netsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /nmap-announce -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /nmap-dev    -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /p%c0%afen-test -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /pen-test    -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/css -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/error -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/css  -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/error -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag   -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/sniffers -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/sploits -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/wireless -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag         -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/sniffers -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/sploits -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/wireless -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /z%c0%afenmap -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /z%c0%afenmap/images -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /zenmap      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /zenmap/images -	 HTTP/1.1 405 Method Not Allowed
+
+	[+] Information Leakage:
+
+		[32mAllow[0;0m:
+		[32mAllow[0;0m: OPTIONS,GET,HEAD,POST
+		[32mAlternates:[0;0m {"index.html" 1 {type text/html}}
+		[32mLocation:[0;0m http:///images/
+		[32mLocation:[0;0m http:///shared/
+		[32mLocation:[0;0m http:///shared/css/
+		[32mLocation:[0;0m http:///shared/error/
+		[32mLocation:[0;0m http:///shared/error/includes/
+		[32mLocation:[0;0m http:///shared/images/
+		[32mLocation:[0;0m http:///shared/images/Acunetix/
+		[32mLocation:[0;0m http:///shared/images/netsparker/
+		[32mLocation:[0;0m http:///shared/images/tenable/
+		[32mLocation:[0;0m http:///shared/templates/
+		[32mLocation:[0;0m http://hophost/images/
+		[32mLocation:[0;0m http://scanme.nmap.org/images/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/css/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/error/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/error/includes/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/Acunetix/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/netsparker/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/tenable/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/templates/
+		[32mServer:[0;0m Apache/2.4.7 (Ubuntu)
+		[32mVary[0;0m: Accept-Encoding
+		[32mVary[0;0m: negotiate
+		'//www.[32mgoogle[0;0m.com/cse/cse.js?cx=' + cx;
+		(function(i,s,o,g,r,a,m){i['[32mGoogle[0;0mAnalyticsObject']=r;i[r]=i[r]||function(){
+		<!--[32mGoogle[0;0m Analytics Code-->
+		<!--[32mGoogle[0;0m Custom Site Search boilerplate Javascript-->
+		<!-- End SiteSearch [32mGoogle[0;0m -->
+		<!-- SiteSearch [32mGoogle[0;0m -->
+		<!--END [32mGoogle[0;0m Analytics Code-->
+		<!--End [32mGoogle[0;0m Custom Site Search boilerplate Javascript-->
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at  Port 80</address>
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at hophost Port 80</address>
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at scanme.nmap.org Port 80</address>
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at www.google.com Port 443</address>
+		<address>Apache/2.4.7 (Ubuntu) Server at www.[32mgoogle[0;0m.com Port 443</address>
+		<li><a href="http://sectools.org/tag/pass-audit/">[32mPassword[0;0m audit</a></li>
+		Server: [32mApache[0;0m/2.4.7 (Ubuntu)
+		an 100 times a day or use this site to test your ssh brute-force [32mpassword[0;0m cracking tool.
+		})(window,document,'script','//www.[32mgoogle[0;0m-analytics.com/analytics.js','ga');
+
+	[+] IP Leakage:
+
+		Location: http://[31m45.33.32.156[0;0m/images/
+		<p>The document has moved <a href="http://[31m45.33.32.156[0;0m/images/">here</a>.</p>
+		<address>Apache/2.4.7 (Ubuntu) Server at [31m45.33.32.156[0;0m Port 80</address>
+
+
+	[+] 1066 check(s) failed to return data, try incrreasing the socket timeout (-t) and re-run with the -4 switch for more information
+
+
+
+
+2016-10-06 18:30:36,212 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:30:36,212 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Thread finished
+2016-10-06 18:30:36,219 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:30:36,220 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :Thread started --with command  perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80
+2016-10-06 18:32:08,429 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :Saving details :
+2016-10-06 18:32:08,455 - Commands Logger - DEBUG - Command id is ->http_3
+2016-10-06 18:32:08,456 - Commands Logger - DEBUG - commands are : [u' perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80', 'End']
+2016-10-06 18:32:08,456 - Commands Logger - DEBUG - My var : '$.Entries."http_3"'
+2016-10-06 18:32:08,456 - Commands Logger - DEBUG - Result --> : Command Executed : perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80
+
+ResultStarting http-dir-enum v0.4.3 ( http://labs.portcullis.co.uk/application/http-dir-enum/ )
+Copyright (C) 2006 Mark Lowe ( mrl@portcullis-security.com )
+
+ ----------------------------------------------------------
+|                   Scan Information                       |
+ ----------------------------------------------------------
+
+URL .................... http://45.33.32.156:80
+Processes .............. 8
+Directory name file .... http-dir-enum/directory-names.txt
+Query timeout .......... 20 secs
+HTTP Method ............ HEAD
+Max Queries / sec ...... unlimited
+Trailing slash ......... On
+Recursive dir search ... On
+Close connections ...... Off
+Follow redirects ....... Off
+Case sensistive dirs ... On
+Auto-ignore ............ On
+
+######## Scan started on Thu Oct  6 18:30:37 2016 #########
+[I] Processing directory: / (0 dirs remaining)
+[I] Auto-ignoring HTTP code 404 for http://45.33.32.156:80
+icons	403
+images	200
+[I] Processing directory: icons (1 dirs remaining)
+[I] Auto-ignoring HTTP code 404 for http://45.33.32.156:80/icons
+[I] Processing directory: images (0 dirs remaining)
+[I] Auto-ignoring HTTP code 404 for http://45.33.32.156:80/images
+######## Scan completed on Thu Oct  6 18:32:08 2016 #########
+2 results.
+
+2118 queries in 91 seconds (23 queries / sec)
+
+
+
+2016-10-06 18:32:08,633 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:32:08,634 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :Thread finished
+2016-10-06 18:32:08,686 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Starting Special char-Interactive Session with command --> w3af_console and timeout 1200
+2016-10-06 18:32:08,759 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Arg list is --> [u'.*w3af>>> ', u'[$,#]', u'.*Usage of w3af for sending any traffic.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-06 18:32:08,760 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :check list is --> [u'0', u'2', '3', '4']
+2016-10-06 18:32:18,164 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Results not as expected --> see aurguments 1
+It seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html
+Traceback (most recent call last):
+  File "/usr/bin/w3af_console"  ,
+2016-10-06 18:32:18,165 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Saving details :
+2016-10-06 18:32:18,276 - Commands Logger - DEBUG - Command id is ->http_4
+2016-10-06 18:32:18,276 - Commands Logger - DEBUG - commands are : [u'w3af_console\n', "[u'.*w3af>>> ', u'[$,#]', u'.*Usage of w3af for sending any traffic.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]", '\nIt seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html\r\nTraceback (most recent call last):\r\n  File "/usr/bin/w3af_console"\n,']
+2016-10-06 18:32:18,276 - Commands Logger - DEBUG - My var : '$.Entries."http_4"'
+2016-10-06 18:32:18,276 - Commands Logger - DEBUG - Result --> : Command Executed :w3af_console
+
+
+Result:
+
+It seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html
+Traceback (most recent call last):
+  File "/usr/bin/w3af_console"
+,
+2016-10-06 18:32:18,443 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:32:18,443 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Before : It seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html
+Traceback (most recent call last):
+  File "/usr/bin/w3af_console"After : ,
+2016-10-06 18:32:18,444 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Closing Child now !!
+2016-10-06 18:32:18,648 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:32:18,649 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :Thread started --with command nmap --script=banner.nse -p 80 45.33.32.156
+2016-10-06 18:32:20,490 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :Saving details :
+2016-10-06 18:32:20,517 - Commands Logger - DEBUG - Command id is ->http_5
+2016-10-06 18:32:20,518 - Commands Logger - DEBUG - commands are : [u'nmap --script=banner.nse -p 80 45.33.32.156', 'End']
+2016-10-06 18:32:20,518 - Commands Logger - DEBUG - My var : '$.Entries."http_5"'
+2016-10-06 18:32:20,518 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=banner.nse -p 80 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-06 18:32 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.033s latency).
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap done: 1 IP address (1 host up) scanned in 1.64 seconds
+
+
+
+2016-10-06 18:32:20,682 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:32:20,683 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :Thread finished
+2016-10-06 18:32:20,707 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:32:20,709 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :Thread started --with command nmap --script=http-trace.nse -p 80 45.33.32.156
+2016-10-06 18:32:21,697 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :Saving details :
+2016-10-06 18:32:21,712 - Commands Logger - DEBUG - Command id is ->http_6
+2016-10-06 18:32:21,712 - Commands Logger - DEBUG - commands are : [u'nmap --script=http-trace.nse -p 80 45.33.32.156', 'End']
+2016-10-06 18:32:21,712 - Commands Logger - DEBUG - My var : '$.Entries."http_6"'
+2016-10-06 18:32:21,713 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=http-trace.nse -p 80 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-06 18:32 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00052s latency).
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.95 seconds
+
+
+
+2016-10-06 18:32:21,904 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:32:21,905 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :Thread finished
+2016-10-06 18:32:21,955 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:32:21,956 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :Thread started --with command nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156
+2016-10-06 18:32:24,284 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :Saving details :
+2016-10-06 18:32:24,308 - Commands Logger - DEBUG - Command id is ->http_7
+2016-10-06 18:32:24,308 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156', 'End']
+2016-10-06 18:32:24,308 - Commands Logger - DEBUG - My var : '$.Entries."http_7"'
+2016-10-06 18:32:24,308 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-06 18:32 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.0010s latency).
+PORT   STATE    SERVICE VERSION
+80/tcp filtered http
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.31 seconds
+
+
+
+2016-10-06 18:32:24,348 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:32:24,349 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :Thread finished
+2016-10-06 18:32:24,398 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Inside command_meta
+2016-10-06 18:33:02,505 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :[4mmsf[0m [0m> 
+2016-10-06 18:33:02,505 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :0
+2016-10-06 18:33:05,689 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :workspace -a Metasploit_automation
+[0m[1m[34m[*][0m Added workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-06 18:33:08,916 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set THREADS 1
+[0mTHREADS => 1
+[4mmsf[0m [0m> 
+2016-10-06 18:33:12,026 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :workspace Metasploit_automation
+[0m[1m[34m[*][0m Workspace: Metasploit_automation
+[4mmsf[0m [0m> 
+2016-10-06 18:33:15,134 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :use auxiliary/scanner/ssh/ssh_login
+[0m[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-06 18:33:18,239 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set RHOSTS 45.33.32.156
+[0mRHOSTS => 45.33.32.156
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-06 18:33:21,355 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set USERPASS_FILE /usr/share/metasploit-framework/dat a/wordlists/root_userpass.txt
+[0mUSERPASS_FILE => /usr/share/metasploit-framework/data/wordlists/root_userpass.txt
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-06 18:33:24,467 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set VERBOSE false
+[0mVERBOSE => false
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-06 18:33:24,467 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Everything Fine till now-->Launching run command
+
+
+2016-10-06 18:37:36,884 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Module Execution completed
+
+
+2016-10-06 18:37:36,886 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Before : 
+After : 
+run
+[0m
+[1m[34m[*][0m 45.33.32.156:22 SSH - Starting bruteforce
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-06 18:37:36,886 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Now exiting !!!
+
+
+2016-10-06 18:37:36,918 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+Exiting  from msfconsole !!!
+
+2016-10-06 18:37:39,040 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Exited from msfconsole !!!
+2016-10-06 18:37:39,041 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Before : 
+exit
+[0mAfter : 
+<class 'pexpect.EOF'>
+2016-10-06 18:37:39,041 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Closing the child pipe !!!
+2016-10-06 18:37:39,143 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Saving details :
+2016-10-06 18:37:39,277 - Commands Logger - DEBUG - Command id is ->ssh_1
+2016-10-06 18:37:39,277 - Commands Logger - DEBUG - commands are : ['>msfconsole', '\x1b[4mmsf\x1b[0m \x1b[0m> ', u'workspace -a Metasploit_automation\n', 'workspace -a Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Added workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'set THREADS 1\n', 'set THREADS 1\r\r\n\x1b[0mTHREADS => 1\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'workspace Metasploit_automation\n', 'workspace Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[34m[*]\x1b[0m Workspace: Metasploit_automation\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'use auxiliary/scanner/ssh/ssh_login\n', 'use auxiliary/scanner/ssh/ssh_login\r\r\n\x1b[0m\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set RHOSTS 45.33.32.156\n', 'set RHOSTS 45.33.32.156\r\r\n\x1b[0mRHOSTS => 45.33.32.156\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\n', 'set USERPASS_FILE /usr/share/metasploit-framework/dat \ra/wordlists/root_userpass.txt\r\r\n\x1b[0mUSERPASS_FILE => /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set VERBOSE false\n', 'set VERBOSE false\r\r\n\x1b[0mVERBOSE => false\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', '>run', 'run\r\r\n\x1b[0m\r\n\x1b[1m\x1b[34m[*]\x1b[0m 45.33.32.156:22 SSH - Starting bruteforce\r\n\x1b[1m\x1b[34m[*]\x1b[0m Scanned 1 of 1 hosts (100% complete)\r\n\x1b[1m\x1b[34m[*]\x1b[0m Auxiliary module execution completed\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n']
+2016-10-06 18:37:39,278 - Commands Logger - DEBUG - My var : '$.Entries."ssh_1"'
+2016-10-06 18:37:39,278 - Commands Logger - DEBUG - Result --> : 
+Command Executed :>msfconsole
+Result :
+run
+[0m
+[1m[34m[*][0m 45.33.32.156:22 SSH - Starting bruteforce
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-06 18:37:39,469 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:37:39,471 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :
+Invoking Single line command -->Title-->java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+
+2016-10-06 18:37:48,021 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :Saving details :
+2016-10-06 18:37:48,053 - Commands Logger - DEBUG - Command id is ->ssh_2
+2016-10-06 18:37:48,054 - Commands Logger - DEBUG - commands are : [u"java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22\n", 'SSH Version: 2.0\nSSH Library: OpenSSH_6.6.1p1 Ubuntu\n\nException in thread "main" java.lang.ArrayIndexOutOfBoundsException\n\tat java.lang.System.arraycopy(Native Method)\n\tat ServerKeyExchangeInit.setPayload(ServerKeyExchangeInit.java:74)\n\tat ServerKeyExchangeInit.<init>(ServerKeyExchangeInit.java:20)\n\tat SSHCipherCheck.main(SSHCipherCheck.java:45)']
+2016-10-06 18:37:48,054 - Commands Logger - DEBUG - My var : '$.Entries."ssh_2"'
+2016-10-06 18:37:48,054 - Commands Logger - DEBUG - Result --> : Command Executed :java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+
+
+Result
+SSH Version: 2.0
+SSH Library: OpenSSH_6.6.1p1 Ubuntu
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException
+	at java.lang.System.arraycopy(Native Method)
+	at ServerKeyExchangeInit.setPayload(ServerKeyExchangeInit.java:74)
+	at ServerKeyExchangeInit.<init>(ServerKeyExchangeInit.java:20)
+	at SSHCipherCheck.main(SSHCipherCheck.java:45)
+2016-10-06 18:37:48,168 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:37:48,169 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :SSH Version: 2.0
+SSH Library: OpenSSH_6.6.1p1 Ubuntu
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException
+	at java.lang.System.arraycopy(Native Method)
+	at ServerKeyExchangeInit.setPayload(ServerKeyExchangeInit.java:74)
+	at ServerKeyExchangeInit.<init>(ServerKeyExchangeInit.java:20)
+	at SSHCipherCheck.main(SSHCipherCheck.java:45)
+2016-10-06 18:37:48,169 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :
+Exiting Single line command -->Title-->java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+
+2016-10-06 18:37:48,171 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :
+Invoking Single line command -->Title-->nc -zvn 45.33.32.156 22
+
+2016-10-06 18:37:48,536 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :Saving details :
+2016-10-06 18:37:48,557 - Commands Logger - DEBUG - Command id is ->ssh_3
+2016-10-06 18:37:48,558 - Commands Logger - DEBUG - commands are : [u'nc -zvn 45.33.32.156 22\n', '(UNKNOWN) [45.33.32.156] 22 (ssh) open']
+2016-10-06 18:37:48,558 - Commands Logger - DEBUG - My var : '$.Entries."ssh_3"'
+2016-10-06 18:37:48,558 - Commands Logger - DEBUG - Result --> : Command Executed :nc -zvn 45.33.32.156 22
+
+
+Result
+(UNKNOWN) [45.33.32.156] 22 (ssh) open
+2016-10-06 18:37:48,684 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:37:48,685 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :(UNKNOWN) [45.33.32.156] 22 (ssh) open
+2016-10-06 18:37:48,685 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :
+Exiting Single line command -->Title-->nc -zvn 45.33.32.156 22
+
+2016-10-06 18:37:48,685 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :
+
+Starting ssh--INteractive
+
+
+2016-10-06 18:37:56,534 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Permission Denied at inception for root--Good 
+2016-10-06 18:37:56,535 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Before : 
+After : 
+
+Permission denied, please try again.
+root@45.33.32.156's password: 
+2016-10-06 18:37:56,535 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Closing Child now !!
+2016-10-06 18:37:56,941 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Saving details :
+2016-10-06 18:37:56,954 - Commands Logger - DEBUG - Command id is ->ssh_4
+2016-10-06 18:37:56,954 - Commands Logger - DEBUG - commands are : [u'ssh root@45.33.32.156\n', 'root\n', "\r\nPermission denied, please try again.\r\r\nroot@45.33.32.156's password: \n"]
+2016-10-06 18:37:56,954 - Commands Logger - DEBUG - My var : '$.Entries."ssh_4"'
+2016-10-06 18:37:56,954 - Commands Logger - DEBUG - Result --> : Command Executed :ssh root@45.33.32.156
+
+
+Result:
+
+Permission denied, please try again.
+root@45.33.32.156's password: 
+
+2016-10-06 18:37:56,995 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:37:56,995 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:37:56,996 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Thread started --with command nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156
+2016-10-06 18:37:58,257 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Saving details :
+2016-10-06 18:37:58,295 - Commands Logger - DEBUG - Command id is ->ssh_5
+2016-10-06 18:37:58,296 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156', 'End']
+2016-10-06 18:37:58,296 - Commands Logger - DEBUG - My var : '$.Entries."ssh_5"'
+2016-10-06 18:37:58,296 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-06 18:37 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00060s latency).
+PORT   STATE    SERVICE VERSION
+22/tcp filtered ssh
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.25 seconds
+
+
+
+2016-10-06 18:37:58,348 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:37:58,349 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Thread finished
+2016-10-06 18:37:58,356 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-06 18:37:58,367 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 22 45.33.32.156
+2016-10-06 18:37:59,680 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Saving details :
+2016-10-06 18:37:59,688 - Commands Logger - DEBUG - Command id is ->ssh_6
+2016-10-06 18:37:59,688 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 22 45.33.32.156', 'End']
+2016-10-06 18:37:59,688 - Commands Logger - DEBUG - My var : '$.Entries."ssh_6"'
+2016-10-06 18:37:59,688 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 22 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-06 18:37 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00063s latency).
+PORT   STATE    SERVICE VERSION
+22/tcp filtered ssh
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.29 seconds
+
+
+
+2016-10-06 18:37:59,710 - Commands Logger - DEBUG - Finished!!!
+2016-10-06 18:37:59,711 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Thread finished
+2016-10-07 08:28:44,631 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting single line + Sniff
+2016-10-07 08:28:44,723 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :IN Start_sniffing() method
+2016-10-07 08:28:44,723 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :sniffing command is --> tshark -i eth0 -a duration:100 -w Results/Data_238/238_45.33.32.156_514_capture-output.pcap
+2016-10-07 08:28:47,725 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Starting Interactive Session with command --> rsh -l dummyuser 45.33.32.156 and timeout 200
+2016-10-07 08:28:47,749 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-07 08:28:47,765 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', u'4', '5', '6']
+2016-10-07 08:28:51,820 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :
+After :  j is 4
+2016-10-07 08:28:51,922 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  yes
+2016-10-07 08:28:53,925 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-07 08:28:53,925 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', u'3', '4', '5']
+2016-10-07 08:28:57,930 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :
+After : dummyuser@45.33.32.156's password: 
+ j is 0
+2016-10-07 08:28:58,032 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  dummyuserpass
+2016-10-07 08:29:00,034 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-07 08:29:00,035 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', '4', '5']
+2016-10-07 08:29:04,041 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :
+After : Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+ j is 0
+2016-10-07 08:29:04,144 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Just sent command -->  root
+2016-10-07 08:29:06,145 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Arg list is --> [u'.*password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-07 08:29:06,145 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :check list is --> [u'0', u'1', u'2', '4', '5']
+2016-10-07 08:29:10,148 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before :
+After : Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+ j is 0
+2016-10-07 08:29:10,149 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Saving details :
+2016-10-07 08:29:10,150 - Commands Logger - DEBUG - Command id is ->shell_1
+2016-10-07 08:29:10,150 - Commands Logger - DEBUG - commands are : [u'rsh -l dummyuser 45.33.32.156\n', "\nThe console would produce a pattern similar to following :\n [u'.*password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', u'.*(yes/no)?.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", '\nThe index of item that console produced is :4\n\n\n:\n\n', u'yes\n', "\nThe console would produce a pattern similar to following :\n [u'.*password.*', u'[$,#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :0\n\n\n:dummyuser@45.33.32.156's password: \r\n\n\n", u'dummyuserpass\n', "\nThe console would produce a pattern similar to following :\n [u'.*password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :0\n\n\n:Permission denied, please try again.\r\r\ndummyuser@45.33.32.156's password: \r\n\n\n", u'root\n', "\nThe console would produce a pattern similar to following :\n [u'.*password.*', u'[$/#]', u'.*No route to host.*', u'.*Connection refused.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]\n", "\nThe index of item that console produced is :0\n\n\n:Permission denied, please try again.\r\r\ndummyuser@45.33.32.156's password: \r\n\n\n"]
+2016-10-07 08:29:10,150 - Commands Logger - DEBUG - My var : '$.Entries."shell_1"'
+2016-10-07 08:29:10,151 - Commands Logger - DEBUG - Result --> : Command Executed :rsh -l dummyuser 45.33.32.156
+
+
+Output
+
+The index of item that console produced is :0
+
+
+:Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+
+
+
+2016-10-07 08:29:10,254 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 08:29:10,254 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Before : After : Permission denied, please try again.
+dummyuser@45.33.32.156's password: 
+
+2016-10-07 08:29:10,254 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Closing Child now !!
+2016-10-07 08:29:10,457 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Terminating Sniffing process
+2016-10-07 08:29:10,502 - Commands Logger - DEBUG - Command Logger --->Command id --> shell_1  Message --> :Parent process already killed:
+2016-10-07 08:29:10,504 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 08:29:10,506 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Thread started --with command nikto -h  45.33.32.156:80
+2016-10-07 09:09:10,507 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Terminating process
+2016-10-07 09:09:10,641 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Parent Process already KIlled
+2016-10-07 09:09:10,642 - Commands Logger - DEBUG - Command Logger --->Command id --> http_1  Message --> :Kill result is --> 137
+2016-10-07 09:09:10,643 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:09:10,676 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Thread started --with command hoppy -t 12 -h 45.33.32.156:80
+2016-10-07 09:09:10,750 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Saving details :
+2016-10-07 09:09:10,754 - Commands Logger - DEBUG - Command id is ->http_2
+2016-10-07 09:09:10,755 - Commands Logger - DEBUG - commands are : [u'nikto -h  45.33.32.156:80', 'End']
+2016-10-07 09:09:10,757 - Commands Logger - DEBUG - My var : '$.Entries."http_2"'
+2016-10-07 09:09:10,757 - Commands Logger - DEBUG - Result --> : Command Executed :nikto -h  45.33.32.156:80
+
+Result- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          45.33.32.156
++ Target Hostname:    45.33.32.156
++ Target Port:        80
++ Start Time:         2016-10-07 08:29:14 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html
++ Apache/2.4.7 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.
++ Allowed HTTP Methods: OPTIONS, GET, HEAD, POST 
++ OSVDB-3268: /images/: Directory indexing found.
++ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
++ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
++ OSVDB-3233: /icons/README: Apache default file found.
+
+Killed
+
+
+2016-10-07 09:09:10,770 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:09:10,771 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Thread finished
+2016-10-07 09:13:03,237 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Saving details :
+2016-10-07 09:13:03,245 - Commands Logger - DEBUG - Command id is ->http_2
+2016-10-07 09:13:03,246 - Commands Logger - DEBUG - commands are : [u'hoppy -t 12 -h 45.33.32.156:80', 'End']
+2016-10-07 09:13:03,247 - Commands Logger - DEBUG - My var : '$.Entries."http_2"'
+2016-10-07 09:13:03,249 - Commands Logger - DEBUG - Result --> : Command Executed :hoppy -t 12 -h 45.33.32.156:80
+
+Result
+[+] hoppy 1.8.1 run @ Fri Oct  7 09:09:10 2016:
+
+	[+] hoppy -t 12 -h 45.33.32.156:80
+
+[+] Configuring Test Environment
+
+	[+] Setup complete :-)
+
+[+] Initialising Connection
+
+	[+] Test host 45.33.32.156 resolves to 45.33.32.156
+
+	[+] Testing Connection to 45.33.32.156:80  - OK Data Recieved
+
+[+] Beginning spider with '/' and '/images/dummy.txt' as start points:
+
+		/shared/ 
+		/shared/images/ 
+		/shared/css/ 
+		/images/ 
+		//g.adspeed.net/ 
+		//nmap.org/ 
+		//nmap.org/book/ 
+		/nmap-announce/ 
+		/nmap-dev/ 
+		/bugtraq/ 
+		/fulldisclosure/ 
+		/pen-test/ 
+		/basics/ 
+		/tag/ 
+		/tag/pass-audit/ 
+		/tag/sniffers/ 
+		/tag/vuln-scanners/ 
+		/tag/web-scanners/ 
+		/tag/wireless/ 
+		/tag/sploits/ 
+		/tag/packet-crafters/ 
+		/fyodor/ 
+		/free-network-vulnerability-scan/ 
+		/shared/images/Acunetix/ 
+		/lp/ 
+		/lp/campaigns/ 
+		/lp/campaigns/nessus-manager/ 
+		/shared/images/tenable/ 
+		/// 
+		/netsparker-web-application-security-scanner/ 
+		/netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner/ 
+		/shared/images/netsparker/ 
+		/icons/ 
+		/shared/error/ 
+		/shared/templates/ 
+		/shared/error/includes/ 
+		/zenmap/ 
+		/zenmap/images/ 
+
+	[+] Spider Completed :-) 
+
+	[+] Found 38 directories for testing
+
+[+] Testing http://45.33.32.156:80 [45.33.32.156] with /images/dummy.txt as webDAV location
+
+	[+] ......................................................................................................................................................................................................................................
+	[!] Connection refused...........................................................................
+	[!] Connection refused.........................!!!.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+	[+] Done :-)
+
+[+] Summary of Findings
+
+	[+] Method Responses:
+
+		Copy                      -	 HTTP/1.1 405 Method Not Allowed
+		Debug                     -	 HTTP/1.1 501 Not Implemented
+		Delete /images/dummy.txt.put -	 HTTP/1.1 405 Method Not Allowed
+		Digest Auth               -	 HTTP/1.1 200 OK
+		Expect Header XSS         -	 HTTP/1.1 417 Expectation Failed
+		IIS Cookie Test           -	 HTTP/1.1 200 OK
+		Invalid Method            -	 HTTP/1.1 501 Not Implemented
+		Lock                      -	 HTTP/1.1 405 Method Not Allowed
+		Move                      -	 HTTP/1.1 405 Method Not Allowed
+		MultiViews Check          -	 HTTP/1.1 406 Not Acceptable
+		NTLM Auth                 -	 HTTP/1.1 200 OK
+		Options                   -	 HTTP/1.1 200 OK
+		Propfind /                -	 HTTP/1.1 405 Method Not Allowed
+		Propfind /images/         -	 HTTP/1.1 405 Method Not Allowed
+		Propfind /images/dummy.txt -	 HTTP/1.1 405 Method Not Allowed
+		Propfind                  -	 HTTP/1.1 405 Method Not Allowed
+		Proppatch /images/        -	 HTTP/1.1 405 Method Not Allowed
+		Proppatch /images/dummy.txt -	 HTTP/1.1 405 Method Not Allowed
+		Proxy Connect             -	 HTTP/1.1 405 Method Not Allowed
+		Proxy                     -	 HTTP/1.1 200 OK
+		Put /images/dummy.txt.put -	 HTTP/1.1 405 Method Not Allowed
+		Trace                     -	 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+		Trace                     -	 HTTP/1.1 405 Method Not Allowed
+		Track                     -	 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+		Track                     -	 HTTP/1.1 501 Not Implemented
+		mkcol                     -	 HTTP/1.1 405 Method Not Allowed
+		unLock                    -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //%c0%afg.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //%c0%afnmap.org -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //%c0%afnmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //              -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //g.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //nmap.org      -	 HTTP/1.1 405 Method Not Allowed
+		webDav on //nmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /b%c0%afasics   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /b%c0%afugtraq  -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /basics         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /bugtraq        -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /f%c0%afree-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /f%c0%afulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /f%c0%afyodor   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /free-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /fulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /fyodor         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /i%c0%afcons    -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /i%c0%afmages   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /icons          -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /images         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /l%c0%afp       -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /l%c0%afp/campaigns -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /l%c0%afp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /lp             -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /lp/campaigns   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /lp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afetsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afetsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afmap-announce -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /n%c0%afmap-dev -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /netsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /nmap-announce  -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /nmap-dev       -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /p%c0%afen-test -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /pen-test       -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/css -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/error -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /s%c0%afhared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/css     -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/error   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images  -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /shared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag      -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/sniffers -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/sploits -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /t%c0%afag/wireless -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag            -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/sniffers   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/sploits    -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /tag/wireless   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /z%c0%afenmap   -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /z%c0%afenmap/images -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /zenmap         -	 HTTP/1.1 405 Method Not Allowed
+		webDav on /zenmap/images  -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //%c0%afg.adspeed.net/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //%c0%afnmap.org/book/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //%c0%afnmap.org/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on ///dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //g.adspeed.net/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //nmap.org/book/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on //nmap.org/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /b%c0%afasics/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /b%c0%afugtraq/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /basics/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /bugtraq/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /f%c0%afree-network-vulnerability-scan/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /f%c0%afulldisclosure/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /f%c0%afyodor/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /free-network-vulnerability-scan/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /fulldisclosure/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /fyodor/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /i%c0%afcons/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /i%c0%afmages/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /icons/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /l%c0%afp/campaigns/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /l%c0%afp/campaigns/nessus-manager/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /l%c0%afp/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /lp/campaigns/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /lp/campaigns/nessus-manager/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /lp/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afetsparker-web-application-security-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afetsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afmap-announce/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /n%c0%afmap-dev/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /netsparker-web-application-security-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /nmap-announce/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /nmap-dev/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /p%c0%afen-test/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /pen-test/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/css/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/error/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/error/includes/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/Acunetix/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/netsparker/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/images/tenable/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /s%c0%afhared/templates/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/css/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/error/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/error/includes/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/Acunetix/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/netsparker/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/images/tenable/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /shared/templates/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/packet-crafters/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/pass-audit/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/sniffers/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/sploits/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/vuln-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/web-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /t%c0%afag/wireless/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/packet-crafters/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/pass-audit/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/sniffers/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/sploits/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/vuln-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/web-scanners/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /tag/wireless/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /z%c0%afenmap/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /z%c0%afenmap/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /zenmap/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavDELETE on /zenmap/images/dnehoppy.html -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //%c0%afg.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //%c0%afnmap.org -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //%c0%afnmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //           -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //g.adspeed.net -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //nmap.org   -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on //nmap.org/book -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /b%c0%afasics -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /b%c0%afugtraq -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /basics      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /bugtraq     -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /f%c0%afree-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /f%c0%afulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /f%c0%afyodor -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /free-network-vulnerability-scan -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /fulldisclosure -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /fyodor      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /i%c0%afcons -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /i%c0%afmages -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /icons       -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /images      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /l%c0%afp    -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /l%c0%afp/campaigns -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /l%c0%afp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /lp          -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /lp/campaigns -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /lp/campaigns/nessus-manager -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afetsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afetsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afmap-announce -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /n%c0%afmap-dev -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /netsparker-web-application-security-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /netsparker-web-application-security-scanner/website-vulnerable-xss-sql-injection-vulnerability-scanner -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /nmap-announce -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /nmap-dev    -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /p%c0%afen-test -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /pen-test    -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/css -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/error -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /s%c0%afhared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/css  -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/error -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/error/includes -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images/Acunetix -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images/netsparker -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/images/tenable -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /shared/templates -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag   -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/sniffers -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/sploits -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /t%c0%afag/wireless -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag         -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/packet-crafters -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/pass-audit -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/sniffers -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/sploits -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/vuln-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/web-scanners -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /tag/wireless -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /z%c0%afenmap -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /z%c0%afenmap/images -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /zenmap      -	 HTTP/1.1 405 Method Not Allowed
+		webDavPUT on /zenmap/images -	 HTTP/1.1 405 Method Not Allowed
+
+	[+] Information Leakage:
+
+		[32mAllow[0;0m:
+		[32mAllow[0;0m: OPTIONS,GET,HEAD,POST
+		[32mAlternates:[0;0m {"index.html" 1 {type text/html}}
+		[32mLocation:[0;0m http:///images/
+		[32mLocation:[0;0m http:///shared/
+		[32mLocation:[0;0m http:///shared/css/
+		[32mLocation:[0;0m http:///shared/error/
+		[32mLocation:[0;0m http:///shared/error/includes/
+		[32mLocation:[0;0m http:///shared/images/
+		[32mLocation:[0;0m http:///shared/images/Acunetix/
+		[32mLocation:[0;0m http:///shared/images/netsparker/
+		[32mLocation:[0;0m http:///shared/images/tenable/
+		[32mLocation:[0;0m http:///shared/templates/
+		[32mLocation:[0;0m http://hophost/images/
+		[32mLocation:[0;0m http://scanme.nmap.org/images/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/css/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/error/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/error/includes/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/Acunetix/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/netsparker/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/images/tenable/
+		[32mLocation:[0;0m http://scanme.nmap.org/shared/templates/
+		[32mServer:[0;0m Apache/2.4.7 (Ubuntu)
+		[32mVary[0;0m: Accept-Encoding
+		[32mVary[0;0m: negotiate
+		'//www.[32mgoogle[0;0m.com/cse/cse.js?cx=' + cx;
+		(function(i,s,o,g,r,a,m){i['[32mGoogle[0;0mAnalyticsObject']=r;i[r]=i[r]||function(){
+		<!--[32mGoogle[0;0m Analytics Code-->
+		<!--[32mGoogle[0;0m Custom Site Search boilerplate Javascript-->
+		<!-- End SiteSearch [32mGoogle[0;0m -->
+		<!-- SiteSearch [32mGoogle[0;0m -->
+		<!--END [32mGoogle[0;0m Analytics Code-->
+		<!--End [32mGoogle[0;0m Custom Site Search boilerplate Javascript-->
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at  Port 80</address>
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at hophost Port 80</address>
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at scanme.nmap.org Port 80</address>
+		<address>[32mApache[0;0m/2.4.7 (Ubuntu) Server at www.google.com Port 443</address>
+		<address>Apache/2.4.7 (Ubuntu) Server at www.[32mgoogle[0;0m.com Port 443</address>
+		<li><a href="http://sectools.org/tag/pass-audit/">[32mPassword[0;0m audit</a></li>
+		Server: [32mApache[0;0m/2.4.7 (Ubuntu)
+		an 100 times a day or use this site to test your ssh brute-force [32mpassword[0;0m cracking tool.
+		})(window,document,'script','//www.[32mgoogle[0;0m-analytics.com/analytics.js','ga');
+
+	[+] IP Leakage:
+
+		<address>Apache/2.4.7 (Ubuntu) Server at [31m45.33.32.156[0;0m Port 80</address>
+		Location: http://[31m45.33.32.156[0;0m/images/
+		<p>The document has moved <a href="http://[31m45.33.32.156[0;0m/images/">here</a>.</p>
+
+
+	[+] 1033 check(s) failed to return data, try incrreasing the socket timeout (-t) and re-run with the -4 switch for more information
+
+
+
+
+2016-10-07 09:13:03,262 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:13:03,262 - Commands Logger - DEBUG - Command Logger --->Command id --> http_2  Message --> :Thread finished
+2016-10-07 09:13:03,292 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:13:03,292 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :Thread started --with command  perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80
+2016-10-07 09:14:35,203 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :Saving details :
+2016-10-07 09:14:35,205 - Commands Logger - DEBUG - Command id is ->http_3
+2016-10-07 09:14:35,206 - Commands Logger - DEBUG - commands are : [u' perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80', 'End']
+2016-10-07 09:14:35,206 - Commands Logger - DEBUG - My var : '$.Entries."http_3"'
+2016-10-07 09:14:35,206 - Commands Logger - DEBUG - Result --> : Command Executed : perl http-dir-enum/http-dir-enum.pl -f http-dir-enum/directory-names.txt http://45.33.32.156:80
+
+ResultStarting http-dir-enum v0.4.3 ( http://labs.portcullis.co.uk/application/http-dir-enum/ )
+Copyright (C) 2006 Mark Lowe ( mrl@portcullis-security.com )
+
+ ----------------------------------------------------------
+|                   Scan Information                       |
+ ----------------------------------------------------------
+
+URL .................... http://45.33.32.156:80
+Processes .............. 8
+Directory name file .... http-dir-enum/directory-names.txt
+Query timeout .......... 20 secs
+HTTP Method ............ HEAD
+Max Queries / sec ...... unlimited
+Trailing slash ......... On
+Recursive dir search ... On
+Close connections ...... Off
+Follow redirects ....... Off
+Case sensistive dirs ... On
+Auto-ignore ............ On
+
+######## Scan started on Fri Oct  7 09:13:03 2016 #########
+[I] Processing directory: / (0 dirs remaining)
+[I] Auto-ignoring HTTP code 404 for http://45.33.32.156:80
+icons	403
+images	200
+[I] Processing directory: icons (1 dirs remaining)
+[I] Auto-ignoring HTTP code 404 for http://45.33.32.156:80/icons
+[I] Processing directory: images (0 dirs remaining)
+[I] Auto-ignoring HTTP code 404 for http://45.33.32.156:80/images
+######## Scan completed on Fri Oct  7 09:14:35 2016 #########
+2 results.
+
+2118 queries in 92 seconds (23 queries / sec)
+
+
+
+2016-10-07 09:14:35,212 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:14:35,213 - Commands Logger - DEBUG - Command Logger --->Command id --> http_3  Message --> :Thread finished
+2016-10-07 09:14:35,214 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Starting Special char-Interactive Session with command --> w3af_console and timeout 1200
+2016-10-07 09:14:35,220 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Arg list is --> [u'.*w3af>>> ', u'[$,#]', u'.*Usage of w3af for sending any traffic.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]
+2016-10-07 09:14:35,221 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :check list is --> [u'0', u'2', '3', '4']
+2016-10-07 09:14:40,782 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Results not as expected --> see aurguments 1
+It seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html
+Traceback (most recent call last):
+  File "/usr/bin/w3af_console"  ,
+2016-10-07 09:14:40,783 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Saving details :
+2016-10-07 09:14:40,786 - Commands Logger - DEBUG - Command id is ->http_4
+2016-10-07 09:14:40,786 - Commands Logger - DEBUG - commands are : [u'w3af_console\n', "[u'.*w3af>>> ', u'[$,#]', u'.*Usage of w3af for sending any traffic.*', <class 'pexpect.TIMEOUT'>, <class 'pexpect.EOF'>]", '\nIt seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html\r\nTraceback (most recent call last):\r\n  File "/usr/bin/w3af_console"\n,']
+2016-10-07 09:14:40,786 - Commands Logger - DEBUG - My var : '$.Entries."http_4"'
+2016-10-07 09:14:40,786 - Commands Logger - DEBUG - Result --> : Command Executed :w3af_console
+
+
+Result:
+
+It seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html
+Traceback (most recent call last):
+  File "/usr/bin/w3af_console"
+,
+2016-10-07 09:14:40,792 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:14:40,793 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Before : It seems that your Python installation does not have all the modules required by the w3af framework. For more information about how to install and debug dependency issues please browse to http://docs.w3af.org/en/latest/install.html
+Traceback (most recent call last):
+  File "/usr/bin/w3af_console"After : ,
+2016-10-07 09:14:40,794 - Commands Logger - DEBUG - Command Logger --->Command id --> http_4  Message --> :Closing Child now !!
+2016-10-07 09:14:41,003 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:14:41,005 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :Thread started --with command nmap --script=banner.nse -p 80 45.33.32.156
+2016-10-07 09:14:45,074 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :Saving details :
+2016-10-07 09:14:45,078 - Commands Logger - DEBUG - Command id is ->http_5
+2016-10-07 09:14:45,079 - Commands Logger - DEBUG - commands are : [u'nmap --script=banner.nse -p 80 45.33.32.156', 'End']
+2016-10-07 09:14:45,079 - Commands Logger - DEBUG - My var : '$.Entries."http_5"'
+2016-10-07 09:14:45,080 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=banner.nse -p 80 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-07 09:14 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00085s latency).
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap done: 1 IP address (1 host up) scanned in 3.55 seconds
+
+
+
+2016-10-07 09:14:45,086 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:14:45,089 - Commands Logger - DEBUG - Command Logger --->Command id --> http_5  Message --> :Thread finished
+2016-10-07 09:14:45,118 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:14:45,119 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :Thread started --with command nmap --script=http-trace.nse -p 80 45.33.32.156
+2016-10-07 09:14:48,523 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :Saving details :
+2016-10-07 09:14:48,525 - Commands Logger - DEBUG - Command id is ->http_6
+2016-10-07 09:14:48,526 - Commands Logger - DEBUG - commands are : [u'nmap --script=http-trace.nse -p 80 45.33.32.156', 'End']
+2016-10-07 09:14:48,526 - Commands Logger - DEBUG - My var : '$.Entries."http_6"'
+2016-10-07 09:14:48,527 - Commands Logger - DEBUG - Result --> : Command Executed :nmap --script=http-trace.nse -p 80 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-07 09:14 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00049s latency).
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap done: 1 IP address (1 host up) scanned in 3.38 seconds
+
+
+
+2016-10-07 09:14:48,533 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:14:48,536 - Commands Logger - DEBUG - Command Logger --->Command id --> http_6  Message --> :Thread finished
+2016-10-07 09:14:48,586 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:14:48,587 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :Thread started --with command nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156
+2016-10-07 09:14:52,600 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :Saving details :
+2016-10-07 09:14:52,601 - Commands Logger - DEBUG - Command id is ->http_7
+2016-10-07 09:14:52,601 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156', 'End']
+2016-10-07 09:14:52,602 - Commands Logger - DEBUG - My var : '$.Entries."http_7"'
+2016-10-07 09:14:52,602 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=http-iis-webdav-vuln.nse -p 80 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-07 09:14 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00055s latency).
+PORT   STATE    SERVICE VERSION
+80/tcp filtered http
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.98 seconds
+
+
+
+2016-10-07 09:14:52,606 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:14:52,607 - Commands Logger - DEBUG - Command Logger --->Command id --> http_7  Message --> :Thread finished
+2016-10-07 09:14:52,650 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Inside command_meta
+2016-10-07 09:15:22,944 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :[1m[31m[-][0m Failed to connect to the database: could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+[4mmsf[0m [0m> 
+2016-10-07 09:15:22,945 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :0
+2016-10-07 09:15:26,052 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :workspace -a Metasploit_automation
+[0m[1m[31m[-][0m Database not connected
+[4mmsf[0m [0m> 
+2016-10-07 09:15:29,158 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set THREADS 1
+[0mTHREADS => 1
+[4mmsf[0m [0m> 
+2016-10-07 09:15:32,265 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :workspace Metasploit_automation
+[0m[1m[31m[-][0m Database not connected
+[4mmsf[0m [0m> 
+2016-10-07 09:15:35,374 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :use auxiliary/scanner/ssh/ssh_login
+[0m[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-07 09:15:38,485 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set RHOSTS 45.33.32.156
+[0mRHOSTS => 45.33.32.156
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-07 09:15:41,597 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set USERPASS_FILE /usr/share/metasploit-framework/dat a/wordlists/root_userpass.txt
+[0mUSERPASS_FILE => /usr/share/metasploit-framework/data/wordlists/root_userpass.txt
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-07 09:15:44,709 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :set VERBOSE false
+[0mVERBOSE => false
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-07 09:15:44,710 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Everything Fine till now-->Launching run command
+
+
+2016-10-07 09:20:09,749 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Module Execution completed
+
+
+2016-10-07 09:20:09,750 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Before : 
+After : 
+run
+[0m
+[1m[34m[*][0m 45.33.32.156:22 SSH - Starting bruteforce
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-07 09:20:09,750 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+
+Now exiting !!!
+
+
+2016-10-07 09:20:09,751 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :
+Exiting  from msfconsole !!!
+
+2016-10-07 09:20:11,860 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Exited from msfconsole !!!
+2016-10-07 09:20:11,860 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Before : 
+exit
+[0mAfter : 
+<class 'pexpect.EOF'>
+2016-10-07 09:20:11,860 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Closing the child pipe !!!
+2016-10-07 09:20:11,962 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_1  Message --> :Saving details :
+2016-10-07 09:20:11,965 - Commands Logger - DEBUG - Command id is ->ssh_1
+2016-10-07 09:20:11,965 - Commands Logger - DEBUG - commands are : ['>msfconsole', '\x1b[1m\x1b[31m[-]\x1b[0m Failed to connect to the database: could not connect to server: Connection refused\r\n\tIs the server running on host "localhost" (::1) and accepting\r\n\tTCP/IP connections on port 5432?\r\ncould not connect to server: Connection refused\r\n\tIs the server running on host "localhost" (127.0.0.1) and accepting\r\n\tTCP/IP connections on port 5432?\r\n\r\n\x1b[4mmsf\x1b[0m \x1b[0m> ', u'workspace -a Metasploit_automation\n', 'workspace -a Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[31m[-]\x1b[0m Database not connected\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'set THREADS 1\n', 'set THREADS 1\r\r\n\x1b[0mTHREADS => 1\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'workspace Metasploit_automation\n', 'workspace Metasploit_automation\r\r\n\x1b[0m\x1b[1m\x1b[31m[-]\x1b[0m Database not connected\r\n\x1b[4mmsf\x1b[0m \x1b[0m> \n', u'use auxiliary/scanner/ssh/ssh_login\n', 'use auxiliary/scanner/ssh/ssh_login\r\r\n\x1b[0m\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set RHOSTS 45.33.32.156\n', 'set RHOSTS 45.33.32.156\r\r\n\x1b[0mRHOSTS => 45.33.32.156\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set USERPASS_FILE /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\n', 'set USERPASS_FILE /usr/share/metasploit-framework/dat \ra/wordlists/root_userpass.txt\r\r\n\x1b[0mUSERPASS_FILE => /usr/share/metasploit-framework/data/wordlists/root_userpass.txt\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', u'set VERBOSE false\n', 'set VERBOSE false\r\r\n\x1b[0mVERBOSE => false\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n', '>run', 'run\r\r\n\x1b[0m\r\n\x1b[1m\x1b[34m[*]\x1b[0m 45.33.32.156:22 SSH - Starting bruteforce\r\n\x1b[1m\x1b[34m[*]\x1b[0m Scanned 1 of 1 hosts (100% complete)\r\n\x1b[1m\x1b[34m[*]\x1b[0m Auxiliary module execution completed\r\n\x1b[4mmsf\x1b[0m auxiliary(\x1b[1m\x1b[31mssh_login\x1b[0m) \x1b[0m> \n']
+2016-10-07 09:20:11,966 - Commands Logger - DEBUG - My var : '$.Entries."ssh_1"'
+2016-10-07 09:20:11,967 - Commands Logger - DEBUG - Result --> : 
+Command Executed :>msfconsole
+Result :
+run
+[0m
+[1m[34m[*][0m 45.33.32.156:22 SSH - Starting bruteforce
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mssh_login[0m) [0m> 
+2016-10-07 09:20:11,979 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:20:11,981 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :
+Invoking Single line command -->Title-->java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+
+2016-10-07 09:20:14,589 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :Saving details :
+2016-10-07 09:20:14,593 - Commands Logger - DEBUG - Command id is ->ssh_2
+2016-10-07 09:20:14,593 - Commands Logger - DEBUG - commands are : [u"java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22\n", 'SSH Version: 2.0\nSSH Library: OpenSSH_6.6.1p1 Ubuntu\n\nException in thread "main" java.lang.ArrayIndexOutOfBoundsException\n\tat java.lang.System.arraycopy(Native Method)\n\tat ServerKeyExchangeInit.setPayload(ServerKeyExchangeInit.java:74)\n\tat ServerKeyExchangeInit.<init>(ServerKeyExchangeInit.java:20)\n\tat SSHCipherCheck.main(SSHCipherCheck.java:45)']
+2016-10-07 09:20:14,593 - Commands Logger - DEBUG - My var : '$.Entries."ssh_2"'
+2016-10-07 09:20:14,594 - Commands Logger - DEBUG - Result --> : Command Executed :java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+
+
+Result
+SSH Version: 2.0
+SSH Library: OpenSSH_6.6.1p1 Ubuntu
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException
+	at java.lang.System.arraycopy(Native Method)
+	at ServerKeyExchangeInit.setPayload(ServerKeyExchangeInit.java:74)
+	at ServerKeyExchangeInit.<init>(ServerKeyExchangeInit.java:20)
+	at SSHCipherCheck.main(SSHCipherCheck.java:45)
+2016-10-07 09:20:14,603 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:20:14,604 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :SSH Version: 2.0
+SSH Library: OpenSSH_6.6.1p1 Ubuntu
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException
+	at java.lang.System.arraycopy(Native Method)
+	at ServerKeyExchangeInit.setPayload(ServerKeyExchangeInit.java:74)
+	at ServerKeyExchangeInit.<init>(ServerKeyExchangeInit.java:20)
+	at SSHCipherCheck.main(SSHCipherCheck.java:45)
+2016-10-07 09:20:14,605 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_2  Message --> :
+Exiting Single line command -->Title-->java -cp 'ssh-cipher-check.jar' SSHCipherCheck 45.33.32.156 22
+
+2016-10-07 09:20:14,606 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :
+Invoking Single line command -->Title-->nc -zvn 45.33.32.156 22
+
+2016-10-07 09:20:14,952 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :Saving details :
+2016-10-07 09:20:14,957 - Commands Logger - DEBUG - Command id is ->ssh_3
+2016-10-07 09:20:14,957 - Commands Logger - DEBUG - commands are : [u'nc -zvn 45.33.32.156 22\n', '(UNKNOWN) [45.33.32.156] 22 (ssh) open']
+2016-10-07 09:20:14,958 - Commands Logger - DEBUG - My var : '$.Entries."ssh_3"'
+2016-10-07 09:20:14,958 - Commands Logger - DEBUG - Result --> : Command Executed :nc -zvn 45.33.32.156 22
+
+
+Result
+(UNKNOWN) [45.33.32.156] 22 (ssh) open
+2016-10-07 09:20:14,964 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:20:14,966 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :(UNKNOWN) [45.33.32.156] 22 (ssh) open
+2016-10-07 09:20:14,967 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_3  Message --> :
+Exiting Single line command -->Title-->nc -zvn 45.33.32.156 22
+
+2016-10-07 09:20:14,968 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :
+
+Starting ssh--INteractive
+
+
+2016-10-07 09:20:21,707 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Permission Denied at inception for root--Good 
+2016-10-07 09:20:21,707 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Before : 
+After : 
+
+Permission denied, please try again.
+root@45.33.32.156's password: 
+2016-10-07 09:20:21,708 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Closing Child now !!
+2016-10-07 09:20:22,120 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_4  Message --> :Saving details :
+2016-10-07 09:20:22,124 - Commands Logger - DEBUG - Command id is ->ssh_4
+2016-10-07 09:20:22,124 - Commands Logger - DEBUG - commands are : [u'ssh root@45.33.32.156\n', 'root\n', "\r\nPermission denied, please try again.\r\r\nroot@45.33.32.156's password: \n"]
+2016-10-07 09:20:22,125 - Commands Logger - DEBUG - My var : '$.Entries."ssh_4"'
+2016-10-07 09:20:22,125 - Commands Logger - DEBUG - Result --> : Command Executed :ssh root@45.33.32.156
+
+
+Result:
+
+Permission denied, please try again.
+root@45.33.32.156's password: 
+
+2016-10-07 09:20:22,131 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:20:22,136 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:20:22,139 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Thread started --with command nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156
+2016-10-07 09:20:25,781 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Saving details :
+2016-10-07 09:20:25,783 - Commands Logger - DEBUG - Command id is ->ssh_5
+2016-10-07 09:20:25,784 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156', 'End']
+2016-10-07 09:20:25,784 - Commands Logger - DEBUG - My var : '$.Entries."ssh_5"'
+2016-10-07 09:20:25,785 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=ssh2-enum-algos.nse -p 22 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-07 09:20 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00036s latency).
+PORT   STATE    SERVICE VERSION
+22/tcp filtered ssh
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.60 seconds
+
+
+
+2016-10-07 09:20:25,792 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:20:25,794 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_5  Message --> :Thread finished
+2016-10-07 09:20:25,802 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :In method SingleLineCommands_Timeout()
+2016-10-07 09:20:25,803 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Thread started --with command nmap -sV --script=banner.nse -p 22 45.33.32.156
+2016-10-07 09:20:29,254 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Saving details :
+2016-10-07 09:20:29,255 - Commands Logger - DEBUG - Command id is ->ssh_6
+2016-10-07 09:20:29,255 - Commands Logger - DEBUG - commands are : [u'nmap -sV --script=banner.nse -p 22 45.33.32.156', 'End']
+2016-10-07 09:20:29,256 - Commands Logger - DEBUG - My var : '$.Entries."ssh_6"'
+2016-10-07 09:20:29,256 - Commands Logger - DEBUG - Result --> : Command Executed :nmap -sV --script=banner.nse -p 22 45.33.32.156
+
+Result
+Starting Nmap 6.49BETA4 ( https://nmap.org ) at 2016-10-07 09:20 EDT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.00045s latency).
+PORT   STATE    SERVICE VERSION
+22/tcp filtered ssh
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.42 seconds
+
+
+
+2016-10-07 09:20:29,263 - Commands Logger - DEBUG - Finished!!!
+2016-10-07 09:20:29,263 - Commands Logger - DEBUG - Command Logger --->Command id --> ssh_6  Message --> :Thread finished

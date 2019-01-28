@@ -1,0 +1,101 @@
+[3;J[H[2JInside INIT
+Inside INVOKER.PY 
+
+
+('192.168.17.128', 'launch_concurrent_02', '1-65500', '1', '1', '330', 'g-start', '1', '1', '1')
+Reached !!!@@@###
+('(192.168.17.128', 'launch_concurrent_02', '1-65500', '1', '1', '330', 'g-start', '1', '1)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in elif(1)
+Scanning remaining ports
+Range is :60001-65500
+
+
+
+
+
+Loop executed : 9
+Started
+ended
+Ended
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['192.168.17.128']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 140007687272400)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+
+Started thread for IP :192.168.17.128 --> Thread is : <Thread(Thread-1, started daemon 140007577138944)>
+Started Simple acanner
+Started
+Ended
+Reached port scanner module with record id --> 17376
+[31m----------------------------------------------[0m
+Result for IP : 192.168.17.128
+Protocol : TCP
+[34mport : [33m40787 	 [32mopen 	[31munknown[0m
+[31m----------------------------------------------[0m
+Started
+Stopped
+
+
+ Project id is :	330
+
+
+Initialising parent directory 
+INitialised
+
+
+
+Data path is -->/root/Django-projects/Dictator/Dictator_service/Results/Data_330
+Log file is --> 330_Log_file_info.txtand log file path is : /root/Django-projects/Dictator/Dictator_service/Results/Data_330/330_Log_file_info.txt
+
+@@@@
+
+hello@@
+->
+
+
+Log file passed is /root/Django-projects/Dictator/Dictator_service/Results/Data_330/330_Log_file_info.txt
+Printing to log 
+Printed to log
+
+
+Starting 
+
+
+
+hello !!!  Logger is set
+Log file is : 330_Log_file
+Printing to log 
+Printed to log
+
+
+
+Welcome  STARTING MAIN METHOD OF DRIVER FILE FOR PROJECT ID --> 330
+
+Exception in getPausedScans() not enough arguments for format string
+Hello
+'NoneType' object is not iterable
+Error occured in Main method 'NoneType' object is not iterable
+

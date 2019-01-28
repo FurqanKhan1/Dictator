@@ -1,0 +1,154 @@
+[3;J[H[2JInside INIT
+concurrent is :0
+Inside INVOKER.PY 
+
+
+('127.0.0.1', 'test_seq_def_ps_master', '80', '1', '-T4 -A -v -Pn -n', '679', 'g-start', 'e14cffae-3ea6-11e7-ba3a-08002722e7b2', 'Paladion_practice', '0')
+Reached !!!@@@###
+('(127.0.0.1', 'test_seq_def_ps_master', '80', '1', '-T4 -A -v -Pn -n', '679', 'g-start', 'e14cffae-3ea6-11e7-ba3a-08002722e7b2', 'Paladion_practice)')
+
+
+ Hello world 
+
+
+The mode recieved is :g-start and profile at main : 0
+[34m[+]Starting SCAN[0m
+Started
+(1)--About to make bulk enteries - #Ip:1
+in else
+Started
+ended
+Ended
+In begning the number of threads are :1
+In begning the threads alive are :[<_MainThread(MainThread, started 139699643147920)>]
+started
+Started DH
+Ended DH
+Ended
+
+
+[31m----------------------------------------------[0m
+None
+Starting : 1Threads for ['127.0.0.1']Hosts
+[31m----------------------------------------------[0m
+None
+
+
+[32m******************************************************************************************************************************************
+[0mCurrent thread count : 1
+The threads enumerate returned are : [<_MainThread(MainThread, started 139699643147920)>][32m
+******************************************************************************************************************************************[0m
+Inside INIT
+
+Started thread for IP :127.0.0.1 --> Thread is : <Thread(Thread-1, started daemon 139699532752640)>
+Started Simple acanner
+Started
+Ended
+Reached port scanner module with record id --> 2528
+Starting the scan with the switch :-T4 -A -v -Pn -n
+Reached Debug 1
+Reached Debug 2
+Up host status is :1
+Reached Debug 3
+[31m----------------------------------------------[0m
+Reached Debug 4
+Result for IP : 127.0.0.1
+Protocol : TCP
+Reached Debug 5
+[34mport : [33m80 	 [32mopen 	[31mhttp[0m
+[31m----------------------------------------------[0m
+Reached Debug 6
+Started
+Stopped
+Reached Debug 8
+
+
+ Finished subprocess for ip 127.0.0.1 and Process : <Process(Process-1, stopped)>
+Ended Simple acanner
+
+
+Thread ended with host ip -127.0.0.1
+
+
+**Pooling started :**
+[31m----------------------------------------------[0m
+None
+Polling 
+ Threads remaining are :[<_MainThread(MainThread, started 139699643147920)>, <_DummyThread(Dummy-2, started daemon 139699700188928)>]
+
+[31m----------------------------------------------[0m
+None
+Obtained dummy thread <_DummyThread(Dummy-2, started daemon 139699700188928)>
+Only dummy threads are alive-Attempting to close
+Started
+Ended
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139699643147920)>, <_DummyThread(Dummy-2, started daemon 139699700188928)>]
+Active Threads are only 1 --Scan about to finish --Threads remaining are :[<_MainThread(MainThread, started 139699643147920)>, <_DummyThread(Dummy-2, started daemon 139699700188928)>]
+Reached here as well !!!
+# of threads Alive are :2
+
+Now stopping and saving Global Project Id : 679
+
+Started
+Ended
+Launching clear logs !!!
+Clearing old logs !!!!! with status -->complete
+
+
+The logs are not clear :
+
+ Clearing them Now ..................
+
+
+Clearing Logs now inside clear logs !!
+Cleared all logs !!
+The logs are finally cleared !!!
+Time taken in seconds : 108.32922101
+Inside INIT
+Inside INIT
+INVOKED Driver meta main with record_list : [] and  concurrent status : False and skip_init_check status as :False and continue =False
+
+
+
+
+
+P_id ---> 679
+
+
+ Project id is :	679
+
+
+valid projects are ['679']
+IN exists with Pid679
+Connection init done()
+Logg printed
+here#@@
+0
+Initialising parent directory 
+INitialised
+Hello
+here reached 
+I am in parse and process
+
+
+ Inside insert IPexploits --
+
+
+
+[32m[+] Launching configuration ....[0m
+success
+
+
+About to return now !!!
+success fully done till now
+folder name is : /root/Django-projects/Dictator1.1/Dictator_service
+
+
+
+
+
+Inside update --Obtained process id is ->22742  and project_id is : 679
+Concurrent is false and updating with above values
+ended
+Stopped
+Successfully launched exploits in seq-def mode.Reffer to exploits logs from here on 
