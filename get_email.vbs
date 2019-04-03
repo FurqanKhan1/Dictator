@@ -13,7 +13,7 @@ Sub Main()
     counter=0
     For Each objMessage In colItems
   Dim sub_str
-  sub_str = Mid(objMessage.Body,1,100)
+  sub_str = Mid(objMessage.Body,1,150)
   sub_str=sub_str & "\n"
   list.Add "Subject : " & objMessage.Subject & "Body : " & sub_str
     Next
@@ -23,7 +23,7 @@ Sub Main()
   WScript.Echo subj
   objFileToWrite.WriteLine(subj)
      counter=counter+1
-  If counter > 2 Then
+  If counter > 5 Then
    Exit For 
   End If
     Next
