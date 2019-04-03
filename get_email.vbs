@@ -20,7 +20,7 @@ Sub Main()
     list.Reverse
     Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("D:\emails.txt",8,true)     
     For Each subj In list
-        WScript.Echo subj
+        'WScript.Echo subj
         objFileToWrite.WriteLine(subj)
         counter=counter+1
         If counter > 5 Then
