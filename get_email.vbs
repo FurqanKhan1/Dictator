@@ -18,7 +18,7 @@ Sub Main()
   list.Add "Subject : " & objMessage.Subject & "Body : " & sub_str
     Next
     list.Reverse
-    Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("emails.txt",8,true)     
+                                        Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("D:\emails.txt",8,true)     
            For Each subj In list
   WScript.Echo subj
   objFileToWrite.WriteLine(subj)
