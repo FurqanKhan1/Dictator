@@ -14,7 +14,7 @@ Sub Main()
     For Each objMessage In colItems
         Dim sub_str
         sub_str = Mid(objMessage.Body,1,150)
-        sub_str=sub_str & "\n"
+        sub_str=sub_str & "**###**###"
         list.Add "Subject : " & objMessage.Subject & "Body : " & sub_str
     Next
     list.Reverse
