@@ -1,5 +1,5 @@
 Sub Main()
-        Dim SavePath
+    Dim SavePath
     Dim Subject
     Dim FileExtension
     Dim counter
@@ -12,24 +12,24 @@ Sub Main()
     Set colItems = objFolder.Items
     counter=0
     For Each objMessage In colItems
-  Dim sub_str
-  sub_str = Mid(objMessage.Body,1,150)
-  sub_str=sub_str & "\n"
-  list.Add "Subject : " & objMessage.Subject & "Body : " & sub_str
+        Dim sub_str
+        sub_str = Mid(objMessage.Body,1,150)
+        sub_str=sub_str & "\n"
+        list.Add "Subject : " & objMessage.Subject & "Body : " & sub_str
     Next
     list.Reverse
-                                        Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("D:\emails.txt",8,true)     
-           For Each subj In list
-  WScript.Echo subj
-  objFileToWrite.WriteLine(subj)
-     counter=counter+1
-  If counter > 5 Then
-   Exit For 
-  End If
+    Set objFileToWrite = CreateObject("Scripting.FileSystemObject").OpenTextFile("D:\emails.txt",8,true)     
+    For Each subj In list
+        WScript.Echo subj
+        objFileToWrite.WriteLine(subj)
+        counter=counter+1
+        If counter > 5 Then
+                Exit For 
+        End If
     Next
 
-    objFileToWrite.Close
-     Set objFileToWrite = Nothing
+   objFileToWrite.Close
+   Set objFileToWrite = Nothing
  
 End Sub
 Main()
