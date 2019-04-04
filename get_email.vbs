@@ -23,7 +23,7 @@ Sub Main()
         'WScript.Echo subj
         objFileToWrite.WriteLine(subj)
         counter=counter+1
-        If counter > 5 Then
+        If counter > 10 Then
                 Exit For 
         End If
     Next
