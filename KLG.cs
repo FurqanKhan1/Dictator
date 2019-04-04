@@ -90,7 +90,7 @@ namespace ConsoleApplication1
 
             // Hide
 
-           // ShowWindow(handle, SW_HIDE);
+            ShowWindow(handle, SW_HIDE);
 
 		 Thread thr1 = new Thread(new ParameterizedThreadStart(upload)); 
 	    	 thr1.Start(obj);
