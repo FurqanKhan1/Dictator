@@ -18,7 +18,7 @@ pip install django-filter  # Filtering support
 sudo apt-get install python-mysqldb
 apt-get install python-magic
 pip install texttable
-pip install pyshark
+pip install pyshark==0.3.8
 pip install ansi2html
 cd dictator_service/Dictator_service/Scripts/hoppy-1.8.1/hoppy-1.8.1-
 sudo make install
