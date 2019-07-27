@@ -24,7 +24,7 @@ mentioned as under:
 import json
 import time
 import sys
-import msfrpc
+#import msfrpc
 import auto_commands
 import psutil
 import MySQLdb
