@@ -1,5 +1,7 @@
 mkdir PTO
 cd PTO
+apt-get install python-mysqldb
+pip install pymetasploit
 wget https://raw.githubusercontent.com/FurqanKhan1/Dictator/master/nmapscan.sql
 git clone https://github.com/FurqanKhan1/Dictator.git
 git clone https://github.com/FurqanKhan1/Dictator_client.git
