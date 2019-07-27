@@ -17,7 +17,7 @@ Thus there are various method catagories like :
 """
 import shlex
 import sys
-import msfrpc
+#import msfrpc
 import time
 import pyshark
 import pexpect
@@ -96,7 +96,7 @@ class Commands:
 		This method would initialize the database connection 
 		"""
 		try:
-			self.con=MySQLdb.connect("localhost","<USER>",<PASSWORD>","nmapscan")
+			self.con=MySQLdb.connect("localhost","<USER>","<PASSWORD>","nmapscan")
 			self.cursor = self.con.cursor()
 		except Exception, e:
 			self.print_Error("EXception in connection-->"+str(e))
