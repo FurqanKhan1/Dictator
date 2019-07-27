@@ -8,6 +8,7 @@ pip install python-nmap
 pip install python-libnmap
 pip install python-libnessus
 pip install lxml
+pip install psutil
 pip install django==1.11.10
 pip install djangorestframework==3.7.7
 pip install markdown       # Markdown support for the browsable API.
@@ -24,7 +25,15 @@ git clone https://github.com/EnableSecurity/sipvicious.git
 cd sipvicious
 python setup.py install
 cd ..
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.3-1_all.deb
-sudo dpkg -i mysql-apt-config_w.x.y-z_all.deb
-sudo apt-get update
+service mysql stop
+apt-get --purge remove 'mysql*'
+mkdir mysql_install
+cd mysql_install
+wget https://dev.mysql.com/get/Downloads/mysql/mysql-server_5.7.17-1debian7_amd64.deb-bundle.tar
+tar -xvf mysql-server_5.7.17-1debian7_amd64.deb-bundle.tar
+sudo dpkg-preconfigure mysql-community-server_*.deb
+sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.deb
+sudo apt-get -f install
+#sudo apt-get update
+cd ..
 mysql -p  < nmapscan.sql
