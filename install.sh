@@ -40,4 +40,5 @@ sudo apt-get -f install
 apt-get install python-mysqldb
 #sudo apt-get update
 cd ..
+service mysql start
 mysql -p  < nmapscan.sql
