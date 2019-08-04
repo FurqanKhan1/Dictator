@@ -35,6 +35,7 @@ cd mysql_install
 wget https://dev.mysql.com/get/Downloads/mysql/mysql-server_5.7.17-1debian7_amd64.deb-bundle.tar
 tar -xvf mysql-server_5.7.17-1debian7_amd64.deb-bundle.tar
 sudo dpkg-preconfigure mysql-community-server_*.deb
+sudo apt-get install libaio1
 sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.deb
 sudo apt-get -f install
 apt-get install python-mysqldb
