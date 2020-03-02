@@ -2,8 +2,8 @@ function send_email()
    Set objOutlook = CreateObject("Outlook.Application")
    Set objMail = objOutlook.CreateItem(0)
    objMail.Display   'To display message
-   objMail.To = "furqan.khan1@du.ae"
-   objMail.cc = "furqan.khan1@du.ae"
+   objMail.To = ""
+   objMail.cc = ""
    objMail.Subject = "Confidential"
    objMail.Body = "This is with regards to my resignation ..."
    objMail.Send  
